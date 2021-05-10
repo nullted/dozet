@@ -179,12 +179,11 @@ trinketwep.PermitDismantle = true
 trinket = GM:AddTrinket("Vitality Bank", "vitpackageii", false, hpveles, hpweles, 4, "+40 maximum health 11% в раз больше кровавая броня ест урон ")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 40)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.11)
+
 trinket = GM:AddTrinket("Жаренный баракот", "classil", false, hpveles, hpweles, 4, "-40 макс хп но кровавая броня в 51% лучше защищает и вы 11% лучше лечитесь ")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -40)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.51)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.11)
-
-
 
 trinket, trinketwep = GM:AddTrinket("Blood Transfusion Pack", "bloodpack", false, hpveles, hpweles, 2, "Generates 20 blood armor if health falls bellow 50%\nConsumes itself on activation.", nil, 15)
 trinketwep.PermitDismantle = true
