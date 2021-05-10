@@ -9,20 +9,20 @@ CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 1
 
-CLASS.Points = 100
+CLASS.Points = 80
 
 CLASS.Model = Model("models/headcrabclassic.mdl")
 
 CLASS.SWEP = "weapon_zs_doomcrab"
 
-CLASS.Health = 3900
+CLASS.Health = 2800
 CLASS.Speed = 300
 --CLASS.JumpPower = 160
 
 CLASS.NoFallDamage = true
 CLASS.NoFallSlowdown = true
 
-CLASS.ModelScale = 3
+CLASS.ModelScale = 2
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 12 * CLASS.ModelScale)}
 CLASS.HullDuck = {Vector(-16, -16, 0), Vector(16, 16, 12 * CLASS.ModelScale)}
 CLASS.ViewOffset = Vector(0, 0, 48)

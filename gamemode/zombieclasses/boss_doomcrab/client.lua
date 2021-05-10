@@ -1,7 +1,7 @@
 include("shared.lua")
 
 CLASS.Icon = "zombiesurvival/killicons/headcrab"
-CLASS.IconColor = Color(50, 50, 50)
+CLASS.IconColor = Color(110, 50, 50)
 
 function CLASS:PrePlayerDraw(pl)
 	render.SetColorModulation(0.1, 0.1, 0.1)
