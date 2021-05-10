@@ -36,9 +36,9 @@ SWEP.UseHands = true
 
 SWEP.ReloadSound = Sound("Weapon_AWP.ClipOut")
 SWEP.Primary.Sound = Sound("Weapon_Hunter.Single")
-SWEP.Primary.Damage = 350
+SWEP.Primary.Damage = 250
 SWEP.Primary.NumShots = 2
-SWEP.Primary.Delay = 1.1
+SWEP.Primary.Delay = 0.78
 SWEP.ReloadDelay = SWEP.Primary.Delay
 
 SWEP.Primary.ClipSize = 4
@@ -61,11 +61,11 @@ SWEP.Tier = 4
 
 SWEP.TracerName = "AR2Tracer"
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.3)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Classix' Заебал бомбить", "Uses twice as much ammo, reloads slowly, but overkill damage is dealt as an explosion", function(wept)
 	wept.Primary.ClipSize = 4
 	wept.RequiredClip = 4
-	wept.ReloadSpeed = 0.1
+	wept.ReloadSpeed = 0.6
 
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()

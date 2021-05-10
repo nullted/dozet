@@ -21,7 +21,7 @@ SWEP.Secondary.Ammo = "dummy"
 
 --SWEP.MeleeDamage = 35 -- Reduced due to instant swing speed
 SWEP.MeleeDamage = 60
-SWEP.MeleeRange = 120
+SWEP.MeleeRange = 57
 SWEP.MeleeSize = 0.3
 
 SWEP.MaxStock = 5
