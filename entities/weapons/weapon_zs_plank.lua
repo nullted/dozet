@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "Plank"
-SWEP.Description = "Обычная доска при этом она ОЧЕНЬ тяжелая,странно..."
+SWEP.Description = "Обычная доска..."
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55
@@ -28,10 +28,10 @@ SWEP.UseHands = true
 SWEP.BoxPhysicsMin = Vector(-0.5764, -2.397225, -20.080572) * SWEP.ModelScale
 SWEP.BoxPhysicsMax = Vector(0.70365, 2.501825, 19.973375) * SWEP.ModelScale
 
-SWEP.MeleeDamage = 91
-SWEP.MeleeRange = 69
+SWEP.MeleeDamage = 38
+SWEP.MeleeRange = 71
 SWEP.MeleeSize = 2
-SWEP.Primary.Delay = 3
+SWEP.Primary.Delay = 0.33
 
 SWEP.WalkSpeed = SPEED_FASTER
 

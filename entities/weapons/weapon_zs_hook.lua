@@ -26,7 +26,7 @@ SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
 SWEP.WorldModel = "models/props_junk/meathook001a.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 40
+SWEP.MeleeDamage = 71
 SWEP.MeleeRange = 50
 SWEP.MeleeSize = 1.15
 

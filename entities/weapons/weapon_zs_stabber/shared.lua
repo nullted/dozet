@@ -14,16 +14,16 @@ SWEP.ViewModel = "models/weapons/cstrike/c_snip_g3sg1.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_scout.mdl"
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 65
+SWEP.Primary.Damage = 73
 SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.36
+SWEP.Primary.Delay = 0.31
 
 SWEP.Primary.ClipSize = 8
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "357"
 SWEP.Primary.DefaultClip = 25
 
-SWEP.MeleeDamage = 45
+SWEP.MeleeDamage = 70
 SWEP.MeleeRange = 72
 SWEP.MeleeSize = 0.95
 SWEP.MeleeKnockBack = 0
@@ -32,12 +32,12 @@ SWEP.DamageType = DMG_SLASH
 
 SWEP.BloodDecal = "Blood"
 
-SWEP.SwingTime = 0.35
+SWEP.SwingTime = 0.2
 SWEP.SwingRotation = Angle(-8, -20, 0)
 SWEP.SwingOffset = Vector(0, -30, 0)
 
 SWEP.Secondary.Automatic = true
-SWEP.Secondary.Delay = 1.3
+SWEP.Secondary.Delay = 0.9
 
 SWEP.ConeMax = 2.75
 SWEP.ConeMin = 1.25
