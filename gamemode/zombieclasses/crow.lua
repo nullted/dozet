@@ -2,7 +2,7 @@ CLASS.Name = "Crow"
 CLASS.TranslationName = "class_crow"
 CLASS.Description = "description_crow"
 
-CLASS.Health = 1200
+CLASS.Health = 20
 CLASS.Wave = 0
 CLASS.Threshold = 0
 CLASS.SWEP = "weapon_zs_fistz"
@@ -14,7 +14,7 @@ CLASS.PainSounds = {"NPC_Crow.Pain"}
 CLASS.DeathSounds = {"NPC_Crow.Die"}
 
 CLASS.Unlocked = true
-CLASS.Hidden = true
+CLASS.Hidden = false
 
 CLASS.Hull = {Vector(-4, -4, 0), Vector(4, 4, 9)}
 CLASS.HullDuck = {Vector(-4, -4, 0), Vector(4, 4, 9)}
