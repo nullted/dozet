@@ -1,7 +1,7 @@
 INC_SERVER()
 
 ENT.Ticks = 11
-ENT.Damage = 230
+ENT.Damage = 110
 ENT.LegDamage = 120
 ENT.PointsMultiplier = 10
 

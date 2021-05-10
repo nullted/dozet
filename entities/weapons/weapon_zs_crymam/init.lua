@@ -1,6 +1,6 @@
 INC_SERVER()
 
-SWEP.Primary.Projectile = "projectile_crygas"
+SWEP.Primary.Projectile = "projectile_crymam"
 SWEP.Primary.ProjVelocity = 850
 
 function SWEP:EntModify(ent)

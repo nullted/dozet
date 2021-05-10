@@ -1,8 +1,8 @@
 INC_SERVER()
 
 ENT.Ticks = 11
-ENT.Damage = 50
-ENT.LegDamage = 70
+ENT.Damage = 20
+ENT.LegDamage = 30
 ENT.PointsMultiplier = 2
 
 function ENT:AcceptInput(name, activator, caller, arg)
