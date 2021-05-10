@@ -126,7 +126,7 @@ GM.AmmoCache["chemical"]					= 20
 GM.AmmoCache["flashbomb"]					= 1
 GM.AmmoCache["turret_buckshot"]				= 1
 GM.AmmoCache["turret_assault"]				= 1
-GM.AmmoCache["scrap"]						= 5
+GM.AmmoCache["scrap"]						= 7
 
 GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "buckshot", "battery", "pulse", "impactmine", "chemical", "gaussenergy", "scrap", "grenade"})
 
@@ -383,6 +383,7 @@ GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			25,				nil,							"25 Medical K
 item.CanMakeFromScrap = true
 item =
 GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just three nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(3, "GaussEnergy", true) end)
+
 item.NoClassicMode = true
 item.CanMakeFromScrap = true
 -- Tier 1
@@ -493,7 +494,7 @@ item.SkillRequirement = SKILL_U_ANTITODESHOT
 GM:AddPointShopItem("medrifle",			ITEMCAT_TOOLS,			55,				"weapon_zs_medicrifle")
 GM:AddPointShopItem("healray",			ITEMCAT_TOOLS,			100,			"weapon_zs_healingray")
 GM:AddPointShopItem("stone",			ITEMCAT_TOOLS,			5,			"weapon_zs_stone")
-
+GM:AddPointShopItem("nail",				ITEMCAT_TOOLS,			10,				nil,							"Scrap",							"Scrap but is have x10.",					"ammo_scrap",						function(pl) pl:GiveAmmo(10, "Scrap", true) end)
 -- Tier 1
 GM:AddPointShopItem("cutlery",			ITEMCAT_TRINKETS,		10,				"trinket_cutlery").SubCategory =								ITEMSUBCAT_TRINKETS_DEFENSIVE
 GM:AddPointShopItem("boxingtraining",	ITEMCAT_TRINKETS,		10,				"trinket_boxingtraining").SubCategory =							ITEMSUBCAT_TRINKETS_MELEE
