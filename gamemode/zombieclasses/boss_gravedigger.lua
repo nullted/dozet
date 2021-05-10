@@ -7,14 +7,14 @@ CLASS.Help = "controls_gravedigger"
 
 CLASS.Boss = true
 
-CLASS.Health = 1600
-CLASS.Speed = 200
+CLASS.Health = 1200
+CLASS.Speed = 220
 
 CLASS.CanTaunt = true
 
 CLASS.FearPerInstance = 1
 
-CLASS.Points = 30
+CLASS.Points = 15
 
 CLASS.SWEP = "weapon_zs_graveshovelz"
 
