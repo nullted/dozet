@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "71рУоHe271jb"
-SWEP.Description = "GbhdwggBuytjag12."
+SWEP.PrintName = "Undead Pistol"
+SWEP.Description = "why."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 
@@ -32,9 +32,9 @@ SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadSound = Sound("weapons/alyx_gun/alyx_shotgun_cock1.wav")
 SWEP.Primary.Sound = Sound("weapons/alyx_gun/alyx_gun_fire3.wav")
-SWEP.Primary.Damage = 9
-SWEP.Primary.NumShots = 7
-SWEP.Primary.Delay = 0.9
+SWEP.Primary.Damage = 30
+SWEP.Primary.NumShots = 2
+SWEP.Primary.Delay = 1
 
 SWEP.Primary.ClipSize = 32
 SWEP.Primary.Automatic = false

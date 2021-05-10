@@ -4,10 +4,10 @@ SWEP.Base = "weapon_zs_headcrab"
 
 SWEP.PrintName = "Bloodsucker Headcrab"
 
-SWEP.PounceDamage = 6
+SWEP.PounceDamage = 7
 
-SWEP.NoHitRecovery = 0.6
-SWEP.HitRecovery = 0.75
+SWEP.NoHitRecovery = 1
+SWEP.HitRecovery = 1
 
 function SWEP:Initialize()
 	self:HideViewAndWorldModel()
@@ -24,7 +24,7 @@ function SWEP:Think()
 		else
 			owner:DrawShadow(false)
 			if SERVER and curtime >= self.NextHeal then
-				self.NextHeal = curtime + 0.333
+				self.NextHeal = curtime + 0.4
 
 				if owner:GetVelocity():LengthSqr() > 8 then
 					local effectdata = EffectData()

@@ -7,9 +7,9 @@ CLASS.Help = "controls_tormented_wraith"
 
 CLASS.Health = 90
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio
-CLASS.Speed = 310
+CLASS.Speed = 500
 
-CLASS.Wave = 2 / 6
+CLASS.Wave = 5 / 6
 
 CLASS.SWEP = "weapon_zs_tormentedspy"
 

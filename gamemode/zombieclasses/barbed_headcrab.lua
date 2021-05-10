@@ -7,7 +7,7 @@ CLASS.Help = "controls_barbed_headcrab"
 
 CLASS.Health = 100
 CLASS.Points = CLASS.Health/GM.HeadcrabZombiePointRatio
-CLASS.Speed = 160
+CLASS.Speed = 210
 
 CLASS.Wave = 4 / 6
 

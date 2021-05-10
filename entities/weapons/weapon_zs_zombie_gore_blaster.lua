@@ -4,8 +4,8 @@ SWEP.PrintName = "Gore Blaster Zombie"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 21
-SWEP.BleedDamageMul = 30 / SWEP.MeleeDamage
+SWEP.MeleeDamage = 30
+SWEP.BleedDamageMul = 60 / SWEP.MeleeDamage
 SWEP.MeleeDamageVsProps = 41
 
 SWEP.AlertDelay = 2.75
