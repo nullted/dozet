@@ -17,8 +17,8 @@ CLASS.VoicePitch = 0.65
 
 CLASS.SWEP = "weapon_zs_redbad"
 
-CLASS.Health = 1560
-CLASS.Speed = 260
+CLASS.Health = 2100
+CLASS.Speed = 210
 
 CLASS.Skeletal = true
 
