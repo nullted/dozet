@@ -169,7 +169,7 @@ local supveles = {
 local supweles = {
 	["perf"] = { type = "Model", model = "models/props_lab/reciever01c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5, 1.5, -2), angle = Angle(5, 180, 92.337), size = Vector(0.2, 0.699, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
-
+-- some text
 -- Health Trinkets
 trinket, trinketwep = GM:AddTrinket("Health Package", "vitpackagei", false, hpveles, hpweles, 2, "+20 maximum health\n+9% healing received")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 20)
