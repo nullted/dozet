@@ -179,6 +179,11 @@ trinketwep.PermitDismantle = true
 trinket = GM:AddTrinket("Vitality Bank", "vitpackageii", false, hpveles, hpweles, 4, "+40 maximum health 11% в раз больше кровавая броня ест урон ")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 40)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.11)
+trinket = GM:AddTrinket("Жаренный баракот", "classil", false, hpveles, hpweles, 4, "-40 макс хп но кровавая броня в 51% лучше защищает и вы 11% лучше лечитесь ")
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -40)
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.51)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.11)
+
 
 
 trinket, trinketwep = GM:AddTrinket("Blood Transfusion Pack", "bloodpack", false, hpveles, hpweles, 2, "Generates 20 blood armor if health falls bellow 50%\nConsumes itself on activation.", nil, 15)
@@ -196,11 +201,11 @@ trinket, trinketwep = GM:AddTrinket("Bio Cleanser", "biocleanser", false, hpvele
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Cutlery Set", "cutlery", false, hpveles, hpweles, nil, "-80% time to eat food"), SKILLMOD_FOODEATTIME_MUL, -0.8)
-trinket, trinketwep = GM:AddTrinket("Пакет самоубийцы", "killer", false, hpveles, hpweles, 2, "+100 Максималой кровавой брони и отнимает 20 хп вы получаете на 11% больше урона")
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 100)
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -20)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.13)
+trinket, trinketwep = GM:AddTrinket("Пакет самоубийцы", "killer", false, hpveles, hpweles, 2, "+200 Максималой кровавой брони и отнимает 60 хп вы получаете на 11% больше урона")
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 200)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -60)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.09)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.25)
 trinketwep.PermitDismantle = true
 
 -- Melee Trinkets
