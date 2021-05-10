@@ -69,7 +69,7 @@ end
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/wraithv2"
-CLASS.IconColor = Color(90, 0, 200)
+CLASS.IconColor = Color(0, 210, 120)
 
 function CLASS:PrePlayerDraw(pl)
 	local alpha = self:GetAlpha(pl)
