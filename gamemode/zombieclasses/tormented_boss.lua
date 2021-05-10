@@ -23,8 +23,8 @@ function CLASS:Move(pl, move)
 	end
 
 	if pl:KeyDown(IN_SPEED) then
-		move:SetMaxSpeed(200)
-		move:SetMaxClientSpeed(200)
+		move:SetMaxSpeed(90)
+		move:SetMaxClientSpeed(90)
 	end
 end
 
