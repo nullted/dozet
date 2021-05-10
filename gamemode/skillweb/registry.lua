@@ -247,6 +247,7 @@ SKILL_ROBUST = 145
 SKILL_STOWAGE = 146
 SKILL_TRUEWOOISM = 147
 SKILL_UNBOUND = 148
+SKILL_FOUR_IN_ONE = 149
 
 SKILLMOD_HEALTH = 1
 SKILLMOD_SPEED = 2
@@ -627,7 +628,7 @@ GM:AddSkill(SKILL_BATTLER1, "Battler I", GOOD.."+4% melee damage",
 GM:AddSkill(SKILL_BATTLER2, "Battler II", GOOD.."+5% melee damage",
 																-6,			-4,					{SKILL_BATTLER3, SKILL_LIGHTWEIGHT}, TREE_MELEETREE)
 GM:AddSkill(SKILL_BATTLER3, "Battler III", GOOD.."+5% melee damage",
-																-4,			-2,					{SKILL_BATTLER4, SKILL_LANKY}, TREE_MELEETREE)
+																-4,			-2,					{SKILL_BATTLER4, SKILL_LANKY, SKILL_FOUR_IN_ONE}, TREE_MELEETREE)
 GM:AddSkill(SKILL_BATTLER4, "Battler IV", GOOD.."+6% melee damage",
 																-2,			0,					{SKILL_BATTLER5, SKILL_MASTERCHEF, SKILL_D_CLUMSY}, TREE_MELEETREE)
 GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+7% melee damage",
@@ -662,6 +663,8 @@ GM:AddSkill(SKILL_BLOODLUST, "Bloodlust", "Gain phantom health equal to half the
 																-2,			4,					{SKILL_LASTSTAND}, TREE_MELEETREE)
 GM:AddSkill(SKILL_BRASH, "Brash", GOOD.."-16% melee swing impact delay\n"..BAD.."-15 speed on melee kill for 10 seconds",
 																6,			0,					{}, TREE_MELEETREE)
+GM:AddSkill(SKILL_FOUR_IN_ONE, "2 in 1", GOOD.."-50% melee swing impact delay\n"..BAD.."-20 health",
+																-2,			-2,					{}, TREE_MELEETREE)
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
@@ -1235,6 +1238,9 @@ GM:AddSkillModifier(SKILL_DISPERSION, SKILLMOD_CLOUD_TIME, -0.1)
 
 GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.16)
 GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, -15)
+
+GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.50)
+GM:AddSkillModifier(SKILL_FOUR_IN_ONE, SKILLMOD_HEALTH, -20)
 
 GM:AddSkillModifier(SKILL_CIRCULATION, SKILLMOD_BLOODARMOR, 1)
 
