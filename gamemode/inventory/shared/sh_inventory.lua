@@ -234,7 +234,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_SPEED, -60)
 
 GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+32% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 50% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.32)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.5)
-GM:AddSkillModifier(GM:AddTrinket("Антитермиия", "sharpkt", false, mveles, mweles, 4, "+1% к кровавой броне дает +30 к скорости вы получаете на 11% больше урона ."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.1)
+GM:AddSkillModifier(GM:AddTrinket("Антитермиия", "sharpkt", false, mveles, mweles, 4, "+11% к кровавой броне дает +30 к скорости вы получаете на 11% больше урона ."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.1)
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 10)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
 
@@ -276,8 +276,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.3)
 
 trinket = GM:AddTrinket("Скидка", "store", false, pveles, pweles, 2, "Скидка на 5% в поинтшопе")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.05)
-trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 13% в поинтшопе ")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.13)
+trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 9% в поинтшопе ")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
 
 trinket = GM:AddTrinket("Galvanizer Implant", "analgestic", false, pveles, pweles, 3, "-50% замедления от неполного хп\n-70% кулдаун падения\n-66% duration of pulling attacks\n+25% weapon switch speed но цены в магазине на 3% дороже")
 GM:AddSkillModifier(trinket, SKILLMOD_SLOW_EFF_TAKEN_MUL, -0.50)
@@ -333,10 +333,10 @@ GM:AddSkillModifier(trinket, SKILLMOD_WEAPON_WEIGHT_SLOW_MUL, -0.35)
 
 
 -- Defensive Trinkets
-trinket, trinketwep = GM:AddTrinket("Kevlar Underlay", "kevlar", false, develes, deweles, 2, "-11% melee damage taken\n-11% projectile damage taken,armor is reduced to -20%")
+trinket, trinketwep = GM:AddTrinket("Kevlar Underlay", "kevlar", false, develes, deweles, 2, "-11% melee damage taken\n-11% projectile damage taken,armor is reduced to -17%")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.11)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.20)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.17)
 trinketwep.PermitDismantle = true
 
 trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "100% of melee damage taken reflected back to melee attackers\nAdditional 30 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken")
@@ -362,11 +362,11 @@ GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.95)
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_THRESHOLD_MUL, 0.30)
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, -0.75)
 
-trinket = GM:AddTrinket("Рассрочка!!!", "stopit", false, develes, deweles, 3, "Похоже вы купили рассрочку теперь все предметы в магазине стоят на 60% меньше!!Много дебаффов но...")
-GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, 0.05)
+trinket = GM:AddTrinket("Рассрочка!!!", "stopit", false, develes, deweles, 3, "Похоже вы купили рассрочку теперь все предметы в магазине стоят на 50% меньше!!Много дебаффов но...")
+GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, 0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_BLEED_DAMAGE_TAKEN_MUL, 0.3)
-GM:AddSkillModifier(trinket, SKILLMOD_BLEED_SPEED_MUL, 0.3)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.60)
+GM:AddSkillModifier(trinket, SKILLMOD_BLEED_SPEED_MUL, 0.5)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.40)
 trinketwep.PermitDismantle = true
 
