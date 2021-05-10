@@ -289,10 +289,13 @@ GM:AddSkillModifier(trinket, SKILLMOD_LOW_HEALTH_SLOW_MUL, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.7)
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.25)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.03)
+trinket = GM:AddTrinket("Инвалидная трость", "kre", false, pveles, pweles, 3, "У вас иммунитет к падению! но все в магазине дороже на 10%")
+GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -1)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.10)
 
-GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+16% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.16)
-GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+32% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.32)
-GM:AddSkillModifier(GM:AddTrinket("Классический Учебник по перезарядке", "classix", false, ammoveles, ammoweles, 4, "+40% Скорость перезарядки "), SKILLMOD_RELOADSPEED_MUL, 0.4)
+GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+10% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.10)
+GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+16% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.16)
+GM:AddSkillModifier(GM:AddTrinket("Классический Учебник по перезарядке", "classix", false, ammoveles, ammoweles, 4, "+30% Скорость перезарядки "), SKILLMOD_RELOADSPEED_MUL, 0.3)
 
 GM:AddTrinket("Automated Reloader", "autoreload", false, ammoveles, ammoweles, 2, "Reloads one weapon you switched away from 4 seconds ago automatically")
 
