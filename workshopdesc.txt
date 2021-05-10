@@ -1,9 +1,7 @@
-A massive gamemode where humans are pit against a zombie horde. All zombies are controlled by actual players instead of NPCs. When a human dies, they become part of the Undead!
+Это ZS от досета изменненые мной ( Toy323 ) 
+Если вы хотите изменить еще этот режим то обращайтесь к ериоксису или мне (Toy#3230 Discord - Toy и Discord erioxis erioxis
+#1019) ru
 
-Comes with tons of weapons, multiple classes for zombies, boss zombies, an in-depth barricading system, and the new Classic Mode.
 
-WARNING: THIS GAMEMODE WILL NOT WORK PROPERLY FROM THE WORKSHOP. AN UPCOMING GMOD UPDATE IS REQUIRED BEFORE GAMEMODES WORK ON THE STEAM WORKSHOP. IF YOU ARE PLANNING TO HOST A SERVER THEN DOWNLOAD FROM THE SVN. THIS IS ONLY FOR DOWNLOADING CONTENT.
-
-SVN: svn://noxiousnet.com/trunk/public/gmod13/zombiesurvival
-Forum: http://www.noxiousnet.com/forums/index.php?board=43.0
-FP Thread: http://facepunch.com/showthread.php?t=1160198
+It zs from Doset changed by me ( Toy323 )
+If you change this gamemode then contact me or erioxis ( Toy#3230 Discord - Toy and Discord erioxis#1019)
