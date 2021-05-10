@@ -16,13 +16,13 @@ SWEP.Secondary.DefaultClip = -1
 SWEP.Secondary.Automatic = true
 SWEP.Secondary.Ammo	= "none"
 
-SWEP.PounceDamage = 8
+SWEP.PounceDamage = 11
 SWEP.PounceDamageType = DMG_SLASH
 
 SWEP.NoHitRecovery = 0.75
 SWEP.HitRecovery = 1
 
-SWEP.BurrowTime = 1.5
+SWEP.BurrowTime = 1.2
 
 function SWEP:Initialize()
 	self:HideViewAndWorldModel()

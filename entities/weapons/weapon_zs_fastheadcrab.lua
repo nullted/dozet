@@ -4,7 +4,7 @@ SWEP.Base = "weapon_zs_headcrab"
 
 SWEP.PrintName = "Fast Headcrab"
 
-SWEP.PounceDamage = 6
+SWEP.PounceDamage = 8
 
 SWEP.NoHitRecovery = 0.6
 SWEP.HitRecovery = 0.75
