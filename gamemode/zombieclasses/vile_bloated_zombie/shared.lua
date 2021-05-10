@@ -9,7 +9,7 @@ CLASS.BetterVersion = "Poison Zombie"
 
 CLASS.Wave = 3 / 6
 
-CLASS.Health = 350
+CLASS.Health = 560
 CLASS.Speed = 135
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio
