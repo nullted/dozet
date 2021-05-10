@@ -5,9 +5,9 @@ CLASS.Help = "controls_fresh_dead"
 
 CLASS.Wave = 0
 CLASS.Unlocked = true
-CLASS.Hidden = true
+CLASS.Hidden = false
 
-CLASS.Health = 100
+CLASS.Health = 300
 CLASS.Speed = 195
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio
