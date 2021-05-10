@@ -9,14 +9,14 @@ CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 0.05
 
-CLASS.Points = 20
+CLASS.Points = 30
 
 CLASS.Model = Model("models/dav0r/hoverball.mdl")
 
 CLASS.SWEP = "weapon_zs_special_wow"
 
-CLASS.Health = 1000
-CLASS.Speed = 240
+CLASS.Health = 2000
+CLASS.Speed = 360
 CLASS.JumpPower = 0
 
 CLASS.PainSounds = {Sound("npc/scanner/scanner_photo1.wav")}
