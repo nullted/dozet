@@ -39,7 +39,7 @@ cvars.AddChangeCallback("zs_babymode", function(cvar, oldvalue, newvalue)
 	GAMEMODE:SetBabyMode(tonumber(newvalue) == 1)
 end)
 
-GM.EndWaveHealthBonus = CreateConVar("zs_endwavehealthbonus", "0", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Humans will get this much health after every wave. 0 to disable."):GetInt()
+GM.EndWaveHealthBonus = CreateConVar("zs_endwavehealthbonus", "30", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Humans will get this much health after every wave. 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_endwavehealthbonus", function(cvar, oldvalue, newvalue)
 	GAMEMODE.EndWaveHealthBonus = tonumber(newvalue) or 0
 end)
@@ -79,7 +79,7 @@ cvars.AddChangeCallback("zs_maxpropsinbarricade", function(cvar, oldvalue, newva
 	GAMEMODE.MaxPropsInBarricade = tonumber(newvalue) or 8
 end)
 
-GM.MaxDroppedItems = 48--[[CreateConVar("zs_maxdroppeditems", "48", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Maximum amount of dropped items. Prevents spam or lag when lots of people die."):GetInt()
+GM.MaxDroppedItems = 1200--[[CreateConVar("zs_maxdroppeditems", "48", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Maximum amount of dropped items. Prevents spam or lag when lots of people die."):GetInt()
 cvars.AddChangeCallback("zs_maxdroppeditems", function(cvar, oldvalue, newvalue)
 	GAMEMODE.MaxDroppedItems = tonumber(newvalue) or 48
 end)]]
@@ -99,7 +99,7 @@ cvars.AddChangeCallback("zs_medkitpointsperhealth", function(cvar, oldvalue, new
 	GAMEMODE.MedkitPointsPerHealth = tonumber(newvalue) or 1
 end)]]
 
-GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "35", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
+GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "25", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
 cvars.AddChangeCallback("zs_repairpointsperhealth", function(cvar, oldvalue, newvalue)
 	GAMEMODE.RepairPointsPerHealth = tonumber(newvalue) or 1
 end)
