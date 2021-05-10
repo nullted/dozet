@@ -223,24 +223,24 @@ trinket = GM:AddTrinket("Momentum Scaffold", "momentumsupsysiii", false, mveles,
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.20)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.12)
 
-GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter I", "hemoadrenali", false, mveles, mweles, nil, "+11% melee damage converted to blood armor and you take 11% damage."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.11)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
+GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter I", "hemoadrenali", false, mveles, mweles, nil, "+11% melee damage converted to blood armor and you take 20% damage."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.11)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.20)
 
 trinket = GM:AddTrinket("Hemo-Adrenaline Amplifier", "hemoadrenalii", false, mveles, mweles, 3, "+13% melee damage converted to blood armor\n+30 speed on melee kill for 10 seconds,but you take 11% damage from zombie")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 30)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
 
-trinket = GM:AddTrinket("Жесткая кожа", "flashlo", false, mveles, mweles, 3, "-13% получения кровавой брони при ударе но вы получаете на 51% меньше урона,-60 скорость если вы выкините или разберете оружие ")
+trinket = GM:AddTrinket("Жесткая кожа", "flashlo", false, mveles, mweles, 3, "-13% получения кровавой брони при ударе но вы получаете на 31% меньше урона,-60 скорость если вы выкините или разберете тринкет ")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.13)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.51)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.31)
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, -60)
 
-GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+62% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 50% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.32)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.62)
-GM:AddSkillModifier(GM:AddTrinket("Антитермиия", "sharpkt", false, mveles, mweles, 4, "+11% к кровавой броне при нанесение урона дает +50 к скорости."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.1)
+GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+22% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 36% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.22)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.36)
+GM:AddSkillModifier(GM:AddTrinket("Антитермиия", "sharpkt", false, mveles, mweles, 4, "+11% к кровавой броне при нанесение урона дает +50 к скорости но вы получаете на 6% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.1)
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 50)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.06)
 
 GM:AddSkillModifier(GM:AddTrinket("Power Gauntlet", "powergauntlet", false, mveles, mweles, 3, "Charges your melee damage up to +85% with each hit\nMissing resets damage"), SKILLMOD_MELEE_POWERATTACK_MUL, 0.85)
 
@@ -333,8 +333,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, -0.25)
 
 GM:AddTrinket("Superior Assembly", "supasm", false, oveles, oweles, 5, "Increases to weapon damage via remantling affect reload speed on tier 2 or lower weapons")
 
-trinket = GM:AddTrinket("Olympian Frame", "olympianframe", false, oveles, oweles, 2, "+100% object throwing strength\n-25% prop carrying slow down\n-35% movement speed reduction with heavy weapons + 15 points to end wave")
-GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 15)
+trinket = GM:AddTrinket("Olympian Frame", "olympianframe", false, oveles, oweles, 2, "+100% object throwing strength\n-25% prop carrying slow down\n-35% movement speed reduction with heavy weapons + 35 points to end wave")
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 35)
 GM:AddSkillModifier(trinket, SKILLMOD_PROP_CARRY_SLOW_MUL, -0.25)
 GM:AddSkillModifier(trinket, SKILLMOD_WEAPON_WEIGHT_SLOW_MUL, -0.35)
 
@@ -346,10 +346,11 @@ GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.17)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "100% of melee damage taken reflected back to melee attackers\nAdditional 30 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken")
+trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "100% of melee damage taken reflected back to melee attackers\nAdditional 30 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken and you take +5point to end wave")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT, 30)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT_PERCENT, 1)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.04)
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 5)
 
 trinket = GM:AddTrinket("Antitoxin Package", "antitoxinpack", false, develes, deweles, 2, "-17% poison damage taken\n-40% poison damage over time speed")
 GM:AddSkillModifier(trinket, SKILLMOD_POISON_DAMAGE_TAKEN_MUL, -0.17)
@@ -374,7 +375,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, 0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_BLEED_DAMAGE_TAKEN_MUL, 0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_BLEED_SPEED_MUL, 0.5)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.50)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.40)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.56)
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, -25)
 trinketwep.PermitDismantle = true
 
 local eicev = {
@@ -394,10 +396,10 @@ GM:AddSkillFunction(GM:AddTrinket("Necrotic Senses Distorter", "necrosense", fal
 trinket, trinketwep = GM:AddTrinket("Reactive Flasher", "reactiveflasher", false, develes, deweles, 2, "Blinds and disorients melee attacker for 2 seconds\nRecharges every 75 seconds")
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Composite Underlay", "composite", false, develes, deweles, 4, "-16% melee damage taken\n-16% projectile damage taken and you take -12% blood armor convert")
+trinket = GM:AddTrinket("Composite Underlay", "composite", false, develes, deweles, 4, "-16% melee damage taken\n-16% projectile damage taken and you take -16% blood armor convert")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.16)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.16)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.12)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.16)
 
 trinket = GM:AddTrinket("Toy Armor", "toysite", false, develes, deweles, 4, "Вы получаете на 36% меньше урона но кровавая броня неэффективна вырабатываеться в 32%")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.36)
@@ -420,16 +422,17 @@ trinketwep.PermitDismantle = true
 GM:AddTrinket("Magnet", "magnet", true, supveles, supweles, nil, "Slowly pulls ammo and weapons towards you\nMust be equipped to take effect", "magnet")
 GM:AddTrinket("Electromagnet", "electromagnet", true, supveles, supweles, nil, "Pulls ammo and weapons towards you quickly\nMust be equipped to take effect", "magnet_electro")
 
-trinket, trinketwep = GM:AddTrinket("Loading Exoskeleton", "loadingex", false, supveles, supweles, 2, "-55% prop carrying slow down\n-20% deployable pack time")
+trinket, trinketwep = GM:AddTrinket("Loading Exoskeleton", "loadingex", false, supveles, supweles, 2, "-55% prop carrying slow down\n-20% deployable pack time and you take +15 to end wave")
 GM:AddSkillModifier(trinket, SKILLMOD_PROP_CARRY_SLOW_MUL, -0.55)
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYABLE_PACKTIME_MUL, -0.2)
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 15)
 trinketwep.PermitDismantle = true
 
-trinket, trinketwep = GM:AddTrinket("Blueprints", "blueprintsi", false, supveles, supweles, 2, "+30% repair rate")
-GM:AddSkillModifier(trinket, SKILLMOD_REPAIRRATE_MUL, 0.3)
+trinket, trinketwep = GM:AddTrinket("Blueprints", "blueprintsi", false, supveles, supweles, 2, "+35% repair rate")
+GM:AddSkillModifier(trinket, SKILLMOD_REPAIRRATE_MUL, 0.35)
 trinketwep.PermitDismantle = true
 
-GM:AddSkillModifier(GM:AddTrinket("Advanced Blueprints", "blueprintsii", false, supveles, supweles, 4, "+90% repair rate"), SKILLMOD_REPAIRRATE_MUL, 0.9)
+GM:AddSkillModifier(GM:AddTrinket("Advanced Blueprints", "blueprintsii", false, supveles, supweles, 4, "+60% repair rate"), SKILLMOD_REPAIRRATE_MUL, 0.60)
 
 trinket, trinketwep = GM:AddTrinket("Medical Processor", "processor", false, supveles, supweles, 2, "-30% medic kit cooldown\n-80% medic tool fire delay\nReprocess food into medical ammo with right click")
 GM:AddSkillModifier(trinket, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.3)
@@ -482,16 +485,17 @@ GM:AddSkillModifier(trinket, SKILLMOD_FIELD_RANGE_MUL, 1)
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_DELAY_MUL, -1)
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, 2)
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 0.3)
-GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_HEALTH_MUL, 0.15)
+GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_HEALTH_MUL, 0.6)
 GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_SPEED_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_MANHACK_DAMAGE_MUL, 10)
 GM:AddSkillModifier(trinket, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.6)
 GM:AddSkillModifier(trinket, SKILLMOD_MEDGUN_FIRE_DELAY_MUL, -0.3)
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 55)
 
 
 
-GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-6% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.06)
-GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-9% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.09)
+GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-11% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.11)
+GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-19% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.19)
 
 -- Boss Trinkets
 
