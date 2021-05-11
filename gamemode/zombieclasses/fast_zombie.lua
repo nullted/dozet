@@ -11,8 +11,8 @@ CLASS.Wave = 2 / 6
 CLASS.Infliction = 0.5 -- We auto-unlock this class if 50% of humans are dead regardless of what wave it is.
 CLASS.Revives = true
 
-CLASS.Health = 150
-CLASS.Speed = 255
+CLASS.Health = 210
+CLASS.Speed = 288
 CLASS.SWEP = "weapon_zs_fastzombie"
 
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio

@@ -2,11 +2,11 @@ SWEP.PrintName = "Vile Bloated Zombie"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 32
-SWEP.PoisonDmgMul = 0.5
+SWEP.MeleeDamage = 17
+SWEP.PoisonDmgMul = 0.7
 SWEP.MeleeForceScale = 1.25
 
-SWEP.Primary.Delay = 1.4
+SWEP.Primary.Delay = 0.6
 
 SWEP.NextPuke = 0
 SWEP.PukeLeft = 0

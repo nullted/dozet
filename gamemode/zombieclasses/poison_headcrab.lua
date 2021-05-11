@@ -12,9 +12,9 @@ CLASS.Threshold = 0.6
 
 CLASS.SWEP = "weapon_zs_poisonheadcrab"
 
-CLASS.Health = 85
-CLASS.Speed = 145
-CLASS.JumpPower = 100
+CLASS.Health = 160
+CLASS.Speed = 110
+CLASS.JumpPower = 130
 
 CLASS.NoFallDamage = true
 CLASS.NoFallSlowdown = true
