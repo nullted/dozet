@@ -20,7 +20,7 @@ function ENT:Initialize()
 
 	--self:EmitSound("weapons/physcannon/physcannon_charge.wav", 70, 190)
 
-	self:SetMaxObjectHealth(600)
+	self:SetMaxObjectHealth(1200)
 	self:SetObjectHealth(self:GetMaxObjectHealth())
 end
 
