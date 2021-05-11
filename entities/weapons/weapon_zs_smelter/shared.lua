@@ -13,10 +13,10 @@ SWEP.UseHands = false
 SWEP.CSMuzzleFlashes = false
 
 SWEP.Primary.Sound = Sound("Weapon_Crossbow.Single")
-SWEP.Primary.Delay = 1.25
+SWEP.Primary.Delay = 0.94
 SWEP.Primary.Automatic = true
-SWEP.Primary.Damage = 20.5
-SWEP.Primary.NumShots = 7
+SWEP.Primary.Damage = 26
+SWEP.Primary.NumShots = 8
 
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.Ammo = "scrap"
@@ -32,7 +32,7 @@ SWEP.MaxStock = 2
 SWEP.ConeMax = 6.5
 SWEP.ConeMin = 5.75
 
-SWEP.ReloadSpeed = 0.45
+SWEP.ReloadSpeed = 0.34
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.05)
 
