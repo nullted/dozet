@@ -13,7 +13,7 @@ SWEP.ViewModel = "models/weapons/cstrike/c_snip_awp.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 53.5
+SWEP.Primary.Damage = 66
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.45
 

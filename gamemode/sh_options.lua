@@ -323,6 +323,7 @@ GM:AddPointShopItem("inquisitor",		ITEMCAT_GUNS,			45,				"weapon_zs_inquisitor"
 GM:AddPointShopItem("amigo",			ITEMCAT_GUNS,			45,				"weapon_zs_amigo")
 GM:AddPointShopItem("hurricane",		ITEMCAT_GUNS,			45,				"weapon_zs_hurricane")
 GM:AddPointShopItem("nome",		        ITEMCAT_GUNS,			45,				"weapon_zs_nome")
+GM:AddPointShopItem("popl",		        ITEMCAT_GUNS,			45,				"weapon_zs_popluttar")
 -- Tier 3
 GM:AddPointShopItem("deagle",			ITEMCAT_GUNS,			100,				"weapon_zs_deagle")
 GM:AddPointShopItem("tempest",			ITEMCAT_GUNS,			100,				"weapon_zs_tempest")
