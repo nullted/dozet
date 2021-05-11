@@ -200,11 +200,11 @@ trinket, trinketwep = GM:AddTrinket("Bio Cleanser", "biocleanser", false, hpvele
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Cutlery Set", "cutlery", false, hpveles, hpweles, nil, "-80% time to eat food"), SKILLMOD_FOODEATTIME_MUL, -0.8)
-trinket, trinketwep = GM:AddTrinket("Пакет самоубийцы", "killer", false, hpveles, hpweles, 2, "+150 Максималой кровавой брони и отнимает 56 хп вы получаете на 21% больше урона кровавая броня лучше регенириуеться от удара на 25%")
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 150)
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -56)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.21)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.25)
+trinket, trinketwep = GM:AddTrinket("Пакет самоубийцы", "killer", false, hpveles, hpweles, 2, "+133 Максималой кровавой брони и отнимает 45 хп вы получаете на 19% больше урона кровавая броня лучше регенириуеться от удара на 40%")
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 133)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -45)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.19)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.40)
 trinketwep.PermitDismantle = true
 
 -- Melee Trinkets
@@ -214,9 +214,9 @@ trinket = GM:AddTrinket("Boxing Training Manual", "boxingtraining", false, mvele
 GM:AddSkillModifier(trinket, SKILLMOD_UNARMED_SWING_DELAY_MUL, -0.35)
 GM:AddSkillFunction(trinket, function(pl, active) pl.BoxingTraining = active end)
 
-trinket, trinketwep = GM:AddTrinket("Momentum Support", "momentumsupsysii", false, mveles, mweles, 2, "-13% melee swing impact delay\n+10% melee knockback")
+trinket, trinketwep = GM:AddTrinket("Momentum Support", "momentumsupsysii", false, mveles, mweles, 2, "-13% melee swing impact delay\n+30% melee knockback")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.13)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.1)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.3)
 trinketwep.PermitDismantle = true
 
 trinket = GM:AddTrinket("Momentum Scaffold", "momentumsupsysiii", false, mveles, mweles, 3, "-20% melee swing impact delay\n+12% melee knockback")
@@ -231,9 +231,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 30)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
 
-trinket = GM:AddTrinket("Жесткая кожа", "flashlo", false, mveles, mweles, 3, "-13% получения кровавой брони при ударе но вы получаете на 31% меньше урона,-60 скорость если вы выкините или разберете тринкет ")
+trinket = GM:AddTrinket("Жесткая кожа", "flashlo", false, mveles, mweles, 3, "-13% получения кровавой брони при ударе но вы получаете на 26% меньше урона,-60 скорость если вы выкините или разберете тринкет ")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.13)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.31)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.26)
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, -60)
 
 GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+22% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 36% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.22)
@@ -273,15 +273,16 @@ GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.03)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.04)
 
-trinket = GM:AddTrinket("Agility Magnifier", "pathfinder", false, pveles, pweles, 2, "+90% barricade phasing movement speed\n-75% sigil teleportation time\n+30% jump power")
-GM:AddSkillModifier(trinket, SKILLMOD_BARRICADE_PHASE_SPEED_MUL, 0.9)
-GM:AddSkillModifier(trinket, SKILLMOD_SIGIL_TELEPORT_MUL, -0.75)
-GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.3)
+trinket = GM:AddTrinket("Agility Magnifier", "pathfinder", false, pveles, pweles, 2, "+55% barricade phasing movement speed\n-45% sigil teleportation time\n+20% jump power")
+GM:AddSkillModifier(trinket, SKILLMOD_BARRICADE_PHASE_SPEED_MUL, 0.55)
+GM:AddSkillModifier(trinket, SKILLMOD_SIGIL_TELEPORT_MUL, -0.45)
+GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.2)
 
 trinket = GM:AddTrinket("Скидка", "store", false, pveles, pweles, 2, "Скидка на 5% в поинтшопе")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.05)
-trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 9% в поинтшопе ")
+trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 9% в поинтшопе но ваша скорость атаки мили оружием на 9% хуже ")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, 0.09)
 
 trinket = GM:AddTrinket("Galvanizer Implant", "analgestic", false, pveles, pweles, 3, "-50% замедления от неполного хп\n-70% кулдаун падения\n-66% duration of pulling attacks\n+25% weapon switch speed но цены в магазине на 3% дороже")
 GM:AddSkillModifier(trinket, SKILLMOD_SLOW_EFF_TAKEN_MUL, -0.50)
