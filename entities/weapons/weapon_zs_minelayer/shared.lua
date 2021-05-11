@@ -16,7 +16,7 @@ SWEP.ViewModelFOV = 60
 SWEP.Primary.Sound = Sound("weapons/grenade_launcher1.wav")
 SWEP.Primary.Delay = 1
 
-SWEP.Primary.Damage = 124
+SWEP.Primary.Damage = 45
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "impactmine"
@@ -31,7 +31,7 @@ SWEP.WalkSpeed = SPEED_SLOWEST * 0.9
 
 SWEP.UseHands = true
 
-SWEP.MaxMines = 99999
+SWEP.MaxMines = 30
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAXIMUM_MINES, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Sparkler' Laser Miner", "Fires damaging laser trip mines that last several seconds", function(wept)
