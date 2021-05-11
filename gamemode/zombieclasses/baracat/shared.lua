@@ -5,6 +5,8 @@ CLASS.TranslationName = "class_baracat"
 CLASS.Description = "description_baracat"
 CLASS.Help = "controls_asskicker"
 
+
+
 CLASS.Wave = 4 / 6
 
 CLASS.KnockbackScale = 0
