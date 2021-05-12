@@ -3,11 +3,11 @@ CLASS.Disabled = true
 CLASS.Unlocked = true
 
 CLASS.Name = "Shadow Runner"
-CLASS.TranslationName = "class_shadow_corruptor"
+CLASS.TranslationName = "class_shadow_r"
 CLASS.Description = "description_shadow_corruptor"
 CLASS.Help = "controls_shadow_corruptor"
 
-CLASS.Wave = 6 / 6
+CLASS.Wave = 5 / 6
 
 CLASS.Health = 30
 CLASS.Speed = 341
