@@ -176,27 +176,29 @@ GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 20)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.09)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Vitality Bank", "vitpackageii", false, hpveles, hpweles, 4, "+40 maximum health 11% в раз больше кровавая броня ест урон ")
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 40)
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.11)
+trinket = GM:AddTrinket("Vitality Bank", "vitpackageii", false, hpveles, hpweles, 4, "+30 maximum health -6% в раз больше кровавая броня ест урон ")
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 30)
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, -0.6)
 
-trinket = GM:AddTrinket("Жаренный баракот", "classil", false, hpveles, hpweles, 4, "-43 макс хп но кровавая броня в 41% лучше защищает и вы 11% хуже лечитесь ")
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -43)
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.41)
-GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, -0.11)
+trinket = GM:AddTrinket("Жаренный баракот", "classil", false, hpveles, hpweles, 4, "+40 макс хп но кровавая броня в 11% хуже защищает и вы 21% лучше лечитесь ")
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 40)
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.21)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.21)
 
 trinket, trinketwep = GM:AddTrinket("Blood Transfusion Pack", "bloodpack", false, hpveles, hpweles, 2, "Generates 20 blood armor if health falls bellow 50%\nConsumes itself on activation.", nil, 15)
 trinketwep.PermitDismantle = true
 
-trinket, trinketwep = GM:AddTrinket("Blood Package", "cardpackagei", false, hpveles, hpweles, 2, "+5 maximum blood armor")
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 5)
+trinket, trinketwep = GM:AddTrinket("Blood Package", "cardpackagei", false, hpveles, hpweles, 2, "+10 максимум кровавой брони и +7%  кровавой брони от удара")
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 10)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.07)
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Blood Bank", "cardpackageii", false, hpveles, hpweles, 4, "+20 maximum blood armor"), SKILLMOD_BLOODARMOR, 20)
 
 GM:AddTrinket("Regeneration Implant", "regenimplant", false, hpveles, hpweles, 3, "Heals 1 health every 12 seconds provided no damage was taken recently")
 
-trinket, trinketwep = GM:AddTrinket("Bio Cleanser", "biocleanser", false, hpveles, hpweles, 2, "Blocks one harmful status effect every 20 seconds")
+trinket, trinketwep = GM:AddTrinket("Bio Cleanser", "biocleanser", false, hpveles, hpweles, 2, "Blocks one harmful status effect every 20 seconds and +9% power attack for melee")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_POWERATTACK_MUL, 0.09)
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Cutlery Set", "cutlery", false, hpveles, hpweles, nil, "-80% time to eat food"), SKILLMOD_FOODEATTIME_MUL, -0.8)
@@ -226,15 +228,15 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.12)
 GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter I", "hemoadrenali", false, mveles, mweles, nil, "+11% melee damage converted to blood armor and you take 20% damage."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.20)
 
-trinket = GM:AddTrinket("Hemo-Adrenaline Amplifier", "hemoadrenalii", false, mveles, mweles, 3, "+13% melee damage converted to blood armor\n+30 speed on melee kill for 10 seconds,but you take 11% damage from zombie")
+trinket = GM:AddTrinket("Hemo-Adrenaline Amplifier", "hemoadrenalii", false, mveles, mweles, 3, "+13% melee damage converted to blood armor\n+80 speed on melee kill for 10 seconds,but you take 11% damage from zombie")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.13)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 30)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 80)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.11)
 
-trinket = GM:AddTrinket("Жесткая кожа", "flashlo", false, mveles, mweles, 3, "-13% получения кровавой брони при ударе но вы получаете на 26% меньше урона,-60 скорость если вы выкините или разберете тринкет ")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.13)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.26)
-GM:AddSkillModifier(trinket, SKILLMOD_SPEED, -60)
+trinket = GM:AddTrinket("Жесткая кожа", "flashlo", false, mveles, mweles, 3, "-18% получения кровавой брони при ударе но вы получаете на 16% меньше урона,+17 скорость если вы выкините или разберете тринкет ")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.18)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.16)
+GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 17)
 
 GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+22% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 36% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.22)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.36)
@@ -278,8 +280,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_BARRICADE_PHASE_SPEED_MUL, 0.55)
 GM:AddSkillModifier(trinket, SKILLMOD_SIGIL_TELEPORT_MUL, -0.45)
 GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.2)
 
-trinket = GM:AddTrinket("Скидка", "store", false, pveles, pweles, 2, "Скидка на 5% в поинтшопе")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.05)
+trinket = GM:AddTrinket("Скидка", "store", false, pveles, pweles, 2, "Скидка на 7% в поинтшопе")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.07)
 trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 9% в поинтшопе но ваша скорость атаки мили оружием на 9% хуже ")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, 0.09)
