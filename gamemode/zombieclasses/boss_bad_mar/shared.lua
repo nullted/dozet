@@ -17,7 +17,7 @@ CLASS.VoicePitch = 0.65
 
 CLASS.SWEP = "weapon_zs_redbad"
 
-CLASS.Health = 2100
+CLASS.Health = 4550
 CLASS.Speed = 210
 
 CLASS.Skeletal = true
@@ -101,7 +101,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	local dmg = dmginfo:GetDamage()
 	local hp = pl:Health()
 
-	if pl:GetStatus("redmarrow") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
+	if pl:GetStatus("redmad") and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
 		dmginfo:SetDamage(0)
 		dmginfo:ScaleDamage(0)
 		dmg = 0
@@ -116,7 +116,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	if newhp <= dmgthreshold and pl["bloodth"..numthreshold] then
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
-		pl:GiveStatus("redmarrow", 3)
+		pl:GiveStatus("redmarrow", 25)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
