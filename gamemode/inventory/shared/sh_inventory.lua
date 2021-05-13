@@ -86,6 +86,8 @@ GM.Assemblies["weapon_zs_crymam"]								= {"trinket_ammovestiii",	"weapon_zs_cr
 GM.Assemblies["weapon_zs_asmd"]									= {"comp_precision",		"weapon_zs_quasar"}
 GM.Assemblies["weapon_zs_enkindler"]							= {"comp_launcher",			"weapon_zs_cinderrod"}
 GM.Assemblies["weapon_zs_proliferator"]							= {"comp_linearactuator",	"weapon_zs_galestorm"}
+GM.Assemblies["weapon_zs_graveshovel"]						 	= {"comp_linearactuator",	"weapon_zs_shovel"}
+GM.Assemblies["trinket_superstore"]							   = {"trinket_stopit",	     "trinket_store2"}
 GM.Assemblies["trinket_electromagnet"]							= {"comp_electrobattery",	"trinket_magnet"}
 GM.Assemblies["trinket_projguide"]								= {"comp_cpuparts",			"trinket_targetingvisori"}
 GM.Assemblies["trinket_projwei"]								= {"comp_busthead",			"trinket_projguide"}
@@ -202,11 +204,11 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_POWERATTACK_MUL, 0.09)
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Cutlery Set", "cutlery", false, hpveles, hpweles, nil, "-80% time to eat food"), SKILLMOD_FOODEATTIME_MUL, -0.8)
-trinket, trinketwep = GM:AddTrinket("Пакет самоубийцы", "killer", false, hpveles, hpweles, 2, "+133 Максималой кровавой брони и отнимает 45 хп вы получаете на 19% больше урона кровавая броня лучше регенириуеться от удара на 40%")
+trinket, trinketwep = GM:AddTrinket("Пакет самоубийцы", "killer", false, hpveles, hpweles, 2, "+177 Максималой кровавой брони и отнимает 65 хп вы получаете на 29% больше урона кровавая броня лучше регенириуеться от удара на 70%")
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 133)
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -45)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.19)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.40)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -65)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.29)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.70)
 trinketwep.PermitDismantle = true
 
 -- Melee Trinkets
@@ -270,31 +272,33 @@ GM:AddSkillFunction(trinket, function(pl, active)
 end)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Portable Weapons Satchel", "portablehole", false, pveles, pweles, nil, "+15% к забиранию деплояблов перезарядка 3% и скидку в 4%")
+trinket = GM:AddTrinket("Portable Weapons Satchel", "portablehole", false, pveles, pweles, nil, "+15% к забиранию деплояблов перезарядка 3% и скидку в 2%")
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.03)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.04)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.02)
 
 trinket = GM:AddTrinket("Agility Magnifier", "pathfinder", false, pveles, pweles, 2, "+55% barricade phasing movement speed\n-45% sigil teleportation time\n+20% jump power")
 GM:AddSkillModifier(trinket, SKILLMOD_BARRICADE_PHASE_SPEED_MUL, 0.55)
 GM:AddSkillModifier(trinket, SKILLMOD_SIGIL_TELEPORT_MUL, -0.45)
 GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.2)
 
-trinket = GM:AddTrinket("Скидка", "store", false, pveles, pweles, 2, "Скидка на 7% в поинтшопе")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.07)
-trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 9% в поинтшопе но ваша скорость атаки мили оружием на 9% хуже ")
+trinket = GM:AddTrinket("Скидка", "store", false, pveles, pweles, 2, "Скидка на 5% в поинтшопе")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.05)
+trinket = GM:AddTrinket("Супер-Скидка", "superstore", false, pveles, pweles, 2, "Скидка на 23% в поинтшопе")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.23)
+trinket = GM:AddTrinket("Кредитная карта", "store2", false, pveles, pweles, 2, "Скидка на 9% в поинтшопе но ваша скорость атаки мили оружием на 18% хуже ")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, 0.09)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, 0.18)
 
-trinket = GM:AddTrinket("Galvanizer Implant", "analgestic", false, pveles, pweles, 3, "-50% замедления от неполного хп\n-70% кулдаун падения\n-66% duration of pulling attacks\n+25% weapon switch speed но цены в магазине на 3% дороже")
+trinket = GM:AddTrinket("Galvanizer Implant", "analgestic", false, pveles, pweles, 3, "-50% замедления от неполного хп\n-70% кулдаун падения\n-66% duration of pulling attacks\n+25% weapon switch speed но цены в магазине на 11% дороже")
 GM:AddSkillModifier(trinket, SKILLMOD_SLOW_EFF_TAKEN_MUL, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_LOW_HEALTH_SLOW_MUL, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.7)
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.25)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.03)
-trinket = GM:AddTrinket("Инвалидная трость", "kre", false, pveles, pweles, 3, "У вас иммунитет к падению! но все в магазине дороже на 10%")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.11)
+trinket = GM:AddTrinket("Инвалидная трость", "kre", false, pveles, pweles, 3, "У вас иммунитет к падению! но все в магазине дороже на 30%")
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -1)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.10)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.30)
 
 GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+10% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.10)
 GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+16% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.16)
@@ -373,13 +377,13 @@ GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.95)
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_THRESHOLD_MUL, 0.30)
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, -0.75)
 
-trinket = GM:AddTrinket("Рассрочка!!!", "stopit", false, develes, deweles, 3, "Похоже вы купили рассрочку теперь все предметы в магазине стоят на 50% меньше!!Много дебаффов но...")
+trinket = GM:AddTrinket("Рассрочка!!!", "stopit", false, develes, deweles, 3, "Похоже вы купили рассрочку теперь все предметы в магазине стоят на 43% меньше!!Урон от падения увеличен в 40%,урон от кровотечения вы получаете на 30% больше и быстрее в 50%,вы получаете на 56% больше поинтов и -30 поинтов под конец волны")
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, 0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_BLEED_DAMAGE_TAKEN_MUL, 0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_BLEED_SPEED_MUL, 0.5)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.50)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.43)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.56)
-GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, -25)
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, -30)
 trinketwep.PermitDismantle = true
 
 local eicev = {
@@ -545,8 +549,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_AIMSPREAD_MUL, -0.05)
 GM:AddSkillModifier(trinket, SKILLMOD_AIM_SHAKE_MUL, -0.06)
 trinketwep.PermitDismantle = true
 
-trinket, trinketwep = GM:AddTrinket("Vitamin Capsules", "vitamins", false, hpveles, hpweles, nil, "+15 maximum health\n-32% poison damage taken")
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 15)
+trinket, trinketwep = GM:AddTrinket("Vitamin Capsules", "vitamins", false, hpveles, hpweles, nil, "+25 maximum health\n-32% poison damage taken")
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 25)
 GM:AddSkillModifier(trinket, SKILLMOD_POISON_DAMAGE_TAKEN_MUL, -0.32)
 trinketwep.PermitDismantle = true
 
