@@ -238,11 +238,11 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.18)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.16)
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 17)
 
-GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+22% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 36% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.22)
+GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+32% Вырабатываеться кровавой брони от урона удара мили оружие но ты получаешь в 36% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.32)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.36)
-GM:AddSkillModifier(GM:AddTrinket("Антитермиия", "sharpkt", false, mveles, mweles, 4, "+11% к кровавой броне при нанесение урона дает +50 к скорости но вы получаете на 6% больше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.1)
-GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 50)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.06)
+GM:AddSkillModifier(GM:AddTrinket("Антитермиия", "sharpkt", false, mveles, mweles, 4, "+11% к кровавой броне при нанесение урона,при убийстве скорость -999% к скорости на время, вы получаете на 20% меньше урона."), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.11)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.20)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, -280)
 
 GM:AddSkillModifier(GM:AddTrinket("Power Gauntlet", "powergauntlet", false, mveles, mweles, 3, "Charges your melee damage up to +85% with each hit\nMissing resets damage"), SKILLMOD_MELEE_POWERATTACK_MUL, 0.85)
 
