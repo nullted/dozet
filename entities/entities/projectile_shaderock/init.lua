@@ -37,7 +37,7 @@ function ENT:Hit(vHitPos, vHitNormal, ent)
 
 	if ent:IsValid() then
 		if not ent:IsPlayer() or (ent:IsPlayer() and ent:Team() ~= TEAM_UNDEAD) then
-			ent:TakeSpecialDamage(77 * (ent.PhysicsDamageTakenMul or 1), DMG_GENERIC, owner, self)
+			ent:TakeSpecialDamage(34 * (ent.PhysicsDamageTakenMul or 1), DMG_GENERIC, owner, self)
 		end
 	end
 

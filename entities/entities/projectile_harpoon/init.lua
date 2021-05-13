@@ -8,7 +8,7 @@ function ENT:Initialize()
 	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetupGenericProjectile(true)
 
-	self:Fire("kill", "", 30)
+	self:Fire("kill", "", 40)
 	self:EmitSound("weapons/iceaxe/iceaxe_swing1.wav", 75, math.random(35, 45))
 	self.LastPhysicsUpdate = UnPredictedCurTime()
 end

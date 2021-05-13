@@ -1,9 +1,9 @@
 INC_SERVER()
 
-ENT.Ticks = 11
-ENT.Damage = 110
-ENT.LegDamage = 120
-ENT.PointsMultiplier = 10
+ENT.Ticks = 30
+ENT.Damage = 65
+ENT.LegDamage = 71
+ENT.PointsMultiplier = 3
 
 function ENT:AcceptInput(name, activator, caller, arg)
 	if name ~= "corrode" then return end
