@@ -16,7 +16,7 @@ SWEP.Primary.ClipSize = 3
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 3
-SWEP.Primary.Damage = 80
+SWEP.Primary.Damage = 87
 
 SWEP.ConeMin = 0.0001
 SWEP.ConeMax = 0.0001
