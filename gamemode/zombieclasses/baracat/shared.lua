@@ -17,12 +17,12 @@ CLASS.Points = 5
 
 CLASS.SWEP = "weapon_zs_baracat"
 
-CLASS.Health = 110
-CLASS.Speed = 160
+CLASS.Health = 160
+CLASS.Speed = 250
 CLASS.JumpPower = 230
 
 
-CLASS.ModelScale = 0.6
+CLASS.ModelScale = 0.5
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 32)}
 CLASS.HullDuck = {Vector(-16, -16, 0), Vector(16, 16, 32)}
 CLASS.ViewOffset = Vector(0, 0, 32 * CLASS.ModelScale)
