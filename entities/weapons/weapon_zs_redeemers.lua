@@ -22,7 +22,7 @@ SWEP.WorldModel = "models/weapons/w_pist_elite.mdl"
 SWEP.UseHands = true
 
 SWEP.Primary.Sound = Sound("Weapon_ELITE.Single")
-SWEP.Primary.Damage = 22
+SWEP.Primary.Damage = 33
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.15
 
@@ -32,7 +32,7 @@ SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.DefaultClip = 150
 
 SWEP.ConeMax = 2.75
-SWEP.ConeMin = 2.5
+SWEP.ConeMin = 2.1
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
 
