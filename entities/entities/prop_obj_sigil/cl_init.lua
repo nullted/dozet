@@ -67,12 +67,12 @@ function ENT:DrawTranslucent()
 	local r, g, b
 	if corrupt then
 		r = colsat
-		g = 0.75
+		g = 0.9
 		b = colsat
 	else
-		r = 0.15 + colsat
-		g = 0.4 + colsat
-		b = 1
+		r = 0.50 + colsat
+		g = 0.1 + colsat
+		b = 0.3
 	end
 
 	r = r * healthperc
