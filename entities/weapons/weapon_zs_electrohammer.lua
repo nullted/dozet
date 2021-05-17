@@ -21,7 +21,7 @@ end
 
 SWEP.Base = "weapon_zs_hammer"
 
-SWEP.MeleeDamage = 70
+SWEP.MeleeDamage = 41
 SWEP.HealStrength = 2
 
 SWEP.ViewModel = "models/weapons/v_hammer/c_hammer.mdl"
