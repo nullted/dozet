@@ -316,7 +316,7 @@ LANGUAGE.class_lacerator_charging					= "Charger"
 LANGUAGE.class_eradicator							= "Eradicator"
 LANGUAGE.class_howler								= "Howler"
 LANGUAGE.class_extinctioncrab						= "Extinction Crab"
-LANGUAGE.class_tormented_boss						= "Призрак даркнесса"
+LANGUAGE.class_tormented_boss						= "Сгоревший Детдомовец"
 LANGUAGE.class_shadow_r      						= "Shadow nigger"
 -- Class descriptions
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."

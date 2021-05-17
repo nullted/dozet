@@ -7,7 +7,7 @@ CLASS.Help = "controls_tormented_wraith"
 
 CLASS.Health = 2100
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio
-CLASS.Speed = 160
+CLASS.Speed = 110
 
 CLASS.Boss = true
 
