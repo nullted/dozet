@@ -4,23 +4,23 @@ ENT.RenderGroup = RENDERGROUP_TRANSLUCENT
 ENT.m_NoNailUnfreeze = true
 ENT.NoNails = true
 
-ENT.WrenchRepairMultiplier = 0.25
+ENT.WrenchRepairMultiplier = 0.6
 
 ENT.Model = "models/roller.mdl"
-ENT.HitBoxSize = 11.5
+ENT.HitBoxSize = 13
 ENT.Mass = 50
 ENT.WeaponClass = "weapon_zs_rollermine"
 ENT.ControllerClass = "weapon_zs_rollerminecontrol"
 ENT.AmmoType = "rollermine"
 
 ENT.Acceleration = 900
-ENT.MaxSpeed = 450
+ENT.MaxSpeed = 500
 ENT.TurnSpeed = 30
 ENT.IdleDrag = 0.25
 
-ENT.MaxHealth = 225
+ENT.MaxHealth = 344
 ENT.HitCooldown = 1.15
-ENT.HitDamage = 25
+ENT.HitDamage = 41
 ENT.BounceFleshVelocity = 320
 
 ENT.IgnoreBullets = true
