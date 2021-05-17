@@ -13,9 +13,9 @@ ENT.MaxSpeed = 212
 ENT.TurnSpeed = 30
 ENT.IdleDrag = 0.2
 
-ENT.MaxHealth = 800
+ENT.MaxHealth = 345
 ENT.HitCooldown = 0.15
-ENT.HitDamage = 171
+ENT.HitDamage = 111
 ENT.BounceFleshVelocity = 30
 ENT.BounceVelocity = 75
 ENT.SelfDamageSpeed = 0.9
