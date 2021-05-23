@@ -31,6 +31,15 @@ function ENT:Initialize()
 		--ent:SetParent(self) -- Prevents collisions
 		self:DeleteOnRemove(ent)
 	end
+		local ent = ents.Create("func_arsenalzone")
+	if ent:IsValid() then
+		ent:SetPos(self:GetPos())
+		ent:SetAngles(self:GetAngles())
+		ent:Spawn()
+		ent:SetOwner(self)
+		--ent:SetParent(self) -- Prevents collisions
+		self:DeleteOnRemove(ent)
+	end
 end
 
 function ENT:Use(pl)

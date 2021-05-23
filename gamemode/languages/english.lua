@@ -318,6 +318,7 @@ LANGUAGE.class_howler								= "Howler"
 LANGUAGE.class_extinctioncrab						= "Extinction Crab"
 LANGUAGE.class_tormented_boss						= "Сгоревший Детдомовец"
 LANGUAGE.class_shadow_r      						= "Shadow nigger"
+LANGUAGE.class_bartor        						= "Часть баракота"
 -- Class descriptions
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
 LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."
