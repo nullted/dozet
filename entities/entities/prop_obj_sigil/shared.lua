@@ -1,10 +1,10 @@
 ENT.Type = "anim"
 
-ENT.MaxHealth = 230
-ENT.HealthRegen = 120
-ENT.RegenDelay = 2
+ENT.MaxHealth = 1020
+ENT.HealthRegen = 300
+ENT.RegenDelay = 3
 
-ENT.ModelScale = 0.80
+ENT.ModelScale = 0.55
 
 ENT.m_NoNailUnfreeze = true
 ENT.NoNails = true
