@@ -573,6 +573,7 @@ GM:AddPointShopItem("promanifest",		ITEMCAT_TRINKETS,		50,				"trinket_promanife
 GM:AddPointShopItem("opsmatrix",		ITEMCAT_TRINKETS,		50,				"trinket_opsmatrix").SubCategory =								ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("store2",	        ITEMCAT_TRINKETS,		50,				"trinket_store2").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
 GM:AddPointShopItem("kre",	            ITEMCAT_TRINKETS,		70,				"trinket_kre").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
+GM:AddPointShopItem("greedeye",	            ITEMCAT_TRINKETS,		70,				"trinket_greedeye").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
 -- Tier 5
 GM:AddPointShopItem("supasm",			ITEMCAT_TRINKETS,		70,				"trinket_supasm").SubCategory =									ITEMSUBCAT_TRINKETS_OFFENSIVE
 GM:AddPointShopItem("pulseimpedance",	ITEMCAT_TRINKETS,		70,				"trinket_pulseimpedance").SubCategory =							ITEMSUBCAT_TRINKETS_OFFENSIVE
