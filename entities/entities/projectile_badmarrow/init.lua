@@ -38,7 +38,7 @@ function ENT:Explode(hitpos, hitnormal, hitent)
 
 	local effectdata = EffectData()
 		effectdata:SetOrigin(hitpos)
-	util.Effect("explosion_bonemesh", effectdata)
+	util.Effect("explosion_badmarrow", effectdata)
 
 	util.Blood(hitpos, 30, hitnormal, 300, true)
 
