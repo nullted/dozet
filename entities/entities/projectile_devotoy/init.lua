@@ -9,7 +9,7 @@ function ENT:Initialize()
 	self:SetModelScale(2.2, 0)
 	self:SetupGenericProjectile(false)
 
-	self.DieTime = CurTime() + 3
+	self.DieTime = CurTime() + 5
 	self.LastPhysicsUpdate = UnPredictedCurTime()
 end
 
