@@ -186,6 +186,10 @@ trinket = GM:AddTrinket("Истинная Пилюля", "pills", false, hpveles
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 10)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.13)
 
+trinket = GM:AddTrinket("Глаз Жадности", "greedeye", false, hpveles, hpweles, 4, "Вы получаете на 220 поинтов больше под конец волны но стоимость предметов повышена в 30%... ")
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 220)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.30)
+
 trinket = GM:AddTrinket("Жаренный баракот", "classil", false, hpveles, hpweles, 4, "+40 макс хп но кровавая броня в 11% хуже защищает и вы 21% лучше лечитесь ")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 40)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.21)
