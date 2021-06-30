@@ -182,6 +182,10 @@ trinket = GM:AddTrinket("Vitality Bank", "vitpackageii", false, hpveles, hpweles
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 30)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, -0.6)
 
+trinket = GM:AddTrinket("Истинная Пилюля", "pills", false, hpveles, hpweles, 4, "+10 Максимум хп,но может она дает еще что-то? ")
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 10)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.13)
+
 trinket = GM:AddTrinket("Жаренный баракот", "classil", false, hpveles, hpweles, 4, "+40 макс хп но кровавая броня в 11% хуже защищает и вы 21% лучше лечитесь ")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 40)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.21)
