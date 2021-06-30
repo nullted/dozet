@@ -120,7 +120,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
-		util.Effect("explosion_bonemesh", effectdata)
+		util.Effect("explosion_badmarrow", effectdata)
 
 		pl:GodEnable()
 		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 7, DMG_CLUB)
