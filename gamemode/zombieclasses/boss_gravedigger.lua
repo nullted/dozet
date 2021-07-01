@@ -1,13 +1,13 @@
 CLASS.Base = "boss_butcher"
 
-CLASS.Name = "The Grave Digger"
+CLASS.Name = "The Grave Darkness"
 CLASS.TranslationName = "class_gravedigger"
 CLASS.Description = "description_gravedigger"
 CLASS.Help = "controls_gravedigger"
 
 CLASS.Boss = true
 
-CLASS.Health = 1200
+CLASS.Health = 1450
 CLASS.Speed = 220
 
 CLASS.CanTaunt = true
