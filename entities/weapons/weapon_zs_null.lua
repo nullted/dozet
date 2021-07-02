@@ -22,12 +22,12 @@ SWEP.UseHands = true
 SWEP.AutoSwitchFrom	= true
 
 SWEP.MeleeDamage = 51
-SWEP.MeleeRange = 100
+SWEP.MeleeRange = 61
 SWEP.MeleeSize = 0.875
 
 SWEP.WalkSpeed = SPEED_FASTEST
 
-SWEP.Primary.Delay = 0
+SWEP.Primary.Delay = 0.09
 
 SWEP.HitDecal = "Manhackcut"
 
