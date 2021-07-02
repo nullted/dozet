@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Pollutor' Acid Rifle"
+SWEP.PrintName = "'Popllutor' Acid SMG"
 SWEP.Description = "Launches acidic projectiles that have a chance to remove damage resistance"
 
 SWEP.Base = "weapon_zs_baseproj"
@@ -11,13 +11,13 @@ SWEP.UseHands = true
 
 SWEP.CSMuzzleFlashes = false
 
-SWEP.Primary.ClipSize = 40
+SWEP.Primary.ClipSize = 70
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "chemical"
-SWEP.Primary.Delay = 0.33
+SWEP.Primary.Delay = 0.22
 SWEP.Primary.DefaultClip = 80
-SWEP.Primary.Damage = 15
-SWEP.Primary.NumShots = 2
+SWEP.Primary.Damage = 22
+SWEP.Primary.NumShots = 3
 
 SWEP.ConeMax = 3
 SWEP.ConeMin = 2.5

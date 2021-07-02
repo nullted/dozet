@@ -19,15 +19,15 @@ SWEP.WorldModel = "models/weapons/w_medkit.mdl"
 SWEP.ViewModel = "models/weapons/c_medkit.mdl"
 SWEP.UseHands = true
 
-SWEP.Heal = 15
-SWEP.Primary.Delay = 10
+SWEP.Heal = 19
+SWEP.Primary.Delay = 7
 
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.DefaultClip = 150
 SWEP.Primary.Ammo = "Battery"
 
-SWEP.Secondary.DelayMul = 20 / SWEP.Primary.Delay
-SWEP.Secondary.HealMul = 10 / SWEP.Heal
+SWEP.Secondary.DelayMul = 13 / SWEP.Primary.Delay
+SWEP.Secondary.HealMul = 11 / SWEP.Heal
 
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
