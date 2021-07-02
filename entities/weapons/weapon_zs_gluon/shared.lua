@@ -11,11 +11,11 @@ SWEP.ShowViewModel = false
 SWEP.ShowWorldModel = false
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 13.25
-SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.09
+SWEP.Primary.Damage = 46
+SWEP.Primary.NumShots = 2
+SWEP.Primary.Delay = 0.22
 SWEP.Primary.KnockbackScale = 0.1
-SWEP.Primary.MaxDistance = 764
+SWEP.Primary.MaxDistance = 1028
 
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
