@@ -12,15 +12,15 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 13.25
-SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.09
+SWEP.Primary.Damage = 321
+SWEP.Primary.NumShots = 2
+SWEP.Primary.Delay = 0.6
 SWEP.Primary.KnockbackScale = 0.1
-SWEP.Primary.MaxDistance = 764
+SWEP.Primary.MaxDistance = 2048
 
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
-SWEP.Primary.Ammo = "smg"
+SWEP.Primary.Ammo = "357"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.ConeMax = 0
