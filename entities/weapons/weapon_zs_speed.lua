@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Mega Masher"
+SWEP.PrintName = "Boomelee"
 
 if CLIENT then
 	SWEP.ViewModelFOV = 75
