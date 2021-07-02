@@ -249,10 +249,10 @@ function meta:ProcessDamage(dmginfo)
 end
 
 GM.TrinketRecharges = {
-	reactiveflasher = {"ReactiveFlashMessage", "LastReactiveFlash", "Reactive Flasher", 75},
-	bleaksoul = {"BleakSoulMessage", "LastBleakSoul", "Bleak Soul", 35},
+	reactiveflasher = {"ReactiveFlashMessage", "LastReactiveFlash", "Reactive Flasher", 35},
+	bleaksoul = {"BleakSoulMessage", "LastBleakSoul", "Bleak Soul", 15},
 	biocleanser = {"BioCleanserMessage", "LastBioCleanser", "Bio Cleanser", 20},
-	iceburst = {"IceBurstMessage", "LastIceBurst", "Iceburst Shield", 40}
+	iceburst = {"IceBurstMessage", "LastIceBurst", "Iceburst Shield", 20}
 }
 
 function meta:CheckTrinketRecharges()
@@ -1610,7 +1610,9 @@ end
 
 local bossdrops = {
 	"trinket_bleaksoul",
-	"trinket_spiritess"
+	"trinket_spiritess",
+	"trinket_samsonsoul",
+	"trinket_evesoul"
 }
 
 function meta:MakeBossDrop()
