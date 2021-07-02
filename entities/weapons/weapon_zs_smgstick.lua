@@ -1,9 +1,9 @@
 AddCSLuaFile()
 
-SWEP.Base = "weapon_zs_baseshotgun"
+SWEP.Base = "weapon_zs_base"
 
-SWEP.PrintName = "Boom Stick"
-SWEP.Description = "This shotgun allows you to load up to four shells in the chamber at once. Hold down reload for faster loading of each shell."
+SWEP.PrintName = "Smgstick"
+SWEP.Description = "Stop what?."
 
 if CLIENT then
 	SWEP.HUD3DBone = "ValveBiped.Gun"
@@ -19,29 +19,28 @@ SWEP.UseHands = true
 
 SWEP.CSMuzzleFlashes = false
 
-SWEP.ReloadDelay = 0.36
+SWEP.ReloadDelay = 0.2
 
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
-SWEP.Primary.Damage = 31
-SWEP.Primary.NumShots = 9
-SWEP.Primary.Delay = 1
+SWEP.Primary.Damage = 11
+SWEP.Primary.NumShots = 6
+SWEP.Primary.Delay = 0.5
 
 SWEP.Recoil = 7.5
 
-SWEP.Primary.ClipSize = 4
-SWEP.Primary.Automatic = false
-SWEP.Primary.Ammo = "buckshot"
-SWEP.Primary.DefaultClip = 100
+SWEP.Primary.ClipSize = 1
+SWEP.Primary.Automatic = true
+SWEP.Primary.Ammo = "smg1"
+SWEP.Primary.DefaultClip = 200
 
 SWEP.ConeMax = 11.5
 SWEP.ConeMin = 10
 
-SWEP.Tier = 5
-SWEP.MaxStock = 4
+SWEP.Tier = 3
 
 SWEP.WalkSpeed = SPEED_SLOWER
-SWEP.FireAnimSpeed = 0.4
-SWEP.Knockback = 120
+SWEP.FireAnimSpeed = 0.07
+SWEP.Knockback = 271
 
 SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 SWEP.PumpSound = Sound("Weapon_Shotgun.Special1")
@@ -53,9 +52,10 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lithe Stick", "Decreased damage but fast
 	wept.Primary.Damage = wept.Primary.Damage * 0.30
 	wept.ReloadSpeed = wept.ReloadSpeed * 3
 	wept.Primary.Delay = wept.Primary.Delay * 0.5
-	wept.Knockback = 200
+	wept.Knockback = 181
 	wept.WalkSpeed = SPEED_SLOW
 end)
+
 
 function SWEP:PrimaryAttack()
 	if not self:CanPrimaryAttack() then return end

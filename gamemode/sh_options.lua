@@ -338,6 +338,7 @@ GM:AddPointShopItem("oberon",			ITEMCAT_GUNS,			100,				"weapon_zs_oberon")
 GM:AddPointShopItem("hyena",			ITEMCAT_GUNS,			100,				"weapon_zs_hyena")
 GM:AddPointShopItem("pollutor",			ITEMCAT_GUNS,			100,				"weapon_zs_pollutor")
 GM:AddPointShopItem("crman",			ITEMCAT_GUNS,			200,				"weapon_zs_cryman")
+GM:AddPointShopItem("smgstick",			ITEMCAT_GUNS,			100,				"weapon_zs_smgstick")
 -- Tier 4
 GM:AddPointShopItem("longarm",			ITEMCAT_GUNS,			150,			"weapon_zs_longarm")
 GM:AddPointShopItem("sweeper",			ITEMCAT_GUNS,			150,			"weapon_zs_sweepershotgun")
@@ -419,6 +420,7 @@ GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists"
 -- Tier 5
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_frotchet")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
+GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			230,			"weapon_zs_speed")
 
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			25,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
