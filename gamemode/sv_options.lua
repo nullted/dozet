@@ -94,12 +94,12 @@ cvars.AddChangeCallback("zs_nopropdamagefromhumanmelee", function(cvar, oldvalue
 	GAMEMODE.NoPropDamageFromHumanMelee = tonumber(newvalue) == 1
 end)
 
-GM.MedkitPointsPerHealth = 8--[[CreateConVar("zs_medkitpointsperhealth", "8", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of healing for players to be given a point. For use with the medkit and such."):GetInt()
+GM.MedkitPointsPerHealth = 7--[[CreateConVar("zs_medkitpointsperhealth", "8", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of healing for players to be given a point. For use with the medkit and such."):GetInt()
 cvars.AddChangeCallback("zs_medkitpointsperhealth", function(cvar, oldvalue, newvalue)
 	GAMEMODE.MedkitPointsPerHealth = tonumber(newvalue) or 1
 end)]]
 
-GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "25", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
+GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "20", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
 cvars.AddChangeCallback("zs_repairpointsperhealth", function(cvar, oldvalue, newvalue)
 	GAMEMODE.RepairPointsPerHealth = tonumber(newvalue) or 1
 end)

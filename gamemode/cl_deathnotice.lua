@@ -67,6 +67,10 @@ killicon.AddFont("weapon_crowbar", "zsdeathnotice", "6")
 killicon.Add("headshot", "zombiesurvival/killicons/zs_headshot")
 killicon.Add("redeem", "killicon/redeem_v2")
 
+
+
+killicon.Add("weapon_zs_baracat", "zombiesurvival/killicons/fast_legs")
+killicon.Add("weapon_zs_redbad", "zombiesurvival/killicons/skeletal_walker", Color(34, 139, 34))
 killicon.Add("weapon_zs_zombie", "zombiesurvival/killicons/zombie")
 killicon.Add("weapon_zs_zombie_gore_blaster", "zombiesurvival/killicons/zombie", Color(255, 0, 0))
 killicon.Add("weapon_zs_skeleton", "zombiesurvival/killicons/skeletal_walker")
@@ -139,6 +143,8 @@ killicon.Add("weapon_zs_skelesham", "zombiesurvival/killicons/skeletal_walker", 
 killicon.Add("weapon_zs_tormentedwraith", "zombiesurvival/killicons/wraithv2", Color(190, 255, 190))
 killicon.Add("weapon_zs_noxiousghoul", "zombiesurvival/killicons/ghoul", Color(230, 130, 190))
 
+killicon.Add("weapon_zs_classic", "zombiesurvival/killicons/weapon_zs_convalescence")
+killicon.Add("weapon_zs_classix", "zombiesurvival/killicons/weapon_zs_convalescence")
 killicon.Add("prop_gunturret", "zombiesurvival/killicons/weapon_zs_gunturret2")
 killicon.Add("prop_gunturret_assault", "zombiesurvival/killicons/weapon_zs_assaultturret.png")
 killicon.Add("prop_gunturret_buckshot", "zombiesurvival/killicons/weapon_zs_gunturret_buckshot")
@@ -274,7 +280,14 @@ killicon.Add("weapon_zs_renegade", "zombiesurvival/killicons/weapon_zs_renegade.
 killicon.Add("weapon_zs_healingray", "zombiesurvival/killicons/weapon_zs_healingray.png")
 killicon.Add("weapon_zs_proliferator", "zombiesurvival/killicons/weapon_zs_proliferator.png")
 killicon.Add("weapon_zs_pollutor", "zombiesurvival/killicons/weapon_zs_proliferator.png")
+killicon.Add("weapon_zs_popllutor", "zombiesurvival/killicons/weapon_zs_proliferator.png")
+killicon.Add("weapon_zs_plasmatik", "zombiesurvival/killicons/weapon_zs_cosmos2")
+killicon.Add("weapon_zs_crymam", "zombiesurvival/killicons/weapon_zs_hyena", Color(70, 130, 180))
+killicon.Add("weapon_zs_cryman", "zombiesurvival/killicons/weapon_zs_hyena", Color(70, 130, 180))
+killicon.AddFont("weapon_zs_smgstick", "zsdeathnoticecs", "x")
 
+
+killicon.Add("weapon_zs_loy", "zombiesurvival/killicons/weapon_zs_axe")
 killicon.Add("weapon_zs_axe", "zombiesurvival/killicons/weapon_zs_axe")
 killicon.Add("weapon_zs_sawhack", "zombiesurvival/killicons/weapon_zs_sawhack.png")
 killicon.Add("weapon_zs_keyboard", "zombiesurvival/killicons/weapon_zs_keyboard")
@@ -318,6 +331,8 @@ killicon.Add("weapon_zs_graveshovel", "zombiesurvival/killicons/weapon_zs_graves
 killicon.Add("weapon_zs_graveshovelz", "zombiesurvival/killicons/butcher", Color(100, 0, 220)) -- temp killicon
 killicon.Add("weapon_zs_pushbroom", "zombiesurvival/killicons/weapon_zs_broom")
 killicon.Add("weapon_zs_scythe", "zombiesurvival/killicons/weapon_zs_scythe2")
+killicon.Add("weapon_zs_syx", "zombiesurvival/killicons/weapon_zs_scythe2")
+
 
 killicon.Add("weapon_zs_stone", "zombiesurvival/killicons/weapon_zs_stone")
 killicon.Add("projectile_stone", "zombiesurvival/killicons/weapon_zs_stone")
