@@ -143,7 +143,21 @@ function meta:ProcessDamage(dmginfo)
 					attacker:TakeSpecialDamage(damage * self.BarbedArmorPercent, DMG_SLASH, self, self)
 				end
 
-				if self:HasTrinket("reactiveflasher") and (not self.LastReactiveFlash or self.LastReactiveFlash + 35 < CurTime()) then
+				if self:HasTrinket("lazarussoul") and (not self.LastReactiveFlash or self.LastReactiveFlash + 1 < CurTime()) then
+					attacker:ScreenFade(SCREENFADE.IN, nil, 1, 1)
+					attacker:SetDSP(36)
+					attacker:GiveStatus("disorientation", 1)
+
+					self:EmitSound("weapons/flashbang/flashbang_explode2.wav")
+
+					local effectdata = EffectData()
+						effectdata:SetOrigin(self:GetPos())
+					util.Effect("HelicopterMegaBomb", effectdata)
+				end
+
+					self.LastReactiveFlash = CurTime()
+					self.ReactiveFlashMessage = nil
+					if self:HasTrinket("reactiveflasher") and (not self.LastReactiveFlash or self.LastReactiveFlash + 10 < CurTime()) then
 					attacker:ScreenFade(SCREENFADE.IN, nil, 1, 1)
 					attacker:SetDSP(36)
 					attacker:GiveStatus("disorientation", 2)
@@ -156,7 +170,8 @@ function meta:ProcessDamage(dmginfo)
 
 					self.LastReactiveFlash = CurTime()
 					self.ReactiveFlashMessage = nil
-				elseif self:HasTrinket("bleaksoul") and (not self.LastBleakSoul or self.LastBleakSoul + 15 < CurTime()) then
+				elseif
+				self:HasTrinket("bleaksoul") and (not self.LastBleakSoul or self.LastBleakSoul + 15 < CurTime()) then
 					attacker:GiveStatus("dimvision", 7)
 					attacker:SetGroundEntity(nil)
 					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
@@ -178,10 +193,32 @@ function meta:ProcessDamage(dmginfo)
 					self.LastBleakSoul = CurTime()
 					self.BleakSoulMessage = nil
 				end
+								if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 6 < CurTime()) then
+					attacker:GiveStatus("dimvision", 1)
+					attacker:SetGroundEntity(nil)
+					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
+
+					self:EmitSound("ambient/creatures/town_child_scream1.wav", 70, 60)
+					self:EmitSound("npc/stalker/go_alert2a.wav", 70, 45, 0.25)
+
+					self.LastBleakSoul = CurTime()
+					self.BleakSoulMessage = nil
+				end
+				
 				
 
 				if self:HasTrinket("iceburst") and (not self.LastIceBurst or self.LastIceBurst + 40 < CurTime()) then
-					attacker:AddLegDamageExt(17, attacker, attacker, SLOWTYPE_COLD)
+					attacker:AddLegDamageExt(41, attacker, attacker, SLOWTYPE_COLD)
+
+					local effectdata = EffectData()
+						effectdata:SetOrigin(self:GetPos())
+					util.Effect("explosion_cold", effectdata)
+
+					self.LastIceBurst = CurTime()
+					self.IceBurstMessage = nil
+				end
+								if self:HasTrinket("lazarussoul") and (not self.LastIceBurst or self.LastIceBurst + 10 < CurTime()) then
+					attacker:AddLegDamageExt(11, attacker, attacker, SLOWTYPE_COLD)
 
 					local effectdata = EffectData()
 						effectdata:SetOrigin(self:GetPos())
@@ -972,7 +1009,7 @@ function meta:Resupply(owner, obj)
 				owner.ResupplyBoxUsedByOthers = owner.ResupplyBoxUsedByOthers + 1
 			end
 
-			owner:AddPoints(0.15, nil, nil, true)
+			owner:AddPoints(0.25, nil, nil, true)
 
 			net.Start("zs_commission")
 				net.WriteEntity(obj)
@@ -1621,23 +1658,25 @@ function meta:DoSigilTeleport(target, from, corrupted)
 end
 
 local bossdrops = {
-	"trinket_bleaksoul",
-	"trinket_spiritess",
-	"trinket_samsonsoul",
-	"trinket_evesoul",
-    "trinket_jacobjesausoul",
-    "trinket_isaacsoul",
-    "trinket_magdalenesoul",
-    "trinket_lilithsoul",
-    "trinket_whysoul",
-    "trinket_blanksoul",
-    "trinket_classixsoul",
-	"trinket_darksoul",
-	"trinket_eriosoul",
-	"trinket_aposoul",
-	"trinket_betsoul",
-	"trinket_lostsoul",
-	"trinket_greedsoul"
+	"trinket_bleaksoul",  -- 1
+	"trinket_spiritess",  -- 2
+	"trinket_samsonsoul",  -- 3
+	"trinket_evesoul",  -- 4
+    "trinket_jacobjesausoul",  -- 5
+    "trinket_isaacsoul",  -- 6
+    "trinket_magdalenesoul",  -- 7
+    "trinket_lilithsoul",  -- 8
+    "trinket_whysoul",  -- 9
+    "trinket_blanksoul", -- 10
+    "trinket_classixsoul",  -- 11
+	"trinket_darksoul",  --12
+	"trinket_eriosoul",  --13
+	"trinket_aposoul",  --14
+	"trinket_betsoul",  --15
+	"trinket_lostsoul",  --16
+	"trinket_greedsoul",  --17
+	"trinket_cainsoul",   --18
+	"trinket_lazarussoul" -- 19
 }
 
 function meta:MakeBossDrop()

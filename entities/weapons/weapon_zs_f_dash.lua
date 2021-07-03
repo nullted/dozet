@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.Base = "weapon_zs_basefood"
+SWEP.Base = "weapon_zs_base"
 
 SWEP.PrintName = "Dash"
 
@@ -26,6 +26,10 @@ SWEP.Tier = 2
 
 SWEP.FoodHealth = 100
 SWEP.FoodEatTime = 0.1
+
+SWEP.Primary.ClipSize = 1
+SWEP.ReloadSpeed = 1
+SWEP.Primary.Delay = 0.15
 
 SWEP.Knockback = -1027
 
