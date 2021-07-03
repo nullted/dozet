@@ -406,6 +406,7 @@ GM:AddPointShopItem("sledgehammer",		ITEMCAT_MELEE,			35,				"weapon_zs_sledgeha
 GM:AddPointShopItem("harpoon",			ITEMCAT_MELEE,			35,				"weapon_zs_harpoon")
 GM:AddPointShopItem("butcherknf",		ITEMCAT_MELEE,			35,				"weapon_zs_butcherknife")
 GM:AddPointShopItem("keyboard",		    ITEMCAT_MELEE,			1200,				"weapon_zs_keyboard")
+GM:AddPointShopItem("dash",		    ITEMCAT_MELEE,			35,				"weapon_zs_f_dash")
 -- Tier 3
 GM:AddPointShopItem("longsword",		ITEMCAT_MELEE,			60,				"weapon_zs_longsword")
 GM:AddPointShopItem("executioner",		ITEMCAT_MELEE,			60,				"weapon_zs_executioner")

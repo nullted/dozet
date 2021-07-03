@@ -23,7 +23,7 @@ SWEP.EatViewAngles = Angle(80, 0, 15)
 SWEP.EatViewOffset = Vector(-8, -40, 0)
 
 SWEP.AmmoIfHas = true
-SWEP.NoPickupIfHas = true
+SWEP.NoPickupIfHas = false
 SWEP.NoMagazine = true
 
 SWEP.DroppedColorModulation = Color(1, 0, 1)

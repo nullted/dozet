@@ -50,11 +50,6 @@ SWEP.Tier = 5
 
 SWEP.Knockback = 21
 
-SWEP.AllowQualityWeapons = true
-
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_IMPACT_DELAY, -0.15, 1)
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.15, 1)
-
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/iceaxe/iceaxe_swing1.wav", 75, math.random(20, 25))
 end
