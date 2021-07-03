@@ -369,7 +369,6 @@ GM:AddPointShopItem("spinfusor",		ITEMCAT_GUNS,			210,			"weapon_zs_spinfusor")
 GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			210,			"weapon_zs_broadside")
 GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			210,			"weapon_zs_smelter")
 GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			210,			"weapon_zs_plasmatik")
-GM:AddPointShopItem("clasca",			ITEMCAT_GUNS,			210,			"weapon_zs_classixx")
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
 GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			9,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)

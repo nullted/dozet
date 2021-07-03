@@ -92,6 +92,7 @@ GM.Assemblies["trinket_electromagnet"]							= {"comp_electrobattery",	"trinket_
 GM.Assemblies["trinket_projguide"]								= {"comp_cpuparts",			"trinket_targetingvisori"}
 GM.Assemblies["trinket_projwei"]								= {"comp_busthead",			"trinket_projguide"}
 GM.Assemblies["trinket_controlplat"]							= {"comp_cpuparts",			"trinket_mainsuite"}
+GM.Assemblies["weapon_zs_classixx"]							= {"trinket_classixsoul",			"weapon_zs_classic"}
 
 GM:AddInventoryItemData("comp_modbarrel",		"Modular Barrel",			"A modular barrel suited for pairing up with another gun barrel.",								"models/props_c17/trappropeller_lever.mdl")
 GM:AddInventoryItemData("comp_burstmech",		"Burst Fire Mechanism",		"A mechanism that could be used to make a gun burst fire.",										"models/props_c17/trappropeller_lever.mdl")
