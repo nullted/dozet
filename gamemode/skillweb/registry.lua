@@ -248,6 +248,7 @@ SKILL_STOWAGE = 146
 SKILL_TRUEWOOISM = 147
 SKILL_UNBOUND = 148
 SKILL_FOUR_IN_ONE = 149
+SKILL_CHEESE = 150
 
 SKILLMOD_HEALTH = 1
 SKILLMOD_SPEED = 2
@@ -388,6 +389,8 @@ GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+1 maximum health",
 																0,			-2,					{SKILL_VITALITY3}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+1 maximum health",
 																0,			-0,					{SKILL_D_WEAKNESS}, TREE_HEALTHTREE)
+GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+20 maximum health and +20 speed",
+																1,			1,					{SKILL_GOURMET}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_TANKER, "Tanker", GOOD.."+20 maximum health\n"..BAD.."-15 movement speed",
 																-5,			4,					{}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_FORAGER, "Forager", GOOD.."25% chance to collect food from resupply boxes\n"..BAD.."+20% resupply box delay",
@@ -996,6 +999,8 @@ GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_SPEED, -5.25)
 GM:AddSkillModifier(SKILL_VITALITY1, SKILLMOD_HEALTH, 3)
 GM:AddSkillModifier(SKILL_VITALITY2, SKILLMOD_HEALTH, 6)
 GM:AddSkillModifier(SKILL_VITALITY3, SKILLMOD_HEALTH, 9)
+GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_HEALTH, 20)
+GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 20)
 
 GM:AddSkillModifier(SKILL_MOTIONI, SKILLMOD_SPEED, 3)
 GM:AddSkillModifier(SKILL_MOTIONII, SKILLMOD_SPEED, 7)
@@ -1240,7 +1245,7 @@ GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.16)
 GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, -15)
 
 GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.50)
-GM:AddSkillModifier(SKILL_FOUR_IN_ONE, SKILLMOD_HEALTH, -20)
+GM:AddSkillModifier(SKILL_FOUR_IN_ONE, SKILLMOD_HEALTH, 20)
 
 GM:AddSkillModifier(SKILL_CIRCULATION, SKILLMOD_BLOODARMOR, 1)
 

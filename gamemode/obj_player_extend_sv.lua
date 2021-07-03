@@ -62,7 +62,7 @@ function meta:ProcessDamage(dmginfo)
 				end
 
 				if attacker:IsSkillActive(SKILL_BLOODLUST) and attacker:GetPhantomHealth() > 0 and attacker:Health() < attackermaxhp then
-					local toheal = math.min(attacker:GetPhantomHealth(), math.min(self:Health(), damage * 0.25))
+					local toheal = math.min(attacker:GetPhantomHealth(), math.min(self:Health(), damage * 0.35))
 					attacker:SetHealth(math.min(attacker:Health() + toheal, attackermaxhp))
 					attacker:SetPhantomHealth(attacker:GetPhantomHealth() - toheal)
 				end
@@ -143,7 +143,7 @@ function meta:ProcessDamage(dmginfo)
 					attacker:TakeSpecialDamage(damage * self.BarbedArmorPercent, DMG_SLASH, self, self)
 				end
 
-				if self:HasTrinket("reactiveflasher") and (not self.LastReactiveFlash or self.LastReactiveFlash + 75 < CurTime()) then
+				if self:HasTrinket("reactiveflasher") and (not self.LastReactiveFlash or self.LastReactiveFlash + 35 < CurTime()) then
 					attacker:ScreenFade(SCREENFADE.IN, nil, 1, 1)
 					attacker:SetDSP(36)
 					attacker:GiveStatus("disorientation", 2)
@@ -156,8 +156,8 @@ function meta:ProcessDamage(dmginfo)
 
 					self.LastReactiveFlash = CurTime()
 					self.ReactiveFlashMessage = nil
-				elseif self:HasTrinket("bleaksoul") and (not self.LastBleakSoul or self.LastBleakSoul + 35 < CurTime()) then
-					attacker:GiveStatus("dimvision", 3)
+				elseif self:HasTrinket("bleaksoul") and (not self.LastBleakSoul or self.LastBleakSoul + 15 < CurTime()) then
+					attacker:GiveStatus("dimvision", 7)
 					attacker:SetGroundEntity(nil)
 					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
 
@@ -167,6 +167,18 @@ function meta:ProcessDamage(dmginfo)
 					self.LastBleakSoul = CurTime()
 					self.BleakSoulMessage = nil
 				end
+				if self:HasTrinket("eriosoul") and (not self.LastBleakSoul or self.LastBleakSoul + 2 < CurTime()) then
+					attacker:GiveStatus("dimvision", 1)
+					attacker:SetGroundEntity(nil)
+					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
+
+					self:EmitSound("ambient/creatures/town_child_scream1.wav", 70, 60)
+					self:EmitSound("npc/stalker/go_alert2a.wav", 70, 45, 0.25)
+
+					self.LastBleakSoul = CurTime()
+					self.BleakSoulMessage = nil
+				end
+				
 
 				if self:HasTrinket("iceburst") and (not self.LastIceBurst or self.LastIceBurst + 40 < CurTime()) then
 					attacker:AddLegDamageExt(17, attacker, attacker, SLOWTYPE_COLD)
@@ -292,7 +304,7 @@ function meta:GetBossZombieIndex()
 	if GAMEMODE:IsBabyMode() then
 		desired = "Giga Gore Child"
 	elseif desired == "[RANDOM]" or desired == "" then
-		desired = "Nightmare"
+		desired = "Red Marrow"
 	end
 
 	local bossindex
@@ -1621,7 +1633,11 @@ local bossdrops = {
     "trinket_blanksoul",
     "trinket_classixsoul",
 	"trinket_darksoul",
-	"trinket_eriosoul"
+	"trinket_eriosoul",
+	"trinket_aposoul",
+	"trinket_betsoul",
+	"trinket_lostsoul",
+	"trinket_greedsoul"
 }
 
 function meta:MakeBossDrop()
@@ -1739,7 +1755,7 @@ function meta:CryogenicInduction(attacker, inflictor, damage)
 		self:TakeSpecialDamage(self:Health() + 90, DMG_DIRECT, attacker, inflictor, pos)
 
 		if attacker:IsValidLivingHuman() then
-			util.BlastDamagePlayer(inflictor, attacker, pos, 100, self:GetMaxHealthEx() * 0.12, DMG_DROWN, 0.95)
+			util.BlastDamagePlayer(inflictor, attacker, pos, 100, self:GetMaxHealthEx() * 0.20, DMG_DROWN, 0.95)
 			for _, ent in pairs(util.BlastAlloc(inflictor, attacker, pos, 100 * (attacker.ExpDamageRadiusMul or 1))) do
 				if ent:IsValidLivingPlayer() and gamemode.Call("PlayerShouldTakeDamage", ent, attacker) then
 					ent:AddLegDamageExt(6, attacker, inflictor, SLOWTYPE_COLD)
