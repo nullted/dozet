@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = " Xaxel "
+SWEP.PrintName = " X axe  "
 SWEP.Description = "This is really big AXEEEE."
 
 if CLIENT then
@@ -28,14 +28,14 @@ SWEP.HoldType = "melee2"
 SWEP.Tier = 5
 
 
-SWEP.MeleeDamage = 177
-SWEP.MeleeRange = 81
-SWEP.MeleeSize = 1.5
+SWEP.MeleeDamage = 233
+SWEP.MeleeRange = 71
+SWEP.MeleeSize = 4
 SWEP.MeleeKnockBack = 9999
 
 SWEP.WalkSpeed = SPEED_FAST
 
-SWEP.SwingTime = 0.26
+SWEP.SwingTime = 0.22
 SWEP.SwingRotation = Angle(0, -20, -40)
 SWEP.SwingOffset = Vector(10, 0, 0)
 SWEP.SwingHoldType = "melee"
