@@ -2,7 +2,7 @@ SWEP.PrintName = "'Cinderrod' Zip Gun"
 
 SWEP.Base = "weapon_zs_blareduct"
 
-SWEP.Primary.Damage = 54
+SWEP.Primary.Damage = 213
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 1.5
 
