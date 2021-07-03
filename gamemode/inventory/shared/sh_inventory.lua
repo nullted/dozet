@@ -604,7 +604,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_SPEED, -10)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 13)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 30)
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS , -25)
-GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.1)
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_POISON_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_BLEED_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, -0.03)
@@ -612,6 +612,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, -0.02)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.07)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.09)
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.07)
 trinket = GM:AddTrinket("Blank Soul", "blanksoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 255, 211, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(255, 255, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
