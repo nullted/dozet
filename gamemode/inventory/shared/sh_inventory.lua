@@ -693,7 +693,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -30)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 100)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 1.65)
 GM:AddSkillModifier(trinket, SKILLMOD_AIMSPREAD_MUL, 30)
-GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, -100)
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, -3)
 -- Starter Trinkets
 
 trinket, trinketwep = GM:AddTrinket("Armband", "armband", false, mveles, mweles, nil, "-20% melee swing impact delay\n-16% melee damage taken")

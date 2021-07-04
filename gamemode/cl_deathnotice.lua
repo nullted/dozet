@@ -69,7 +69,7 @@ killicon.Add("redeem", "killicon/redeem_v2")
 
 
 
-killicon.Add("weapon_zs_baracat", "zombiesurvival/killicons/fast_legs")
+killicon.Add("weapon_zs_baracat", "zombiesurvival/killicons/fast_legs", Color(34, 0, 34))
 killicon.Add("weapon_zs_redbad", "zombiesurvival/killicons/skeletal_walker", Color(34, 139, 34))
 killicon.Add("weapon_zs_zombie", "zombiesurvival/killicons/zombie")
 killicon.Add("weapon_zs_zombie_gore_blaster", "zombiesurvival/killicons/zombie", Color(255, 0, 0))
@@ -280,8 +280,8 @@ killicon.Add("weapon_zs_renegade", "zombiesurvival/killicons/weapon_zs_renegade.
 killicon.Add("weapon_zs_healingray", "zombiesurvival/killicons/weapon_zs_healingray.png")
 killicon.Add("weapon_zs_proliferator", "zombiesurvival/killicons/weapon_zs_proliferator.png")
 killicon.Add("weapon_zs_pollutor", "zombiesurvival/killicons/weapon_zs_proliferator.png")
-killicon.Add("weapon_zs_popllutor", "zombiesurvival/killicons/weapon_zs_proliferator.png")
-killicon.Add("weapon_zs_plasmatik", "zombiesurvival/killicons/weapon_zs_cosmos2")
+killicon.Add("weapon_zs_poplutar", "zombiesurvival/killicons/weapon_zs_proliferator.png", Color(70, 101, 11))
+killicon.Add("weapon_zs_plasmatik", "zombiesurvival/killicons/weapon_zs_cosmos2", Color(70, 120, 160))
 killicon.Add("weapon_zs_crymam", "zombiesurvival/killicons/weapon_zs_hyena", Color(70, 130, 180))
 killicon.Add("weapon_zs_cryman", "zombiesurvival/killicons/weapon_zs_hyena", Color(70, 130, 180))
 killicon.AddFont("weapon_zs_smgstick", "zsdeathnoticecs", "x")

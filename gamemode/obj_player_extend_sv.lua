@@ -1676,7 +1676,7 @@ local bossdrops = {
 	"trinket_lostsoul",  --16
 	"trinket_greedsoul",  --17
 	"trinket_cainsoul",   --18
-	"trinket_lazarussoul"	-- 19
+	"trinket_lazarussoul",	-- 19
 	"trinket_forsoul"  -- 20
 }
 
