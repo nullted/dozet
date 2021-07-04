@@ -15,7 +15,7 @@ SWEP.Primary.Sound = Sound("ambient/levels/labs/electric_explosion5.wav")
 SWEP.ReloadFinishSound = Sound("npc/vort/attack_shoot.wav")
 SWEP.Primary.Delay = 1
 SWEP.Primary.Automatic = true
-SWEP.Primary.Damage = 123
+SWEP.Primary.Damage = 170
 
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.Ammo = "XBowBolt"
