@@ -686,7 +686,7 @@ GM:AddDeployableInfo("prop_drone_hauler",		"Hauler Drone",			"weapon_zs_drone_ha
 GM:AddDeployableInfo("prop_rollermine",			"Rollermine",			"weapon_zs_rollermine")
 GM:AddDeployableInfo("prop_tv",                   	 "TV",                    	"weapon_zs_tv")
 
-GM.MaxSigils = 2
+GM.MaxSigils = 3
 
 GM.DefaultRedeem = CreateConVar("zs_redeem", "2", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
@@ -710,7 +710,7 @@ cvars.AddChangeCallback("zs_zombiedamagemultiplier", function(cvar, oldvalue, ne
 	GAMEMODE.ZombieDamageMultiplier = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
 end)
 
-GM.TimeLimit = CreateConVar("zs_timelimit", "15", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time in minutes before the game will change maps. It will not change maps if a round is currently in progress but after the current round ends. -1 means never switch maps. 0 means always switch maps."):GetInt() * 60
+GM.TimeLimit = CreateConVar("zs_timelimit", "66", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time in minutes before the game will change maps. It will not change maps if a round is currently in progress but after the current round ends. -1 means never switch maps. 0 means always switch maps."):GetInt() * 60
 cvars.AddChangeCallback("zs_timelimit", function(cvar, oldvalue, newvalue)
 	GAMEMODE.TimeLimit = tonumber(newvalue) or 2500
 	if GAMEMODE.TimeLimit ~= -1 then
@@ -788,7 +788,7 @@ GM.MaxPoisonDamage = 1000
 GM.MaxBleedDamage = 230
 
 -- Give humans this many points when the wave ends.
-GM.EndWavePointsBonus = 25
+GM.EndWavePointsBonus = 50
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 15
+GM.EndWavePointsBonusPerWave = 20
