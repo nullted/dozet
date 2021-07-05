@@ -30,8 +30,8 @@ ENT.Rotation = math.random(360)
 
 local matWhite = Material("models/debug/debugwhite")
 local matGlow = Material("sprites/light_glow02_add")
-local cDraw = Color(255, 255, 255)
-local cDrawWhite = Color(255, 255, 255)
+local cDraw = Color(255, 15, 120)
+local cDrawWhite = Color(0, 255, 255)
 
 local math_sin = math.sin
 local math_cos = math.cos
@@ -67,12 +67,12 @@ function ENT:DrawTranslucent()
 	local r, g, b
 	if corrupt then
 		r = colsat
-		g = 0.9
+		g = 0.3
 		b = colsat
 	else
-		r = 0.50 + colsat
-		g = 0.1 + colsat
-		b = 0.3
+		r = 0.20 + colsat
+		g = 0 + colsat
+		b = 0.2
 	end
 
 	r = r * healthperc

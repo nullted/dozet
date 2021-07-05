@@ -12,7 +12,7 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 321
+SWEP.Primary.Damage = 132
 SWEP.Primary.NumShots = 2
 SWEP.Primary.Delay = 0.6
 SWEP.Primary.KnockbackScale = 0.1
@@ -46,7 +46,7 @@ SWEP.TracerName = "tracer_gluon"
 
 
 function SWEP:Initialize()
-	self.FiringSound = CreateSound(self, "^thrusters/rocket02.wav")
+	self.FiringSound = CreateSound(self, "Weapon_Hunter.Single")
 	self.FiringSound:SetSoundLevel(85)
 	if CLIENT then self.VentingSound = CreateSound(self, "ambient/levels/labs/teleport_alarm_loop1.wav") end
 
@@ -64,7 +64,7 @@ function SWEP:Deploy()
 
 	if self:GetLongHeat() > 0.5 then
 		self:SetGunState(2)
-		self:EmitSound("npc/scanner/scanner_siren1.wav")
+		self:EmitSound("Weapon_AWP.ClipOut")
 	end
 
 	return self.BaseClass.Deploy(self)
@@ -145,7 +145,7 @@ end
 function SWEP:Reload()
 	if self:GetGunState() == 0 and self:GetLongHeat() ~= 0 then
 		self:SetGunState(2)
-		self:EmitSound("npc/scanner/scanner_siren1.wav")
+		self:EmitSound("Weapon_AWP.ClipOut")
 	end
 end
 
@@ -226,7 +226,7 @@ function SWEP:ManageHeat()
 
 			if self:GetLongHeat() == 0 and self:GetShortHeat() < self.HeatBuildShort then
 				self:SetGunState(0)
-				self:EmitSound("npc/scanner/combat_scan3.wav", 65, 90)
+				self:EmitSound("Weapon_AWP.ClipOut", 65, 90)
 			end
 		else
 			owner.GunSway = false
@@ -251,9 +251,9 @@ function SWEP:Think()
 			if self.Overheat then
 				self:GetOwner():TakeSpecialDamage(15, DMG_BURN, self:GetOwner(), self)
 			end
-			self:EmitSound("npc/scanner/scanner_siren1.wav", 75)
+			self:EmitSound("Weapon_AWP.ClipOut", 75)
 		end
-		self:EmitSound("weapons/zs_gluon/egon_off1.wav", 75, 115, 0.9, CHAN_WEAPON + 20)
+		self:EmitSound("Weapon_AWP.ClipOut", 75, 115, 0.9, CHAN_WEAPON + 20)
 	end
 
 	self:ManageHeat()

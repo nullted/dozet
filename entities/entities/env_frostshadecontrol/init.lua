@@ -19,7 +19,7 @@ function ENT:AttachTo(ent)
 	self.ObjectPosition = ent:GetPos() + Vector(0, 0, 37.5)
 end
 
-local ShadowParams = {secondstoarrive = 0.05, maxangular = 15, maxangulardamp = 1, maxspeed = 100, maxspeeddamp = 1000, dampfactor = 0.65, teleportdistance = 0}
+local ShadowParams = {secondstoarrive = 0.05, maxangular = 15, maxangulardamp = 1, maxspeed = 340, maxspeeddamp = 1000, dampfactor = 0.65, teleportdistance = 0}
 function ENT:Think()
 	local owner = self:GetOwner()
 	if owner:IsValid() and owner:IsPlayer() and owner:Alive() and owner:Team() == TEAM_UNDEAD and owner:GetZombieClassTable().Name == "Frost Shade" then
