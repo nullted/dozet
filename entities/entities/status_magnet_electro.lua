@@ -5,5 +5,5 @@ ENT.Radius = 1500
 
 if CLIENT then return end
 
-ENT.Force = 350
-ENT.ForceDelay = 0.2
+ENT.Force = 500
+ENT.ForceDelay = 0.1

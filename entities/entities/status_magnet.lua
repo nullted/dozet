@@ -3,7 +3,7 @@ AddCSLuaFile()
 ENT.Type = "anim"
 ENT.Base = "status__base"
 
-ENT.Radius = 4000
+ENT.Radius = 700
 
 if CLIENT then return end
 
@@ -11,7 +11,7 @@ ENT.Classes = table.ToAssoc(
 	{"prop_ammo", "prop_invitem", "prop_weapon"}
 )
 ENT.Force = 400
-ENT.ForceDelay = 0.25
+ENT.ForceDelay = 0.1
 
 function ENT:Think()
 	local owner = self:GetOwner()

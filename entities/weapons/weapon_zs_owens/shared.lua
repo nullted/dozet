@@ -15,6 +15,13 @@ if CLIENT then
 	SWEP.HUD3DScale = 0.015
 end
 
+
+
+
+
+
+
+
 SWEP.Base = "weapon_zs_base"
 
 SWEP.HoldType = "pistol"

@@ -144,7 +144,7 @@ killicon.Add("weapon_zs_tormentedwraith", "zombiesurvival/killicons/wraithv2", C
 killicon.Add("weapon_zs_noxiousghoul", "zombiesurvival/killicons/ghoul", Color(230, 130, 190))
 
 killicon.Add("weapon_zs_classic", "zombiesurvival/killicons/weapon_zs_convalescence")
-killicon.Add("weapon_zs_classix", "zombiesurvival/killicons/weapon_zs_convalescence")
+killicon.Add("weapon_zs_classixx", "zombiesurvival/killicons/weapon_zs_convalescence", Color(230, 188, 190))
 killicon.Add("prop_gunturret", "zombiesurvival/killicons/weapon_zs_gunturret2")
 killicon.Add("prop_gunturret_assault", "zombiesurvival/killicons/weapon_zs_assaultturret.png")
 killicon.Add("prop_gunturret_buckshot", "zombiesurvival/killicons/weapon_zs_gunturret_buckshot")
