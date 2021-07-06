@@ -80,8 +80,6 @@ SWEP.IronSightsAng = Vector(0, -1, 0)
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
-GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.135)
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.09, 1)
 
 function SWEP:IsScoped()
 	return self:GetIronsights() and self.fIronTime and self.fIronTime + 0.25 <= CurTime()
@@ -134,3 +132,26 @@ function SWEP.BulletCallback(attacker, tr, dmginfo)
 		end
 	end
 end
+
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.4)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloads slowly, but overkill damage is dealt as an explosion", function(wept)
+	wept.Primary.ClipSize = 12
+	wept.RequiredClip = 2
+	wept.ReloadSpeed = 0.8
+
+	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
+		local killer = self:GetOwner()
+		local minushp = -zombie:Health()
+		if killer:IsValid() and minushp > 10 then
+			local pos = zombie:GetPos()
+
+			timer.Simple(0.15, function()
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 0.94)
+			end)
+
+			local effectdata = EffectData()
+				effectdata:SetOrigin(pos)
+			util.Effect("Explosion", effectdata, true, true)
+		end
+	end
+end)
