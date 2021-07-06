@@ -21,8 +21,8 @@ SWEP.UseHands = true
 
 SWEP.AutoSwitchFrom	= true
 
-SWEP.MeleeDamage = 51
-SWEP.MeleeRange = 61
+SWEP.MeleeDamage = 21
+SWEP.MeleeRange = 81
 SWEP.MeleeSize = 0.875
 
 SWEP.WalkSpeed = SPEED_FASTEST

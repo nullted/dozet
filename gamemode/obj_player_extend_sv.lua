@@ -62,7 +62,7 @@ function meta:ProcessDamage(dmginfo)
 				end
 
 				if attacker:IsSkillActive(SKILL_BLOODLUST) and attacker:GetPhantomHealth() > 0 and attacker:Health() < attackermaxhp then
-					local toheal = math.min(attacker:GetPhantomHealth(), math.min(self:Health(), damage * 0.35))
+					local toheal = math.min(attacker:GetPhantomHealth(), math.min(self:Health(), damage * 0.65))
 					attacker:SetHealth(math.min(attacker:Health() + toheal, attackermaxhp))
 					attacker:SetPhantomHealth(attacker:GetPhantomHealth() - toheal)
 				end

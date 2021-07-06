@@ -449,6 +449,9 @@ GM:AddPointShopItem("rocketturret",		ITEMCAT_DEPLOYABLES,			125,			"weapon_zs_gu
 item.Countables = "prop_gunturret_rocket"
 item.NoClassicMode = true
 item.SkillRequirement = SKILL_U_ROCKETTURRET
+GM:AddPointShopItem("sturret",		ITEMCAT_DEPLOYABLES,			125,			"weapon_zs_gunturret_super",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_super") pl:GiveAmmo(1, "turret_sp") end)
+item.Countables = "prop_gunturret_super"
+item.NoClassicMode = true
 GM:AddPointShopItem("manhack",			ITEMCAT_DEPLOYABLES,			30,				"weapon_zs_manhack").Countables = "prop_manhack"
 item =
 GM:AddPointShopItem("drone",			ITEMCAT_DEPLOYABLES,			40,				"weapon_zs_drone")
