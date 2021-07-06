@@ -41,7 +41,7 @@ SWEP.MaxStock = 4
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.FireAnimSpeed = 0.4
-SWEP.Knockback = 120
+SWEP.Knockback = 98
 
 SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 SWEP.PumpSound = Sound("Weapon_Shotgun.Special1")

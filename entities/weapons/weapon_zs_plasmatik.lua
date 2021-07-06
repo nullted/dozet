@@ -28,9 +28,9 @@ SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadSound = Sound("Weapon_SMG1.Reload")
 SWEP.Primary.Sound = Sound("Airboat.FireGunHeavy")
-SWEP.Primary.Damage = 10
-SWEP.Primary.NumShots = 7
-SWEP.Primary.Delay = 0.3
+SWEP.Primary.Damage = 27
+SWEP.Primary.NumShots = 5
+SWEP.Primary.Delay = 0.33
 SWEP.Culinary = true
 
 SWEP.Primary.ClipSize = 28
@@ -56,7 +56,7 @@ SWEP.FireAnimSpeed = 0.4
 SWEP.LegDamage = 5
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.014, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Servitor' Pulse Rifle", "Refreshes zapper cooldown on kill, more leg damage, reduced accuracy and reload speed", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Server' Pulse Rifle", "Refreshes zapper cooldown on kill, more leg damage, reduced accuracy and reload speed", function(wept)
 	wept.ConeMin = 2.25
 	wept.ConeMax = 3.75
 	wept.ReloadSpeed = 0.2
