@@ -73,3 +73,23 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 		util.Effect("explosion", effectdata)
 	end
 end
+
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.15)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Grants defence on kill, does not knockback zombie vision, faster but less damage and knockback", function(wept)
+	wept.Primary.Delay = wept.Primary.Delay * 0.3
+	wept.MeleeDamage = wept.MeleeDamage * 0.6
+	wept.MeleeKnockBack = 412
+
+	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
+		local killer = self:GetOwner()
+
+		if killer:IsValid() then
+			killer:GiveStatus("medrifledefboost", 30)
+		end
+	end
+
+	if SERVER then
+		wept.OnMeleeHit = function() end
+	end
+end)
+

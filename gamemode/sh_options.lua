@@ -68,7 +68,7 @@ swep, callback, and model can all be nil or empty
 ]]
 GM.Items = {}
 function GM:AddItem(signature, category, price, swep, name, desc, model, callback)
-	local tab = {Signature = signature, Name = name or "Death", Description = desc, Category = category, Price = price or 0, SWEP = swep, Callback = callback, Model = model}
+	local tab = {Signature = signature, Name = name or "?", Description = desc, Category = category, Price = price or 0, SWEP = swep, Callback = callback, Model = model}
 
 	tab.Worth = tab.Price -- compat
 
