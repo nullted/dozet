@@ -64,7 +64,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "357"
 SWEP.Primary.DefaultClip = 10
 
-SWEP.HeadshotMulti = 10
+SWEP.HeadshotMulti = 5
 
 SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
@@ -134,10 +134,11 @@ function SWEP.BulletCallback(attacker, tr, dmginfo)
 end
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.4)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloads slowly, but overkill damage is dealt as an explosion", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloads faster, but overkill damage is dealt as an explosion", function(wept)
 	wept.Primary.ClipSize = 12
 	wept.RequiredClip = 2
-	wept.ReloadSpeed = 0.8
+	wept.ReloadSpeed = 1.1
+	wept.HeadshotMulti = 18
 
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()
