@@ -76,7 +76,7 @@ end
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.15)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Grants defence on kill, does not knockback zombie vision, faster but less damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.3
+	wept.Primary.Delay = wept.Primary.Delay * 0.2
 	wept.MeleeDamage = wept.MeleeDamage * 0.6
 	wept.MeleeKnockBack = 412
 
@@ -90,6 +90,22 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Grants defence on kill, does
 
 	if SERVER then
 		wept.OnMeleeHit = function() end
+	end
+	
+	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
+		local killer = self:GetOwner()
+		local minushp = -zombie:Health()
+		if killer:IsValid() and minushp > 0 then
+			local pos = zombie:GetPos()
+
+			timer.Simple(0.15, function()
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 4)
+			end)
+
+			local effectdata = EffectData()
+				effectdata:SetOrigin(pos)
+			util.Effect("Explosion", effectdata, true, true)
+		end
 	end
 end)
 

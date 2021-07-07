@@ -147,7 +147,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloa
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 0.94)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 3)
 			end)
 
 			local effectdata = EffectData()
