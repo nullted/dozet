@@ -91,7 +91,7 @@ DEFAULT_MODELSCALE = 1
 -- Humans can not carry OR drag anything heavier than this (in kg.)
 CARRY_MAXIMUM_MASS = 300
 -- Humans can not carry anything with a volume more than this (OBBMins():Length() + OBBMaxs():Length()).
-CARRY_MAXIMUM_VOLUME = 150
+CARRY_MAXIMUM_VOLUME = 300
 -- Objects with more mass than this will be dragged instead of carried.
 CARRY_DRAG_MASS = 145
 -- Anything bigger than this is dragged regardless of mass.
@@ -128,13 +128,13 @@ GM.TorsoZombiePointRatio = 42
 GM.LegsZombiePointRatio = 37.5
 GM.SkeletonPointRatio = GM.HumanoidZombiePointRatio/3
 
-SPEED_NORMAL = 225
-SPEED_SLOWEST = SPEED_NORMAL - 20
-SPEED_SLOWER = SPEED_NORMAL - 14
-SPEED_SLOW = SPEED_NORMAL - 7
-SPEED_FAST = SPEED_NORMAL + 7
-SPEED_FASTER = SPEED_NORMAL + 14
-SPEED_FASTEST = SPEED_NORMAL + 20
+SPEED_NORMAL = 255
+SPEED_SLOWEST = SPEED_NORMAL - 40
+SPEED_SLOWER = SPEED_NORMAL - 20
+SPEED_SLOW = SPEED_NORMAL - 8
+SPEED_FAST = SPEED_NORMAL + 8
+SPEED_FASTER = SPEED_NORMAL + 20
+SPEED_FASTEST = SPEED_NORMAL + 40
 
 SPEED_ZOMBIEESCAPE_SLOWEST = 220
 SPEED_ZOMBIEESCAPE_SLOWER = 230
@@ -146,13 +146,13 @@ ZE_KNOCKBACKSCALE = 0.1
 
 MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GRATE, CONTENTS_WINDOW, CONTENTS_HITBOX)
 
-GM.BarricadeHealthMin = 50
-GM.BarricadeHealthMax = 1100 * 0.85
+GM.BarricadeHealthMin = 100
+GM.BarricadeHealthMax = 1500 * 0.85
 GM.BarricadeHealthMassFactor = 3 * 0.85
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
-GM.BarricadeRepairCapacity = 1.25
+GM.BarricadeRepairCapacity = 3
 
-GM.BossZombiePlayersRequired = 8
+GM.BossZombiePlayersRequired = 5
 
 GM.HumanGibs = {
 Model("models/gibs/HGIBS.mdl"),
@@ -288,15 +288,15 @@ GM.ResistableStatuses = {
 
 GM.ScrapVals = {
 	--6, 16, 32, 58, 92, 138
-	6, 16, 30, 46, 70, 106
+	6, 13, 20, 43, 80, 133
 }
 
 GM.ScrapValsTrinkets = {
-	5, 10, 16, 23, 32, 56
+	6, 13, 20, 43, 32, 56
 }
 
 GM.DismantleMultipliers = {
-	1, 2, 4, 7
+	3, 6, 8, 13
 }
 
 -- Handled in languages file.

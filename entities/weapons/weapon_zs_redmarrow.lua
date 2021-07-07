@@ -8,6 +8,7 @@ SWEP.Base = "weapon_zs_zombie"
 
 SWEP.MeleeDamage = 30
 SWEP.MeleeDamageShielded = 50
+SWEP.MeleeDelay = 0.74
 
 function SWEP:MeleeHit(ent, trace, damage, forcescale)
 	local owner = self:GetOwner()
@@ -16,7 +17,7 @@ function SWEP:MeleeHit(ent, trace, damage, forcescale)
 	end
 
 	self.BaseClass.MeleeHit(self, ent, trace, damage, forcescale)
-end]]
+end
 
 function SWEP:Reload()
 	self:SecondaryAttack()

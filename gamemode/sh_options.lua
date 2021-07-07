@@ -111,7 +111,7 @@ GM.AmmoCache["grenade"]						= 1			-- Grenades.
 GM.AmmoCache["thumper"]						= 1			-- Gun turret.
 GM.AmmoCache["gravity"]						= 1			-- Unused.
 GM.AmmoCache["battery"]						= 55		-- Used with the Medical Kit.
-GM.AmmoCache["gaussenergy"]					= 2			-- Nails used with the Carpenter's Hammer.
+GM.AmmoCache["gaussenergy"]					= 7			-- Nails used with the Carpenter's Hammer.
 GM.AmmoCache["combinecannon"]				= 1			-- Not used.
 GM.AmmoCache["airboatgun"]					= 1			-- Arsenal crates.
 GM.AmmoCache["striderminigun"]				= 1			-- Message beacons.
@@ -380,10 +380,10 @@ GM:AddPointShopItem("pulseammo",		ITEMCAT_AMMO,			9,				nil,							"30 pulse amm
 GM:AddPointShopItem("impactmine",		ITEMCAT_AMMO,			9,				nil,							"3 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(3, "impactmine", true) end)
 GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			9,				nil,							"20 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(20, "chemical", true) end)
 item =
-GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			25,				nil,							"25 Medical Kit power",			"215 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(100, "Battery", true) end)
+GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"100 Medical Kit power",			"100 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(100, "Battery", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just three nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(3, "GaussEnergy", true) end)
+GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just seven nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(7, "GaussEnergy", true) end)
 
 item.NoClassicMode = true
 item.CanMakeFromScrap = true
@@ -420,7 +420,7 @@ GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists"
 -- Tier 5
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_frotchet")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
-GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			230,			"weapon_zs_speed")
+GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
 
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			25,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
