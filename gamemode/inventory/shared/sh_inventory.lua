@@ -308,9 +308,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_LOW_HEALTH_SLOW_MUL, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.7)
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.25)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.11)
-trinket = GM:AddTrinket("Инвалидная трость", "kre", false, pveles, pweles, 3, "У вас иммунитет к дебаффу падения! но все в магазине дороже на 11%")
+trinket = GM:AddTrinket("Инвалидная трость", "kre", false, pveles, pweles, 3, "У вас иммунитет к дебаффу падения! но все в магазине дороже на 7%")
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -1)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.11)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.07)
 
 GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+10% к скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.10)
 GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+16% к скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.16)
@@ -359,17 +359,17 @@ GM:AddSkillModifier(trinket, SKILLMOD_WEAPON_WEIGHT_SLOW_MUL, -0.35)
 
 
 -- Defensive Trinkets
-trinket, trinketwep = GM:AddTrinket("Kevlar Underlay", "kevlar", false, develes, deweles, 2, "-11% melee damage taken\n-11% projectile damage taken,armor is reduced to -17%")
+trinket, trinketwep = GM:AddTrinket("Kevlar Underlay", "kevlar", false, develes, deweles, 2, "-11% melee damage taken\n-11% projectile damage taken,armor is reduced to +21%")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.11)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.17)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.21)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "100% of melee damage taken reflected back to melee attackers\nAdditional 30 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken and you take +5point to end wave")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT, 30)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT_PERCENT, 1)
+trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "300% of melee damage taken reflected back to melee attackers\nAdditional 60 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken and you take +25point to end wave")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT, 60)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT_PERCENT, 3)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.04)
-GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 5)
+GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 25)
 
 trinket = GM:AddTrinket("Antitoxin Package", "antitoxinpack", false, develes, deweles, 2, "-17% poison damage taken\n-40% poison damage over time speed")
 GM:AddSkillModifier(trinket, SKILLMOD_POISON_DAMAGE_TAKEN_MUL, -0.17)
