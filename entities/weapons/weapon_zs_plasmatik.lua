@@ -30,7 +30,7 @@ SWEP.ReloadSound = Sound("Weapon_SMG1.Reload")
 SWEP.Primary.Sound = Sound("Airboat.FireGunHeavy")
 SWEP.Primary.Damage = 27
 SWEP.Primary.NumShots = 5
-SWEP.Primary.Delay = 0.33
+SWEP.Primary.Delay = 0.21
 SWEP.Culinary = true
 
 SWEP.Primary.ClipSize = 28
