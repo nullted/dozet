@@ -32,8 +32,8 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "buckshot"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
-SWEP.ConeMax = 8.75
-SWEP.ConeMin = 5
+SWEP.ConeMax = 5
+SWEP.ConeMin = 2
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
@@ -45,7 +45,7 @@ SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Blaster' Slug Gun", "Single accurate slug round, less total damage", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 5.5
-	wept.Primary.NumShots = 1
+	wept.Primary.NumShots = 2
 	wept.ConeMin = wept.ConeMin * 0.15
 	wept.ConeMax = wept.ConeMax * 0.3
 end)

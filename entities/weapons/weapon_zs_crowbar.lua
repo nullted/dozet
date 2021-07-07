@@ -8,7 +8,7 @@ SWEP.DamageType = DMG_SLASH
 SWEP.Slot = 1
 SWEP.SlotPos = 2
 
-SWEP.ViewModel = models/weapons/v_crowbar.mdl"
+SWEP.ViewModel = "models/weapons/v_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 
 SWEP.ShootSound = Sound("Metal.SawbladeStick")
