@@ -4,7 +4,7 @@ CLASS.Description = "description_zombie_torso"
 
 CLASS.Model = Model("models/Zombie/Classic_torso.mdl")
 
-CLASS.SWEP = "weapon_zs_zombietorso"
+CLASS.SWEP = "weapon_zs_baratorso"
 
 CLASS.Wave = 1
 CLASS.Threshold = 0
