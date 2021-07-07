@@ -382,11 +382,9 @@ GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			9,				nil,							"20 chemical 
 item =
 GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"100 Medical Kit power",			"100 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(100, "Battery", true) end)
 item.CanMakeFromScrap = true
-item =
-GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just seven nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(7, "GaussEnergy", true) end)
+GM:AddPointShopItem("nailsz",			ITEMCAT_AMMO,			1,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
 
 item.NoClassicMode = true
-item.CanMakeFromScrap = true
 -- Tier 1
 GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			5,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
 GM:AddPointShopItem("knife",			ITEMCAT_MELEE,			15,				"weapon_zs_swissarmyknife")
