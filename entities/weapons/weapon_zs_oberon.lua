@@ -50,9 +50,9 @@ SWEP.UseHands = true
 SWEP.CSMuzzleFlashes = false
 
 SWEP.Primary.Sound = Sound("Weapon_Oberon.Single")
-SWEP.Primary.Damage = 12
+SWEP.Primary.Damage = 21
 SWEP.Primary.NumShots = 5
-SWEP.Primary.Delay = 0.8
+SWEP.Primary.Delay = 0.6
 
 SWEP.FireAnimSpeed = 0.55
 
