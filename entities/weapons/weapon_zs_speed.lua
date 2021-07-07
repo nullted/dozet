@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Boomelee"
+SWEP.PrintName = "Need For VKid"
 
 if CLIENT then
 	SWEP.ViewModelFOV = 75
@@ -23,6 +23,7 @@ if CLIENT then
 end
 
 SWEP.Base = "weapon_zs_basemelee"
+SWEP.MaxStock = 1
 
 SWEP.HoldType = "melee2"
 
@@ -35,7 +36,7 @@ SWEP.UseHands = true
 SWEP.MeleeDamage = 230
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 4
-SWEP.MeleeKnockBack = 420
+SWEP.MeleeKnockBack = 31
 
 SWEP.Primary.Delay = 1.7
 
@@ -48,7 +49,7 @@ SWEP.SwingHoldType = "melee"
 
 SWEP.Tier = 5
 
-SWEP.Knockback = 21
+SWEP.Knockback = 11
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/iceaxe/iceaxe_swing1.wav", 75, math.random(20, 25))
@@ -76,14 +77,11 @@ function SWEP:PrimaryAttack()
 
 	local owner = self:GetOwner()
 
-	local clip = self:Clip1()
 
-
-	self:TakePrimaryAmmo(clip)
-	owner:ViewPunch(clip * 0.5 * Angle(math.Rand(-0.1, -0.1), math.Rand(-0.1, 0.1), 0))
+	owner:ViewPunch( 0.1 * Angle(math.Rand(-0.1, -0.7), math.Rand(-2.1, 0.5), 0))
 
 	owner:SetGroundEntity(NULL)
-	owner:SetVelocity(-self.Knockback * clip * owner:GetAimVector())
+	owner:SetVelocity(-self.Knockback * owner:GetAimVector())
 
-	self.IdleAnimation = CurTime() + self:SequenceDuration()
+
 end

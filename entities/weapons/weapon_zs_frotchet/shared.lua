@@ -9,15 +9,15 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 142
-SWEP.MeleeRange = 75
+SWEP.MeleeDamage = 161
+SWEP.MeleeRange = 91
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 240
 
 SWEP.MeleeDamageSecondaryMul = 1.2273
 SWEP.MeleeKnockBackSecondaryMul = 1.25
 
-SWEP.Primary.Delay = 1.4
+SWEP.Primary.Delay = 1.6
 SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.75
 
 SWEP.WalkSpeed = SPEED_SLOWER
