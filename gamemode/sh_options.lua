@@ -694,7 +694,7 @@ cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
 	GAMEMODE.DefaultRedeem = math.max(0, tonumber(newvalue) or 0)
 end)
 
-GM.WaveOneZombies = 0.11--math.Round(CreateConVar("zs_waveonezombies", "0.1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The percentage of players that will start as zombies when the game begins."):GetFloat(), 2)
+GM.WaveOneZombies = 0.08--math.Round(CreateConVar("zs_waveonezombies", "0.1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The percentage of players that will start as zombies when the game begins."):GetFloat(), 2)
 -- cvars.AddChangeCallback("zs_waveonezombies", function(cvar, oldvalue, newvalue)
 -- 	GAMEMODE.WaveOneZombies = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
 -- end)
@@ -777,7 +777,7 @@ GM.PointSaving = 1
 GM.LockItemTiers = false
 
 -- Don't save more than this amount of points. 0 for infinite.
-GM.PointSavingLimit = 0
+GM.PointSavingLimit = 230
 
 -- For Classic Mode
 GM.WaveIntermissionLengthClassic = 4
