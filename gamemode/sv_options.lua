@@ -10,7 +10,8 @@ GM.StartLoadouts = {
 	{"minelayer", "4mines", "6mines"},
 	{"junkpack", "12nails", "electroh", "loadingframe"},
 	{"z9000", "3pls", "2pls", "stnbtn"},
-	{"sling", "xbow1", "xbow2", "2sgcp", "3sgcp"}
+	{"sling", "xbow1", "xbow2", "2sgcp", "3sgcp"},
+	{"stbbr", "3rcp", "2rcp", "2pcp", "3pcp","classixsoul"}
 }
 
 
@@ -74,12 +75,12 @@ cvars.AddChangeCallback("zs_grief_reflectthreshold", function(cvar, oldvalue, ne
 	GAMEMODE.GriefReflectThreshold = tonumber(newvalue) or -5
 end)
 
-GM.MaxPropsInBarricade = CreateConVar("zs_maxpropsinbarricade", "8", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Limits the amount of props that can be in one 'contraption' of nails."):GetInt()
+GM.MaxPropsInBarricade = CreateConVar("zs_maxpropsinbarricade", "24", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Limits the amount of props that can be in one 'contraption' of nails."):GetInt()
 cvars.AddChangeCallback("zs_maxpropsinbarricade", function(cvar, oldvalue, newvalue)
 	GAMEMODE.MaxPropsInBarricade = tonumber(newvalue) or 8
 end)
 
-GM.MaxDroppedItems = 1200--[[CreateConVar("zs_maxdroppeditems", "48", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Maximum amount of dropped items. Prevents spam or lag when lots of people die."):GetInt()
+GM.MaxDroppedItems = 56--[[CreateConVar("zs_maxdroppeditems", "48", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Maximum amount of dropped items. Prevents spam or lag when lots of people die."):GetInt()
 cvars.AddChangeCallback("zs_maxdroppeditems", function(cvar, oldvalue, newvalue)
 	GAMEMODE.MaxDroppedItems = tonumber(newvalue) or 48
 end)]]
@@ -94,12 +95,12 @@ cvars.AddChangeCallback("zs_nopropdamagefromhumanmelee", function(cvar, oldvalue
 	GAMEMODE.NoPropDamageFromHumanMelee = tonumber(newvalue) == 1
 end)
 
-GM.MedkitPointsPerHealth = 7--[[CreateConVar("zs_medkitpointsperhealth", "8", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of healing for players to be given a point. For use with the medkit and such."):GetInt()
+GM.MedkitPointsPerHealth = 5--[[CreateConVar("zs_medkitpointsperhealth", "8", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of healing for players to be given a point. For use with the medkit and such."):GetInt()
 cvars.AddChangeCallback("zs_medkitpointsperhealth", function(cvar, oldvalue, newvalue)
 	GAMEMODE.MedkitPointsPerHealth = tonumber(newvalue) or 1
 end)]]
 
-GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "20", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
+GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "14", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
 cvars.AddChangeCallback("zs_repairpointsperhealth", function(cvar, oldvalue, newvalue)
 	GAMEMODE.RepairPointsPerHealth = tonumber(newvalue) or 1
 end)
@@ -146,6 +147,7 @@ end
 GM.HonorableMentions[HM_MOSTHEADSHOTS].GetPlayer = function(self)
 	return GetMostKey("Headshots")
 end
+
 
 GM.HonorableMentions[HM_SCARECROW].GetPlayer = function(self)
 	return GetMostKey("CrowKills")

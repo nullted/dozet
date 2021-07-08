@@ -140,14 +140,14 @@ cvars.AddChangeCallback("zs_crosshairthickness", function(cvar, oldvalue, newval
 	GAMEMODE.CrosshairThickness = math.Clamp(tonumber(newvalue) or 1, 0.5, 2)
 end)
 
-GM.PropRotationSensitivity = math.Clamp(CreateClientConVar("zs_proprotationsens", 1, true, false):GetFloat(), 0.1, 4)
+GM.PropRotationSensitivity = math.Clamp(CreateClientConVar("zs_proprotationsens", 1, true, false):GetFloat(), 0.1, 8)
 cvars.AddChangeCallback("zs_proprotationsens", function(cvar, oldvalue, newvalue)
-	GAMEMODE.PropRotationSensitivity = math.Clamp(tonumber(newvalue) or 1, 0.1, 4)
+	GAMEMODE.PropRotationSensitivity = math.Clamp(tonumber(newvalue) or 1, 0.1, 12)
 end)
 
-GM.PropRotationSnap = math.Clamp(CreateClientConVar("zs_proprotationsnap", 0, true, false):GetInt(), 0, 45)
+GM.PropRotationSnap = math.Clamp(CreateClientConVar("zs_proprotationsnap", 0, true, false):GetInt(), 0, 90)
 cvars.AddChangeCallback("zs_proprotationsnap", function(cvar, oldvalue, newvalue)
-	GAMEMODE.PropRotationSnap = math.Clamp(tonumber(newvalue) or 0, 0, 45)
+	GAMEMODE.PropRotationSnap = math.Clamp(tonumber(newvalue) or 0, 0, 90)
 end)
 
 GM.DamageNumberScale = math.Clamp(CreateClientConVar("zs_dmgnumberscale", 1, true, false):GetFloat(), 0.5, 2)
@@ -155,9 +155,9 @@ cvars.AddChangeCallback("zs_dmgnumberscale", function(cvar, oldvalue, newvalue)
 	GAMEMODE.DamageNumberScale = math.Clamp(tonumber(newvalue) or 1, 0.5, 2)
 end)
 
-GM.DamageNumberSpeed = math.Clamp(CreateClientConVar("zs_dmgnumberspeed", 1, true, false):GetFloat(), 0, 1)
+GM.DamageNumberSpeed = math.Clamp(CreateClientConVar("zs_dmgnumberspeed", 1, true, false):GetFloat(), 0, 5)
 cvars.AddChangeCallback("zs_dmgnumberspeed", function(cvar, oldvalue, newvalue)
-	GAMEMODE.DamageNumberSpeed = math.Clamp(tonumber(newvalue) or 1, 0, 1)
+	GAMEMODE.DamageNumberSpeed = math.Clamp(tonumber(newvalue) or 1, 0, 5)
 end)
 
 GM.DamageNumberLifetime = math.Clamp(CreateClientConVar("zs_dmgnumberlife", 1, true, false):GetFloat(), 0.2, 1.5)
@@ -277,6 +277,7 @@ end)
 
 CreateConVar( "cl_playercolor", "0.24 0.34 0.41", { FCVAR_ARCHIVE, FCVAR_USERINFO }, "The value is a Vector - so between 0-1 - not between 0-255" )
 CreateConVar( "cl_weaponcolor", "0.30 1.80 2.10", { FCVAR_ARCHIVE, FCVAR_USERINFO }, "The value is a Vector - so between 0-1 - not between 0-255" )
+CreateConVar( "prop_obj_sigil", "0.30 1.80 2.10", { FCVAR_ARCHIVE, FCVAR_USERINFO }, "The value is a Vector - so between 0-1 - not between 0-255" )
 
 GM.BeatSetHuman = CreateClientConVar("zs_beatset_human", "default", true, false):GetString()
 cvars.AddChangeCallback("zs_beatset_human", function(cvar, oldvalue, newvalue)

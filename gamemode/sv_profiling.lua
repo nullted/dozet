@@ -4,7 +4,7 @@ GM.ProfilerNodes = {}
 GM.ProfilerFolder = "zsprofiler"
 GM.ProfilerFolderPreMade = "profiler_premade"
 GM.ProfilerVersion = 0
-GM.MaxProfilerNodes = 128
+GM.MaxProfilerNodes = 256
 
 hook.Add("Initialize", "ZSProfiler", function()
 	file.CreateDir(GAMEMODE.ProfilerFolder)

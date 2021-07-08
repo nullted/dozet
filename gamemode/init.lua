@@ -1171,7 +1171,7 @@ function GM:Think()
 			elseif self.BossZombies and not self.PantsMode and not self:IsClassicMode() and not self.ZombieEscape
 			and self.LastBossZombieSpawned ~= wave and wave > 0 and not self.RoundEnded
 			and (self.BossZombiePlayersRequired <= 0 or #player.GetAll() >= self.BossZombiePlayersRequired) then
-				if self:GetWaveStart() - 5 <= time then
+				if self:GetWaveStart() - 30 <= time then
 					self:SpawnBossZombie()
 				else
 					self:CalculateNextBoss()
@@ -1198,7 +1198,7 @@ function GM:Think()
 			end
 
 			if P_GetPhantomHealth(pl) > 0 and P_Alive(pl) and pl:IsSkillActive(SKILL_BLOODLUST) then
-				pl:SetPhantomHealth(math_max(0, P_GetPhantomHealth(pl) - 5 * FrameTime()))
+				pl:SetPhantomHealth(math_max(0, P_GetPhantomHealth(pl) - 1 * FrameTime()))
 			end
 		end
 	end

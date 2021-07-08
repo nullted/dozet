@@ -217,8 +217,8 @@ function meta:ProcessDamage(dmginfo)
 					self.LastIceBurst = CurTime()
 					self.IceBurstMessage = nil
 				end
-								if self:HasTrinket("lazarussoul") and (not self.LastIceBurst or self.LastIceBurst + 10 < CurTime()) then
-					attacker:AddLegDamageExt(11, attacker, attacker, SLOWTYPE_COLD)
+								if self:HasTrinket("lazarussoul") and (not self.LastIceBurst or self.LastIceBurst + 2 < CurTime()) then
+					attacker:AddLegDamageExt(41, attacker, attacker, SLOWTYPE_COLD)
 
 					local effectdata = EffectData()
 						effectdata:SetOrigin(self:GetPos())
@@ -1768,7 +1768,7 @@ function meta:PulseResonance(attacker, inflictor)
 		pos.z = pos.z + 16
 
 		if attacker:IsValidLivingHuman() then
-			util.BlastDamagePlayer(inflictor, attacker, pos, 100, 75, DMG_ALWAYSGIB, 0.95)
+			util.BlastDamagePlayer(inflictor, attacker, pos, 100, 75, DMG_ALWAYSGIB, 3)
 			for _, ent in pairs(util.BlastAlloc(inflictor, attacker, pos, 100 * (attacker.ExpDamageRadiusMul or 1))) do
 				if ent:IsValidLivingPlayer() and gamemode.Call("PlayerShouldTakeDamage", ent, attacker) then
 					ent:AddLegDamageExt(5, attacker, inflictor, SLOWTYPE_PULSE)
@@ -1792,10 +1792,10 @@ function meta:CryogenicInduction(attacker, inflictor, damage)
 		local pos = self:WorldSpaceCenter()
 		pos.z = pos.z + 16
 
-		self:TakeSpecialDamage(self:Health() + 90, DMG_DIRECT, attacker, inflictor, pos)
+		self:TakeSpecialDamage(self:Health() + 210, DMG_DIRECT, attacker, inflictor, pos)
 
 		if attacker:IsValidLivingHuman() then
-			util.BlastDamagePlayer(inflictor, attacker, pos, 100, self:GetMaxHealthEx() * 0.20, DMG_DROWN, 0.95)
+			util.BlastDamagePlayer(inflictor, attacker, pos, 100, self:GetMaxHealthEx() * 0.80, DMG_DROWN, 0.95)
 			for _, ent in pairs(util.BlastAlloc(inflictor, attacker, pos, 100 * (attacker.ExpDamageRadiusMul or 1))) do
 				if ent:IsValidLivingPlayer() and gamemode.Call("PlayerShouldTakeDamage", ent, attacker) then
 					ent:AddLegDamageExt(6, attacker, inflictor, SLOWTYPE_COLD)

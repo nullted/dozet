@@ -252,12 +252,14 @@ function MakepOptions()
 	dropdown:AddChoice("15 degrees")
 	dropdown:AddChoice("30 degrees")
 	dropdown:AddChoice("45 degrees")
+	dropdown:AddChoice("90 degrees")
 	dropdown.OnSelect = function(me, index, value, data)
-		RunConsoleCommand("zs_proprotationsnap", value == "15 degrees" and 15 or value == "30 degrees" and 30 or value == "45 degrees" and 45 or 0)
+		RunConsoleCommand("zs_proprotationsnap", value == "15 degrees" and 15 or value == "30 degrees" and 30 or value == "45 degrees" and 45 or value == "90" and 90 or value)
 	end
 	dropdown:SetText(GAMEMODE.PropRotationSnap == 15 and "15 degrees"
 		or GAMEMODE.PropRotationSnap == 30 and "30 degrees"
 		or GAMEMODE.PropRotationSnap == 45 and "45 degrees"
+		or GAMEMODE.PropRotationSnap == 90 and "90 degrees"
 		or "No snap")
 	dropdown:SetTextColor(color_black)
 	list:AddItem(dropdown)
