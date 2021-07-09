@@ -40,7 +40,7 @@ SWEP.UseHands = true
 SWEP.Primary.Sound = Sound("weapons/ar2/npc_ar2_altfire.wav")
 SWEP.Primary.Damage = 81
 SWEP.Primary.NumShots = 2
-SWEP.Primary.Delay = 2
+SWEP.Primary.Delay = 1
 SWEP.Primary.BurstShots = 5
 
 SWEP.Primary.ClipSize = 21
@@ -54,7 +54,7 @@ SWEP.ConeMin = 1.8
 SWEP.Tier = 3
 SWEP.FireAnimSpeed = 1.5
 
-SWEP.ReloadSpeed = 0.2
+SWEP.ReloadSpeed = 0.4
 
 SWEP.IronSightsPos = Vector(-5.95, 0, 2.5)
 

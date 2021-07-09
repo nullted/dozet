@@ -1,5 +1,5 @@
 SWEP.PrintName = "'Nomer' Pulse Revolver"
-SWEP.Description = "Combines the ricochet properties of the magnum into a bouncing pulse projectile, that slows zombies."
+SWEP.Description = "STONE."
 
 SWEP.Base = "weapon_zs_baseproj"
 
@@ -18,12 +18,12 @@ SWEP.Primary.Delay = 0.9
 SWEP.Primary.Damage = 40
 SWEP.Primary.NumShots = 1
 
-SWEP.Primary.ClipSize = 27
+SWEP.Primary.ClipSize = 35
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "pulse"
-SWEP.Primary.DefaultClip = 27
+SWEP.Primary.DefaultClip = 35
 
-SWEP.RequiredClip = 3
+SWEP.RequiredClip = 35
 
 SWEP.ConeMax = 3.5
 SWEP.ConeMin = 1.75
@@ -42,7 +42,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Novx' Pulse Revolver", "Fires two proje
 	wept.Primary.Damage = wept.Primary.Damage * 1.5
 	wept.Primary.ProjVelocity = 450
 	wept.Primary.NumShots = 2
-	wept.Primary.ClipSize = 18
+	wept.Primary.ClipSize = 70
 	wept.SameSpread = true
 	if SERVER then
 		wept.EntModify = function(self, ent)

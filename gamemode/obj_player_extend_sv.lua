@@ -1677,7 +1677,8 @@ local bossdrops = {
 	"trinket_greedsoul",  --17
 	"trinket_cainsoul",   --18
 	"trinket_lazarussoul",	-- 19
-	"trinket_forsoul"  -- 20
+	"trinket_forsoul",  -- 20
+	"trinket_starsoul"  -- 21
 }
 
 function meta:MakeBossDrop()

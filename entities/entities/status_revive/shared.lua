@@ -2,7 +2,7 @@ ENT.Type = "anim"
 ENT.Base = "status__base"
 
 function ENT:IsRising()
-	return self:GetReviveTime() - 2.5 <= CurTime()
+	return self:GetReviveTime() - 7 <= CurTime()
 end
 
 function ENT:SetReviveTime(tim)

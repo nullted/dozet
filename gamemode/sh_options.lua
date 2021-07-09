@@ -354,6 +354,7 @@ GM:AddPointShopItem("quasar",			ITEMCAT_GUNS,			180,			"weapon_zs_quasar")
 GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			180,			"weapon_zs_gluon")
 GM:AddPointShopItem("barrage",			ITEMCAT_GUNS,			180,			"weapon_zs_barrage")
 GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			180,			"weapon_zs_classic")
+GM:AddPointShopItem("toxico",			ITEMCAT_GUNS,			180,			"weapon_zs_toxicshooter")
 -- Tier 5
 GM:AddPointShopItem("novacolt",			ITEMCAT_GUNS,			260,			"weapon_zs_novacolt")
 GM:AddPointShopItem("bulwark",			ITEMCAT_GUNS,		    260,			"weapon_zs_bulwark")
@@ -537,7 +538,7 @@ GM:AddPointShopItem("blueprintsi",		ITEMCAT_TRINKETS,		15,				"trinket_blueprint
 GM:AddPointShopItem("processor",		ITEMCAT_TRINKETS,		15,				"trinket_processor").SubCategory =								ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("acqmanifest",		ITEMCAT_TRINKETS,		15,				"trinket_acqmanifest").SubCategory =							ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("mainsuite",		ITEMCAT_TRINKETS,		15,				"trinket_mainsuite").SubCategory =								ITEMSUBCAT_TRINKETS_SUPPORT
-GM:AddPointShopItem("hateome",		ITEMCAT_TRINKETS,		10,				"trinket_hateome").SubCategory =					    			ITEMSUBCAT_TRINKETS_SUPPORT
+GM:AddPointShopItem("hateome",		ITEMCAT_TRINKETS,		100,				"trinket_hateome").SubCategory =					    		ITEMSUBCAT_TRINKETS_SUPPORT
 -- Tier 3
 --GM:AddPointShopItem("climbinggear",  	ITEMCAT_TRINKETS,		30,				"trinket_climbinggear").SubCategory =							ITEMSUBCAT_TRINKETS_PERFORMANCE
 GM:AddPointShopItem("reachem",			ITEMCAT_TRINKETS,		30,				"trinket_reachem").SubCategory =								ITEMSUBCAT_TRINKETS_OFFENSIVE
@@ -687,7 +688,7 @@ GM:AddDeployableInfo("prop_drone_hauler",		"Hauler Drone",			"weapon_zs_drone_ha
 GM:AddDeployableInfo("prop_rollermine",			"Rollermine",			"weapon_zs_rollermine")
 GM:AddDeployableInfo("prop_tv",                   	 "TV",                    	"weapon_zs_tv")
 
-GM.MaxSigils = 3
+GM.MaxSigils = 4
 
 GM.DefaultRedeem = CreateConVar("zs_redeem", "2", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
@@ -730,7 +731,7 @@ end)
 GM.WaveOneLength = 170
 
 -- Add this many seconds for each additional wave.
-GM.TimeAddedPerWave = 30
+GM.TimeAddedPerWave = 60
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
 GM.NoNewHumansWave = 3
@@ -739,19 +740,19 @@ GM.NoNewHumansWave = 3
 GM.NoSuicideWave = 0
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
-GM.WaveZeroLength = 210
+GM.WaveZeroLength = 450
 
 -- Time humans have between waves to do stuff without NEW zombies spawning. Any dead zombies will be in spectator (crow) view and any living ones will still be living.
 GM.WaveIntermissionLength = 70
 
 -- Time in seconds between end round and next map.
-GM.EndGameTime = 120
+GM.EndGameTime = 30
 
 -- How many clips of ammo guns from the Worth menu start with. Some guns such as shotguns and sniper rifles have multipliers on this.
 GM.SurvivalClips = 4 --2
 
 -- How long do humans have to wait before being able to get more ammo from a resupply box?
-GM.ResupplyBoxCooldown = 30
+GM.ResupplyBoxCooldown = 45
 
 -- Put your unoriginal, 5MB Rob Zombie and Metallica music here.
 GM.LastHumanSound = Sound("zombiesurvival/lasthuman.ogg")
@@ -789,7 +790,7 @@ GM.MaxPoisonDamage = 1000
 GM.MaxBleedDamage = 230
 
 -- Give humans this many points when the wave ends.
-GM.EndWavePointsBonus = 50
+GM.EndWavePointsBonus = 5
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 20
+GM.EndWavePointsBonusPerWave = 5

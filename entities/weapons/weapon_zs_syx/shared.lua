@@ -11,7 +11,7 @@ SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 26
+SWEP.MeleeDamage = 33
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 3.5
 SWEP.MeleeKnockBack = 6000
@@ -147,7 +147,7 @@ function SWEP:MeleeHitEntity(tr, hitent, damagemultiplier, damage)
 	local owner = self:GetOwner()
 
 	if SERVER and hitent:IsPlayer() and owner:IsSkillActive(SKILL_GLASSWEAPONS) then
-		damagemultiplier = damagemultiplier * 3.5
+		damagemultiplier = damagemultiplier * 7
 		owner.GlassWeaponShouldBreak = not owner.GlassWeaponShouldBreak
 	end
 

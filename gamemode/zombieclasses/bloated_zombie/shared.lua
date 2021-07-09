@@ -7,9 +7,9 @@ CLASS.BetterVersion = "Vile Bloated Zombie"
 
 CLASS.Wave = 2 / 6
 
-CLASS.Health = 325
+CLASS.Health = 455
 CLASS.Speed = 125
---CLASS.JumpPower = DEFAULT_JUMP_POWER * 0.811
+CLASS.JumpPower = DEFAULT_JUMP_POWER * 1.322
 CLASS.Mass = DEFAULT_MASS * 2
 
 CLASS.CanTaunt = true

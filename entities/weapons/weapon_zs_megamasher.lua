@@ -32,7 +32,7 @@ SWEP.ViewModel = "models/weapons/v_sledgehammer/c_sledgehammer.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 230
+SWEP.MeleeDamage = 211
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 4
 SWEP.MeleeKnockBack = 420
@@ -74,17 +74,17 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	end
 end
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.15)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Grants defence on kill, does not knockback zombie vision, faster but less damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.2
-	wept.MeleeDamage = wept.MeleeDamage * 0.6
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MELEE_IMPACT_DELAY, -0.33)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, faster but big damage and knockback", function(wept)
+	wept.Primary.Delay = wept.Primary.Delay * 0.3
+	wept.MeleeDamage = wept.MeleeDamage * 0.4
 	wept.MeleeKnockBack = 412
 
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
-		local killer = self:GetOwner()
+		local killer1 = self:GetOwner()
 
-		if killer:IsValid() then
-			killer:GiveStatus("medrifledefboost", 30)
+		if killer1:IsValid() then
+			killer1:GiveStatus("poison", 3)
 		end
 	end
 
@@ -99,7 +99,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Grants defence on kill, does
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 4)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 3)
 			end)
 
 			local effectdata = EffectData()
