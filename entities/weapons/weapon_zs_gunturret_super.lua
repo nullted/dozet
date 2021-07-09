@@ -13,7 +13,7 @@ SWEP.TurretAmmoType = "impactmine"
 SWEP.TurretAmmoStartAmount = 12
 SWEP.TurretSpread = 1
 
-SWEP.Primary.Ammo = "turret_rocket"
+SWEP.Primary.Ammo = "turret_super"
 
 SWEP.Tier = 4
 

@@ -12,7 +12,7 @@ GM.StartLoadouts = {
 	{"z9000", "3pls", "2pls", "stnbtn"},
 	{"sling", "xbow1", "xbow2", "2sgcp", "3sgcp"},
 	{"stbbr", "3rcp", "2rcp", "2pcp", "3pcp", "classixsoul"},
-	{"stnbtn", "3pls", "eriosoul", "blanksoul"},
+	{"stnbtn", "3pls", "eriosoul", "blanksoul"}
 }
 
 
