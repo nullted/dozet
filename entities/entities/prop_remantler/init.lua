@@ -16,9 +16,10 @@ function ENT:Initialize()
 
 	self:SetModel("models/props_lab/powerbox01a.mdl")
 	self:SetUseType(SIMPLE_USE)
-
-	self:CollisionRulesChanged()
-
+	self:SetCollisionGroup(COLLISION_GROUP_WORLD)
+	
+    self:PhysicsInit(SOLID_VPHYSICS)
+self:CollisionRulesChanged()
 	local phys = self:GetPhysicsObject()
 	if phys:IsValid() then
 		phys:EnableMotion(false)

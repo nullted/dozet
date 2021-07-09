@@ -1,3 +1,4 @@
+
 AddCSLuaFile()
 
 SWEP.PrintName = "Mega Masher"
@@ -74,23 +75,11 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	end
 end
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MELEE_IMPACT_DELAY, -0.33)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, faster but big damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.3
-	wept.MeleeDamage = wept.MeleeDamage * 0.4
-	wept.MeleeKnockBack = 412
-
-	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
-		local killer1 = self:GetOwner()
-
-		if killer1:IsValid() then
-			killer1:GiveStatus("poison", 3)
-		end
-	end
-
-	if SERVER then
-		wept.OnMeleeHit = function() end
-	end
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
+	wept.Primary.Delay = wept.Primary.Delay * 0.2
+	wept.MeleeDamage = wept.MeleeDamage * 0.5
+	wept.MeleeKnockBack = 612
+   wept.SwingTime = 0.5
 	
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()
@@ -108,4 +97,3 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, 
 		end
 	end
 end)
-

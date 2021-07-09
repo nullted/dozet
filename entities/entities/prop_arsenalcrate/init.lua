@@ -12,8 +12,11 @@ hook.Add("OnPlayerChangedTeam", "ArsenalCrate.OnPlayerChangedTeam", RefreshCrate
 
 function ENT:Initialize()
 	self:SetModel("models/Items/item_item_crate.mdl")
-	self:SetUseType(SIMPLE_USE)
 
+	self:SetUseType(SIMPLE_USE)
+	self:SetCollisionGroup(COLLISION_GROUP_WORLD)
+	
+    self:PhysicsInit(SOLID_VPHYSICS)
 	self:CollisionRulesChanged()
 
 	local phys = self:GetPhysicsObject()

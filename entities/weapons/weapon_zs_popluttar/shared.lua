@@ -17,7 +17,7 @@ SWEP.Primary.Ammo = "chemical"
 SWEP.Primary.Delay = 0.22
 SWEP.Primary.DefaultClip = 80
 SWEP.Primary.Damage = 22
-SWEP.Primary.NumShots = 3
+SWEP.Primary.NumShots = 5
 
 SWEP.ConeMax = 3
 SWEP.ConeMin = 2.5
@@ -31,7 +31,7 @@ SWEP.FireAnimSpeed = 0.4
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.15)
 
 local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Poplaer' Napalm Rifle", "Chance to ignite instead of corrode", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 2
+	wept.Primary.Damage = wept.Primary.Damage * 1.3
 
 	if SERVER then
 		wept.EntModify = function(self, ent)
@@ -45,11 +45,11 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Poplaer' Napalm Rifle", 
 	end
 end)
 branch.Colors = {Color(255, 160, 50), Color(215, 120, 50), Color(175, 100, 40)}
-branch.NewNames = {"Hot", "Searing", "Torching"}
+branch.NewNames = {"Hot", "Searing", "Lavpool"}
 
 branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Popupar' Cryo Rifle", "Launches cryoblobs that slow zombies down at the cost of numshot", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 2
-	wept.Primary.NumShots = 3
+	wept.Primary.Damage = wept.Primary.Damage * 1.4
+	wept.Primary.NumShots = 1
 
 	if SERVER then
 		wept.EntModify = function(self, ent)

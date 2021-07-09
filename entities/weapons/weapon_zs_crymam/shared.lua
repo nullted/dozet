@@ -25,17 +25,18 @@ SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 3
 
-SWEP.MaxBombs = 1
+SWEP.MaxBombs = 7
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Better crygas", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 1.2
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Better damage but less max bombs", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 5
 	if SERVER then
 		wept.EntModify = function(self, ent)
 			self:SetNextSecondaryFire(CurTime() + 0.2)
 			ent:SetDTBool(0, true)
 		end
 	end
+	wept.MaxBombs = 1
 	if CLIENT then
 		wept.VElements.clipbase.color = Color(30, 95, 150)
 	end

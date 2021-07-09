@@ -12,8 +12,12 @@ hook.Add("OnPlayerChangedTeam", "ResupplyBox.OnPlayerChangedTeam", RefreshCrateO
 
 function ENT:Initialize()
 	self:SetModel("models/Items/ammocrate_ar2.mdl")
+
 	self:SetUseType(SIMPLE_USE)
 	self:SetPlaybackRate(1)
+		self:SetCollisionGroup(COLLISION_GROUP_WORLD)
+	
+    self:PhysicsInit(SOLID_VPHYSICS)
 
 	self:CollisionRulesChanged()
 
