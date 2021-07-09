@@ -19,12 +19,12 @@ SWEP.UseHands = true
 
 SWEP.CSMuzzleFlashes = false
 
-SWEP.ReloadDelay = 0.2
+SWEP.ReloadDelay = 1.3
 
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
 SWEP.Primary.Damage = 11
-SWEP.Primary.NumShots = 6
-SWEP.Primary.Delay = 0.5
+SWEP.Primary.NumShots = 3
+SWEP.Primary.Delay = 0.8
 
 SWEP.Recoil = 7.5
 
