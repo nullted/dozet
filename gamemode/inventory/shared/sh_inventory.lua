@@ -199,7 +199,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, -1)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.55)
 
-trinket, trinketwep = GM:AddTrinket("Blood Transfusion Pack", "bloodpack", false, hpveles, hpweles, 2, "Generates 20 blood armor if health falls bellow 50%\nConsumes itself on activation.", nil, 15)
+trinket, trinketwep = GM:AddTrinket("Blood Transfusion Pack", "bloodpack", false, hpveles, hpweles, 2, "Generates 60 blood armor if health falls bellow 70%\nConsumes itself on activation.", nil, 15)
 trinketwep.PermitDismantle = true
 
 trinket, trinketwep = GM:AddTrinket("Blood Package", "cardpackagei", false, hpveles, hpweles, 2, "+20 максимум кровавой брони и +7%  кровавой брони от удара")
@@ -211,7 +211,7 @@ trinket = GM:AddTrinket("Blood Bank", "cardpackageii", false, hpveles, hpweles, 
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 20)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.12)
 
-GM:AddTrinket("Regeneration Implant", "regenimplant", false, hpveles, hpweles, 3, "Heals 1 health every 12 seconds provided no damage was taken recently")
+GM:AddTrinket("Regeneration Implant", "regenimplant", false, hpveles, hpweles, 3, "Heals 7 health every 7 seconds provided no damage was taken recently")
 
 trinket, trinketwep = GM:AddTrinket("Bio Cleanser", "biocleanser", false, hpveles, hpweles, 2, "Блокирует каждые 20 секунд негативный эффект")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_POWERATTACK_MUL, 0.25)
@@ -288,10 +288,10 @@ GM:AddSkillFunction(trinket, function(pl, active)
 end)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Portable Weapons Satchel", "portablehole", false, pveles, pweles, nil, "+15% к забиранию деплояблов, перезарядка 3% и скидку в 2%")
+trinket = GM:AddTrinket("Portable Weapons Satchel", "portablehole", false, pveles, pweles, nil, "+15% к забиранию деплояблов, перезарядка 3% и скидку в 6%")
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.03)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.02)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.06)
 
 trinket = GM:AddTrinket("Agility Magnifier", "pathfinder", false, pveles, pweles, 2, "+55% скорости в фазе перехода между баррикадами\n-45% к скорости телепортирования сигила \n+20% силе прыжка")
 GM:AddSkillModifier(trinket, SKILLMOD_BARRICADE_PHASE_SPEED_MUL, 0.55)
@@ -315,9 +315,9 @@ trinket = GM:AddTrinket("Инвалидная трость", "kre", false, pvele
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -1)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.07)
 
-GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+10% к скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.10)
-GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+16% к скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.16)
-GM:AddSkillModifier(GM:AddTrinket("Классический Учебник по перезарядке", "classix", false, ammoveles, ammoweles, 4, "+32% Скорость перезарядки "), SKILLMOD_RELOADSPEED_MUL, 0.32)
+GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+10% к скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.16)
+GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+16% к скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.15)
+GM:AddSkillModifier(GM:AddTrinket("Классический Учебник по перезарядке", "classix", false, ammoveles, ammoweles, 4, "+22% Скорость перезарядки "), SKILLMOD_RELOADSPEED_MUL, 0.14)
 
 GM:AddTrinket("Automated Reloader", "autoreload", false, ammoveles, ammoweles, 2, "Перезаряжает одно оружие каждые 4 секунды но не оружие которое ты держишь")
 

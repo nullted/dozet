@@ -1246,8 +1246,8 @@ function GM:Think()
 				end
 
 				if pl:HasTrinket("regenimplant") and time >= pl.NextRegenTrinket and pl:Health() < healmax then
-					pl.NextRegenTrinket = time + 12
-					pl:SetHealth(math.min(healmax, pl:Health() + 1))
+					pl.NextRegenTrinket = time + 7
+					pl:SetHealth(math.min(healmax, pl:Health() + 7))
 				end
 
 				if pl:IsSkillActive(SKILL_BLOODARMOR) and pl.MaxBloodArmor > 0 and time >= pl.NextBloodArmorRegen and pl:GetBloodArmor() < pl.MaxBloodArmor then
@@ -3228,8 +3228,8 @@ function GM:PlayerHurt(victim, attacker, healthremaining, damage)
 			victim:ResetSpeed(nil, healthremaining)
 		end
 
-		if healthremaining < victim:GetMaxHealth() * 0.5 and victim:GetBloodArmor() < victim.MaxBloodArmor + 10 and victim:HasTrinket("bloodpack") then
-			victim:SetBloodArmor(math.min(victim:GetBloodArmor() + (20 * victim.BloodarmorGainMul), victim.MaxBloodArmor + (20 * victim.MaxBloodArmorMul)))
+		if healthremaining < victim:GetMaxHealth() * 0.9 and victim:GetBloodArmor() < victim.MaxBloodArmor + 60 and victim:HasTrinket("bloodpack") then
+			victim:SetBloodArmor(math.min(victim:GetBloodArmor() + (60 * victim.BloodarmorGainMul), victim.MaxBloodArmor + (70 * victim.MaxBloodArmorMul)))
 			victim:TakeInventoryItem("trinket_bloodpack")
 
 			net.Start("zs_trinketconsumed")
