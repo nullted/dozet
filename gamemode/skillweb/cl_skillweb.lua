@@ -119,10 +119,10 @@ net.Receive("zs_skills_nextreset", function(length)
 	GAMEMODE.NextSkillReset = net.ReadUInt(32)
 
 	if GAMEMODE.SkillWeb and GAMEMODE.SkillWeb:IsValid() then
-		local days = math.floor(GAMEMODE.NextSkillReset / 86400)
+		local days = math.floor(GAMEMODE.NextSkillReset / 1)
 		local btn = GAMEMODE.SkillWeb.Reset
 
-		btn:SetText(GAMEMODE.NextSkillReset <= 0 and "Reset" or (days .. " days left"))
+		btn:SetText(GAMEMODE.NextSkillReset <= 0 and "Reset" or (days .. " 0"))
 		btn:SetDisabled(GAMEMODE.NextSkillReset > 0)
 	end
 end)

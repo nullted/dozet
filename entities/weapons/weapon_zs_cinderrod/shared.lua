@@ -21,7 +21,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Arobus' Minicannon", "MORE DAMAGE", fun
 	wept.Primary.Damage = wept.Primary.Damage * 4
 	wept.ConeMin = wept.ConeMin * 0.5
 	wept.ConeMax = wept.ConeMax * 0.5
-	wept.Primary.Delay = wept.Primary.Delay * 2.65
+	wept.Primary.Delay = wept.Primary.Delay * 1.3
 	wept.Recoil = 4
 
 end)

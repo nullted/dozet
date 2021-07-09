@@ -3,7 +3,6 @@ INC_SERVER()
 function ENT:Initialize()
 	self:DrawShadow(false)
 	self:SetModel("models/props_c17/tv_monitor01.mdl")
-	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetUseType(SIMPLE_USE)
 
 	local phys = self:GetPhysicsObject()

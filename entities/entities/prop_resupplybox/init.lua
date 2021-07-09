@@ -12,7 +12,6 @@ hook.Add("OnPlayerChangedTeam", "ResupplyBox.OnPlayerChangedTeam", RefreshCrateO
 
 function ENT:Initialize()
 	self:SetModel("models/Items/ammocrate_ar2.mdl")
-	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetUseType(SIMPLE_USE)
 	self:SetPlaybackRate(1)
 

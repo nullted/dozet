@@ -74,7 +74,7 @@ function SWEP:SecondaryAttack()
 	self.NextDeploy = CurTime() + 0.75
 
 	if SERVER then
-		local ent = ents.Create("projectile_harpoon")
+		local ent = ents.Create("projectile_harpoon_te")
 		if ent:IsValid() then
 			ent:SetPos(owner:GetShootPos())
 			ent:SetAngles(owner:EyeAngles())
@@ -93,3 +93,4 @@ function SWEP:SecondaryAttack()
 		owner:StripWeapon(self:GetClass())
 	end
 end
+

@@ -7,10 +7,9 @@ SWEP.Base = "weapon_zs_harpoon"
 function SWEP:SecondaryAttack()
 	if not self:CanPrimaryAttack() then return end
 	local owner = self:GetOwner()
-	local tr = owner:TraceLine(60)
 	if tr.HitWorld or (tr.Entity:IsValid() and not tr.Entity:IsPlayer()) then return end
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
-
+	local tr = owner:TraceLine(60)
 	self:SendWeaponAnim(ACT_VM_MISSCENTER)
 	owner:DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE)
 
