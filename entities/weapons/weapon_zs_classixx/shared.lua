@@ -1,5 +1,5 @@
 SWEP.PrintName = "CLASSIXXXXX"
-SWEP.Description = "Projects a stream of gluons at the target, causing immense damage. Hard to wield and aim, and builds up heat over time."
+SWEP.Description = "Свежая струя говна в тебя летит."
 
 SWEP.Base = "weapon_zs_base"
 
@@ -12,7 +12,7 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 96
+SWEP.Primary.Damage = 166
 SWEP.Primary.NumShots = 2
 SWEP.Primary.Delay = 0.6
 SWEP.Primary.KnockbackScale = 0.1
