@@ -9,8 +9,8 @@ CLASS.Help = "controls_shadow_corruptor"
 
 CLASS.Wave = 6 / 6
 
-CLASS.Health = 133
-CLASS.Speed = 166
+CLASS.Health = 210
+CLASS.Speed = 250
 
 CLASS.Points = 6
 
