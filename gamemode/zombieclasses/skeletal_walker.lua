@@ -5,7 +5,7 @@ CLASS.Help = "controls_skeletal_walker"
 
 CLASS.Wave = 2 / 6
 
-CLASS.Health = 100
+CLASS.Health = 260
 CLASS.Speed = 150
 
 CLASS.CanTaunt = true

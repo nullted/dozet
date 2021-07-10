@@ -17,8 +17,8 @@ CLASS.Wave = 2 / 6
 CLASS.Unlocked = false
 CLASS.Hidden = false
 
-CLASS.Health = 75
-CLASS.Speed = 155
+CLASS.Health = 210
+CLASS.Speed = 230
 CLASS.JumpPower = 160
 
 CLASS.Points = CLASS.Health/GM.SkeletonPointRatio
