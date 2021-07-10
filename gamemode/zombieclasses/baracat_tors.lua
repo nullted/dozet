@@ -11,9 +11,9 @@ CLASS.Threshold = 0
 CLASS.Unlocked = true
 CLASS.Hidden = false
 
-CLASS.Health = 300
-CLASS.Speed = 150
-CLASS.JumpPower = 222
+CLASS.Health = 1200
+CLASS.Speed = 266
+CLASS.JumpPower = 340
 
 CLASS.Points = CLASS.Health/GM.TorsoZombiePointRatio
 

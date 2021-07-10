@@ -1,4 +1,4 @@
-
+cnfv
 AddCSLuaFile()
 
 SWEP.PrintName = "Mega Masher"
@@ -33,7 +33,7 @@ SWEP.ViewModel = "models/weapons/v_sledgehammer/c_sledgehammer.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 211
+SWEP.MeleeDamage = 144
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 4
 SWEP.MeleeKnockBack = 420
@@ -47,7 +47,7 @@ SWEP.SwingOffset = Vector(0, -30, 0)
 SWEP.SwingTime = 1.33
 SWEP.SwingHoldType = "melee"
 
-SWEP.Tier = 3
+SWEP.Tier = 5
 
 SWEP.AllowQualityWeapons = true
 
@@ -77,7 +77,7 @@ end
 
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
 	wept.Primary.Delay = wept.Primary.Delay * 0.2
-	wept.MeleeDamage = wept.MeleeDamage * 0.5
+	wept.MeleeDamage = wept.MeleeDamage * 0.3
 	wept.MeleeKnockBack = 612
    wept.SwingTime = 0.5
 	

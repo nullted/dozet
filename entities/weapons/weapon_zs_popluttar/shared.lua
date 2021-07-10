@@ -32,6 +32,7 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.15)
 
 local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Poplaer' Napalm Rifle", "Chance to ignite instead of corrode", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 1.3
+	wept.Primary.Delay = 0.21
 
 	if SERVER then
 		wept.EntModify = function(self, ent)
@@ -48,8 +49,9 @@ branch.Colors = {Color(255, 160, 50), Color(215, 120, 50), Color(175, 100, 40)}
 branch.NewNames = {"Hot", "Searing", "Lavpool"}
 
 branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Popupar' Cryo Rifle", "Launches cryoblobs that slow zombies down at the cost of numshot", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 1.4
-	wept.Primary.NumShots = 1
+	wept.Primary.Damage = wept.Primary.Damage * 2
+	wept.Primary.NumShots = 2
+	wept.Primary.Delay = 0.31
 
 	if SERVER then
 		wept.EntModify = function(self, ent)

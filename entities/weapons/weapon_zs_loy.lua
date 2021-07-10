@@ -28,7 +28,7 @@ SWEP.HoldType = "melee2"
 SWEP.Tier = 5
 
 
-SWEP.MeleeDamage = 199
+SWEP.MeleeDamage = 151
 SWEP.MeleeRange = 71
 SWEP.MeleeSize = 4
 SWEP.MeleeKnockBack = 9999
