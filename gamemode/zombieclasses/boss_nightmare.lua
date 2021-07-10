@@ -21,6 +21,15 @@ CLASS.SWEP = "weapon_zs_nightmare"
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")
 CLASS.OverrideModel = Model("models/player/charple.mdl")
 
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 4)
+	end
+end
+end
+
+
 CLASS.VoicePitch = 0.65
 
 CLASS.PainSounds = {"npc/zombie/zombie_pain1.wav", "npc/zombie/zombie_pain2.wav", "npc/zombie/zombie_pain3.wav", "npc/zombie/zombie_pain4.wav", "npc/zombie/zombie_pain5.wav", "npc/zombie/zombie_pain6.wav"}

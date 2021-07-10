@@ -26,6 +26,14 @@ CLASS.UsePreviousModel = false
 if SERVER then
 	function CLASS:OnKilled() end
 end
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 3)
+	end
+end
+end
+
 
 local ACT_ZOMBIE_LEAPING = ACT_ZOMBIE_LEAPING
 local ACT_HL2MP_RUN_ZOMBIE_FAST = ACT_HL2MP_RUN_ZOMBIE_FAST

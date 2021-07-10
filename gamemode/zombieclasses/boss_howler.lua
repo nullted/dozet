@@ -17,6 +17,14 @@ CLASS.SWEP = "weapon_zs_howler"
 
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")
 CLASS.OverrideModel = Model("models/player/zombie_lacerator2.mdl")
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 5)
+	end
+end
+end
+
 
 CLASS.Health = 2750
 CLASS.Speed = 175

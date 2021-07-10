@@ -34,3 +34,12 @@ end
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/ancient_nightmare"
+
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 3)
+	end
+end
+end
+

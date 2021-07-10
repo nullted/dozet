@@ -17,6 +17,15 @@ CLASS.SWEP = "weapon_zs_tank"
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")
 CLASS.OverrideModel = Model("models/Zombie/Poison.mdl")
 
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 20)
+	end
+end
+end
+
+
 CLASS.VoicePitch = 0.6
 
 local CurTime = CurTime

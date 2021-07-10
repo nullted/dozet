@@ -9,12 +9,13 @@ CLASS.KnockbackScale = 0
 
 CLASS.CanTaunt = true
 
-CLASS.Health = 2000
+CLASS.Health = 4500
 CLASS.Speed = 195
+
 
 CLASS.FearPerInstance = 1
 
-CLASS.Points = 35
+CLASS.Points = 88
 
 CLASS.SWEP = "weapon_zs_bonemesh"
 
@@ -60,6 +61,14 @@ function CLASS:PlayerStepSoundTime(pl, iType, bWalking)
 	end
 
 	return 250
+end
+
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 2)
+	end
+end
 end
 
 function CLASS:CalcMainActivity(pl, velocity)

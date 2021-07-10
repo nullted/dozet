@@ -28,6 +28,15 @@ function CLASS:Move(pl, move)
 	end
 end
 
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 1000)
+	end
+end
+end
+
+
 function CLASS:PlayDeathSound(pl)
 	for i=1, 4 do
 		pl:EmitSound("zombiesurvival/wraithdeath4.ogg", 75, math.random(80, 140), 0.6, CHAN_AUTO + i)

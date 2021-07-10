@@ -14,6 +14,15 @@ CLASS.CanTaunt = true
 
 CLASS.FearPerInstance = 1
 
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 4)
+	end
+end
+end
+
+
 CLASS.Points = 15
 
 CLASS.SWEP = "weapon_zs_graveshovelz"

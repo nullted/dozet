@@ -1,5 +1,3 @@
-cnfv
-AddCSLuaFile()
 
 SWEP.PrintName = "Mega Masher"
 

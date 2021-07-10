@@ -10,9 +10,18 @@ CLASS.Unlocked = true
 
 CLASS.SWEP = "weapon_zs_headcrab"
 
-CLASS.Health = 70
-CLASS.Speed = 175
+CLASS.Health = 11
+CLASS.Speed = 230
 CLASS.JumpPower = 160
+
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 1200)
+	end
+end
+end
+
 
 CLASS.NoFallDamage = true
 CLASS.NoFallSlowdown = true
