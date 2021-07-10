@@ -8,7 +8,7 @@ CLASS.BetterVersion = "Tormented Wraith"
 CLASS.Wave = 0
 CLASS.Unlocked = true
 
-CLASS.Health = 135
+CLASS.Health = 233
 
 CLASS.SWEP = "weapon_zs_wraith"
 CLASS.Model = Model("models/player/zelpa/stalker.mdl")
@@ -161,3 +161,6 @@ function CLASS:PostPlayerDraw(pl)
 	render.SetColorModulation(1, 1, 1)
 	render.SetBlend(1)
 end
+
+
+--https://tenor.com/view/get-real-jungle-junglecord-gif-20306452
