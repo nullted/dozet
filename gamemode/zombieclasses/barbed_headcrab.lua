@@ -13,6 +13,15 @@ CLASS.Wave = 4 / 6
 
 CLASS.SWEP = "weapon_zs_barbedheadcrab"
 
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 1200)
+	end
+end
+end
+
+
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/poisonheadcrab"

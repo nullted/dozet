@@ -17,6 +17,15 @@ CLASS.SWEP = "weapon_zs_fastzombie"
 
 CLASS.Points = CLASS.Health/GM.NoHeadboxZombiePointRatio
 
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() * 2)
+	end
+end
+end
+
+
 CLASS.CanTaunt = true
 
 CLASS.Hull = {Vector(-16, -16, 0), Vector(16, 16, 58)}

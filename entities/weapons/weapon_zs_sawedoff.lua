@@ -89,23 +89,8 @@ end)
 SWEP.ReloadStartActivity = ACT_VM_RELOAD
 SWEP.ReloadActivity = ACT_VM_HOLSTER
 
-function SWEP:StartReloading()
-	local delay = self:GetReloadDelay()
-	self:SetDTFloat(3, CurTime() + delay)
-	self:SetDTBool(2, true) -- force one shell load
-	self:SetNextPrimaryFire(CurTime() + math.max(self.Primary.Delay, delay))
 
-	self:GetOwner():DoReloadEvent()
 
-	if self.ReloadStartActivity then
-		self:SendWeaponAnim(self.ReloadStartActivity)
-		self:ProcessReloadAnim()
-		self:SetNextPlugSound(CurTime() + delay * 0.9)
-		self:SetNextStateChange(CurTime() + delay * 0.8)
-	end
-
-	self:EmitSound(self.ReloadSound)
-end
 
 function SWEP:StopReloading()
 	self:SetDTFloat(3, 0)
@@ -118,51 +103,6 @@ function SWEP:StopReloading()
 		self:SendWeaponAnim(ACT_VM_IDLE)
 		self:ProcessReloadAnim()
 	end
-end
-
-function SWEP:Think()
-	if self:ShouldDoReload() then
-		self:DoReload()
-	end
-
-	if self:GetNextPlugSound() ~= 0 and CurTime() > self:GetNextPlugSound() then
-		if self:Clip1() ~= 2 then
-			self:EmitSound(self.ReloadPlugSound)
-		end
-		self:SetNextPlugSound(0)
-	end
-
-	if self:GetNextStateChange() ~= 0 and CurTime() > self:GetNextStateChange() then
-		self:SetSawnoffState((self:GetSawnoffState() + 1) % 2)
-		self:SetNextStateChange(0)
-	end
-
-	self:NextThink(CurTime())
-	return true
-end
-
-function SWEP:DoReload()
-	if not self:CanReload() then
-		self:StopReloading()
-		return
-	end
-
-	local delay = self:GetReloadDelay()
-	if self.ReloadActivity then
-		self:SendWeaponAnim(self.ReloadActivity)
-		self:ProcessReloadAnim()
-		self:SetNextPlugSound(CurTime() + delay * 0.9)
-
-		timer.Simple(0, function() if IsValid(self) then self:SendWeaponAnim(ACT_VM_RELOAD) end end)
-	end
-
-	self:GetOwner():RemoveAmmo(1, self.Primary.Ammo, false)
-	self:SetClip1(self:Clip1() + 1)
-
-	self:SetDTBool(2, false)
-	self:SetDTFloat(3, CurTime() + delay)
-
-	self:SetNextPrimaryFire(CurTime() + math.max(self.Primary.Delay, delay))
 end
 
 function SWEP:CanPrimaryAttack()
