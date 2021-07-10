@@ -31,19 +31,28 @@ SWEP.ViewModel = "models/weapons/c_stunstick.mdl"
 SWEP.WorldModel = "models/props_c17/computer01_keyboard.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 124
+SWEP.MeleeDamage = 41
 SWEP.MeleeRange = 70
 SWEP.MeleeSize = 1.25
 
-SWEP.Primary.Delay = 0.5
+SWEP.Primary.Delay = 0.4
 
-SWEP.SwingTime = 0.5
+SWEP.SwingTime = 0.45
 SWEP.SwingRotation = Angle(30, -30, -30)
 SWEP.SwingOffset = Vector(0, -30, 0)
 SWEP.SwingHoldType = "grenade"
 
 SWEP.AllowQualityWeapons = true
 SWEP.DismantleDiv = 2
+
+SWEP.OnZombieKilled = function(self, zombie, total, dmginfo)
+	local killer = self:GetOwner()
+
+	if killer:IsValid() then
+		killer:GiveStatus("medrifledefboost", 10)
+		end
+end
+
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.075)
 
