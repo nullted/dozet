@@ -337,7 +337,6 @@ GM:AddPointShopItem("akbar",			ITEMCAT_GUNS,			100,				"weapon_zs_akbar")
 GM:AddPointShopItem("oberon",			ITEMCAT_GUNS,			100,				"weapon_zs_oberon")
 GM:AddPointShopItem("hyena",			ITEMCAT_GUNS,			100,				"weapon_zs_hyena")
 GM:AddPointShopItem("pollutor",			ITEMCAT_GUNS,			100,				"weapon_zs_pollutor")
-GM:AddPointShopItem("crman",			ITEMCAT_GUNS,			260,				"weapon_zs_cryman")
 GM:AddPointShopItem("smgstick",			ITEMCAT_GUNS,			100,				"weapon_zs_smgstick")
 -- Tier 4
 GM:AddPointShopItem("longarm",			ITEMCAT_GUNS,			180,			"weapon_zs_longarm")
