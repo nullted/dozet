@@ -65,17 +65,3 @@ function GM:Move(pl, move)
 	end
 end
 
-function GM:FinishMove(pl, move)
-	pt = E_GetTable(pl)
-
-	-- Simple anti bunny hopping. Flag is set in OnPlayerHitGround
-	if pt.LandSlow then
-		pt.LandSlow = false
-
-		vel = M_GetVelocity(move)
-		mul = 1 - 0.25 * (pt.FallDamageSlowDownMul or 1)
-		vel.x = vel.x * mul
-		vel.y = vel.y * mul
-		M_SetVelocity(move, vel)
-	end
-end
