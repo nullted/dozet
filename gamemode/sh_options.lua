@@ -502,7 +502,7 @@ GM:AddPointShopItem("antidote",			ITEMCAT_TOOLS,			30,				"weapon_zs_antidotesho
 item.SkillRequirement = SKILL_U_ANTITODESHOT
 GM:AddPointShopItem("medrifle",			ITEMCAT_TOOLS,			55,				"weapon_zs_medicrifle")
 GM:AddPointShopItem("healray",			ITEMCAT_TOOLS,			100,			"weapon_zs_healingray")
-GM:AddPointShopItem("stone",			ITEMCAT_TOOLS,			5,			"weapon_zs_stone")
+GM:AddPointShopItem("stone",			ITEMCAT_TOOLS,			20,			"weapon_zs_stone")
 GM:AddPointShopItem("nail",				ITEMCAT_TOOLS,			10,				nil,							"Scrap",							"Scrap but is have x10.",					"ammo_scrap",						function(pl) pl:GiveAmmo(10, "Scrap", true) end)
 -- Tier 1
 GM:AddPointShopItem("cutlery",			ITEMCAT_TRINKETS,		10,				"trinket_cutlery").SubCategory =								ITEMSUBCAT_TRINKETS_DEFENSIVE
