@@ -15,13 +15,13 @@ SWEP.ViewModel = "models/weapons/cstrike/c_knife_t.mdl"
 SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 50
+SWEP.MeleeDamage = 240
 SWEP.MeleeRange = 62
 SWEP.MeleeSize = 0.875
 
 SWEP.WalkSpeed = SPEED_ZOMBIEESCAPE_NORMAL
 
-SWEP.Primary.Delay = 0.45
+SWEP.Primary.Delay = 0.41
 
 SWEP.HitDecal = "Manhackcut"
 

@@ -8,7 +8,8 @@ GM.ZombieEscapeWeaponsPrimary = {
 	"weapon_zs_zesilencer",
 	"weapon_zs_zequicksilver",
 	"weapon_zs_zeamigo",
-	"weapon_zs_zem4"
+	"weapon_zs_zem4",
+	"weapon_zs_zeboomstick"
 }
 
 GM.ZombieEscapeWeaponsSecondary = {

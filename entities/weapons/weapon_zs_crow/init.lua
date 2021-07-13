@@ -53,7 +53,6 @@ end
 
 function SWEP:PrimaryAttack()
 	if CurTime() < self:GetNextPrimaryFire() or not self:GetOwner():IsOnGround() then return end
-	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
 
 	self:GetOwner():EmitSound("NPC_Crow.Squawk")
 	self:GetOwner().EatAnim = CurTime() + 2
