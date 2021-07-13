@@ -11,7 +11,7 @@ CLASS.Wave = 4 / 6
 
 CLASS.Health = 520
 CLASS.Speed = 160
-CLASS.JumpPower = DEFAULT_JUMP_POWER * 1.081
+CLASS.JumpPower = DEFAULT_JUMP_POWER * 1.612
 CLASS.SWEP = "weapon_zs_poisonzombie"
 
 CLASS.Mass = DEFAULT_MASS * 1.5

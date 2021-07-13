@@ -49,7 +49,7 @@ SWEP.SwingHoldType = "melee"
 
 SWEP.Tier = 5
 
-SWEP.Knockback = 11
+SWEP.Knockback = 2
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/iceaxe/iceaxe_swing1.wav", 75, math.random(20, 25))
