@@ -19,5 +19,4 @@ function SWEP:ApplyMeleeDamage(ent, trace, damage)
 		ent:ThrowFromPositionSetZ(trace.StartPos, ent:IsPlayer() and 600 or 1600, nil, noknockdown)
 	end
 
-	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
 end
