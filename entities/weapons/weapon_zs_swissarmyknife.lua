@@ -16,13 +16,13 @@ SWEP.ViewModel = "models/weapons/cstrike/c_knife_t.mdl"
 SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 19
+SWEP.MeleeDamage = 31
 SWEP.MeleeRange = 52
 SWEP.MeleeSize = 0.875
 
 SWEP.WalkSpeed = SPEED_FASTEST
 
-SWEP.Primary.Delay = 0.85
+SWEP.Primary.Delay = 0.66
 
 SWEP.HitDecal = "Manhackcut"
 
@@ -53,7 +53,7 @@ end
 function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	if hitent:IsValid() and hitent:IsPlayer() and not self.m_BackStabbing and math.abs(hitent:GetForward():Angle().yaw - self:GetOwner():GetForward():Angle().yaw) <= 90 then
 		self.m_BackStabbing = true
-		self.MeleeDamage = self.MeleeDamage * 5
+		self.MeleeDamage = self.MeleeDamage * 17
 	end
 end
 
@@ -61,7 +61,7 @@ function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
 	if self.m_BackStabbing then
 		self.m_BackStabbing = false
 
-		self.MeleeDamage = self.MeleeDamage / 5
+		self.MeleeDamage = self.MeleeDamage / 17
 	end
 end
 
