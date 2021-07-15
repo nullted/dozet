@@ -3,11 +3,11 @@ SWEP.Base = "weapon_zs_zombie"
 SWEP.MeleeReach = 52
 SWEP.MeleeDelay = 0.3
 SWEP.MeleeSize = 4.5 --1.5
-SWEP.MeleeDamage = 14
+SWEP.MeleeDamage = 41
 SWEP.MeleeDamageType = DMG_SLASH
-SWEP.MeleeAnimationDelay = 0.11
+SWEP.MeleeAnimationDelay = 0.05
 
-SWEP.Primary.Delay = 0.11
+SWEP.Primary.Delay = 0.7
 
 SWEP.ViewModel = Model("models/weapons/v_pza.mdl")
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
