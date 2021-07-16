@@ -377,9 +377,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.21)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "300% of melee damage taken reflected back to melee attackers\nAdditional 60 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken and you take +25point to end wave")
+trinket = GM:AddTrinket("Barbed Armor", "barbedarmor", false, develes, deweles, 3, "100% of melee damage taken reflected back to melee attackers\nAdditional 60 damage reflected back to melee attackers\nMelee attackers take 30 arm damage\n-4% melee damage taken and you take +25point to end wave")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT, 60)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT_PERCENT, 3)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_ATTACKER_DMG_REFLECT_PERCENT, 1)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.04)
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 25)
 
@@ -515,14 +515,14 @@ GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_HEALTH_MUL, 0.6)
 GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_SPEED_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_MANHACK_DAMAGE_MUL, 10)
-GM:AddSkillModifier(trinket, SKILLMOD_MEDKIT_COOLDOWN_MUL, -1)
+GM:AddSkillModifier(trinket, SKILLMOD_MEDKIT_COOLDOWN_MUL, -3)
 GM:AddSkillModifier(trinket, SKILLMOD_MEDGUN_FIRE_DELAY_MUL, -0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 55)
 
 
 
-GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-5% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.05)
-GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-16% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.16)
+GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-13% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.13)
+GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-28% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.28)
 
 -- Boss Trinkets
 

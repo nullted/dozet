@@ -83,7 +83,7 @@ TEXT_ALIGN_BOTTOM_REAL = 4
 DEFAULT_VIEW_OFFSET = Vector(0, 0, 64)
 DEFAULT_VIEW_OFFSET_DUCKED = Vector(0, 0, 32) -- 28 is the default but 32 lines up to where the gun is on the model
 -- default land speed = 269.5 274
-DEFAULT_JUMP_POWER = 185 --284
+DEFAULT_JUMP_POWER = 200 --284
 DEFAULT_STEP_SIZE = 18
 DEFAULT_MASS = 80
 DEFAULT_MODELSCALE = 1
@@ -115,7 +115,7 @@ GM.ExtraHealthPerExtraNail = 120
 GM.MaxNails = 6
 
 -- Moved from options to globals because the game is now balanced around it being static. The gamemode will BREAK if this is not 6!!
-GM.NumberOfWaves = 8
+GM.NumberOfWaves = 12
 
 GM.PulsePointsMultiplier = 1.55
 
@@ -147,7 +147,7 @@ ZE_KNOCKBACKSCALE = 0.1
 MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GRATE, CONTENTS_WINDOW, CONTENTS_HITBOX)
 
 GM.BarricadeHealthMin = 300
-GM.BarricadeHealthMax = 1500 * 0.85
+GM.BarricadeHealthMax = 3000 * 0.85
 GM.BarricadeHealthMassFactor = 3 * 0.85
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
 GM.BarricadeRepairCapacity = 3

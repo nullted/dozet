@@ -1,5 +1,4 @@
 SWEP.PrintName = "Luxoid"
-SWEP.Description = "An axe made from frost. Secondary attack unleashes a powerful swing, creating an icy explosion when aimed at the ground. Slows zombie movement and attack speed."
 
 SWEP.Base = "weapon_zs_basemelee"
 
@@ -9,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 21
+SWEP.MeleeDamage = 31
 SWEP.MeleeRange = 91
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 240
