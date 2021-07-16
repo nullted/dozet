@@ -421,6 +421,7 @@ GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists"
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_frotchet")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
 GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
+GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_luxoid")
 
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			25,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
@@ -693,12 +694,12 @@ GM:AddDeployableInfo("prop_tv",                   	 "TV",                    	"w
 
 GM.MaxSigils = 4
 
-GM.DefaultRedeem = CreateConVar("zs_redeem", "2", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
+GM.DefaultRedeem = CreateConVar("zs_redeem", "3", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
 	GAMEMODE.DefaultRedeem = math.max(0, tonumber(newvalue) or 0)
 end)
 
-GM.WaveOneZombies = 0.08--math.Round(CreateConVar("zs_waveonezombies", "0.1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The percentage of players that will start as zombies when the game begins."):GetFloat(), 2)
+GM.WaveOneZombies = 0.12--math.Round(CreateConVar("zs_waveonezombies", "0.1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The percentage of players that will start as zombies when the game begins."):GetFloat(), 2)
 -- cvars.AddChangeCallback("zs_waveonezombies", function(cvar, oldvalue, newvalue)
 -- 	GAMEMODE.WaveOneZombies = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
 -- end)
@@ -734,16 +735,16 @@ end)
 GM.WaveOneLength = 170
 
 -- Add this many seconds for each additional wave.
-GM.TimeAddedPerWave = 60
+GM.TimeAddedPerWave = 45
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
-GM.NoNewHumansWave = 3
+GM.NoNewHumansWave = 4
 
 -- Humans can not commit suicide if the current wave is this or lower.
 GM.NoSuicideWave = 0
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
-GM.WaveZeroLength = 450
+GM.WaveZeroLength = 230
 
 -- Time humans have between waves to do stuff without NEW zombies spawning. Any dead zombies will be in spectator (crow) view and any living ones will still be living.
 GM.WaveIntermissionLength = 70
@@ -755,7 +756,7 @@ GM.EndGameTime = 30
 GM.SurvivalClips = 4 --2
 
 -- How long do humans have to wait before being able to get more ammo from a resupply box?
-GM.ResupplyBoxCooldown = 45
+GM.ResupplyBoxCooldown = 30
 
 -- Put your unoriginal, 5MB Rob Zombie and Metallica music here.
 GM.LastHumanSound = Sound("zombiesurvival/lasthuman.ogg")
