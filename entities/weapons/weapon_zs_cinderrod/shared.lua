@@ -18,10 +18,10 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -1)
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_HEADSHOT_MULTI, 0.3)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Arobus' Minibush", "MORE DAMAGE", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 2.5
+	wept.Primary.Damage = wept.Primary.Damage * 1.7
 	wept.ConeMin = wept.ConeMin * 0.3
 	wept.ConeMax = wept.ConeMax * 0.1
-	wept.Primary.Delay = wept.Primary.Delay * 1.1
+	wept.Primary.Delay = wept.Primary.Delay * 0.9
 	wept.Recoil = 4
 
 end)

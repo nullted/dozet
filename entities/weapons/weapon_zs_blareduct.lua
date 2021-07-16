@@ -39,7 +39,7 @@ SWEP.ShowViewModel = false
 SWEP.ShowWorldModel = false
 
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
-SWEP.Primary.Damage = 7.7625
+SWEP.Primary.Damage = 12
 SWEP.Primary.NumShots = 8
 SWEP.Primary.Delay = 0.75
 
@@ -74,18 +74,3 @@ function SWEP:SecondaryAttack()
 end
 
 if not CLIENT then return end
-
-local ghostlerp = 0
-function SWEP:CalcViewModelView(vm, oldpos, oldang, pos, ang)
-	if self:GetOwner():GetBarricadeGhosting() or self:IsReloading() then
-		ghostlerp = math.min(1, ghostlerp + FrameTime() * 0.5)
-	elseif ghostlerp > 0 then
-		ghostlerp = math.max(0, ghostlerp - FrameTime() * 0.5)
-	end
-
-	if ghostlerp > 0 then
-		ang:RotateAroundAxis(ang:Right(), -35 * ghostlerp)
-	end
-
-	return pos, ang
-end

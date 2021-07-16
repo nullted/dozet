@@ -20,7 +20,7 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 		if ice:IsValid() then
 			ice:SetPos(tr.HitPos)
 			ice:SetOwner(owner)
-			ice.Damage = self.MeleeDamage * 2
+			ice.Damage = self.MeleeDamage * 1.2
 			ice.Team = owner:Team()
 			ice:Spawn()
 		end

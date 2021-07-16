@@ -9,7 +9,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 212
+SWEP.MeleeDamage = 187
 SWEP.MeleeRange = 91
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 240
@@ -17,8 +17,8 @@ SWEP.MeleeKnockBack = 240
 SWEP.MeleeDamageSecondaryMul = 1.2273
 SWEP.MeleeKnockBackSecondaryMul = 1.25
 
-SWEP.Primary.Delay = 0.9
-SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.75
+SWEP.Primary.Delay = 0.8
+SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.5
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
@@ -117,8 +117,8 @@ function SWEP:GetCharge()
 end
 
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.9
-	wept.MeleeDamage = wept.MeleeDamage * 0.8
+	wept.Primary.Delay = wept.Primary.Delay * 0.5
+	wept.MeleeDamage = wept.MeleeDamage * 0.6
 	
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()

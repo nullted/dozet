@@ -418,7 +418,7 @@ GM:AddPointShopItem("kongol",			ITEMCAT_MELEE,			95,			"weapon_zs_kongolaxe")
 GM:AddPointShopItem("scythe",			ITEMCAT_MELEE,			95,			"weapon_zs_scythe")
 GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists")
 -- Tier 5
-GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_frotchet")
+GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			95,			"weapon_zs_frotchet")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
 GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_luxoid")
