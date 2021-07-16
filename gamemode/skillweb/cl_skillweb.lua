@@ -446,7 +446,7 @@ function PANEL:Init()
 	end
 
 	local resettime = GAMEMODE.NextSkillReset or 0
-	local days = math.floor(resettime / 86400)
+	local days = math.floor(resettime / 0)
 
 	local reset = vgui.Create("DButton", bottomlefttop)
 	reset:SetFont("ZSHUDFontSmaller")
