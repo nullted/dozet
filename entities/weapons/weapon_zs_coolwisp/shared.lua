@@ -37,13 +37,13 @@ function SWEP:PrimaryAttack()
 	if SERVER then
 		for _, ent in pairs(util.BlastAlloc(self, owner, owner:GetPos(), 57)) do
 			if ent:IsValidLivingPlayer() and gamemode.Call("PlayerShouldTakeDamage", ent, owner) and ent ~= owner then
-				ent:GiveStatus("frost", 4)
-				ent:AddLegDamageExt(10, owner, self, SLOWTYPE_COLD)
+				ent:GiveStatus("frost", 20)
+				ent:AddLegDamageExt(40, owner, self, SLOWTYPE_COLD)
 			end
 		end
 
 		owner:GodEnable()
-		util.BlastDamageEx(self, owner, owner:GetShootPos(), 57, 5, DMG_DROWN)
+		util.BlastDamageEx(self, owner, owner:GetShootPos(), 57, 12, DMG_DROWN)
 		owner:GodDisable()
 	end
 

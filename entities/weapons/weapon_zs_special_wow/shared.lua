@@ -40,7 +40,7 @@ function SWEP:PrimaryAttack()
 
 	if SERVER then
 		owner:GodEnable()
-		util.BlastDamageEx(self, owner, owner:GetShootPos(), 64, 5, DMG_DISSOLVE)
+		util.BlastDamageEx(self, owner, owner:GetShootPos(), 64, 21, DMG_DISSOLVE)
 		owner:GodDisable()
 	end
 
