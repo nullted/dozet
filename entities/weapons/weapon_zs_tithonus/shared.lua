@@ -16,7 +16,7 @@ SWEP.UseHands = true
 SWEP.CSMuzzleFlashes = false
 
 SWEP.Primary.Sound = Sound("Weapon_357.Single")
-SWEP.Primary.Damage = 17.5
+SWEP.Primary.Damage = 26
 SWEP.Primary.NumShots = 4
 SWEP.Primary.Delay = 0.85
 

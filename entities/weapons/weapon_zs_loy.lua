@@ -24,8 +24,9 @@ SWEP.WorldModel = "models/props/cs_militia/axe.mdl"
 SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
-
+SWEP.PointsMultiplier = 3
 SWEP.Tier = 5
+SWEP.MaxStock = 2
 
 
 SWEP.MeleeDamage = 241

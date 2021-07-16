@@ -23,7 +23,7 @@ SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.5
 SWEP.WalkSpeed = SPEED_SLOWER
 
 SWEP.HitAnim = ACT_VM_MISSCENTER
-
+SWEP.PointsMultiplier = 0.7
 SWEP.SwingRotation = Angle(60, 0, -80)
 SWEP.SwingOffset = Vector(0, -30, 0)
 SWEP.SwingTime = 0.62
