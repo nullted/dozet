@@ -732,10 +732,10 @@ end)
 -- Static values that don't need convars...
 
 -- Initial length for wave 1.
-GM.WaveOneLength = 170
+GM.WaveOneLength = 140
 
 -- Add this many seconds for each additional wave.
-GM.TimeAddedPerWave = 45
+GM.TimeAddedPerWave = 30
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
 GM.NoNewHumansWave = 4
@@ -744,10 +744,10 @@ GM.NoNewHumansWave = 4
 GM.NoSuicideWave = 0
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
-GM.WaveZeroLength = 230
+GM.WaveZeroLength = 200
 
 -- Time humans have between waves to do stuff without NEW zombies spawning. Any dead zombies will be in spectator (crow) view and any living ones will still be living.
-GM.WaveIntermissionLength = 70
+GM.WaveIntermissionLength = 60
 
 -- Time in seconds between end round and next map.
 GM.EndGameTime = 30
@@ -775,7 +775,7 @@ GM.UseOnlineProfiles = true
 
 -- This multiplier of points will save over to the next round. 1 is full saving. 0 is disabled.
 -- Setting this to 0 will not delete saved points and saved points do not "decay" if this is less than 1.
-GM.PointSaving = 1
+GM.PointSaving = 0.10
 
 -- Lock item purchases to waves. Tier 2 items can only be purchased on wave 2, tier 3 on wave 3, etc.
 -- HIGHLY suggested that this is on if you enable point saving. Always false if objective map, zombie escape, classic mode, or wave number is changed by the map.

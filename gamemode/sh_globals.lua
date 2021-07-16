@@ -111,13 +111,13 @@ GM.ArsenalCrateCommission = 0.04
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 
-GM.ExtraHealthPerExtraNail = 75
-GM.MaxNails = 4
+GM.ExtraHealthPerExtraNail = 120
+GM.MaxNails = 6
 
 -- Moved from options to globals because the game is now balanced around it being static. The gamemode will BREAK if this is not 6!!
-GM.NumberOfWaves = 6
+GM.NumberOfWaves = 8
 
-GM.PulsePointsMultiplier = 1.25
+GM.PulsePointsMultiplier = 1.55
 
 -- The amount of damage you need to inflict to a zombie type to get a point
 GM.HumanoidZombiePointRatio = 45
@@ -128,9 +128,9 @@ GM.TorsoZombiePointRatio = 42
 GM.LegsZombiePointRatio = 37.5
 GM.SkeletonPointRatio = GM.HumanoidZombiePointRatio/3
 
-SPEED_NORMAL = 255
-SPEED_SLOWEST = SPEED_NORMAL - 40
-SPEED_SLOWER = SPEED_NORMAL - 20
+SPEED_NORMAL = 190
+SPEED_SLOWEST = SPEED_NORMAL - 60
+SPEED_SLOWER = SPEED_NORMAL - 30
 SPEED_SLOW = SPEED_NORMAL - 8
 SPEED_FAST = SPEED_NORMAL + 8
 SPEED_FASTER = SPEED_NORMAL + 20
@@ -146,13 +146,13 @@ ZE_KNOCKBACKSCALE = 0.1
 
 MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GRATE, CONTENTS_WINDOW, CONTENTS_HITBOX)
 
-GM.BarricadeHealthMin = 100
+GM.BarricadeHealthMin = 300
 GM.BarricadeHealthMax = 1500 * 0.85
 GM.BarricadeHealthMassFactor = 3 * 0.85
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
 GM.BarricadeRepairCapacity = 3
 
-GM.BossZombiePlayersRequired = 5
+GM.BossZombiePlayersRequired = 4
 
 GM.HumanGibs = {
 Model("models/gibs/HGIBS.mdl"),
@@ -220,6 +220,7 @@ GM.AmmoNames["zapper_arc"] = "Arc Zappers"
 GM.AmmoNames["remantler"] = "Remantlers"
 GM.AmmoNames["turret_buckshot"] = "Blast Turrets"
 GM.AmmoNames["turret_assault"] = "Assault Turrets"
+GM.AmmoNames["turret_super"] = "Super Turret"
 GM.AmmoNames["scrap"] = "Scrap"
 
 GM.AmmoTranslations = {}
@@ -292,11 +293,11 @@ GM.ScrapVals = {
 }
 
 GM.ScrapValsTrinkets = {
-	6, 13, 20, 43, 32, 56
+	2, 6, 9, 15, 17, 21
 }
 
 GM.DismantleMultipliers = {
-	3, 6, 8, 13
+	3, 3, 6, 8
 }
 
 -- Handled in languages file.

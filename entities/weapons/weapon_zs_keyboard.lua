@@ -1,6 +1,8 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "Keyboard"
+SWEP.Description = "You overfilled by fury and shields!."
+
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55
@@ -49,7 +51,8 @@ SWEP.OnZombieKilled = function(self, zombie, total, dmginfo)
 	local killer = self:GetOwner()
 
 	if killer:IsValid() then
-		killer:GiveStatus("medrifledefboost", 10)
+		killer:GiveStatus("medrifledefboost", 30) 
+		killer:GiveStatus("strengthdartboost", 30)
 		end
 end
 

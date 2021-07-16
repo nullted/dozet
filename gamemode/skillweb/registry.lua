@@ -384,15 +384,15 @@ GM:AddSkill(SKILL_IRONBLOOD, "Iron Blood", GOOD.."+25% damage reduction from blo
 																2,			4,					{SKILL_HAEMOSTASIS, SKILL_CIRCULATION}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_D_WEAKNESS, "Debuff: Weakness", GOOD.."+15 starting Worth\n"..GOOD.."+1 end of wave points\n"..BAD.."-45 maximum health",
 																1,			-1,					{}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_VITALITY1, "Vitality I", GOOD.."+1 maximum health",
+GM:AddSkill(SKILL_VITALITY1, "Vitality I", GOOD.."+8 maximum health",
 																0,			-4,					{SKILL_VITALITY2}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+1 maximum health",
+GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+8 maximum health",
 																0,			-2,					{SKILL_VITALITY3}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+1 maximum health",
+GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+8 maximum health",
 																0,			-0,					{SKILL_D_WEAKNESS}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+20 maximum health and +20 speed",
 																1,			1,					{SKILL_GOURMET}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_TANKER, "Tanker", GOOD.."+20 maximum health\n"..BAD.."-15 movement speed",
+GM:AddSkill(SKILL_TANKER, "Tanker", GOOD.."+60 maximum health\n"..BAD.."-40 movement speed",
 																-5,			4,					{}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_FORAGER, "Forager", GOOD.."25% chance to collect food from resupply boxes\n"..BAD.."+20% resupply box delay",
 																5,			-2,					{SKILL_GOURMET}, TREE_HEALTHTREE)
@@ -567,7 +567,7 @@ GM:AddSkill(SKILL_D_NOODLEARMS, "Debuff: Noodle Arms", GOOD.."+5 starting Worth\
 																-7,			2,					{}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_INSTRUMENTS, "Instruments", GOOD.."+5% turret range",
 																-10,		-3,					{}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_STOWAGE, 	"Stowage", GOOD.."Resupply usages build up when you're not there\n"..BAD.."+15% resupply delay",
+GM:AddSkill(SKILL_STOWAGE, 	"Stowage", GOOD.."Resupply usages build up when you're not there\n"..BAD.."-15% resupply delay",
 																4,			-3,					{}, TREE_BUILDINGTREE)
 
 -- Gunnery Tree
@@ -980,28 +980,28 @@ GM:AddSkillModifier(SKILL_SPEED4, SKILLMOD_SPEED, 7)
 GM:AddSkillModifier(SKILL_SPEED4, SKILLMOD_HEALTH, -6)
 
 GM:AddSkillModifier(SKILL_SPEED5, SKILLMOD_SPEED, 13)
-GM:AddSkillModifier(SKILL_SPEED5, SKILLMOD_HEALTH, -7)
+GM:AddSkillModifier(SKILL_SPEED5, SKILLMOD_HEALTH, -10)
 
 GM:AddSkillModifier(SKILL_STOIC1, SKILLMOD_HEALTH, 1)
-GM:AddSkillModifier(SKILL_STOIC1, SKILLMOD_SPEED, -1)
+GM:AddSkillModifier(SKILL_STOIC1, SKILLMOD_SPEED, -5)
 
 GM:AddSkillModifier(SKILL_STOIC2, SKILLMOD_HEALTH, 2)
-GM:AddSkillModifier(SKILL_STOIC2, SKILLMOD_SPEED, -2)
+GM:AddSkillModifier(SKILL_STOIC2, SKILLMOD_SPEED, -10)
 
 GM:AddSkillModifier(SKILL_STOIC3, SKILLMOD_HEALTH, 4)
-GM:AddSkillModifier(SKILL_STOIC3, SKILLMOD_SPEED, -4)
+GM:AddSkillModifier(SKILL_STOIC3, SKILLMOD_SPEED, -16)
 
 GM:AddSkillModifier(SKILL_STOIC4, SKILLMOD_HEALTH, 6)
-GM:AddSkillModifier(SKILL_STOIC4, SKILLMOD_SPEED, -6)
+GM:AddSkillModifier(SKILL_STOIC4, SKILLMOD_SPEED, -21)
 
 GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_HEALTH, 7)
-GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_SPEED, -6)
+GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_SPEED, -31)
 
 GM:AddSkillModifier(SKILL_VITALITY1, SKILLMOD_HEALTH, 8)
 GM:AddSkillModifier(SKILL_VITALITY2, SKILLMOD_HEALTH, 8)
 GM:AddSkillModifier(SKILL_VITALITY3, SKILLMOD_HEALTH, 8)
 GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_HEALTH, 20)
-GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 20)
+GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 30)
 
 GM:AddSkillModifier(SKILL_MOTIONI, SKILLMOD_SPEED, 5)
 GM:AddSkillModifier(SKILL_MOTIONII, SKILLMOD_SPEED, 9)
@@ -1025,8 +1025,8 @@ GM:AddSkillModifier(SKILL_WOOISM, SKILLMOD_IRONSIGHT_EFF_MUL, -0.25)
 
 GM:AddSkillModifier(SKILL_GLUTTON, SKILLMOD_HEALTH, 7)
 
-GM:AddSkillModifier(SKILL_TANKER, SKILLMOD_HEALTH, 40)
-GM:AddSkillModifier(SKILL_TANKER, SKILLMOD_SPEED, -10)
+GM:AddSkillModifier(SKILL_TANKER, SKILLMOD_HEALTH, 60)
+GM:AddSkillModifier(SKILL_TANKER, SKILLMOD_SPEED, -40)
 
 GM:AddSkillModifier(SKILL_ULTRANIMBLE, SKILLMOD_HEALTH, -5)
 GM:AddSkillModifier(SKILL_ULTRANIMBLE, SKILLMOD_SPEED, 50)
