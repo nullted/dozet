@@ -29,7 +29,7 @@ SWEP.Tier = 5
 SWEP.MaxStock = 2
 
 
-SWEP.MeleeDamage = 241
+SWEP.MeleeDamage = 199
 SWEP.MeleeRange = 141
 SWEP.MeleeSize = 4
 SWEP.MeleeKnockBack = 9999
