@@ -40,7 +40,7 @@ SWEP.MeleeKnockBack = 17
 
 SWEP.Primary.Delay = 1.7
 
-SWEP.WalkSpeed = SPEED_SLOWEST * 0.7
+SWEP.WalkSpeed = SPEED_VKID
 
 SWEP.SwingRotation = Angle(60, 0, -80)
 SWEP.SwingOffset = Vector(0, -30, 0)
@@ -49,7 +49,7 @@ SWEP.SwingHoldType = "melee"
 
 SWEP.Tier = 5
 
-SWEP.Knockback = 2
+SWEP.Knockback = -111
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/iceaxe/iceaxe_swing1.wav", 75, math.random(20, 25))

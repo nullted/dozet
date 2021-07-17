@@ -84,7 +84,7 @@ DEFAULT_VIEW_OFFSET = Vector(0, 0, 64)
 DEFAULT_VIEW_OFFSET_DUCKED = Vector(0, 0, 32) -- 28 is the default but 32 lines up to where the gun is on the model
 -- default land speed = 269.5 274
 DEFAULT_JUMP_POWER = 200 --284
-DEFAULT_STEP_SIZE = 18
+DEFAULT_STEP_SIZE = 26
 DEFAULT_MASS = 80
 DEFAULT_MODELSCALE = 1
 
@@ -107,7 +107,7 @@ GM.MaxArmDamage = 20
 GM.UtilityKey = IN_SPEED
 GM.MenuKey = IN_WALK -- I would use the spawn menu but it has no IN_ key assignment.
 
-GM.ArsenalCrateCommission = 0.20
+GM.ArsenalCrateCommission = 0.27
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 
@@ -135,6 +135,7 @@ SPEED_SLOW = SPEED_NORMAL - 8
 SPEED_FAST = SPEED_NORMAL + 8
 SPEED_FASTER = SPEED_NORMAL + 20
 SPEED_FASTEST = SPEED_NORMAL + 40
+SPEED_VKID = SPEED_NORMAL + 200
 
 SPEED_ZOMBIEESCAPE_SLOWEST = 240
 SPEED_ZOMBIEESCAPE_SLOWER = 260
