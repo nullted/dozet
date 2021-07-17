@@ -23,7 +23,7 @@ CLASS.DeathSounds = {Sound("npc/zombie_poison/pz_call1.wav")}
 if SERVER then
 function CLASS:ProcessDamage(pl, dmginfo)
 	if dmginfo:GetInflictor().IsMelee then
-		dmginfo:SetDamage(dmginfo:GetDamage() / 10)
+		dmginfo:SetDamage(dmginfo:GetDamage() / 30)
 	end
 end
 end

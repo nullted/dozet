@@ -127,3 +127,10 @@ function CLASS:ProcessDamage(pl, dmginfo)
 		pl:GodDisable()
 	end
 end
+if SERVER then
+function CLASS:ProcessDamage(pl, dmginfo)
+	if dmginfo:GetInflictor().IsMelee then
+		dmginfo:SetDamage(dmginfo:GetDamage() / 6)
+	end
+end
+end
