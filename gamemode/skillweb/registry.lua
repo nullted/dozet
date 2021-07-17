@@ -354,23 +354,23 @@ local BAD = "^"..COLORID_RED
 --
 
 -- Health Tree
-GM:AddSkill(SKILL_STOIC1, "Stoic I", GOOD.."+2 maximum health\n"..BAD.."-1 movement speed",
+GM:AddSkill(SKILL_STOIC1, "Stoic I", GOOD.."+4 maximum health\n"..BAD.."-5 movement speed",
 																-4,			-6,					{SKILL_NONE, SKILL_STOIC2}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_STOIC2, "Stoic II", GOOD.."+2 maximum health\n"..BAD.."-1.5 movement speed",
+GM:AddSkill(SKILL_STOIC2, "Stoic II", GOOD.."+5 maximum health\n"..BAD.."-7 movement speed",
 																-4,			-4,					{SKILL_STOIC3, SKILL_VITALITY1, SKILL_REGENERATOR}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_STOIC3, "Stoic III", GOOD.."+4 maximum health\n"..BAD.."-3 movement speed",
+GM:AddSkill(SKILL_STOIC3, "Stoic III", GOOD.."+6 maximum health\n"..BAD.."-9 movement speed",
 																-3,			-2,					{SKILL_STOIC4}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_STOIC4, "Stoic IV", GOOD.."+6 maximum health\n"..BAD.."-4.5 movement speed",
+GM:AddSkill(SKILL_STOIC4, "Stoic IV", GOOD.."+8 maximum health\n"..BAD.."-11 movement speed",
 																-3,			0,					{SKILL_STOIC5}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_STOIC5, "Stoic V", GOOD.."+7 maximum health\n"..BAD.."-5.25 movement speed",
+GM:AddSkill(SKILL_STOIC5, "Stoic V", GOOD.."+11 maximum health\n"..BAD.."-10 movement speed",
 																-3,			2,					{SKILL_BLOODARMOR, SKILL_TANKER}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_D_HEMOPHILIA, "Debuff: Hemophilia", GOOD.."+10 starting Worth\n"..GOOD.."+3 starting scrap\n"..BAD.."Bleed for 25% extra damage when hit",
 																4,			2,					{}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_GLUTTON, "Glutton", GOOD.."Gain up to 30 blood armor when you eat food\n"..GOOD.."Blood armor gained can exceed the cap by 40\n"..BAD.."-5 maximum health\n"..BAD.."No longer receive health from eating food",
+GM:AddSkill(SKILL_GLUTTON, "Glutton", GOOD.."Gain up to 30 blood armor when you eat food\n"..GOOD.."Blood armor gained can exceed the cap by 40\n"..BAD.."+7 maximum health\n"..BAD.."No longer receive health from eating food",
 																3,			-2,					{SKILL_GOURMET, SKILL_BLOODARMOR}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_PREPAREDNESS, "Preparedness", GOOD.."Your starting item can be a random food item",
 																4,			-6,					{SKILL_NONE}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_GOURMET, "Gourmet", GOOD.."+100% recovery from food\n"..BAD.."+200% time to eat food",
+GM:AddSkill(SKILL_GOURMET, "Gourmet", GOOD.."+400% recovery from food\n"..BAD.."+200% time to eat food",
 																4,			-4,					{SKILL_PREPAREDNESS, SKILL_VITALITY1}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_HAEMOSTASIS, "Haemostasis", GOOD.."Resist status effects while you have at least 2 blood armor\n"..BAD.."Lose 2 blood armor on resist\n"..BAD.."-25% blood armor damage absorption",
 																4,			6,					{}, TREE_HEALTHTREE)
@@ -390,7 +390,7 @@ GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+8 maximum health",
 																0,			-2,					{SKILL_VITALITY3}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+8 maximum health",
 																0,			-0,					{SKILL_D_WEAKNESS}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+20 maximum health and +20 speed",
+GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+20 maximum health and +30 speed",
 																1,			1,					{SKILL_GOURMET}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_TANKER, "Tanker", GOOD.."+60 maximum health\n"..BAD.."-40 movement speed",
 																-5,			4,					{}, TREE_HEALTHTREE)
@@ -405,15 +405,15 @@ GM:AddSkill(SKILL_SANGUINE, "Sanguine", GOOD.."+11 maximum blood armor\n"..BAD..
 GM:AddSkill(SKILL_ANTIGEN, "Antigen", GOOD.."+5% blood armor damage absorption\n"..BAD.."-3 maximum health",
 																-2,			4,					{}, TREE_HEALTHTREE)
 -- Speed Tree
-GM:AddSkill(SKILL_SPEED1, "Speed I", GOOD.."+0.75 movement speed\n"..BAD.."-1 maximum health",
+GM:AddSkill(SKILL_SPEED1, "Speed I", GOOD.."+2 movement speed\n"..BAD.."-1 maximum health",
 																-4,			6,					{SKILL_NONE, SKILL_SPEED2}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_SPEED2, "Speed II", GOOD.."+1.5 movement speed\n"..BAD.."-2 maximum health",
+GM:AddSkill(SKILL_SPEED2, "Speed II", GOOD.."3 movement speed\n"..BAD.."-2 maximum health",
 																-4,			4,					{SKILL_SPEED3, SKILL_PHASER, SKILL_SPEED2, SKILL_U_CORRUPTEDFRAGMENT}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_SPEED3, "Speed III", GOOD.."+3 movement speed\n"..BAD.."-4 maximum health",
+GM:AddSkill(SKILL_SPEED3, "Speed III", GOOD.."+5 movement speed\n"..BAD.."-4 maximum health",
 																-4,			2,					{SKILL_SPEED4}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_SPEED4, "Speed IV", GOOD.."+4.5 movement speed\n"..BAD.."-6 maximum health",
+GM:AddSkill(SKILL_SPEED4, "Speed IV", GOOD.."+7 movement speed\n"..BAD.."-6 maximum health",
 																-4,			0,					{SKILL_SPEED5, SKILL_SAFEFALL}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_SPEED5, "Speed V", GOOD.."+5.25 movement speed\n"..BAD.."-7 maximum health",
+GM:AddSkill(SKILL_SPEED5, "Speed V", GOOD.."+13 movement speed\n"..BAD.."-10 maximum health",
 																-4,			-2,					{SKILL_ULTRANIMBLE, SKILL_BACKPEDDLER, SKILL_MOTIONI, SKILL_CARDIOTONIC, SKILL_UNBOUND}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_AGILEI, "Agile I", GOOD.."+4% jumping power\n"..BAD.."-2 movement speed",
 																4,			6,					{SKILL_NONE, SKILL_AGILEII}, TREE_SPEEDTREE)
@@ -421,13 +421,13 @@ GM:AddSkill(SKILL_AGILEII, "Agile II", GOOD.."+5% jumping power\n"..BAD.."-3 mov
 																4,			2,					{SKILL_AGILEIII, SKILL_WORTHINESS3}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_AGILEIII, "Agile III", GOOD.."+6% jumping power\n"..BAD.."-4 movement speed",
 																4,			-2,					{SKILL_SAFEFALL, SKILL_ULTRANIMBLE, SKILL_SURESTEP, SKILL_INTREPID}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_D_SLOW, "Debuff: Slow", GOOD.."+15 starting Worth\n"..GOOD.."+1 end of wave points\n"..BAD.."-33.75 movement speed",
+GM:AddSkill(SKILL_D_SLOW, "Slow", GOOD.."+30 starting Worth\n"..GOOD.."+20 end of wave points\n"..BAD.."-13.75 movement speed",
 																0,			-4,					{}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_MOTIONI, "Motion I", GOOD.."+0.75 movement speed",
+GM:AddSkill(SKILL_MOTIONI, "Motion I", GOOD.."+5 movement speed",
 																-2,			-2,					{SKILL_MOTIONII}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_MOTIONII, "Motion II", GOOD.."+0.75 movement speed",
+GM:AddSkill(SKILL_MOTIONII, "Motion II", GOOD.."+9 movement speed",
 																-1,			-1,					{SKILL_MOTIONIII}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_MOTIONIII, "Motion III", GOOD.."+0.75 movement speed",
+GM:AddSkill(SKILL_MOTIONIII, "Motion III", GOOD.."+12 movement speed",
 																0,			-2,					{SKILL_D_SLOW}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_BACKPEDDLER, "Backpeddler", GOOD.."Move the same speed in all directions\n"..BAD.."-7 movement speed\n"..BAD.."Receive leg damage on any melee hit",
 																-6,			0,					{}, TREE_SPEEDTREE)
@@ -443,7 +443,7 @@ GM:AddSkill(SKILL_D_WIDELOAD, "Debuff: Wide Load", GOOD.."+20 starting Worth\n".
 																1,			1,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_U_CORRUPTEDFRAGMENT, "Unlock: Corrupted Fragment", GOOD.."Unlocks purchasing the Corrupted Fragment\nGoes to corrupted sigils instead",
 																-2,			2,					{}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_ULTRANIMBLE, "Ultra Nimble", GOOD.."+15 movement speed\n"..BAD.."-20 maximum health",
+GM:AddSkill(SKILL_ULTRANIMBLE, "Ultra Nimble", GOOD.."+30 movement speed\n"..BAD.."-10 maximum health",
 																0,			-6,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_WORTHINESS3, "Worthiness III", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
 																6,			2,					{}, TREE_SPEEDTREE)
@@ -458,21 +458,21 @@ GM:AddSkill(SKILL_CARDIOTONIC, "Cardiotonic", GOOD.."Hold shift to run whilst dr
 GM:AddSkill(SKILL_UNBOUND, "Unbound", GOOD.."-60% reduced delay from switching weapons affecting movement speed\n"..BAD.."-4 movement speed",
 																-4,			-4,					{}, TREE_SPEEDTREE)
 -- Medic Tree
-GM:AddSkill(SKILL_SURGEON1, "Surgeon I", GOOD.."-8% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEON1, "Surgeon I", GOOD.."-10% medical kit cooldown",
 																-4,			6,					{SKILL_NONE, SKILL_SURGEON2}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_SURGEON2, "Surgeon II", GOOD.."-9% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEON2, "Surgeon II", GOOD.."-14% medical kit cooldown",
 																-3,			3,					{SKILL_WORTHINESS4, SKILL_SURGEON3}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_SURGEON3, "Surgeon III", GOOD.."-10% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEON3, "Surgeon III", GOOD.."-17% medical kit cooldown",
 																-2,			0,					{SKILL_U_MEDICCLOUD, SKILL_D_FRAIL, SKILL_SURGEONIV}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_SURGEONIV, "Surgeon IV", GOOD.."-11% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEONIV, "Surgeon IV", GOOD.."-33% medical kit cooldown",
 																-2,			-3,					{}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYI, "Biology I", GOOD.."+8% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYI, "Biology I", GOOD.."+1% medic tool effectiveness",
 																4,			6,					{SKILL_NONE, SKILL_BIOLOGYII}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYII, "Biology II", GOOD.."+9% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYII, "Biology II", GOOD.."+13% medic tool effectiveness",
 																3,			3,					{SKILL_BIOLOGYIII, SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYIII, "Biology III", GOOD.."+10% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYIII, "Biology III", GOOD.."+30% medic tool effectiveness",
 																2,			0,					{SKILL_U_MEDICCLOUD, SKILL_U_ANTITODESHOT, SKILL_BIOLOGYIV}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYIV, "Biology IV", GOOD.."+11% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYIV, "Biology IV", GOOD.."+41% medic tool effectiveness",
 																2,			-3,					{}, TREE_SUPPORTTREE)
 GM:AddSkill(SKILL_D_FRAIL, "Debuff: Frail", GOOD.."+20 starting Worth\n"..GOOD.."+5 starting points\n"..BAD.."Cannot be healed above 25% health",
 																-4,			-2,					{}, TREE_SUPPORTTREE)
@@ -493,17 +493,17 @@ GM:AddSkill(SKILL_DISPERSION, "Dispersion", GOOD.."+15% cloud bomb radius\n"..BA
 																0,			-4,					{}, TREE_SUPPORTTREE)
 
 -- Defence Tree
-GM:AddSkill(SKILL_HANDY1, "Handy I", GOOD.."+4% repair rate",
+GM:AddSkill(SKILL_HANDY1, "Handy I", GOOD.."+8% repair rate",
 																-5,			-6,					{SKILL_NONE, SKILL_HANDY2}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_HANDY2, "Handy II", GOOD.."+5% repair rate",
+GM:AddSkill(SKILL_HANDY2, "Handy II", GOOD.."+9% repair rate",
 																-5,			-4,					{SKILL_HANDY3, SKILL_U_BLASTTURRET, SKILL_LOADEDHULL}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_HANDY3, "Handy III", GOOD.."+6% repair rate",
+GM:AddSkill(SKILL_HANDY3, "Handy III", GOOD.."+11% repair rate",
 																-5,			-1,					{SKILL_TAUT, SKILL_HAMMERDISCIPLINE, SKILL_D_NOODLEARMS, SKILL_HANDY4}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_HANDY4, "Handy IV", GOOD.."+7% repair rate",
+GM:AddSkill(SKILL_HANDY4, "Handy IV", GOOD.."+17% repair rate",
 																-3,			1,					{SKILL_HANDY5}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_HANDY5, "Handy V", GOOD.."+8% repair rate",
+GM:AddSkill(SKILL_HANDY5, "Handy V", GOOD.."+22% repair rate",
 																-3,			3,					{}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_HAMMERDISCIPLINE, "Hammer Discipline", GOOD.."-20% swing delay with the Carpenter Hammer",
+GM:AddSkill(SKILL_HAMMERDISCIPLINE, "Hammer Discipline", GOOD.."-40% swing delay with the Carpenter Hammer",
 																0,			1,					{SKILL_BARRICADEEXPERT}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Props hit with a hammer in the last 2 seconds take 8% less damage\n"..GOOD.."Gain points from protected props\n"..BAD.."+30% swing delay with the Carpenter Hammer",
 																0,			3,					{}, TREE_BUILDINGTREE)
@@ -583,11 +583,11 @@ GM:AddSkill(SKILL_LEVELHEADED, "Level Headed", GOOD.."-5% reduced effect of aim 
 																-2,			2,					{}, TREE_GUNTREE)
 GM:AddSkill(SKILL_QUICKDRAW, "Quick Draw", GOOD.."+65% weapon draw speed\n"..BAD.."-15% weapon reload speed",
 																0,			1,					{}, TREE_GUNTREE)
-GM:AddSkill(SKILL_FOCUS, "Focus I", GOOD.."+3% tighter aiming reticule\n"..BAD.."-3% weapon reload speed",
+GM:AddSkill(SKILL_FOCUS, "Focus I", GOOD.."+11% tighter aiming reticule\n"..BAD.."-3% weapon reload speed",
 																5,			6,					{SKILL_NONE, SKILL_FOCUSII}, TREE_GUNTREE)
-GM:AddSkill(SKILL_FOCUSII, "Focus II", GOOD.."+4% tighter aiming reticule\n"..BAD.."-4% weapon reload speed",
+GM:AddSkill(SKILL_FOCUSII, "Focus II", GOOD.."+9% tighter aiming reticule\n"..BAD.."-7% weapon reload speed",
 																4,			3,					{SKILL_FOCUSIII, SKILL_SCAVENGER, SKILL_D_PALSY, SKILL_PITCHER}, TREE_GUNTREE)
-GM:AddSkill(SKILL_FOCUSIII, "Focus III", GOOD.."+5% tighter aiming reticule\n"..BAD.."-5% weapon reload speed",
+GM:AddSkill(SKILL_FOCUSIII, "Focus III", GOOD.."+12% tighter aiming reticule\n"..BAD.."-6% weapon reload speed",
 																3,			0,					{SKILL_EGOCENTRIC, SKILL_WOOISM, SKILL_ORPHICFOCUS, SKILL_SCOURER}, TREE_GUNTREE)
 GM:AddSkill(SKILL_QUICKRELOAD, "Quick Reload", GOOD.."+10% weapon reload speed\n"..BAD.."-25% weapon draw speed",
 																-5,			1,					{SKILL_SLEIGHTOFHAND}, TREE_GUNTREE)
@@ -599,11 +599,11 @@ GM:AddSkill(SKILL_SOFTDET, "Soft Detonation", GOOD.."-40% explosive damage taken
 																0,			-5,					{}, TREE_GUNTREE)
 GM:AddSkill(SKILL_ORPHICFOCUS, "Orphic Focus", GOOD.."90% spread while ironsighting\n"..GOOD.."+2% tighter aiming reticule\n"..BAD.."110% spread at any other time\n"..BAD.."-6% reload speed",
 																5,			-1,					{SKILL_DELIBRATION}, TREE_GUNTREE)
-GM:AddSkill(SKILL_DELIBRATION, "Delibration", GOOD.."+1% tighter aiming reticule",
+GM:AddSkill(SKILL_DELIBRATION, "Delibration", GOOD.."+3% tighter aiming reticule",
 																6,			-3,					{}, TREE_GUNTREE)
-GM:AddSkill(SKILL_EGOCENTRIC, "Egocentric", GOOD.."-35% damage vs. yourself\n"..BAD.."-5 health",
+GM:AddSkill(SKILL_EGOCENTRIC, "Egocentric", GOOD.."-40% damage vs. yourself\n"..BAD.."-10 health",
 																0,			-1,					{SKILL_BLASTPROOF}, TREE_GUNTREE)
-GM:AddSkill(SKILL_BLASTPROOF, "Blast Proof", GOOD.."-45% damage vs. yourself\n"..BAD.."-7% reload speed\n"..BAD.."-12% weapon draw speed",
+GM:AddSkill(SKILL_BLASTPROOF, "Blast Proof", GOOD.."-40% damage vs. yourself\n"..BAD.."-10% reload speed\n"..BAD.."-12% weapon draw speed",
 																0,			-3,					{SKILL_SOFTDET, SKILL_CANNONBALL, SKILL_CONEFFECT}, TREE_GUNTREE)
 GM:AddSkill(SKILL_WOOISM, "Zeal", GOOD.."-50% speed reduction from being ironsighted\n"..BAD.."-25% accuracy bonus from ironsighting",
 																5,			1,					{SKILL_TRUEWOOISM}, TREE_GUNTREE)
@@ -627,15 +627,15 @@ GM:AddSkill(SKILL_TRUEWOOISM, "Wooism", GOOD.."No accuracy penalty from moving o
 -- Melee Tree
 GM:AddSkill(SKILL_WORTHINESS2, "Worthiness II", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
 																4,			0,					{}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER1, "Battler I", GOOD.."+4% melee damage",
+GM:AddSkill(SKILL_BATTLER1, "Battler I", GOOD.."+5% melee damage",
 																-6,			-6,					{SKILL_BATTLER2, SKILL_NONE}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER2, "Battler II", GOOD.."+5% melee damage",
+GM:AddSkill(SKILL_BATTLER2, "Battler II", GOOD.."+7% melee damage",
 																-6,			-4,					{SKILL_BATTLER3, SKILL_LIGHTWEIGHT}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER3, "Battler III", GOOD.."+5% melee damage",
+GM:AddSkill(SKILL_BATTLER3, "Battler III", GOOD.."+10% melee damage",
 																-4,			-2,					{SKILL_BATTLER4, SKILL_LANKY, SKILL_FOUR_IN_ONE}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER4, "Battler IV", GOOD.."+6% melee damage",
+GM:AddSkill(SKILL_BATTLER4, "Battler IV", GOOD.."+13% melee damage",
 																-2,			0,					{SKILL_BATTLER5, SKILL_MASTERCHEF, SKILL_D_CLUMSY}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+7% melee damage",
+GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+16% melee damage",
 																0,			2,					{SKILL_GLASSWEAPONS, SKILL_BLOODLUST}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LASTSTAND, "Last Stand", GOOD.."Double melee damage when below 25% health\n"..BAD.."0.85x melee weapon damage at any other time",
 																0,			6,					{}, TREE_MELEETREE)
@@ -653,7 +653,7 @@ GM:AddSkill(SKILL_COMBOKNUCKLE, "Combo Knuckle", GOOD.."Next unarmed strike is 2
 																6,			-4,					{SKILL_CHEAPKNUCKLE, SKILL_CRITICALKNUCKLE}, TREE_MELEETREE)
 GM:AddSkill(SKILL_HEAVYSTRIKES, "Heavy Strikes", GOOD.."+100% melee knockback\n"..BAD.."8% of melee damage dealt is reflected back to you\n"..BAD.."100% reflected if using unarmed strikes",
 																2,			0,					{SKILL_BATTLER5, SKILL_JOUSTER}, TREE_MELEETREE)
-GM:AddSkill(SKILL_JOUSTER, "Jouster", GOOD.."+10% melee damage\n"..BAD.."-100% melee knockback",
+GM:AddSkill(SKILL_JOUSTER, "Jouster", GOOD.."+90% melee damage\n"..BAD.."-90% melee knockback",
 																2,			2,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LANKY, "Lanky I", GOOD.."+10% melee range\n"..BAD.."-15% melee damage",
 																-4,			0,					{SKILL_LANKYII}, TREE_MELEETREE)
@@ -1005,7 +1005,7 @@ GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 30)
 
 GM:AddSkillModifier(SKILL_MOTIONI, SKILLMOD_SPEED, 5)
 GM:AddSkillModifier(SKILL_MOTIONII, SKILLMOD_SPEED, 9)
-GM:AddSkillModifier(SKILL_MOTIONIII, SKILLMOD_SPEED, 30)
+GM:AddSkillModifier(SKILL_MOTIONIII, SKILLMOD_SPEED, 12)
 
 GM:AddSkillModifier(SKILL_FOCUS, SKILLMOD_AIMSPREAD_MUL, -0.11)
 GM:AddSkillModifier(SKILL_FOCUS, SKILLMOD_RELOADSPEED_MUL, -0.03)
@@ -1019,7 +1019,7 @@ GM:AddSkillModifier(SKILL_FOCUSIII, SKILLMOD_RELOADSPEED_MUL, -0.06)
 GM:AddSkillModifier(SKILL_ORPHICFOCUS, SKILLMOD_RELOADSPEED_MUL, -0.06)
 GM:AddSkillModifier(SKILL_ORPHICFOCUS, SKILLMOD_AIMSPREAD_MUL, -0.02)
 
-GM:AddSkillModifier(SKILL_DELIBRATION, SKILLMOD_AIMSPREAD_MUL, -0.01)
+GM:AddSkillModifier(SKILL_DELIBRATION, SKILLMOD_AIMSPREAD_MUL, -0.03)
 
 GM:AddSkillModifier(SKILL_WOOISM, SKILLMOD_IRONSIGHT_EFF_MUL, -0.25)
 
@@ -1028,14 +1028,14 @@ GM:AddSkillModifier(SKILL_GLUTTON, SKILLMOD_HEALTH, 7)
 GM:AddSkillModifier(SKILL_TANKER, SKILLMOD_HEALTH, 60)
 GM:AddSkillModifier(SKILL_TANKER, SKILLMOD_SPEED, -40)
 
-GM:AddSkillModifier(SKILL_ULTRANIMBLE, SKILLMOD_HEALTH, -5)
-GM:AddSkillModifier(SKILL_ULTRANIMBLE, SKILLMOD_SPEED, 50)
+GM:AddSkillModifier(SKILL_ULTRANIMBLE, SKILLMOD_HEALTH, -10)
+GM:AddSkillModifier(SKILL_ULTRANIMBLE, SKILLMOD_SPEED, 30)
 
-GM:AddSkillModifier(SKILL_EGOCENTRIC, SKILLMOD_SELF_DAMAGE_MUL, -0.7)
+GM:AddSkillModifier(SKILL_EGOCENTRIC, SKILLMOD_SELF_DAMAGE_MUL, -0.4)
 GM:AddSkillModifier(SKILL_EGOCENTRIC, SKILLMOD_HEALTH, -10)
 
-GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_SELF_DAMAGE_MUL, -0.60)
-GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_RELOADSPEED_MUL, 0.30)
+GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_SELF_DAMAGE_MUL, -0.40)
+GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_RELOADSPEED_MUL, -0.10)
 GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_DEPLOYSPEED_MUL, -0.12)
 
 GM:AddSkillModifier(SKILL_SURGEON1, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.1)
@@ -1059,7 +1059,7 @@ GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_ENDWAVE_POINTS, 20)
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_SPEED, -13.75)
 
 GM:AddSkillModifier(SKILL_GOURMET, SKILLMOD_FOODEATTIME_MUL, 2.0)
-GM:AddSkillModifier(SKILL_GOURMET, SKILLMOD_FOODRECOVERY_MUL, 1.0)
+GM:AddSkillModifier(SKILL_GOURMET, SKILLMOD_FOODRECOVERY_MUL, 4.0)
 
 GM:AddSkillModifier(SKILL_SUGARRUSH, SKILLMOD_FOODRECOVERY_MUL, -0.35)
 

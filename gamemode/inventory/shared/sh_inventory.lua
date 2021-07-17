@@ -94,9 +94,9 @@ GM.Assemblies["trinket_electromagnet"]							= {"comp_electrobattery",	"trinket_
 GM.Assemblies["trinket_projguide"]								= {"comp_cpuparts",			"trinket_targetingvisori"}
 GM.Assemblies["trinket_projwei"]								= {"comp_busthead",			"trinket_projguide"}
 GM.Assemblies["trinket_controlplat"]							= {"comp_cpuparts",			"trinket_mainsuite"}
-GM.Assemblies["weapon_zs_classixx"]				 		    	= {"comp_scoper",			"weapon_zs_classic"}
-GM.Assemblies["trinket_classixsoul"]							= {"comp_cpuparts",			"trinket_classix"}
-GM.Assemblies["comp_scoper"]						        	= {"trinket_electromagnet",	"trinket_classixsoul"}
+GM.Assemblies["weapon_zs_classixx"]				 		    	= {"trinket_classixsoul",			"weapon_zs_classic"}
+GM.Assemblies["trinket_classixsoul"]							= {"comp_cpuparts",			"comp_scoper"}
+GM.Assemblies["comp_scoper"]						        	= {"trinket_electromagnet",	"trinket_classix"}
 GM.Assemblies["weapon_zs_cryman"] 				     			= {"comp_gaussframe",		"weapon_zs_hyena"}
 GM.Assemblies["trinket_invalid"]						        	= {"trinket_classil",	"trinket_analgestic"}
 
@@ -717,7 +717,7 @@ trinket = GM:AddTrinket("Soul of Toy", "toysoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(0, 0, 0, 125), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(0, 0, 0, 125), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(0, 0, 0, 100), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil, "Душа Тоя???Невозможно.Большая уязвимость к баракотам")
+}, nil, "Душа Тоя???Невозможно.Большая уязвимость к баракотам,дает 100 скорости,чинильная станция лучше на 100%,вы не взорветесь!Хотя смысл все объяснять?")
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 100)
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_RANGE_MUL, 1)
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_DELAY_MUL, -1)
