@@ -98,6 +98,7 @@ GM.Assemblies["weapon_zs_classixx"]				 		    	= {"comp_scoper",			"weapon_zs_cl
 GM.Assemblies["trinket_classixsoul"]							= {"comp_cpuparts",			"trinket_classix"}
 GM.Assemblies["comp_scoper"]						        	= {"trinket_electromagnet",	"trinket_classixsoul"}
 GM.Assemblies["weapon_zs_cryman"] 				     			= {"comp_gaussframe",		"weapon_zs_hyena"}
+GM.Assemblies["trinket_invalid"]						        	= {"trinket_classil",	"trinket_analgestic"}
 
 
 GM:AddInventoryItemData("comp_modbarrel",		"Modular Barrel",			"A modular barrel suited for pairing up with another gun barrel.",								"models/props_c17/trappropeller_lever.mdl")
@@ -202,8 +203,8 @@ trinket = GM:AddTrinket("Greed eye", "greedeye", false, hpveles, hpweles, 4, "Yo
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 40)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.05)
 
-trinket = GM:AddTrinket("Grilled Baracat", "classil", false, hpveles, hpweles, 4, "+133 hp,blood armor effective 9% and you can't take heal,-55% convert melee damage to blood armor")
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 133)
+trinket = GM:AddTrinket("Grilled Baracat", "classil", false, hpveles, hpweles, 4, "+90 hp,blood armor effective 9% and you can't take heal,-55% convert melee damage to blood armor")
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 90)
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, -1)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.55)
@@ -320,6 +321,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_LOW_HEALTH_SLOW_MUL, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.7)
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.25)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.04)
+trinket = GM:AddTrinket("INVALID", "invalid", false, pveles, pweles, 3, "baracat  sucks dicks,you have immune to knockdown")
+GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -1)
+
 trinket = GM:AddTrinket("Credit", "kre", false, pveles, pweles, 3, "Sale by 7%")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.07)
 
@@ -506,17 +510,11 @@ trinket = GM:AddTrinket("Operations Matrix", "opsmatrix", false, supveles, supwe
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_RANGE_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_DELAY_MUL, -0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_TURRET_RANGE_MUL, 0.85)
-trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "USELESS.")
-GM:AddSkillModifier(trinket, SKILLMOD_FIELD_RANGE_MUL, 1)
-GM:AddSkillModifier(trinket, SKILLMOD_FIELD_DELAY_MUL, -1)
-GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, 2)
-GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 0.3)
-GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_HEALTH_MUL, 0.6)
-GM:AddSkillModifier(trinket, SKILLMOD_CONTROLLABLE_SPEED_MUL, 0.15)
-GM:AddSkillModifier(trinket, SKILLMOD_MANHACK_DAMAGE_MUL, 10)
-GM:AddSkillModifier(trinket, SKILLMOD_MEDKIT_COOLDOWN_MUL, -3)
-GM:AddSkillModifier(trinket, SKILLMOD_MEDGUN_FIRE_DELAY_MUL, -0.3)
-GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 55)
+trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "Fucking boomS x5 radius of explosive and -0.4 taken damage by explosive.")
+GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, -0.4)
+GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 5)
+
+
 
 
 
