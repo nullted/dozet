@@ -101,13 +101,13 @@ CARRY_SPEEDLOSS_PERKG = 1.3
 -- but can never be slower than this.
 CARRY_SPEEDLOSS_MINSPEED = 88
 
-GM.MaxLegDamage = 3
-GM.MaxArmDamage = 3
+GM.MaxLegDamage = 20
+GM.MaxArmDamage = 20
 
 GM.UtilityKey = IN_SPEED
 GM.MenuKey = IN_WALK -- I would use the spawn menu but it has no IN_ key assignment.
 
-GM.ArsenalCrateCommission = 0.04
+GM.ArsenalCrateCommission = 0.20
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 
@@ -121,14 +121,14 @@ GM.PulsePointsMultiplier = 1.55
 
 -- The amount of damage you need to inflict to a zombie type to get a point
 GM.HumanoidZombiePointRatio = 45
-GM.PoisonZombiePointRatio = 60 -- Has an enormous head hitbox
-GM.HeadcrabZombiePointRatio = 30
-GM.NoHeadboxZombiePointRatio = 38
-GM.TorsoZombiePointRatio = 42
+GM.PoisonZombiePointRatio = 77 -- Has an enormous head hitbox
+GM.HeadcrabZombiePointRatio = 55
+GM.NoHeadboxZombiePointRatio = 55
+GM.TorsoZombiePointRatio = 45
 GM.LegsZombiePointRatio = 37.5
 GM.SkeletonPointRatio = GM.HumanoidZombiePointRatio/3
 
-SPEED_NORMAL = 190
+SPEED_NORMAL = 259
 SPEED_SLOWEST = SPEED_NORMAL - 60
 SPEED_SLOWER = SPEED_NORMAL - 30
 SPEED_SLOW = SPEED_NORMAL - 8
@@ -136,21 +136,21 @@ SPEED_FAST = SPEED_NORMAL + 8
 SPEED_FASTER = SPEED_NORMAL + 20
 SPEED_FASTEST = SPEED_NORMAL + 40
 
-SPEED_ZOMBIEESCAPE_SLOWEST = 220
-SPEED_ZOMBIEESCAPE_SLOWER = 230
-SPEED_ZOMBIEESCAPE_SLOW = 240
-SPEED_ZOMBIEESCAPE_NORMAL = 250
-SPEED_ZOMBIEESCAPE_ZOMBIE = 280
+SPEED_ZOMBIEESCAPE_SLOWEST = 240
+SPEED_ZOMBIEESCAPE_SLOWER = 260
+SPEED_ZOMBIEESCAPE_SLOW = 290
+SPEED_ZOMBIEESCAPE_NORMAL = 340
+SPEED_ZOMBIEESCAPE_ZOMBIE = 370
 
 ZE_KNOCKBACKSCALE = 0.1
 
 MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GRATE, CONTENTS_WINDOW, CONTENTS_HITBOX)
 
-GM.BarricadeHealthMin = 300
-GM.BarricadeHealthMax = 3000 * 0.85
+GM.BarricadeHealthMin = 700
+GM.BarricadeHealthMax = 5600 * 0.85
 GM.BarricadeHealthMassFactor = 3 * 0.85
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
-GM.BarricadeRepairCapacity = 3
+GM.BarricadeRepairCapacity = 7
 
 GM.BossZombiePlayersRequired = 4
 
@@ -259,6 +259,7 @@ GM.AmmoModels["zapper"] = "models/props_c17/utilityconnecter006c.mdl"
 GM.AmmoModels["zapper_arc"] = "models/props_c17/utilityconnecter006c.mdl"
 GM.AmmoModels["turret_buckshot"] = "models/Combine_turrets/Floor_turret.mdl"
 GM.AmmoModels["turret_assault"] = "models/Combine_turrets/Floor_turret.mdl"
+GM.AmmoModels["turret_super"] = "models/Combine_turrets/Floor_turret.mdl"
 GM.AmmoModels["remantler"] = "models/props_lab/powerbox01a.mdl"
 GM.AmmoModels["scrap"] = "models/props_junk/vent001_chunk5.mdl"
 GM.AmmoModels["sniperround"] = "models/props_debris/wood_board02a.mdl"

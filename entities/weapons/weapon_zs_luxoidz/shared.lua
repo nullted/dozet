@@ -8,7 +8,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 31
+SWEP.MeleeDamage = 71
 SWEP.MeleeRange = 91
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 240
@@ -16,21 +16,19 @@ SWEP.MeleeKnockBack = 240
 SWEP.MeleeDamageSecondaryMul = 1.5
 SWEP.MeleeKnockBackSecondaryMul = 4
 
-SWEP.Primary.Delay = 0.8
-SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.5
+SWEP.Primary.Delay = 0.5
+SWEP.Secondary.Delay = SWEP.Primary.Delay * 0.8
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
 SWEP.HitAnim = ACT_VM_MISSCENTER
-SWEP.PointsMultiplier = 0.7
+SWEP.PointsMultiplier = 0.3
 SWEP.SwingRotation = Angle(60, 0, -80)
 SWEP.SwingOffset = Vector(0, -30, 0)
 SWEP.SwingTime = 0.62
 SWEP.SwingHoldType = "melee"
 
-SWEP.SwingTimeSecondary = 0.66
-
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.14)
+SWEP.SwingTimeSecondary = 0.41
 
 function SWEP:Initialize()
 	self.BaseClass.Initialize(self)

@@ -33,11 +33,11 @@ SWEP.ViewModel = "models/weapons/c_stunstick.mdl"
 SWEP.WorldModel = "models/props_c17/computer01_keyboard.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 41
+SWEP.MeleeDamage = 32
 SWEP.MeleeRange = 70
-SWEP.MeleeSize = 1.25
+SWEP.MeleeSize = 0.8
 
-SWEP.Primary.Delay = 0.4
+SWEP.Primary.Delay = 0.46
 
 SWEP.SwingTime = 0.45
 SWEP.SwingRotation = Angle(30, -30, -30)
@@ -52,7 +52,7 @@ SWEP.OnZombieKilled = function(self, zombie, total, dmginfo)
 
 	if killer:IsValid() then
 		killer:GiveStatus("medrifledefboost", 30) 
-		killer:GiveStatus("strengthdartboost", 30)
+		killer:GiveStatus("strengthdartboost", 5)
 		end
 end
 

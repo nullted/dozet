@@ -32,7 +32,7 @@ end
 
 function SWEP:PrimaryAttack()
 	if CurTime() < self:GetNextPrimaryAttack() then return end
-	self:SetNextPrimaryAttack(CurTime() + 4)
+	self:SetNextPrimaryAttack(CurTime() + 1)
 
 	local owner = self:GetOwner()
 

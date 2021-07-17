@@ -23,7 +23,7 @@ function SWEP:SecondaryAttack()
 
 	self:EmitSound("npc/headcrab_poison/ph_poisonbite3.wav", 75, 46)
 
-	self:SetHookTime(CurTime() + 1.1)
+	self:SetHookTime(CurTime() + 0.5)
 end
 
 function SWEP:Think()
