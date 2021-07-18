@@ -34,10 +34,10 @@ SWEP.WorldModel = "models/props_c17/computer01_keyboard.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 32
-SWEP.MeleeRange = 70
+SWEP.MeleeRange = 61
 SWEP.MeleeSize = 0.8
 
-SWEP.Primary.Delay = 0.46
+SWEP.Primary.Delay = 0.56
 
 SWEP.SwingTime = 0.45
 SWEP.SwingRotation = Angle(30, -30, -30)

@@ -12,6 +12,7 @@ SWEP.MeleeDamage = 71
 SWEP.MeleeRange = 91
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 240
+SWEP.MeleeDamageVsProps = 13
 
 SWEP.MeleeDamageSecondaryMul = 1.5
 SWEP.MeleeKnockBackSecondaryMul = 4

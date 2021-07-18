@@ -17,13 +17,13 @@ SWEP.MeleeKnockBack = 240
 SWEP.MeleeDamageSecondaryMul = 0.40
 SWEP.MeleeKnockBackSecondaryMul = 1.56
 
-SWEP.Primary.Delay = 0.8
-SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.3
+SWEP.Primary.Delay = 0.91
+SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.7
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
 SWEP.HitAnim = ACT_VM_MISSCENTER
-SWEP.PointsMultiplier = 0.2
+SWEP.PointsMultiplier = 1
 SWEP.SwingRotation = Angle(60, 0, -80)
 SWEP.SwingOffset = Vector(0, -30, 0)
 SWEP.SwingTime = 0.62
@@ -119,6 +119,7 @@ end
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
 	wept.Primary.Delay = wept.Primary.Delay * 0.7
 	wept.MeleeDamage = wept.MeleeDamage * 0.4
+	wept.PointsMultiplier = 0.2
 	
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()

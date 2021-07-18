@@ -5,7 +5,7 @@ SWEP.PrintName = "Nightmare"
 SWEP.Base = "weapon_zs_zombie"
 
 SWEP.MeleeDamage = 50
-SWEP.BleedDamage = 30
+SWEP.BleedDamage = 70
 SWEP.SlowDownScale = 19
 SWEP.MeleeDamageVsProps = 70
 SWEP.EnfeebleDurationMul = 10 / SWEP.MeleeDamage
