@@ -382,7 +382,7 @@ GM:AddPointShopItem("pulseammo",		ITEMCAT_AMMO,			9,				nil,							"30 pulse amm
 GM:AddPointShopItem("impactmine",		ITEMCAT_AMMO,			9,				nil,							"3 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(3, "impactmine", true) end)
 GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			9,				nil,							"20 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(20, "chemical", true) end)
 item =
-GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"100 Medical Kit power",			"100 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(100, "Battery", true) end)
+GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"100 Medical Kit power",			"100 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(50, "Battery", true) end)
 item.CanMakeFromScrap = true
 GM:AddPointShopItem("nailsz",			ITEMCAT_AMMO,			1,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
 
@@ -632,7 +632,7 @@ GM.HonorableMentions[HM_SALESMAN] = {Name = "стоимость предмета
 GM.HonorableMentions[HM_WAREHOUSE] = {Name = "Кладмен", String = "describes %s well since they had their resupply boxes used %d times.", Callback = genericcallback, Color = COLOR_CYAN}
 GM.HonorableMentions[HM_DEFENCEDMG] = {Name = "Защитник", String = "goes to %s for protecting humans from %d damage with defence boosts.", Callback = genericcallback, Color = COLOR_WHITE}
 GM.HonorableMentions[HM_STRENGTHDMG] = {Name = "Тойка би лайк", String = "is what %s is for boosting players with an additional %d damage.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_BARRICADEDESTROYER] = {Name = "Обратный Лазарь", String = "goes to %s for doing %d damage to barricades.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
+GM.HonorableMentions[HM_BARRICADEDESTROYER] = {Name = "Обратный Лекарь", String = "goes to %s for doing %d damage to barricades.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
 GM.HonorableMentions[HM_NESTDESTROYER] = {Name = "УЕБОК", String = "goes to %s for destroying %d nests.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
 GM.HonorableMentions[HM_NESTMASTER] = {Name = "Хороший человек", String = "goes to %s for having %d zombies spawn through their nest.", Callback = genericcallback, Color = COLOR_LIMEGREEN}
 
@@ -732,10 +732,10 @@ end)
 -- Static values that don't need convars...
 
 -- Initial length for wave 1.
-GM.WaveOneLength = 140
+GM.WaveOneLength = 160
 
 -- Add this many seconds for each additional wave.
-GM.TimeAddedPerWave = 30
+GM.TimeAddedPerWave = 20
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
 GM.NoNewHumansWave = 4
@@ -744,7 +744,7 @@ GM.NoNewHumansWave = 4
 GM.NoSuicideWave = 0
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
-GM.WaveZeroLength = 200
+GM.WaveZeroLength = 300
 
 -- Time humans have between waves to do stuff without NEW zombies spawning. Any dead zombies will be in spectator (crow) view and any living ones will still be living.
 GM.WaveIntermissionLength = 60
@@ -785,16 +785,16 @@ GM.LockItemTiers = false
 GM.PointSavingLimit = 230
 
 -- For Classic Mode
-GM.WaveIntermissionLengthClassic = 4
+GM.WaveIntermissionLengthClassic = 10
 GM.WaveOneLengthClassic = 30
-GM.TimeAddedPerWaveClassic = 30
+GM.TimeAddedPerWaveClassic = 15
 
 -- Max amount of damage left to tick on these. Any more pending damage is ignored.
 GM.MaxPoisonDamage = 1000
 GM.MaxBleedDamage = 230
 
 -- Give humans this many points when the wave ends.
-GM.EndWavePointsBonus = 5
+GM.EndWavePointsBonus = 7
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 5
+GM.EndWavePointsBonusPerWave = 1

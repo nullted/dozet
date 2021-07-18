@@ -1,11 +1,11 @@
 GM.Name		=	"Zombie Survival"
-GM.Author	=	"William \"JetBoom\" Moodhe"
+GM.Author	=	"Toyka"
 GM.Email	=	"williammoodhe@gmail.com"
 GM.Website	=	"http://www.noxiousnet.com"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"William \"JetBoom\" Moodhe", "williammoodhe@gmail.com (www.noxiousnet.com)", "Creator / Programmer"},
+	{"Toyka", "williammoodhe@gmail.com (www.noxiousnet.com)", "Creator / Programmer"},
 	{"11k", "tjd113@gmail.com", "Zombie view models"},
 	{"Eisiger", "k2deseve@gmail.com", "Zombie kill icons"},
 	{"Austin \"Little Nemo\" Killey", "austin_odyssey@yahoo.com", "Ambient music"},
@@ -157,6 +157,7 @@ function GM:AddCustomAmmo()
 	game.AddAmmoType({name = "turret_buckshot"})
 	game.AddAmmoType({name = "turret_assault"})
 	game.AddAmmoType({name = "turret_rocket"})
+	game.AddAmmoType({name = "turret_super"})
 	game.AddAmmoType({name = "camera"})
 	game.AddAmmoType({name = "tv"})
 

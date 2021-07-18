@@ -1,10 +1,10 @@
 if string.sub(string.lower(game.GetMap()), 1, 3) ~= "ze_" then return end
 
 GM.ZombieEscape = true
-GM.WaveZeroLength = 90
+GM.WaveZeroLength = 120
 GM.EndGameTime = 35
-GM.ZE_FreezeTime = 20
-GM.ZE_TimeLimit = 60 * 16
+GM.ZE_FreezeTime = 15
+GM.ZE_TimeLimit = 60 * 20
 
 GM.DefaultZombieClass = GM.ZombieClasses["Super Zombie"].Index
 
