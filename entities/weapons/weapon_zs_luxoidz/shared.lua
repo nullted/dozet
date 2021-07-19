@@ -1,4 +1,4 @@
-SWEP.PrintName = "Luxoid"
+SWEP.PrintName = "LuxoidzZZ"
 
 SWEP.Base = "weapon_zs_basemelee"
 
@@ -8,17 +8,17 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 71
-SWEP.MeleeRange = 91
-SWEP.MeleeSize = 3
+SWEP.MeleeDamage = 51
+SWEP.MeleeRange = 61
+SWEP.MeleeSize = 1.3
 SWEP.MeleeKnockBack = 240
 SWEP.MeleeDamageVsProps = 13
 
-SWEP.MeleeDamageSecondaryMul = 1.5
-SWEP.MeleeKnockBackSecondaryMul = 4
+SWEP.MeleeDamageSecondaryMul = 1.3
+SWEP.MeleeKnockBackSecondaryMul = 7
 
-SWEP.Primary.Delay = 0.5
-SWEP.Secondary.Delay = SWEP.Primary.Delay * 0.8
+SWEP.Primary.Delay = 0.94
+SWEP.Secondary.Delay = SWEP.Primary.Delay * 3
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
@@ -26,7 +26,7 @@ SWEP.HitAnim = ACT_VM_MISSCENTER
 SWEP.PointsMultiplier = 0.3
 SWEP.SwingRotation = Angle(60, 0, -80)
 SWEP.SwingOffset = Vector(0, -30, 0)
-SWEP.SwingTime = 0.62
+SWEP.SwingTime = 0.91
 SWEP.SwingHoldType = "melee"
 
 SWEP.SwingTimeSecondary = 0.41
@@ -108,24 +108,3 @@ end
 function SWEP:GetCharge()
 	return self:GetDTFloat(1)
 end
-
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.5
-	wept.MeleeDamage = wept.MeleeDamage * 0.6
-	
-	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
-		local killer = self:GetOwner()
-		local minushp = -zombie:Health()
-		if killer:IsValid() and minushp > -100 then
-			local pos = zombie:GetPos()
-
-			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 2)
-			end)
-
-			local effectdata = EffectData()
-				effectdata:SetOrigin(pos)
-			util.Effect("Explosion", effectdata, true, true)
-		end
-	end
-end)

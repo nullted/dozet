@@ -7,13 +7,13 @@ CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 7100
-CLASS.Speed = 210
+CLASS.Health = 1122
+CLASS.Speed = 160
 
 if SERVER then
 function CLASS:ProcessDamage(pl, dmginfo)
 	if dmginfo:GetInflictor().IsMelee then
-		dmginfo:SetDamage(dmginfo:GetDamage() / 10)
+		dmginfo:SetDamage(dmginfo:GetDamage() / 30)
 	end
 end
 end
@@ -122,6 +122,7 @@ if SERVER then
 	end
 end
 
+
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/butcher"
@@ -153,18 +154,3 @@ function CLASS:PostPlayerDraw(pl)
 	end
 end
 
-
-
-if SERVER then
-	function CLASS:AltUse(pl)
-		pl:StartFeignDeath()
-	end
-
-	function CLASS:ProcessDamage(pl, dmginfo)
-		if bit_band(dmginfo:GetDamageType(), DMG_BULLET) ~= 0 then
-			dmginfo:SetDamage(dmginfo:GetDamage() * 4)
-		elseif bit_band(dmginfo:GetDamageType(), DMG_SLASH) == 0 and bit_band(dmginfo:GetDamageType(), DMG_CLUB) == 0 then
-			dmginfo:SetDamage(dmginfo:GetDamage() * 4)
-		end
-	end
-end

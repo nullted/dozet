@@ -115,17 +115,17 @@ GM.ExtraHealthPerExtraNail = 120
 GM.MaxNails = 6
 
 -- Moved from options to globals because the game is now balanced around it being static. The gamemode will BREAK if this is not 6!!
-GM.NumberOfWaves = 12
+GM.NumberOfWaves = 10
 
 GM.PulsePointsMultiplier = 1.55
 
 -- The amount of damage you need to inflict to a zombie type to get a point
-GM.HumanoidZombiePointRatio = 45
-GM.PoisonZombiePointRatio = 77 -- Has an enormous head hitbox
-GM.HeadcrabZombiePointRatio = 55
-GM.NoHeadboxZombiePointRatio = 55
-GM.TorsoZombiePointRatio = 45
-GM.LegsZombiePointRatio = 37.5
+GM.HumanoidZombiePointRatio = 66
+GM.PoisonZombiePointRatio = 100 -- Has an enormous head hitbox
+GM.HeadcrabZombiePointRatio = 90
+GM.NoHeadboxZombiePointRatio = 77
+GM.TorsoZombiePointRatio = 60
+GM.LegsZombiePointRatio = 50
 GM.SkeletonPointRatio = GM.HumanoidZombiePointRatio/3
 
 SPEED_NORMAL = 259
@@ -135,7 +135,7 @@ SPEED_SLOW = SPEED_NORMAL - 8
 SPEED_FAST = SPEED_NORMAL + 8
 SPEED_FASTER = SPEED_NORMAL + 20
 SPEED_FASTEST = SPEED_NORMAL + 40
-SPEED_VKID = SPEED_NORMAL + 200
+SPEED_VKID = SPEED_NORMAL + 120
 
 SPEED_ZOMBIEESCAPE_SLOWEST = 240
 SPEED_ZOMBIEESCAPE_SLOWER = 260
