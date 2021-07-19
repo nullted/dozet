@@ -349,6 +349,7 @@ killicon.Add("weapon_zs_remantler", "zombiesurvival/killicons/weapon_zs_remantle
 killicon.Add("weapon_zs_tv", "zombiesurvival/killicons/weapon_zs_tv.png")
 killicon.Add("weapon_zs_barricadekit", "zombiesurvival/killicons/weapon_zs_barricadekit")
 killicon.Add("weapon_zs_boardpack", "zombiesurvival/killicons/weapon_zs_boardpack")
+killicon.Add("weapon_zs_normalpack", "zombiesurvival/killicons/weapon_zs_boardpack")
 killicon.Add("weapon_zs_manhack", "zombiesurvival/killicons/weapon_zs_manhack")
 killicon.Add("prop_manhack", "zombiesurvival/killicons/weapon_zs_manhack")
 killicon.AddFont("weapon_zs_manhackcontrol", "zsdeathnotice", "*")
