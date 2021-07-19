@@ -145,6 +145,10 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloa
 		local minushp = -zombie:Health()
 		if killer:IsValid() and minushp > 10 then
 			local pos = zombie:GetPos()
+			
+			if killer:IsValid() then
+				killer:GiveStatus("strengthdartboost", 15)
+			end
 
 			timer.Simple(0.15, function()
 				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 3)

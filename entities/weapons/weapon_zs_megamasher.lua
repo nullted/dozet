@@ -84,6 +84,12 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, 
 		local minushp = -zombie:Health()
 		if killer:IsValid() and minushp > 0 then
 			local pos = zombie:GetPos()
+				local killer = self:GetOwner()
+		
+				if killer:IsValid() then
+					killer:GiveStatus("strengthdartboost", 15)
+				end
+	
 
 			timer.Simple(0.15, function()
 				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 3)

@@ -732,7 +732,7 @@ end)
 -- Static values that don't need convars...
 
 -- Initial length for wave 1.
-GM.WaveOneLength = 160
+GM.WaveOneLength = 360
 
 -- Add this many seconds for each additional wave.
 GM.TimeAddedPerWave = 20
