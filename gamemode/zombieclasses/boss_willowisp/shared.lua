@@ -30,6 +30,7 @@ CLASS.CrouchedWalkSpeed = 1
 CLASS.Mass = 40
 --CLASS.Gravity = -0.0001
 
+
 CLASS.NoGibs = true
 CLASS.NoCollideAll = true
 CLASS.NoFallDamage = true
@@ -95,3 +96,10 @@ function CLASS:Move(pl, mv)
 
 	return true
 end
+if SERVER then
+	function CLASS:ProcessDamage(pl, dmginfo)
+		if dmginfo:GetInflictor().IsMelee then
+			dmginfo:SetDamage(dmginfo:GetDamage() * 5)
+		end
+	end
+	end

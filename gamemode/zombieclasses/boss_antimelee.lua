@@ -152,3 +152,19 @@ function CLASS:PostPlayerDraw(pl)
 		render_DrawSprite(LocalToWorld(vecEyeRight, angle_zero, pos, ang), 4, 4, colGlow)
 	end
 end
+
+
+
+if SERVER then
+	function CLASS:AltUse(pl)
+		pl:StartFeignDeath()
+	end
+
+	function CLASS:ProcessDamage(pl, dmginfo)
+		if bit_band(dmginfo:GetDamageType(), DMG_BULLET) ~= 0 then
+			dmginfo:SetDamage(dmginfo:GetDamage() * 4)
+		elseif bit_band(dmginfo:GetDamageType(), DMG_SLASH) == 0 and bit_band(dmginfo:GetDamageType(), DMG_CLUB) == 0 then
+			dmginfo:SetDamage(dmginfo:GetDamage() * 4)
+		end
+	end
+end

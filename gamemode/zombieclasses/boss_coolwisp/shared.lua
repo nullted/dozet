@@ -13,7 +13,7 @@ CLASS.Health = 4000
 if SERVER then
 function CLASS:ProcessDamage(pl, dmginfo)
 	if dmginfo:GetInflictor().IsMelee then
-		dmginfo:SetDamage(dmginfo:GetDamage() / 2.3)
+		dmginfo:SetDamage(dmginfo:GetDamage() * 5)
 	end
 end
 end
