@@ -237,6 +237,7 @@ GM:AddStartingItem("wrench",			ITEMCAT_TOOLS,			20,				"weapon_zs_wrench").NoCla
 GM:AddStartingItem("crphmr",			ITEMCAT_TOOLS,			40,				"weapon_zs_hammer").NoClassicMode = true
 GM:AddStartingItem("electoh",			ITEMCAT_TOOLS,			80,				"weapon_zs_electrohammer").NoClassicMode = true
 GM:AddStartingItem("junkpack",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_boardpack")
+GM:AddStartingItem("normpack",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_normalpack")
 GM:AddStartingItem("propanetank",		ITEMCAT_TOOLS,			30,				"comp_propanecan")
 GM:AddStartingItem("busthead",			ITEMCAT_TOOLS,			35,				"comp_busthead")
 GM:AddStartingItem("sawblade",			ITEMCAT_TOOLS,			35,				"comp_sawblade")
