@@ -23,6 +23,6 @@ SWEP.WorldModel = "models/props/cs_office/water_bottle.mdl"
 
 SWEP.Primary.Ammo = "foodwater"
 
-SWEP.FoodHealth = 56
-SWEP.FoodEatTime = 4
+SWEP.FoodHealth = 71
+SWEP.FoodEatTime = 1
 SWEP.FoodIsLiquid = true
