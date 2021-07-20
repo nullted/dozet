@@ -1,4 +1,4 @@
-CLASS.Name = "The Antilion"
+CLASS.Name = "The Genius"
 CLASS.TranslationName = "class_antimelee"
 CLASS.Description = "description_butcher"
 CLASS.Help = "controls_butcher"
@@ -23,7 +23,7 @@ CLASS.FearPerInstance = 1
 
 CLASS.Points = 120
 
-CLASS.SWEP = "weapon_zs_luxoidz"
+CLASS.SWEP = "weapon_zs_hammer"
 
 CLASS.Model = Model("models/player/corpse1.mdl")
 
