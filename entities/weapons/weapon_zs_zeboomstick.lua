@@ -22,14 +22,14 @@ SWEP.CSMuzzleFlashes = false
 SWEP.ReloadDelay = 0.61
 
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
-SWEP.Primary.Damage = 81
+SWEP.Primary.Damage = 51
 SWEP.Primary.NumShots = 6
-SWEP.Primary.Delay = 0.65
+SWEP.Primary.Delay = 0.77
 SWEP.Primary.DefaultClip = 99999
 
 SWEP.Recoil = 7.5
 
-SWEP.Primary.ClipSize = 6
+SWEP.Primary.ClipSize = 5
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "buckshot"
 
@@ -39,8 +39,8 @@ SWEP.ConeMin = 4
 SWEP.AllowQualityWeapons = false
 
 SWEP.WalkSpeed = SPEED_SLOWER
-SWEP.FireAnimSpeed = 0.51
-SWEP.Knockback = 126
+SWEP.FireAnimSpeed = 0.59
+SWEP.Knockback = 67
 
 SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 SWEP.PumpSound = Sound("Weapon_Shotgun.Special1")
