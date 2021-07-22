@@ -253,14 +253,14 @@ function meta:ProcessDamage(dmginfo)
 		end
 	end
 
-	self.NextBloodArmorRegen = CurTime() + 5
+	self.NextBloodArmorRegen = CurTime() + 3
 	if self:GetBloodArmor() > 0 then
 		local damage = dmginfo:GetDamage()
 		if damage > 0 then
 			if damage >= self:GetBloodArmor() and self:IsSkillActive(SKILL_BLOODLETTER) then
 				local bleed = self:GiveStatus("bleed")
 				if bleed and bleed:IsValid() then
-					bleed:AddDamage(5)
+					bleed:AddDamage(2)
 					bleed.Damager = self
 				end
 			end

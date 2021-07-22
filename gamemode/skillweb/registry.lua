@@ -249,6 +249,10 @@ SKILL_TRUEWOOISM = 147
 SKILL_UNBOUND = 148
 SKILL_FOUR_IN_ONE = 149
 SKILL_CHEESE = 150
+SKILL_CARRIER = 151
+SKILL_NULLED = 152
+SKILL_OVERHAND = 153
+
 
 SKILLMOD_HEALTH = 1
 SKILLMOD_SPEED = 2
@@ -378,6 +382,8 @@ GM:AddSkill(SKILL_BLOODLETTER, "Bloodletter", GOOD.."+100% blood armor generated
 																0,			4,					{SKILL_ANTIGEN}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_REGENERATOR, "Regenerator", GOOD.."Regenerate 1 health every 6s when below 60% health\n"..BAD.."-6 maximum health",
 																-5,			-2,					{}, TREE_HEALTHTREE)
+GM:AddSkill(SKILL_NULLED, "The Immortal", GOOD.."Regenerate 3 health every 5 sec",
+			                                                   	-5,			0,					{SKILL_REGENERATOR}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_BLOODARMOR, "Blood Armor", GOOD.."Regenerate 1 blood armor every 8 seconds upto your blood armor max\nBase blood armor maximum is 20\nBase blood armor damage absorption is 50%\n"..BAD.."-13 maximum health",
 																2,			2,					{SKILL_IRONBLOOD, SKILL_BLOODLETTER, SKILL_D_HEMOPHILIA}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_IRONBLOOD, "Iron Blood", GOOD.."+25% damage reduction from blood armor\n"..GOOD.."Bonus doubled when health is 50% or less\n"..BAD.."-50% maximum blood armor",
@@ -502,7 +508,9 @@ GM:AddSkill(SKILL_HANDY3, "Handy III", GOOD.."+11% repair rate",
 GM:AddSkill(SKILL_HANDY4, "Handy IV", GOOD.."+17% repair rate",
 																-3,			1,					{SKILL_HANDY5}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_HANDY5, "Handy V", GOOD.."+22% repair rate",
-																-3,			3,					{}, TREE_BUILDINGTREE)
+																-3,			3,					{SKILL_OVERHAND}, TREE_BUILDINGTREE)
+GM:AddSkill(SKILL_OVERHAND, "OverHandy", GOOD.."+100% repair rate\n"..BAD.."+50% swing delay",
+																-3,			4,					{SKILL_HANDY5}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_HAMMERDISCIPLINE, "Hammer Discipline", GOOD.."-40% swing delay with the Carpenter Hammer",
 																0,			1,					{SKILL_BARRICADEEXPERT}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Props hit with a hammer in the last 2 seconds take 8% less damage\n"..GOOD.."Gain points from protected props\n"..BAD.."+30% swing delay with the Carpenter Hammer",
@@ -558,6 +566,8 @@ GM:AddSkill(SKILL_U_ZAPPER_ARC, "Unlock: Arc Zapper", GOOD.."Unlocks purchasing 
 .AlwaysActive = true
 GM:AddSkill(SKILL_D_LATEBUYER, "Debuff: Late Buyer", GOOD.."+20 starting Worth\n"..GOOD.."20% arsenal discount\n"..BAD.."Unable to use points at arsenal crates until the second half of the round",
 																8,			1,					{}, TREE_BUILDINGTREE)
+GM:AddSkill(SKILL_CARRIER, "Carrier", GOOD.."+100% Speed when you take prop\n"..BAD.."-50% Deployable health\n"..BAD.."-50% Deployable packtime",
+																9,			2,					{SKILL_D_LATEBUYER}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_U_CRAFTINGPACK, "Unlock: Crafting Pack", GOOD.."Unlocks purchasing the Sawblade component\n"..GOOD.."Unlocks purchasing the Electrobattery component\n"..GOOD.."Unlocks purchasing the CPU Parts component",
 																4,			-1,					{}, TREE_BUILDINGTREE)
 .AlwaysActive = true
@@ -627,15 +637,15 @@ GM:AddSkill(SKILL_TRUEWOOISM, "Wooism", GOOD.."No accuracy penalty from moving o
 -- Melee Tree
 GM:AddSkill(SKILL_WORTHINESS2, "Worthiness II", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
 																4,			0,					{}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER1, "Battler I", GOOD.."+5% melee damage",
+GM:AddSkill(SKILL_BATTLER1, "Battler I", GOOD.."+3% melee damage",
 																-6,			-6,					{SKILL_BATTLER2, SKILL_NONE}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER2, "Battler II", GOOD.."+7% melee damage",
+GM:AddSkill(SKILL_BATTLER2, "Battler II", GOOD.."+6% melee damage",
 																-6,			-4,					{SKILL_BATTLER3, SKILL_LIGHTWEIGHT}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER3, "Battler III", GOOD.."+10% melee damage",
+GM:AddSkill(SKILL_BATTLER3, "Battler III", GOOD.."+8% melee damage",
 																-4,			-2,					{SKILL_BATTLER4, SKILL_LANKY, SKILL_FOUR_IN_ONE}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER4, "Battler IV", GOOD.."+13% melee damage",
+GM:AddSkill(SKILL_BATTLER4, "Battler IV", GOOD.."+9% melee damage",
 																-2,			0,					{SKILL_BATTLER5, SKILL_MASTERCHEF, SKILL_D_CLUMSY}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+16% melee damage",
+GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+10% melee damage",
 																0,			2,					{SKILL_GLASSWEAPONS, SKILL_BLOODLUST}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LASTSTAND, "Last Stand", GOOD.."Double melee damage when below 25% health\n"..BAD.."0.85x melee weapon damage at any other time",
 																0,			6,					{}, TREE_MELEETREE)
@@ -1054,6 +1064,9 @@ GM:AddSkillModifier(SKILL_HANDY3, SKILLMOD_REPAIRRATE_MUL, 0.11)
 GM:AddSkillModifier(SKILL_HANDY4, SKILLMOD_REPAIRRATE_MUL, 0.17)
 GM:AddSkillModifier(SKILL_HANDY5, SKILLMOD_REPAIRRATE_MUL, 0.22)
 
+GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_REPAIRRATE_MUL, 1)
+GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.50)
+
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_WORTH, 30)
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_ENDWAVE_POINTS, 20)
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_SPEED, -13.75)
@@ -1139,6 +1152,9 @@ GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_ARSENAL_DISCOUNT, -0.30)
 GM:AddSkillFunction(SKILL_TAUT, function(pl, active)
 	pl.BuffTaut = active
 end)
+GM:AddSkillModifier(SKILL_CARRIER, SKILLMOD_DEPLOYABLE_PACKTIME_MUL, 0.50)
+GM:AddSkillModifier(SKILL_CARRIER, SKILLMOD_DEPLOYABLE_HEALTH_MUL, -0.50)
+GM:AddSkillModifier(SKILL_CARRIER, SKILLMOD_PROP_CARRY_SLOW_MUL, -1)
 
 GM:AddSkillModifier(SKILL_BLOODARMOR, SKILLMOD_HEALTH, -5)
 

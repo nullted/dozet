@@ -1,6 +1,7 @@
 -- Translated by Mr. Darkness (http://www.noxiousnet.com/forums/index.php?action=profile;u=6296)
 
 translate.AddLanguage("ru", "Russian")
+-- Trinkets
 
 -- Various gamemode stuff
 LANGUAGE.minute_points_added						= "Вы не получили ранений за всю минуту! Вам было присвоено %d очков."

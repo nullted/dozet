@@ -167,7 +167,7 @@ GM:AddStartingItem("8nails",			ITEMCAT_AMMO,			15,				nil,			"8 nails",						nil
 GM:AddStartingItem("12nails",			ITEMCAT_AMMO,			20,				nil,			"12 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(12, "GaussEnergy", true) end)
 GM:AddStartingItem("60mkit",			ITEMCAT_AMMO,			20,				nil,			"100 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(100, "Battery", true) end)
 GM:AddStartingItem("90mkit",			ITEMCAT_AMMO,			25,				nil,			"120 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(120, "Battery", true) end)
-GM:AddStartingItem("scrap",			ITEMCAT_AMMO,			20,				nil,			"Scrap 35",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(35, "Scrap", true) end)
+GM:AddStartingItem("scrap",			ITEMCAT_AMMO,			20,				nil,			"Scrap 15",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(15, "Scrap", true) end)
 
 
 
@@ -580,8 +580,8 @@ GM:AddPointShopItem("resupplypack",		ITEMCAT_TRINKETS,		50,				"trinket_resupply
 GM:AddPointShopItem("promanifest",		ITEMCAT_TRINKETS,		50,				"trinket_promanifest").SubCategory =							ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("opsmatrix",		ITEMCAT_TRINKETS,		50,				"trinket_opsmatrix").SubCategory =								ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("store2",	        ITEMCAT_TRINKETS,		50,				"trinket_store2").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
-GM:AddPointShopItem("kre",	            ITEMCAT_TRINKETS,		70,				"trinket_kre").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
-GM:AddPointShopItem("greedeye",	            ITEMCAT_TRINKETS,		70,				"trinket_greedeye").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
+GM:AddPointShopItem("kre",	            ITEMCAT_TRINKETS,		50,				"trinket_kre").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
+GM:AddPointShopItem("greedeye",	            ITEMCAT_TRINKETS,		50,				"trinket_greedeye").SubCategory =						ITEMSUBCAT_TRINKETS_PERFORMANCE
 -- Tier 5
 GM:AddPointShopItem("supasm",			ITEMCAT_TRINKETS,		70,				"trinket_supasm").SubCategory =									ITEMSUBCAT_TRINKETS_OFFENSIVE
 GM:AddPointShopItem("pulseimpedance",	ITEMCAT_TRINKETS,		70,				"trinket_pulseimpedance").SubCategory =							ITEMSUBCAT_TRINKETS_OFFENSIVE
@@ -614,10 +614,10 @@ item.SkillRequirement = SKILL_U_NANITECLOUD
 
 local function genericcallback(pl, magnitude) return pl:Name(), magnitude end
 GM.HonorableMentions = {}
-GM.HonorableMentions[HM_MOSTZOMBIESKILLED] = {Name = "Краймамочка", String = "by %s, with %d killed zombies.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_MOSTDAMAGETOUNDEAD] = {Name = "Самый сильный милишник", String = "goes to %s, with a total of %d damage dealt to the undead.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_MOSTHEADSHOTS] = {Name = "АИМщик", String = "goes to %s, with a total of %s headshot kills.", Callback = genericcallback, Color = COLOR_CYAN}
-GM.HonorableMentions[HM_PACIFIST] = {Name = "Гений", String = "goes to %s for not killing a single zombie and still surviving!", Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_MOSTZOMBIESKILLED] = {Name = "Crymommy", String = "by %s, with %d killed zombies.", Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_MOSTDAMAGETOUNDEAD] = {Name = "GEnius", String = "goes to %s, with a total of %d damage dealt to the undead.", Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_MOSTHEADSHOTS] = {Name = "AIMer", String = "goes to %s, with a total of %s headshot kills.", Callback = genericcallback, Color = COLOR_CYAN}
+GM.HonorableMentions[HM_PACIFIST] = {Name = "Fucking Pacifist", String = "goes to %s for not killing a single zombie and still surviving!", Callback = genericcallback, Color = COLOR_CYAN}
 GM.HonorableMentions[HM_MOSTHELPFUL] = {Name = "У того у кого стилили", String = "goes to %s for assisting in the disposal of %d zombies.", Callback = genericcallback, Color = COLOR_CYAN}
 GM.HonorableMentions[HM_LASTHUMAN] = {Name = "Последний досетовец", String = "goes to %s for being the last person alive.", Callback = genericcallback, Color = COLOR_CYAN}
 GM.HonorableMentions[HM_OUTLANDER] = {Name = "Приключенец", String = "goes to %s for getting killed %d feet away from a zombie spawn.", Callback = genericcallback, Color = COLOR_CYAN}
