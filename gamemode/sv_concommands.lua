@@ -580,8 +580,9 @@ concommand.Add("zs_shitmap_check", function(sender, command, arguments)
 	table.Add(doors, ents.FindByClass("func_movelinear"))
 	local props = ents.FindByClass("prop_physics_multiplayer")
 	local props = ents.FindByClass("prop_physics")
+	local weapon = ents.FindByClass("prop_weapon")
 
-	sender:PrintMessage(HUD_PRINTCONSOLE, "Teleports: "..#teleporters.." Buttons: "..#buttons.." Doors: "..#doors.. " Props: "..#props)
+	sender:PrintMessage(HUD_PRINTCONSOLE, "Teleports: "..#teleporters.." Buttons: "..#buttons.." Doors: "..#doors.. " Props: "..#props.. " Loots: " ..#weapon)
 end)
 
 concommand.Add("zs_shitmap_toteleport", function(sender, command, arguments)
@@ -635,6 +636,16 @@ concommand.Add("zs_shitmap_detail", function(sender, command, arguments)
 
 	local entities = ents.FindByClass("prop_physics")
 	table.Add(entities, ents.FindByClass("prop_physics_multiplayer"))
+	local ent = entities[tonumber(arguments[1])]
+	if ent then
+		sender:SetPos(ent:WorldSpaceCenter())
+	end
+end)
+
+concommand.Add("zs_shitmap_toloot", function(sender, command, arguments)
+	if not sender:IsSuperAdmin() then return end
+
+	local entities = ents.FindByClass("prop_weapon")
 	local ent = entities[tonumber(arguments[1])]
 	if ent then
 		sender:SetPos(ent:WorldSpaceCenter())
