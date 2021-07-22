@@ -32,6 +32,7 @@ ITEMCAT_TOOLS = 4
 ITEMCAT_DEPLOYABLES = 5
 ITEMCAT_TRINKETS = 6
 ITEMCAT_OTHER = 7
+ITEMCAT_SUPER = 8
 
 ITEMSUBCAT_TRINKETS_DEFENSIVE = 1
 ITEMSUBCAT_TRINKETS_OFFENSIVE = 2
@@ -40,6 +41,7 @@ ITEMSUBCAT_TRINKETS_PERFORMANCE = 4
 ITEMSUBCAT_TRINKETS_SUPPORT = 5
 ITEMSUBCAT_TRINKETS_SPECIAL = 6
 
+
 GM.ItemCategories = {
 	[ITEMCAT_GUNS] = "Guns",
 	[ITEMCAT_AMMO] = "Ammunition",
@@ -47,7 +49,8 @@ GM.ItemCategories = {
 	[ITEMCAT_TOOLS] = "Tools",
 	[ITEMCAT_DEPLOYABLES] = "Deployables",
 	[ITEMCAT_TRINKETS] = "Trinkets",
-	[ITEMCAT_OTHER] = "Other"
+	[ITEMCAT_OTHER] = "Other",
+	[ITEMCAT_SUPER] = "Super Trinkets"
 }
 
 GM.ItemSubCategories = {
@@ -57,6 +60,7 @@ GM.ItemSubCategories = {
 	[ITEMSUBCAT_TRINKETS_PERFORMANCE] = "Performance",
 	[ITEMSUBCAT_TRINKETS_SUPPORT] = "Support",
 	[ITEMSUBCAT_TRINKETS_SPECIAL] = "Special"
+
 }
 
 --[[
@@ -423,7 +427,10 @@ GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			95,			"weapon_zs_frotchet")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
 GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_luxoid")
-
+-- Super Trinkets
+GM:AddPointShopItem("lazarus",			ITEMCAT_SUPER,			200,			"trinket_lazarussoul")
+GM:AddPointShopItem("sman",			ITEMCAT_SUPER,			200,			"trinket_sman")
+GM:AddPointShopItem("stutor",			ITEMCAT_SUPER,			200,			"trinket_stutor")
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			25,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
 GM:AddPointShopItem("wrench",			ITEMCAT_TOOLS,			20,				"weapon_zs_wrench").NoClassicMode = true

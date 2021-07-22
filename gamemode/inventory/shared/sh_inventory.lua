@@ -513,11 +513,17 @@ GM:AddSkillModifier(trinket, SKILLMOD_TURRET_RANGE_MUL, 0.85)
 trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "Fucking boomS x5 radius of explosive and -0.4 taken damage by explosive.")
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, -0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 5)
+-- Super Trinkets
+trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-50% Ressuply Delay."), SKILLMOD_RESUPPLY_DELAY_MUL, -0.50)
+
+trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, supveles, supweles, 4, "+30% Points Multiplier."), SKILLMOD_POINT_MULTIPLIER, 0.30)
 
 
 
 
 
+
+-- ???
 GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-13% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.13)
 GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-28% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.28)
 
