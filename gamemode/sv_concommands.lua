@@ -423,6 +423,7 @@ concommand.Add("zsemptyclip", function(sender, command, arguments)
 	end
 end)
 
+
 function GM:TryGetLockOnTrace(sender, arguments)
 	local ent
 	local dent = Entity(tonumbersafe(arguments[2] or 0) or 0)
@@ -577,8 +578,10 @@ concommand.Add("zs_shitmap_check", function(sender, command, arguments)
 	local buttons = ents.FindByClass("func_button")
 	local doors = ents.FindByClass("func_door_rotating")
 	table.Add(doors, ents.FindByClass("func_movelinear"))
+	local props = ents.FindByClass("prop_physics_multiplayer")
+	local props = ents.FindByClass("prop_physics")
 
-	sender:PrintMessage(HUD_PRINTCONSOLE, "Teleports: "..#teleporters.." Buttons: "..#buttons.." Doors: "..#doors)
+	sender:PrintMessage(HUD_PRINTCONSOLE, "Teleports: "..#teleporters.." Buttons: "..#buttons.." Doors: "..#doors.. " Props: "..#props)
 end)
 
 concommand.Add("zs_shitmap_toteleport", function(sender, command, arguments)
@@ -620,6 +623,18 @@ concommand.Add("zs_shitmap_tomover", function(sender, command, arguments)
 
 	local entities = ents.FindByClass("func_door_rotating")
 	table.Add(entities, ents.FindByClass("func_movelinear"))
+	local ent = entities[tonumber(arguments[1])]
+	if ent then
+		sender:SetPos(ent:WorldSpaceCenter())
+	end
+end)
+
+
+concommand.Add("zs_shitmap_detail", function(sender, command, arguments)
+	if not sender:IsSuperAdmin() then return end
+
+	local entities = ents.FindByClass("prop_physics")
+	table.Add(entities, ents.FindByClass("prop_physics_multiplayer"))
 	local ent = entities[tonumber(arguments[1])]
 	if ent then
 		sender:SetPos(ent:WorldSpaceCenter())

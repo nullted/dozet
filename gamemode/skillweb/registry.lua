@@ -443,7 +443,7 @@ GM:AddSkill(SKILL_DRIFT, "Drift", GOOD.."+5% barricade phasing movement speed",
 																1,			3,					{SKILL_WARP}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_WARP, "Warp", GOOD.."-5% sigil teleportation time",
 																2,			2,					{}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_SAFEFALL, "Safe Fall", GOOD.."-40% fall damage taken\n"..GOOD.."+50% faster fall damage knockdown recovery\n"..BAD.."+40% slow down from landing or fall damage",
+GM:AddSkill(SKILL_SAFEFALL, "Safe Fall", GOOD.."-40% fall damage taken\n"..GOOD.."+20% faster fall damage knockdown recovery\n"..BAD.."+10% slow down from landing or fall damage",
 																0,			0,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_D_WIDELOAD, "Debuff: Wide Load", GOOD.."+20 starting Worth\n"..GOOD.."-5% resupply delay\n"..BAD.."Phasing speed limited to 1 for the first 6 seconds of phasing",
 																1,			1,					{}, TREE_SPEEDTREE)
@@ -451,7 +451,7 @@ GM:AddSkill(SKILL_U_CORRUPTEDFRAGMENT, "Unlock: Corrupted Fragment", GOOD.."Unlo
 																-2,			2,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_ULTRANIMBLE, "Ultra Nimble", GOOD.."+30 movement speed\n"..BAD.."-10 maximum health",
 																0,			-6,					{}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_WORTHINESS3, "Worthiness III", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
+GM:AddSkill(SKILL_WORTHINESS3, "Worthiness III", GOOD.."+10 starting worth\n"..BAD.."-3 starting points",
 																6,			2,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_SURESTEP, "Sure Step", GOOD.."-30% effectiveness of slows\n"..BAD.."-4 movement speed",
 																6,			0,					{}, TREE_SPEEDTREE)
@@ -491,7 +491,7 @@ GM:AddSkill(SKILL_RECLAIMSOL, "Recoverable Solution", GOOD.."60% of wasted medic
 																0,			4,					{SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
 GM:AddSkill(SKILL_U_STRENGTHSHOT, "Unlock: Strength Shot Gun", GOOD.."Unlocks purchasing the Strength Shot Gun\nTarget damage +25% for 10 seconds\nExtra damage is given to you as points\nTarget is not healed",
 																0,			0,					{SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_WORTHINESS4, "Worthiness IV", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
+GM:AddSkill(SKILL_WORTHINESS4, "Worthiness IV", GOOD.."+10 starting worth\n"..BAD.."-3 starting points",
 																-5,			2,					{}, TREE_SUPPORTTREE)
 GM:AddSkill(SKILL_U_ANTITODESHOT, "Unlock: Antidote Handgun", GOOD.."Unlocks purchasing the Antidote Handgun\nFires piercing blasts that heal poison greatly\nCleanses statuses from targets with a small point gain\nDoes not heal health",
 																4,			-2,					{}, TREE_SUPPORTTREE)
@@ -550,7 +550,7 @@ GM:AddSkill(SKILL_HAULMODULE, "Unlock: Hauling Drone", GOOD.."Unlocks the Haulin
 																2,			-1,					{SKILL_U_NANITECLOUD}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_LIGHTCONSTRUCT, "Light Construction", GOOD.."-25% deployable pack time\n"..BAD.."-25% deployable health",
 																8,			-1,					{}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_STOCKPILE, "Stockpiling", GOOD.."Collect twice as much from resupplies\n"..BAD.."2.12x resupply box delay",
+GM:AddSkill(SKILL_STOCKPILE, "Stockpiling", GOOD.."Collect twice as much from resupplies\n"..BAD.."2x resupply box delay",
 																8,			-3,					{}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_ACUITY, "Supplier's Acuity", GOOD.."Locate nearby resupply boxes if behind walls\n"..GOOD.."Locate nearby unplaced resupply boxes on players through walls\n"..GOOD.."Locate nearby resupply packs through walls",
 																6,			-3,					{SKILL_INSIGHT, SKILL_STOCKPILE, SKILL_U_CRAFTINGPACK, SKILL_STOWAGE}, TREE_BUILDINGTREE)
@@ -623,7 +623,7 @@ GM:AddSkill(SKILL_PITCHER, "Pitcher", GOOD.."+10% object throw and thrown weapon
 																6,			2,					{}, TREE_GUNTREE)
 GM:AddSkill(SKILL_EQUIPPED, "Alacrity", GOOD.."Your starting item can be a random special trinket",
 																-6,			2,					{}, TREE_GUNTREE)
-GM:AddSkill(SKILL_WORTHINESS1, "Worthiness I", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
+GM:AddSkill(SKILL_WORTHINESS1, "Worthiness I", GOOD.."+10 starting worth\n"..BAD.."-3 starting points",
 																-4,			-3,					{}, TREE_GUNTREE)
 GM:AddSkill(SKILL_CANNONBALL, "Cannonball", "-25% projectile speed\n"..GOOD.."+3% projectile damage",
 																-2,			-3,					{}, TREE_GUNTREE)
@@ -635,7 +635,7 @@ GM:AddSkill(SKILL_TRUEWOOISM, "Wooism", GOOD.."No accuracy penalty from moving o
 																7,			0,					{}, TREE_GUNTREE)
 
 -- Melee Tree
-GM:AddSkill(SKILL_WORTHINESS2, "Worthiness II", GOOD.."+5 starting worth\n"..BAD.."-3 starting points",
+GM:AddSkill(SKILL_WORTHINESS2, "Worthiness II", GOOD.."+10 starting worth\n"..BAD.."-3 starting points",
 																4,			0,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_BATTLER1, "Battler I", GOOD.."+3% melee damage",
 																-6,			-6,					{SKILL_BATTLER2, SKILL_NONE}, TREE_MELEETREE)
@@ -1113,7 +1113,7 @@ GM:AddSkillModifier(SKILL_WARP, SKILLMOD_SIGIL_TELEPORT_MUL, -0.05)
 GM:AddSkillModifier(SKILL_HAMMERDISCIPLINE, SKILLMOD_HAMMER_SWING_DELAY_MUL, -0.4)
 GM:AddSkillModifier(SKILL_BARRICADEEXPERT, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.2)
 
-GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.7)
+GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.4)
 GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_RECOVERY_MUL, -0.2)
 GM:AddSkillModifier(SKILL_SAFEFALL, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, 0.1)
 

@@ -147,6 +147,7 @@ function meta:ProcessDamage(dmginfo)
 					attacker:ScreenFade(SCREENFADE.IN, nil, 1, 1)
 					attacker:SetDSP(36)
 					attacker:GiveStatus("disorientation", 1)
+					attacker:GiveStatus("dimvision", 1)
 
 					self:EmitSound("weapons/flashbang/flashbang_explode2.wav")
 
@@ -193,8 +194,8 @@ function meta:ProcessDamage(dmginfo)
 					self.LastBleakSoul = CurTime()
 					self.BleakSoulMessage = nil
 				end
-								if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 6 < CurTime()) then
-					attacker:GiveStatus("dimvision", 1)
+								if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 1 < CurTime()) then
+					attacker:GiveStatus("burn", 50)
 					attacker:SetGroundEntity(nil)
 					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
 
@@ -217,16 +218,7 @@ function meta:ProcessDamage(dmginfo)
 					self.LastIceBurst = CurTime()
 					self.IceBurstMessage = nil
 				end
-								if self:HasTrinket("lazarussoul") and (not self.LastIceBurst or self.LastIceBurst + 2 < CurTime()) then
-					attacker:AddLegDamageExt(41, attacker, attacker, SLOWTYPE_COLD)
 
-					local effectdata = EffectData()
-						effectdata:SetOrigin(self:GetPos())
-					util.Effect("explosion_cold", effectdata)
-
-					self.LastIceBurst = CurTime()
-					self.IceBurstMessage = nil
-				end
 
 				if self.MeleeDamageTakenMul and not dmgbypass then
 					dmginfo:SetDamage(dmginfo:GetDamage() * self.MeleeDamageTakenMul)
@@ -341,7 +333,7 @@ function meta:GetBossZombieIndex()
 	if GAMEMODE:IsBabyMode() then
 		desired = "Giga Gore Child"
 	elseif desired == "[RANDOM]" or desired == "" then
-		desired = "Red Marrow"
+		desired = "Giga Gore Child"
 	end
 
 	local bossindex
@@ -533,6 +525,7 @@ function meta:AddPoisonDamage(damage, attacker)
 		end
 	end
 end
+
 
 function meta:AddBleedDamage(damage, attacker)
 	--damage = math.ceil(damage)
@@ -969,6 +962,7 @@ function meta:Resupply(owner, obj)
 
 	local stockpiling = self:IsSkillActive(SKILL_STOCKPILE)
 	local stowage = self:IsSkillActive(SKILL_STOWAGE)
+	
 
 	if (stowage and (self.StowageCaches or 0) <= 0) or (not stowage and CurTime() < (self.NextResupplyUse or 0)) then
 		self:CenterNotify(COLOR_RED, translate.ClientGet(self, "no_ammo_here"))
@@ -976,7 +970,7 @@ function meta:Resupply(owner, obj)
 	end
 
 	if not stowage then
-		self.NextResupplyUse = CurTime() + GAMEMODE.ResupplyBoxCooldown * (self.ResupplyDelayMul or 1) * (stockpiling and 2.12 or 1)
+		self.NextResupplyUse = CurTime() + GAMEMODE.ResupplyBoxCooldown * (self.ResupplyDelayMul or 1) * (stockpiling and 2 or 1)
 
 		net.Start("zs_nextresupplyuse")
 			net.WriteFloat(self.NextResupplyUse)
@@ -1000,7 +994,7 @@ function meta:Resupply(owner, obj)
 
 		self:GiveAmmo(amount, ammotype)
 
-		if self:IsSkillActive(SKILL_FORAGER) and math.random(4) == 1 and #GAMEMODE.Food > 0 then
+		if self:IsSkillActive(SKILL_FORAGER) and math.random(2) == 1 and #GAMEMODE.Food > 0 then
 			self:Give(GAMEMODE.Food[math.random(#GAMEMODE.Food)])
 		end
 
@@ -1009,7 +1003,7 @@ function meta:Resupply(owner, obj)
 				owner.ResupplyBoxUsedByOthers = owner.ResupplyBoxUsedByOthers + 1
 			end
 
-			owner:AddPoints(0.25, nil, nil, true)
+			owner:AddPoints(1, nil, nil, true)
 
 			net.Start("zs_commission")
 				net.WriteEntity(obj)
