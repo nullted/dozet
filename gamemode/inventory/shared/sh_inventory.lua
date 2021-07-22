@@ -518,6 +518,8 @@ trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, 
 GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.50)
 trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, supveles, supweles, 4, "+30% Points Multiplier.")
 GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.30)
+trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+20% Arsenal Discount.")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT -0.20)
 
 
 

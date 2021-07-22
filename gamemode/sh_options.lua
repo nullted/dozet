@@ -427,10 +427,11 @@ GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			95,			"weapon_zs_frotchet")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
 GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			150,			"weapon_zs_luxoid")
--- Super Trinkets
+-- Super Trinkets ------------------------------------------------------------------------------------------------------------------------------------------------
 GM:AddPointShopItem("lazarus",			ITEMCAT_SUPER,			200,			"trinket_lazarussoul")
 GM:AddPointShopItem("sman",			ITEMCAT_SUPER,			200,			"trinket_sman")
 GM:AddPointShopItem("stutor",			ITEMCAT_SUPER,			200,			"trinket_stutor")
+GM:AddPointShopItem("gstore",			ITEMCAT_SUPER,			200,			"trinket_gstore")
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			25,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
 GM:AddPointShopItem("wrench",			ITEMCAT_TOOLS,			20,				"weapon_zs_wrench").NoClassicMode = true
