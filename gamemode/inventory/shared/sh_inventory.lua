@@ -514,10 +514,10 @@ trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "F
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, -0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 5)
 -- Super Trinkets
-trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-50% Ressuply Delay."), SKILLMOD_RESUPPLY_DELAY_MUL, -0.50)
-
-trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, supveles, supweles, 4, "+30% Points Multiplier."), SKILLMOD_POINT_MULTIPLIER, 0.30)
-
+trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-50% Ressuply Delay.")
+GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.50)
+trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, supveles, supweles, 4, "+30% Points Multiplier.")
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.30)
 
 
 
