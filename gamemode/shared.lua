@@ -5,9 +5,9 @@ GM.Website	=	"http://www.noxiousnet.com"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Toyka", "williammoodhe@gmail.com (www.noxiousnet.com)", "Creator / Programmer"},
-	{"11k", "tjd113@gmail.com", "Zombie view models"},
-	{"Eisiger", "k2deseve@gmail.com", "Zombie kill icons"},
+	{"Toyka", "HEHE", "Creator / Programmer"},
+	{"11k", "HAHA", "Zombie view models"},
+	{"Eisiger", "HIHI", "Zombie kill icons"},
 	{"Austin \"Little Nemo\" Killey", "austin_odyssey@yahoo.com", "Ambient music"},
 	{"Zombie Panic: Source", "http://www.zombiepanic.org/", "Melee weapon sounds"},
 	{"Samuel", "samuel_games@hotmail.com", "Board Kit models"},
@@ -76,8 +76,8 @@ GM.EndRound = false
 GM.StartingWorth = 160
 GM.ZombieVolunteers = {}
 
-team.SetUp(TEAM_ZOMBIE, "The Undead", Color(0, 255, 0, 255))
-team.SetUp(TEAM_SURVIVORS, "Survivors", Color(0, 160, 255, 255))
+team.SetUp(TEAM_ZOMBIE, "The Nigger", Color(0, 255, 0, 255))
+team.SetUp(TEAM_SURVIVORS, "Autizmer", Color(0, 160, 255, 255))
 
 local validmodels = player_manager.AllValidModels()
 validmodels["tf01"] = nil

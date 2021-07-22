@@ -304,3 +304,4 @@ end)
 if GM.BeatSetZombie == "default" then
 	GM.BeatSetZombie = GM.BeatSetZombieDefault
 end
+

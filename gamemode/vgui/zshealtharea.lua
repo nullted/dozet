@@ -11,9 +11,9 @@ local function ContentsPaint(self, w, h)
 		local healthperc = math.Clamp(health / lp:GetMaxHealthEx(), 0, 1)
 		local wid, hei = 300 * screenscale, 18 * screenscale
 
-		colHealth.r = (1 - healthperc) * 180
-		colHealth.g = healthperc * 180
-		colHealth.b = 0
+		colHealth.r = (1 - healthperc) * 255
+		colHealth.g = healthperc * 10
+		colHealth.b = 40
 
 		local x = 18 * screenscale
 		local y = 115 * screenscale
@@ -38,9 +38,9 @@ local function ContentsPaint(self, w, h)
 		local phantomhealth = math.max(lp:GetPhantomHealth(), 0)
 		healthperc = math.Clamp(phantomhealth / lp:GetMaxHealthEx(), 0, 1)
 
-		colHealth.r = 100
-		colHealth.g = 90
-		colHealth.b = 80
+		colHealth.r = 255
+		colHealth.g = 120
+		colHealth.b = 90
 		local phantomwidth = healthperc * wid
 
 		surface.SetDrawColor(colHealth.r, colHealth.g, colHealth.b, 160)

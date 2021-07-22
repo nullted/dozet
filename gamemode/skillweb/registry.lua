@@ -513,7 +513,7 @@ GM:AddSkill(SKILL_OVERHAND, "OverHandy", GOOD.."+100% repair rate\n"..BAD.."+50%
 																-3,			4,					{SKILL_HANDY5}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_HAMMERDISCIPLINE, "Hammer Discipline", GOOD.."-40% swing delay with the Carpenter Hammer",
 																0,			1,					{SKILL_BARRICADEEXPERT}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Props hit with a hammer in the last 2 seconds take 8% less damage\n"..GOOD.."Gain points from protected props\n"..BAD.."+30% swing delay with the Carpenter Hammer",
+GM:AddSkill(SKILL_BARRICADEEXPERT, "Reinforcer", GOOD.."Props hit with a hammer in the last 7 seconds take 8% less damage\n"..GOOD.."Gain points from protected props\n"..BAD.."+20% swing delay with the Carpenter Hammer",
 																0,			3,					{}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_LOADEDHULL, "Loaded Hull", GOOD.."Controllables explode when destroyed, dealing explosive damage\n"..BAD.."-10% Controllable health",
 																-2,			-4,					{SKILL_REINFORCEDHULL, SKILL_REINFORCEDBLADES, SKILL_AVIATOR}, TREE_BUILDINGTREE)

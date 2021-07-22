@@ -661,3 +661,6 @@ concommand.Add("zs_shitmap_toplayer", function(sender, command, arguments)
 	end
 end)
 
+
+
+
