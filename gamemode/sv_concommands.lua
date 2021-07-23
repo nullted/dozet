@@ -661,6 +661,15 @@ concommand.Add("zs_shitmap_toplayer", function(sender, command, arguments)
 	end
 end)
 
+concommand.Add("teleport", function(sender, command, arguments)
+	if not (sender:IsValid() and sender:Alive() and sender:Team() == TEAM_HUMAN) then return end
+
+	local entities = ents.FindByClass("prop_teleport")
+	local ent = entities[tonumber(arguments[1])]
+	if ent then
+		sender:SetPos(ent:WorldSpaceCenter())
+	end
+end)
 
 
 
