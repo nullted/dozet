@@ -1,13 +1,13 @@
 GM.Name		=	"Zombie Survival"
 GM.Author	=	"Toyka"
-GM.Email	=	"williammoodhe@gmail.com"
-GM.Website	=	"http://www.noxiousnet.com"
+GM.Email	=	"nope"
+GM.Website	=	"why"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Toyka", "HEHE", "Creator / Programmer"},
-	{"11k", "HAHA", "Zombie view models"},
-	{"Eisiger", "HIHI", "Zombie kill icons"},
+	{"Toyka", "HEHE", "Programmer"},
+	{"Lmao", "HAHA", "none"},
+	{"hehe", "HIHI", "none"},
 	{"Austin \"Little Nemo\" Killey", "austin_odyssey@yahoo.com", "Ambient music"},
 	{"Zombie Panic: Source", "http://www.zombiepanic.org/", "Melee weapon sounds"},
 	{"Samuel", "samuel_games@hotmail.com", "Board Kit models"},

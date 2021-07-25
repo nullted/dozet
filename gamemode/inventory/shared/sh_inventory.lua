@@ -204,6 +204,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, -0.03)
 trinket = GM:AddTrinket("True pill", "pills", false, hpveles, hpweles, 4, "+30 hp,maybe this thing doing more than 30 hp? ")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 30)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.33)
+--trinket = GM:AddTrinket("Damage", "damage222", false, hpveles, hpweles, 4, "+10% damage melee ")
+--GM:AddWeaponModifier(trinket, WEAPON_MODIFIER_DAMAGE, 3)
+
 
 trinket = GM:AddTrinket("Greed eye", "greedeye", false, hpveles, hpweles, 4, "You receive 40 end wave points but arsenal item more expensive by 5%... ")
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 40)

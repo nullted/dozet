@@ -1,8 +1,8 @@
 GM.MaxChannels = {}
-GM.MaxChannels["turret"] = 7
+GM.MaxChannels["turret"] = 4
 
 GM.ChannelsToClass = {}
-GM.ChannelsToClass["turret"] = {"prop_gunturret", "prop_gunturret_buckshot", "prop_gunturret_assault", "prop_gunturret_rocket"}
+GM.ChannelsToClass["turret"] = {"prop_gunturret", "prop_gunturret_buckshot", "prop_gunturret_assault", "prop_gunturret_rocket", "prop_gunturret_super"}
 
 function GM:GetFreeChannel(class)
 	local max = self.MaxChannels[class]

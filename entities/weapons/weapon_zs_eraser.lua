@@ -24,7 +24,7 @@ SWEP.WorldModel = "models/weapons/w_pist_fiveseven.mdl"
 SWEP.UseHands = true
 
 SWEP.Primary.Sound = Sound("weapons/ar2/npc_ar2_altfire.wav")
-SWEP.Primary.Damage = 23.5
+SWEP.Primary.Damage = 27
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.15
 
@@ -49,10 +49,10 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Cleanser' Tactical Pistol", "Less reloa
 	wept.ConeMax = wept.ConeMax * 1.7
 	wept.ConeMin = wept.ConeMin * 2.1
 	wept.ReloadSpeed = wept.ReloadSpeed * 0.7
-	wept.HeadshotMulti = wept.HeadshotMulti * 0.9
+	wept.HeadshotMulti = wept.HeadshotMulti * 1.2
 
 	wept.BulletCallback = function(attacker, tr, dmginfo)
-		dmginfo:SetDamage(dmginfo:GetDamage() + dmginfo:GetDamage() * GAMEMODE:GetWave()/15)
+		dmginfo:SetDamage(dmginfo:GetDamage() + dmginfo:GetDamage() * GAMEMODE:GetWave()/44)
 	end
 end)
 

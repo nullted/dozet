@@ -38,7 +38,7 @@ function GM:Move(pl, move)
 		if P_GetBarricadeGhosting(pl) and not E_GetDTBool(pl, 1) then
 			-- Use 7, because friction will amount this to a velocity of 1 roughly.
 			phase = pt.NoGhosting and E_GetDTFloat(pl, DT_PLAYER_FLOAT_WIDELOAD) > curtime()
-			M_SetMaxClientSpeed(move, math_min(M_GetMaxClientSpeed(move), phase and 7 or (36 * (pt.BarricadePhaseSpeedMul or 1))))
+			M_SetMaxClientSpeed(move, math_min(M_GetMaxClientSpeed(move), phase and 7 or (30 * (pt.BarricadePhaseSpeedMul or 1))))
 		elseif not pt.NoBWSpeedPenalty then
 			fw = M_GetForwardSpeed(move)
 			if fw < 0 then
@@ -52,8 +52,8 @@ function GM:Move(pl, move)
 		end
 	else
 		if pt.SpawnProtection then
-			M_SetMaxSpeed(move, M_GetMaxSpeed(move) * 1.15)
-			M_SetMaxClientSpeed(move, M_GetMaxClientSpeed(move) * 1.15)
+			M_SetMaxSpeed(move, M_GetMaxSpeed(move) * 1.30)
+			M_SetMaxClientSpeed(move, M_GetMaxClientSpeed(move) * 1.30)
 		end
 
 		if P_CallZombieFunction1(pl, "Move", move) then return end

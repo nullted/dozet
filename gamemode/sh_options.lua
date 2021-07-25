@@ -573,6 +573,7 @@ GM:AddPointShopItem("curativeii",		ITEMCAT_TRINKETS,		30,				"trinket_curativeii
 GM:AddPointShopItem("remedy",			ITEMCAT_TRINKETS,		30,				"trinket_remedy").SubCategory =									ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("flashlo",	      	ITEMCAT_TRINKETS,		30,				"trinket_flashlo").SubCategory =								ITEMSUBCAT_TRINKETS_MELEE
 GM:AddPointShopItem("pills",	      	ITEMCAT_TRINKETS,		30,				"trinket_pills").SubCategory =								ITEMSUBCAT_TRINKETS_MELEE
+GM:AddPointShopItem("damage222",	      	ITEMCAT_TRINKETS,		30,				"trinket_damage222").SubCategory =								ITEMSUBCAT_TRINKETS_MELEE
 -- Tier 4
 GM:AddPointShopItem("hemoadrenaliii",	ITEMCAT_TRINKETS,		50,				"trinket_hemoadrenaliii").SubCategory =							ITEMSUBCAT_TRINKETS_MELEE
 GM:AddPointShopItem("ammoband",			ITEMCAT_TRINKETS,		50,				"trinket_ammovestiii").SubCategory =							ITEMSUBCAT_TRINKETS_OFFENSIVE
@@ -741,7 +742,7 @@ end)
 -- Static values that don't need convars...
 
 -- Initial length for wave 1.
-GM.WaveOneLength = 360
+GM.WaveOneLength = 210
 
 -- Add this many seconds for each additional wave.
 GM.TimeAddedPerWave = 20
@@ -784,14 +785,14 @@ GM.UseOnlineProfiles = true
 
 -- This multiplier of points will save over to the next round. 1 is full saving. 0 is disabled.
 -- Setting this to 0 will not delete saved points and saved points do not "decay" if this is less than 1.
-GM.PointSaving = 0.10
+GM.PointSaving = 1
 
 -- Lock item purchases to waves. Tier 2 items can only be purchased on wave 2, tier 3 on wave 3, etc.
 -- HIGHLY suggested that this is on if you enable point saving. Always false if objective map, zombie escape, classic mode, or wave number is changed by the map.
 GM.LockItemTiers = false
 
 -- Don't save more than this amount of points. 0 for infinite.
-GM.PointSavingLimit = 230
+GM.PointSavingLimit = 100
 
 -- For Classic Mode
 GM.WaveIntermissionLengthClassic = 10
@@ -806,4 +807,4 @@ GM.MaxBleedDamage = 230
 GM.EndWavePointsBonus = 7
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 1
+GM.EndWavePointsBonusPerWave = 3

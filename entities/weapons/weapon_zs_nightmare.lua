@@ -4,10 +4,10 @@ SWEP.PrintName = "Nightmare"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 50
-SWEP.BleedDamage = 70
+SWEP.MeleeDamage = 21
+SWEP.BleedDamage = 90
 SWEP.SlowDownScale = 19
-SWEP.MeleeDamageVsProps = 70
+SWEP.MeleeDamageVsProps = 40
 SWEP.EnfeebleDurationMul = 10 / SWEP.MeleeDamage
 
 function SWEP:Reload()
@@ -38,7 +38,7 @@ function SWEP:ApplyMeleeDamage(ent, trace, damage)
 			gt.Applier = self:GetOwner()
 		end
 
-		ent:GiveStatus("dimvision", 10)
+		ent:GiveStatus("dimvision", 3)
 
 		local bleed = ent:GiveStatus("bleed")
 		if bleed and bleed:IsValid() then

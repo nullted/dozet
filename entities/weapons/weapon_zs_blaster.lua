@@ -20,20 +20,20 @@ SWEP.ViewModel = "models/weapons/v_supershorty/v_supershorty.mdl"
 SWEP.WorldModel = "models/weapons/w_supershorty.mdl"
 SWEP.UseHands = false
 
-SWEP.ReloadDelay = 0.4
+SWEP.ReloadDelay = 0.67
 
 SWEP.Primary.Sound = Sound("Weapon_Shotgun.NPC_Single")
-SWEP.Primary.Damage = 8.325
-SWEP.Primary.NumShots = 8
-SWEP.Primary.Delay = 0.8
+SWEP.Primary.Damage = 9.5
+SWEP.Primary.NumShots = 7
+SWEP.Primary.Delay = 0.6
 
-SWEP.Primary.ClipSize = 5
+SWEP.Primary.ClipSize = 6
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "buckshot"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
-SWEP.ConeMax = 5
-SWEP.ConeMin = 2
+SWEP.ConeMax = 4
+SWEP.ConeMin = 1.6
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
@@ -43,11 +43,11 @@ SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
 SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Blaster' Slug Gun", "Single accurate slug round, less total damage", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 5.5
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Blaster' Slug Gun", "Double very accurate slug round, less total damage", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 4.8
 	wept.Primary.NumShots = 2
-	wept.ConeMin = wept.ConeMin * 0.15
-	wept.ConeMax = wept.ConeMax * 0.3
+	wept.ConeMin = wept.ConeMin * 0.33
+	wept.ConeMax = wept.ConeMax * 0.5
 end)
 
 function SWEP:SendWeaponAnimation()

@@ -352,6 +352,7 @@ SKILLMOD_EXP_DAMAGE_MUL = 96
 SKILLMOD_TURRET_RANGE_MUL = 97
 SKILLMOD_AIM_SHAKE_MUL = 98
 SKILLMOD_MEDDART_EFFECTIVENESS_MUL = 99
+SKILLMOD_DAMAGE = 100
 
 local GOOD = "^"..COLORID_GREEN
 local BAD = "^"..COLORID_RED
@@ -927,6 +928,9 @@ end)
 
 GM:SetSkillModifierFunction(SKILLMOD_POISON_SPEED_MUL, function(pl, amount)
 	pl.PoisonSpeedMul = math.Clamp(amount + 1.0, 0.1, 1000.0)
+end)
+GM:SetSkillModifierFunction(SKILLMOD_DAMAGE, function(pl, amount)
+	pl.WEAPON_MODIFIER_DAMAGE = math.Clamp(amount + 1.0, 0.0, 100.0)
 end)
 
 GM:SetSkillModifierFunction(SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, GM:MkGenericMod("ProjDamageTakenMul"))

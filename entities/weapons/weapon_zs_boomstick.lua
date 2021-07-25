@@ -24,7 +24,7 @@ SWEP.ReloadDelay = 0.81
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
 SWEP.Primary.Damage = 51
 SWEP.Primary.NumShots = 3
-SWEP.Primary.Delay = 0.9138
+SWEP.Primary.Delay = 1.2
 
 SWEP.Recoil = 7.5
 
@@ -41,7 +41,7 @@ SWEP.MaxStock = 4
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.FireAnimSpeed = 0.6
-SWEP.Knockback = 98
+SWEP.Knockback = 76
 
 SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 SWEP.PumpSound = Sound("Weapon_Shotgun.Special1")
@@ -52,10 +52,10 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lithe Stick", "Decreased damage but faster reload, more knockback and more move speed", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 0.30
 	wept.ReloadSpeed = wept.ReloadSpeed * 1.3
-	wept.Primary.Delay = wept.Primary.Delay * 0.8
-	wept.Knockback = 123
+	wept.Primary.Delay = wept.Primary.Delay * 0.9
+	wept.Knockback = 97
 	wept.WalkSpeed = SPEED_SLOW
-	wept.FireAnimSpeed = 0.53
+	wept.FireAnimSpeed = 0.58
 end)
 
 function SWEP:PrimaryAttack()
