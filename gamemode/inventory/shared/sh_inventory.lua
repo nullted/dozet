@@ -184,6 +184,12 @@ local supveles = {
 local supweles = {
 	["perf"] = { type = "Model", model = "models/props_lab/reciever01c.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5, 1.5, -2), angle = Angle(5, 180, 92.337), size = Vector(0.2, 0.699, 0.6), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 }
+local book = {
+	["perf"] = { type = "Model", model = "models/props_lab/binderblue.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5, 1.5, -2), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+}
+local bookw = {
+	["perf"] = { type = "Model", model = "models/props_lab/binderblue.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(5, 1.5, -2), angle = Angle(0, 0, 0), size = Vector(1, 1, 1), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+}
 -- some text
 -- Health Trinkets
 trinket, trinketwep = GM:AddTrinket("Health Package", "vitpackagei", false, hpveles, hpweles, 2, "+20 Hp and +9% heal received")
@@ -329,7 +335,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.07)
 
 GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+10% reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.16)
 GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+16% Reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.15)
-GM:AddSkillModifier(GM:AddTrinket("Classic Tutorial on reload", "classix", false, ammoveles, ammoweles, 4, "+22% Reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.14)
+GM:AddSkillModifier(GM:AddTrinket("Classic Tutorial on reload", "classix", false, book, bookw, 4, "+22% Reload speed"), SKILLMOD_RELOADSPEED_MUL, 0.14)
 
 GM:AddTrinket("Automated Reloader", "autoreload", false, ammoveles, ammoweles, 2, "Reload weapon every 4 seconds")
 
@@ -516,10 +522,10 @@ GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 5)
 -- Super Trinkets
 trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-50% Ressuply Delay.")
 GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.50)
-trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, supveles, supweles, 4, "+30% Points Multiplier.")
+trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, book, bookw, 4, "+30% Points Multiplier.")
 GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.30)
 trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+20% Arsenal Discount.")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT -0.20)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.20)
 
 
 
