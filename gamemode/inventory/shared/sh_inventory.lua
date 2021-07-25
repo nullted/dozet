@@ -778,9 +778,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 25)
 GM:AddSkillModifier(trinket, SKILLMOD_POISON_DAMAGE_TAKEN_MUL, -0.32)
 trinketwep.PermitDismantle = true
 
-trinket, trinketwep = GM:AddTrinket("Welfare Shield", "welfare", false, hpveles, hpweles, nil, "-26% resupply delay\n-70% self damage taken")
+trinket, trinketwep = GM:AddTrinket("Welfare Shield", "welfare", false, hpveles, hpweles, nil, "-26% resupply delay\n-20% self damage taken")
 GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.26)
-GM:AddSkillModifier(trinket, SKILLMOD_SELF_DAMAGE_MUL, -0.70)
+GM:AddSkillModifier(trinket, SKILLMOD_SELF_DAMAGE_MUL, -0.20)
 trinketwep.PermitDismantle = true
 
 trinket, trinketwep = GM:AddTrinket("Chemistry Set", "chemistry", false, hpveles, hpweles, nil, "+13% medic tool effectiveness\n+100% cloud bomb time")
