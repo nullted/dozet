@@ -523,8 +523,8 @@ trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "F
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, -0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 5)
 -- Super Trinkets
-trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-50% Ressuply Delay.")
-GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.50)
+trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-24% Ressuply Delay.")
+GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.24)
 trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, book, bookw, 4, "+30% Points Multiplier.")
 GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.30)
 trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+20% Arsenal Discount.")
@@ -535,8 +535,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.20)
 
 
 -- ???
-GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-13% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.13)
-GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-28% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.28)
+GM:AddSkillModifier(GM:AddTrinket("Acquisitions Manifest", "acqmanifest", false, supveles, supweles, 2, "-6% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.6)
+GM:AddSkillModifier(GM:AddTrinket("Procurement Manifest", "promanifest", false, supveles, supweles, 4, "-15% resupply delay time"), SKILLMOD_RESUPPLY_DELAY_MUL, -0.15)
 
 -- Boss Trinkets
 
