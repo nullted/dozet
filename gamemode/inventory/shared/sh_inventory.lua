@@ -519,9 +519,9 @@ trinket = GM:AddTrinket("Operations Matrix", "opsmatrix", false, supveles, supwe
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_RANGE_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_DELAY_MUL, -0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_TURRET_RANGE_MUL, 0.85)
-trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "Fucking boomS x5 radius of explosive and -0.4 taken damage by explosive.")
+trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "Fucking boomS x1.9 radius of explosive and -0.4 taken damage by explosive.")
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, -0.4)
-GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 5)
+GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 1.8)
 -- Super Trinkets
 trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-24% Ressuply Delay.")
 GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.24)

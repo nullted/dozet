@@ -1763,7 +1763,7 @@ function meta:PulseResonance(attacker, inflictor)
 		pos.z = pos.z + 16
 
 		if attacker:IsValidLivingHuman() then
-			util.BlastDamagePlayer(inflictor, attacker, pos, 100, 75, DMG_ALWAYSGIB, 3)
+			util.BlastDamagePlayer(inflictor, attacker, pos, 100, 75, DMG_ALWAYSGIB, 0.7)
 			for _, ent in pairs(util.BlastAlloc(inflictor, attacker, pos, 100 * (attacker.ExpDamageRadiusMul or 1))) do
 				if ent:IsValidLivingPlayer() and gamemode.Call("PlayerShouldTakeDamage", ent, attacker) then
 					ent:AddLegDamageExt(5, attacker, inflictor, SLOWTYPE_PULSE)
@@ -1790,7 +1790,7 @@ function meta:CryogenicInduction(attacker, inflictor, damage)
 		self:TakeSpecialDamage(self:Health() + 210, DMG_DIRECT, attacker, inflictor, pos)
 
 		if attacker:IsValidLivingHuman() then
-			util.BlastDamagePlayer(inflictor, attacker, pos, 100, self:GetMaxHealthEx() * 0.80, DMG_DROWN, 0.95)
+			util.BlastDamagePlayer(inflictor, attacker, pos, 100, self:GetMaxHealthEx() * 0.80, DMG_DROWN, 0.83)
 			for _, ent in pairs(util.BlastAlloc(inflictor, attacker, pos, 100 * (attacker.ExpDamageRadiusMul or 1))) do
 				if ent:IsValidLivingPlayer() and gamemode.Call("PlayerShouldTakeDamage", ent, attacker) then
 					ent:AddLegDamageExt(6, attacker, inflictor, SLOWTYPE_COLD)
