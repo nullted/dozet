@@ -61,8 +61,8 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 9 less but m
 end)
 local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shredder' SOCOM Mark 23", "Fires 1 shot, hides your aura, deals HIGHER total damage but is more accurate", function(wept)
 	wept.Primary.NumShots = 1
-	wept.Primary.Damage = wept.Primary.Damage * 10
-	wept.Primary.Delay = 0.9
+	wept.Primary.Damage = wept.Primary.Damage * 6
+	wept.Primary.Delay = 1.6
 	wept.ConeMin = wept.ConeMin * 0.3
 	wept.ConeMax = wept.ConeMax * 0.4
 	wept.Primary.Sound = Sound("weapons/usp/usp1.wav")
