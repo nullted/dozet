@@ -76,7 +76,7 @@ function ENT:Hit(vHitPos, vHitNormal, vel, hitent)
 	if not owner:IsValid() then owner = self end
 
 	if hitent and hitent:IsValid() and hitent:IsPlayer() then
-		hitent:AddLegDamage(5-)
+		hitent:AddLegDamage(17)
 
 		self.Exploded = true
 
