@@ -424,10 +424,10 @@ GM:AddPointShopItem("scythe",			ITEMCAT_MELEE,			95,			"weapon_zs_scythe")
 GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists")
 -- Tier 5
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			95,			"weapon_zs_frotchet")
-GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			150,			"weapon_zs_loy")
+GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			190,			"weapon_zs_loy")
 GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
-GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			150,			"weapon_zs_luxoid")
-GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			150,			"weapon_zs_harpoon_mega")
+GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			190,			"weapon_zs_luxoid")
+GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			190,			"weapon_zs_harpoon_mega")
 -- Super Trinkets ------------------------------------------------------------------------------------------------------------------------------------------------
 GM:AddPointShopItem("lazarus",			ITEMCAT_SUPER,			200,			"trinket_lazarussoul")
 GM:AddPointShopItem("sman",			ITEMCAT_SUPER,			200,			"trinket_sman")
