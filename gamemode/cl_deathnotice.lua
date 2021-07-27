@@ -318,6 +318,7 @@ killicon.Add("weapon_zs_luxoid", "zombiesurvival/killicons/weapon_zs_kongolaxe2"
 killicon.Add("weapon_zs_fists", "zombiesurvival/killicons/weapon_zs_fists")
 killicon.Add("weapon_zs_harpoon", "zombiesurvival/killicons/weapon_zs_harpoon2")
 killicon.Add("weapon_zs_harpoon_te", "zombiesurvival/killicons/weapon_zs_harpoon2")
+killicon.Add("weapon_zs_luxrock", "zombiesurvival/killicons/weapon_zs_crowbar")
 killicon.Add("prop_harpoon", "zombiesurvival/killicons/weapon_zs_harpoon2")
 killicon.Add("projectile_harpoon", "zombiesurvival/killicons/weapon_zs_harpoon2")
 killicon.Add("projectile_harpoon_te", "zombiesurvival/killicons/weapon_zs_harpoon2")

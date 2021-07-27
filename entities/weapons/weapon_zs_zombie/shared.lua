@@ -406,7 +406,7 @@ function SWEP:OnRemove()
 		self:StopMoaning()
 	end
 end
-SWEP.Holster = SWEP.OnRemove
+
 
 function SWEP:SetMoaning(moaning)
 	self:SetDTBool(0, moaning)
