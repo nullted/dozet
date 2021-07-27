@@ -296,6 +296,7 @@ killicon.Add("weapon_zs_sawhack", "zombiesurvival/killicons/weapon_zs_sawhack.pn
 killicon.Add("weapon_zs_keyboard", "zombiesurvival/killicons/weapon_zs_keyboard")
 killicon.Add("weapon_zs_sledgehammer", "zombiesurvival/killicons/weapon_zs_sledgehammer")
 killicon.Add("weapon_zs_megamasher", "zombiesurvival/killicons/weapon_zs_megamasher2")
+killicon.Add("weapon_zs_luxshade", "zombiesurvival/killicons/weapon_zs_crowbar")
 killicon.Add("weapon_zs_fryingpan", "zombiesurvival/killicons/weapon_zs_fryingpan")
 killicon.Add("weapon_zs_pot", "zombiesurvival/killicons/weapon_zs_pot")
 killicon.Add("weapon_zs_plank", "zombiesurvival/killicons/weapon_zs_plank")
