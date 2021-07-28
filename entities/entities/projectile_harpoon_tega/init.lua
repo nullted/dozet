@@ -46,10 +46,10 @@ function ENT:Think()
 	if parent:IsValid() and parent:IsPlayer() then
 		if parent:IsValidLivingZombie() and not parent.SpawnProtection then
 			if CurTime() >= self.NextDamage then
-				self.NextDamage = CurTime() + 0.35
+				self.NextDamage = CurTime() + 0.71
 
 				util.Blood((parent:NearestPoint(self:GetPos()) + parent:WorldSpaceCenter()) / 2, math.random(4, 9), Vector(0, 0, 1), 100)
-				parent:TakeSpecialDamage((self.ProjDamage or 71) * 0.512, DMG_SLASH, self:GetOwner(), self)
+				parent:TakeSpecialDamage((self.ProjDamage or 71) * 0.101, DMG_SLASH, self:GetOwner(), self)
 			end
 		else
 			self:Remove()
@@ -57,7 +57,7 @@ function ENT:Think()
 	end
 
 	if self.Exploded and not self.ColChange then
-		self.ColChange = true
+		self.ColChange = true	
 		self:SetCollisionGroup(COLLISION_GROUP_WORLD)
 	end
 

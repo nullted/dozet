@@ -7,7 +7,7 @@ CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 1122
+CLASS.Health = 1750
 CLASS.Speed = 160
 
 if SERVER then
@@ -21,9 +21,9 @@ CLASS.CanTaunt = true
 
 CLASS.FearPerInstance = 1
 
-CLASS.Points = 120
+CLASS.Points = 30
 
-CLASS.SWEP = "weapon_zs_hammer"
+CLASS.SWEP = "weapon_zs_hammer_x"
 
 CLASS.Model = Model("models/player/corpse1.mdl")
 
