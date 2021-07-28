@@ -37,7 +37,7 @@ function ENT:Hit(vHitPos, vHitNormal, ent)
 
 	if ent:IsValid() then
 		if not ent:IsPlayer() or (ent:IsPlayer() and ent:Team() ~= TEAM_HUMAN) then
-			ent:TakeSpecialDamage(99 * (ent.PhysicsDamageTakenMul or 1), DMG_BULLET, owner, self)
+			ent:TakeSpecialDamage(94 * (ent.PhysicsDamageTakenMul or 1), DMG_SLASH, owner, self)
 		end
 	end
 
@@ -45,7 +45,7 @@ function ENT:Hit(vHitPos, vHitNormal, ent)
 		effectdata:SetOrigin(vHitPos)
 		effectdata:SetNormal(vHitNormal)
 	util.Effect("hit_shadestone", effectdata)
-	util.Effect("hit_stone", effectdata)
+	util.Effect("hit_flesh", effectdata)
 end
 
 function ENT:PhysicsCollide(data, phys)

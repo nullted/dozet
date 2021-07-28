@@ -37,7 +37,7 @@ function ENT:Think()
 
 					phys:Wake()
 
-					ShadowParams.pos = (self.ObjectPosition or ent:GetPos()) + VectorRand():GetNormalized() * math.Rand(-24, 24)
+					ShadowParams.pos = (self.ObjectPosition or ent:GetPos()) + VectorRand():GetNormalized() * math.Rand(0, 2)
 					ShadowParams.angle = AngleRand()
 					ShadowParams.deltatime = frametime
 					phys:ComputeShadowControl(ShadowParams)

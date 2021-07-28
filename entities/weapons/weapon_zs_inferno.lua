@@ -55,7 +55,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Inferno' Incendiary Rifle", "Fires ince
 	wept.BulletCallback = function(attacker, tr, dmginfo)
 		local ent = tr.Entity
 		if SERVER and math.random(6) == 1 and ent:IsValidLivingZombie() then
-			ent:Ignite(6)
+			ent:Ignite(40)
 			for __, fire in pairs(ents.FindByClass("entityflame")) do
 				if fire:IsValid() and fire:GetParent() == ent then
 					fire:SetOwner(attacker)

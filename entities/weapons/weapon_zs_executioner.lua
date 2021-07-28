@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "'Executioner' Axe"
-SWEP.Description = "Instantly kills zombies brought bellow 10% of their max health."
+SWEP.Description = "Instantly kills zombies brought bellow 5% of their max health."
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55
@@ -31,7 +31,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 125
+SWEP.MeleeDamage = 113
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 2.75
 SWEP.MeleeKnockBack = 225
@@ -64,7 +64,7 @@ function SWEP:PlayHitFleshSound()
 end
 
 function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
-	if hitent:IsValid() and hitent:IsPlayer() and hitent:Alive() and hitent:Health() <= hitent:GetMaxHealthEx() * 0.1 and gamemode.Call("PlayerShouldTakeDamage", hitent, self:GetOwner()) then
+	if hitent:IsValid() and hitent:IsPlayer() and hitent:Alive() and hitent:Health() <= hitent:GetMaxHealthEx() * 0.13 and gamemode.Call("PlayerShouldTakeDamage", hitent, self:GetOwner()) then
 		if SERVER then
 			hitent:SetWasHitInHead()
 		end
@@ -72,3 +72,4 @@ function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
 		hitent:EmitSound("npc/roller/blade_out.wav", 80, 75)
 	end
 end
+
