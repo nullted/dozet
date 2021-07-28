@@ -631,6 +631,10 @@ concommand.Add("zs_shitmap_tomover", function(sender, command, arguments)
 end)
 
 
+
+
+
+
 concommand.Add("zs_shitmap_detail", function(sender, command, arguments)
 	if not sender:IsSuperAdmin() then return end
 

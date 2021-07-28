@@ -1248,6 +1248,10 @@ function GM:Think()
 					pl.NextRegenerate = time + 5
 					pl:SetHealth(math.min(healmax, pl:Health() + 3))
 				end
+				if pl:HasTrinket("lazarussoul") and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.17) then
+					pl.NextRegenerate = time + 1
+					pl:SetHealth(math.min(healmax, pl:Health() + 100))
+				end
 
 				if pl:HasTrinket("regenimplant") and time >= pl.NextRegenTrinket and pl:Health() < healmax then
 					pl.NextRegenTrinket = time + 7
@@ -1327,7 +1331,7 @@ function GM:Think()
 		if self:GetEscapeStage() == ESCAPESTAGE_DEATH then
 			for _, pl in pairs(allplayers) do
 				if P_Team(pl) == TEAM_HUMAN then
-					pl:TakeSpecialDamage(15, DMG_ACID)
+					pl:TakeSpecialDamage(50, DMG_ACID)
 				end
 			end
 		end
@@ -1871,7 +1875,7 @@ local function EndRoundSetupPlayerVisibility(pl)
 end
 
 function GM:OnPlayerWin(pl)
-	local xp = math.Clamp(#player.GetAll() * 6, 20, 200) * (GAMEMODE.WinXPMulti or 1)
+	local xp = math.Clamp(#player.GetAll() * 40, 300, 800) * (GAMEMODE.WinXPMulti or 1)
 	if self.ZombieEscape then
 		xp = xp / 4
 	end
@@ -3240,6 +3244,14 @@ function GM:PlayerHurt(victim, attacker, healthremaining, damage)
 				net.WriteString("Blood Transfusion Pack")
 			net.Send(victim)
 		end
+		if healthremaining < victim:GetMaxHealth() * 0.12 and victim:GetBloodArmor() < victim.MaxBloodArmor + 60 and victim:HasTrinket("hemostasis") then
+			victim:SetBloodArmor(math.min(victim:GetBloodArmor() + (200 * victim.BloodarmorGainMul), victim.MaxBloodArmor + (70 * victim.MaxBloodArmorMul)))
+			victim:TakeInventoryItem("trinket_lazarussoul")
+
+			net.Start("zs_trinketconsumed")
+				net.WriteString("Lazarus Soul")
+			net.Send(victim)
+		end
 	else
 		victim:PlayZombiePainSound()
 	end
@@ -3379,9 +3391,8 @@ function GM:PlayerUse(pl, ent)
 	elseif pl:Team() == TEAM_HUMAN and not pl:IsCarrying() and pl:KeyPressed(IN_USE) then
 		self:TryHumanPickup(pl, ent)
 	end
-
-	return true
 end
+
 
 function GM:PlayerDeath(pl, inflictor, attacker)
 end
