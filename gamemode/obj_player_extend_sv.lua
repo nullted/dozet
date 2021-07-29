@@ -1745,6 +1745,9 @@ function meta:GetRandomStartingItem()
 	if self:IsSkillActive(SKILL_EQUIPPED) then
 		pool[#pool + 1] = GAMEMODE.StarterTrinkets[math.random(#GAMEMODE.StarterTrinkets)]
 	end
+	if self:IsSkillActive(SKILL_SOULNET) then
+		pool[#pool + 1] = GAMEMODE.StarterSoul[math.random(#GAMEMODE.StarterSoul)]
+	end
 
 	if #pool > 0 then
 		return pool[math.random(#pool)]

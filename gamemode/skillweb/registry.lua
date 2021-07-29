@@ -254,6 +254,7 @@ SKILL_NULLED = 152
 SKILL_OVERHAND = 153
 SKILL_SIGILOL = 154
 SKILL_UNSIGIL = 155
+SKILL_SOULNET = 156
 
 
 SKILLMOD_HEALTH = 1
@@ -661,6 +662,8 @@ GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+10% melee damage\n"..BAD.."-16%
 																0,			2,					{SKILL_GLASSWEAPONS, SKILL_BLOODLUST}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LASTSTAND, "Last Stand", GOOD.."Double melee damage when below 25% health\n"..BAD.."0.85x melee weapon damage at any other time",
 																0,			6,					{}, TREE_MELEETREE)
+GM:AddSkill(SKILL_SOULNET, "Souler", GOOD.."In Start Gave random soul\n"..BAD.."-10% melee damage",
+																0,			6,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_GLASSWEAPONS, "Glass Weapons", GOOD.."3.5x melee weapon damage vs. zombies\n"..BAD.."Your melee weapons have a 50% chance to break when hitting a zombie",
 																2,			4,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_D_CLUMSY, "Debuff: Clumsy", GOOD.."+20 starting Worth\n"..GOOD.."+5 starting points\n"..BAD.."Very easy to be knocked down",
@@ -675,7 +678,7 @@ GM:AddSkill(SKILL_COMBOKNUCKLE, "Combo Knuckle", GOOD.."Next unarmed strike is 2
 																6,			-4,					{SKILL_CHEAPKNUCKLE, SKILL_CRITICALKNUCKLE}, TREE_MELEETREE)
 GM:AddSkill(SKILL_HEAVYSTRIKES, "Heavy Strikes", GOOD.."+100% melee knockback\n"..BAD.."8% of melee damage dealt is reflected back to you\n"..BAD.."100% reflected if using unarmed strikes",
 																2,			0,					{SKILL_BATTLER5, SKILL_JOUSTER}, TREE_MELEETREE)
-GM:AddSkill(SKILL_JOUSTER, "Jouster", GOOD.."+90% melee damage\n"..BAD.."-90% melee knockback",
+GM:AddSkill(SKILL_JOUSTER, "Jouster", GOOD.."+20% melee damage\n"..BAD.."-90% melee knockback",
 																2,			2,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LANKY, "Lanky I", GOOD.."+10% melee range\n"..BAD.."-15% melee damage",
 																-4,			0,					{SKILL_LANKYII}, TREE_MELEETREE)
@@ -1096,14 +1099,15 @@ GM:AddSkillModifier(SKILL_BATTLER2, SKILLMOD_MELEE_DAMAGE_MUL, 0.03)
 GM:AddSkillModifier(SKILL_BATTLER3, SKILLMOD_MELEE_DAMAGE_MUL, 0.03)
 GM:AddSkillModifier(SKILL_BATTLER4, SKILLMOD_MELEE_DAMAGE_MUL, 0.07)
 GM:AddSkillModifier(SKILL_BATTLER5, SKILLMOD_MELEE_DAMAGE_MUL, 0.09)
+GM:AddSkillModifier(SKILL_SOULNET, SKILLMOD_MELEE_DAMAGE_MUL,-0.10)
 
-GM:AddSkillModifier(SKILL_BATTLER1, SKILLMOD_RELOADSPEED_MUL,- 0.02)
+GM:AddSkillModifier(SKILL_BATTLER1, SKILLMOD_RELOADSPEED_MUL, -0.02)
 GM:AddSkillModifier(SKILL_BATTLER2, SKILLMOD_RELOADSPEED_MUL, -0.04)
 GM:AddSkillModifier(SKILL_BATTLER3, SKILLMOD_RELOADSPEED_MUL, -0.09)
 GM:AddSkillModifier(SKILL_BATTLER4, SKILLMOD_RELOADSPEED_MUL, -0.13)
 GM:AddSkillModifier(SKILL_BATTLER5, SKILLMOD_RELOADSPEED_MUL, -0.16)
 
-GM:AddSkillModifier(SKILL_JOUSTER, SKILLMOD_MELEE_DAMAGE_MUL, 0.9)
+GM:AddSkillModifier(SKILL_JOUSTER, SKILLMOD_MELEE_DAMAGE_MUL, 0.2)
 GM:AddSkillModifier(SKILL_JOUSTER, SKILLMOD_MELEE_KNOCKBACK_MUL, -0.9)
 
 GM:AddSkillModifier(SKILL_QUICKDRAW, SKILLMOD_DEPLOYSPEED_MUL, 0.65)

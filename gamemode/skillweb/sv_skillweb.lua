@@ -257,7 +257,7 @@ end
 function meta:SkillsReset()
 	self:SetUnlockedSkills({})
 	self:SetDesiredActiveSkills({})
-	self.NextSkillReset = os.time() + 604800 -- 1 week
+	self.NextSkillReset = os.time() + 0 -- 1 week
 
 	self:CenterNotify(COLOR_CYAN, translate.ClientGet(self, "you_have_reset_all"))
 end

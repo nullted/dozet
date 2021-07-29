@@ -9,6 +9,16 @@ GM.StarterTrinkets = {
 	"trinket_chemistry",
 	"trinket_classixsoul"
 }
+GM.StarterSoul = {
+	"trinket_armband",
+	"trinket_condiments",
+	"trinket_emanual",
+	"trinket_aimaid",
+	"trinket_vitamins",
+	"trinket_welfare",
+	"trinket_chemistry",
+	"trinket_classixsoul"
+}
 
 function GM:AddWorldPropConversionRecipe(model, result)
 	local datatab = {Result = result, Index = wcindex}
