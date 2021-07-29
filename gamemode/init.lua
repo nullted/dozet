@@ -1248,9 +1248,9 @@ function GM:Think()
 					pl.NextRegenerate = time + 5
 					pl:SetHealth(math.min(healmax, pl:Health() + 3))
 				end
-				if pl:HasTrinket("lazarussoul") and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.17) then
-					pl.NextRegenerate = time + 1
-					pl:SetHealth(math.min(healmax, pl:Health() + 100))
+				if pl:HasTrinket("lazarussoul") and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.10) then
+					pl.NextRegenerate = time + 60
+					pl:SetHealth(math.min(healmax, pl:Health() + 500))
 				end
 
 				if pl:HasTrinket("regenimplant") and time >= pl.NextRegenTrinket and pl:Health() < healmax then
