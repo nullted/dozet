@@ -99,13 +99,13 @@ end
 
 -- How much ammo is considered one 'clip' of ammo? For use with setting up weapon defaults. Works directly with zs_survivalclips
 GM.AmmoCache = {}
-GM.AmmoCache["ar2"]							= 84		-- Assault rifles.
+GM.AmmoCache["ar2"]							= 46		-- Assault rifles.
 GM.AmmoCache["alyxgun"]						= 24		-- Not used.
-GM.AmmoCache["pistol"]						= 30		-- Pistols.
-GM.AmmoCache["smg1"]						= 66		-- SMG's and some rifles.
-GM.AmmoCache["357"]							= 16		-- Rifles, especially of the sniper variety.
-GM.AmmoCache["xbowbolt"]					= 9 		-- Crossbows
-GM.AmmoCache["buckshot"]					= 20		-- Shotguns
+GM.AmmoCache["pistol"]						= 24		-- Pistols.
+GM.AmmoCache["smg1"]						= 55		-- SMG's and some rifles.
+GM.AmmoCache["357"]							= 12		-- Rifles, especially of the sniper variety.
+GM.AmmoCache["xbowbolt"]					= 8		-- Crossbows
+GM.AmmoCache["buckshot"]					= 14		-- Shotguns
 GM.AmmoCache["ar2altfire"]					= 1			-- Not used.
 GM.AmmoCache["slam"]						= 1			-- Force Field Emitters.
 GM.AmmoCache["rpg_round"]					= 1			-- Not used. Rockets?
@@ -115,8 +115,8 @@ GM.AmmoCache["sniperpenetratedround"]		= 1			-- Remote Det pack.
 GM.AmmoCache["grenade"]						= 1			-- Grenades.
 GM.AmmoCache["thumper"]						= 1			-- Gun turret.
 GM.AmmoCache["gravity"]						= 1			-- Unused.
-GM.AmmoCache["battery"]						= 55		-- Used with the Medical Kit.
-GM.AmmoCache["gaussenergy"]					= 7			-- Nails used with the Carpenter's Hammer.
+GM.AmmoCache["battery"]						= 40		-- Used with the Medical Kit.
+GM.AmmoCache["gaussenergy"]					= 4		-- Nails used with the Carpenter's Hammer.
 GM.AmmoCache["combinecannon"]				= 1			-- Not used.
 GM.AmmoCache["airboatgun"]					= 1			-- Arsenal crates.
 GM.AmmoCache["striderminigun"]				= 1			-- Message beacons.
@@ -125,14 +125,14 @@ GM.AmmoCache["spotlamp"]					= 1
 GM.AmmoCache["manhack"]						= 1
 GM.AmmoCache["repairfield"]					= 1
 GM.AmmoCache["zapper"]						= 1
-GM.AmmoCache["pulse"]						= 45
+GM.AmmoCache["pulse"]						= 35
 GM.AmmoCache["impactmine"]					= 5
-GM.AmmoCache["chemical"]					= 30
+GM.AmmoCache["chemical"]					= 35
 GM.AmmoCache["flashbomb"]					= 1
 GM.AmmoCache["turret_buckshot"]				= 1
 GM.AmmoCache["turret_assault"]				= 1
 GM.AmmoCache["turret_super"]				= 1
-GM.AmmoCache["scrap"]						= 7
+GM.AmmoCache["scrap"]						= 4
 
 GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "buckshot", "battery", "pulse", "impactmine", "chemical", "gaussenergy", "scrap", "grenade"})
 
@@ -430,7 +430,7 @@ GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			1020,			"weapon_zs_speed")
 GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			190,			"weapon_zs_luxoid")
 GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			190,			"weapon_zs_harpoon_mega")
 -- Super Trinkets ------------------------------------------------------------------------------------------------------------------------------------------------
-GM:AddPointShopItem("lazarus",			ITEMCAT_SUPER,			200,			"trinket_lazarussoul")
+GM:AddPointShopItem("futureblu",			ITEMCAT_SUPER,			200,			"trinket_futureblu")
 GM:AddPointShopItem("sman",			ITEMCAT_SUPER,			200,			"trinket_sman")
 GM:AddPointShopItem("stutor",			ITEMCAT_SUPER,			200,			"trinket_stutor")
 GM:AddPointShopItem("gstore",			ITEMCAT_SUPER,			200,			"trinket_gstore")

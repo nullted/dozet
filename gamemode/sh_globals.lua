@@ -111,21 +111,21 @@ GM.ArsenalCrateCommission = 0.27
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 
-GM.ExtraHealthPerExtraNail = 120
-GM.MaxNails = 6
+GM.ExtraHealthPerExtraNail = 60
+GM.MaxNails = 4
 
 -- Moved from options to globals because the game is now balanced around it being static. The gamemode will BREAK if this is not 6!!
 GM.NumberOfWaves = 10
 
-GM.PulsePointsMultiplier = 1.55
+GM.PulsePointsMultiplier = 1.35
 
 -- The amount of damage you need to inflict to a zombie type to get a point
-GM.HumanoidZombiePointRatio = 66
+GM.HumanoidZombiePointRatio = 83
 GM.PoisonZombiePointRatio = 100 -- Has an enormous head hitbox
-GM.HeadcrabZombiePointRatio = 90
-GM.NoHeadboxZombiePointRatio = 77
-GM.TorsoZombiePointRatio = 60
-GM.LegsZombiePointRatio = 50
+GM.HeadcrabZombiePointRatio = 60
+GM.NoHeadboxZombiePointRatio = 78
+GM.TorsoZombiePointRatio = 80
+GM.LegsZombiePointRatio = 60
 GM.SkeletonPointRatio = GM.HumanoidZombiePointRatio/3
 
 SPEED_NORMAL = 225
@@ -147,7 +147,7 @@ ZE_KNOCKBACKSCALE = 0.1
 
 MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GRATE, CONTENTS_WINDOW, CONTENTS_HITBOX)
 
-GM.BarricadeHealthMin = 700
+GM.BarricadeHealthMin = 510
 GM.BarricadeHealthMax = 5600 * 0.85
 GM.BarricadeHealthMassFactor = 3 * 0.85
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
@@ -291,15 +291,15 @@ GM.ResistableStatuses = {
 
 GM.ScrapVals = {
 	--6, 16, 32, 58, 92, 138
-	6, 13, 20, 43, 80, 133
+	4, 11, 16, 41, 64, 111
 }
 
 GM.ScrapValsTrinkets = {
-	2, 6, 9, 15, 17, 21
+	3, 6, 9, 15, 17, 21
 }
 
 GM.DismantleMultipliers = {
-	3, 3, 6, 8
+	3, 6, 7, 8
 }
 
 -- Handled in languages file.

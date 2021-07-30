@@ -23,8 +23,8 @@ SWEP.UseHands = false
 SWEP.ReloadDelay = 0.67
 
 SWEP.Primary.Sound = Sound("Weapon_Shotgun.NPC_Single")
-SWEP.Primary.Damage = 9.5
-SWEP.Primary.NumShots = 7
+SWEP.Primary.Damage = 11
+SWEP.Primary.NumShots = 6
 SWEP.Primary.Delay = 0.6
 
 SWEP.Primary.ClipSize = 6
@@ -43,9 +43,9 @@ SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
 SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Blaster' Slug Gun", "Double very accurate slug round, less total damage", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 4.8
-	wept.Primary.NumShots = 2
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Blaster' Slug Gun", "One very accurate slug round, less total damage", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 7
+	wept.Primary.NumShots = 1
 	wept.ConeMin = wept.ConeMin * 0.33
 	wept.ConeMax = wept.ConeMax * 0.5
 end)
