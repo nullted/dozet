@@ -31,7 +31,7 @@ SWEP.UseHands = true
 SWEP.Primary.Sound = Sound("Weapon_P228.Single")
 SWEP.Primary.Damage = 36
 SWEP.Primary.NumShots = 2
-SWEP.Primary.Delay = 0.43
+SWEP.Primary.Delay = 0.33
 SWEP.Tier = 4
 SWEP.Primary.ClipSize = 13
 SWEP.Primary.Automatic = false
@@ -43,7 +43,7 @@ SWEP.ConeMin = 0.75
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Breath' Boom gun", "Большой Шанс взорвать зомби при смерти", function(wept)
-	wept.Primary.Delay = 0.267
+	wept.Primary.Delay = 0.243
 	wept.Primary.Automatic = true
 	wept.Primary.ClipSize = math.floor(wept.Primary.ClipSize * 1.25)
 
@@ -56,7 +56,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Breath' Boom gun", "Большой Ша
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 6)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 2)
 			end)
 
 			local effectdata = EffectData()

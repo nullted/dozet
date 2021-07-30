@@ -44,7 +44,7 @@ SWEP.PumpActivity = ACT_SHOTGUN_PUMP
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Blaster' Slug Gun", "One very accurate slug round, less total damage", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 7
+	wept.Primary.Damage = wept.Primary.Damage * 3.7
 	wept.Primary.NumShots = 1
 	wept.ConeMin = wept.ConeMin * 0.33
 	wept.ConeMax = wept.ConeMax * 0.5

@@ -31,7 +31,7 @@ SWEP.BoxPhysicsMax = Vector(0.70365, 2.501825, 19.973375) * SWEP.ModelScale
 SWEP.MeleeDamage = 16
 SWEP.MeleeRange = 64
 SWEP.MeleeSize = 2
-SWEP.Primary.Delay = 0.23
+SWEP.Primary.Delay = 0.28
 
 SWEP.WalkSpeed = SPEED_FASTER
 
@@ -42,7 +42,7 @@ SWEP.MissGesture = SWEP.HitGesture
 
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 4)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 0.4)
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/knife/knife_slash"..math.random(2)..".wav")
@@ -61,7 +61,7 @@ function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
 		local combo = self:GetDTInt(2)
 		local owner = self:GetOwner()
 		local armdelay = owner:GetMeleeSpeedMul()
-		self:SetNextPrimaryFire(CurTime() + math.max(0.2, self.Primary.Delay * (1 - combo / 10)) * armdelay)
+		self:SetNextPrimaryFire(CurTime() + math.max(0.2, self.Primary.Delay * (1 - combo / 20)) * armdelay)
 
 		self:SetDTInt(2, combo + 1)
 	end
@@ -70,3 +70,20 @@ end
 function SWEP:PostOnMeleeMiss(tr)
 	self:SetDTInt(2, 0)
 end
+
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Planket'", "Don't work...In test", function(wept)
+wept.MeleeDamage = 13
+wept.BleedDamage = 30
+wept.ApplyMeleeDamage = function(ent, trace, damage)
+	if SERVER and ent:IsPlayer() then
+
+		local bleed = ent:GiveStatus("bleed")
+		if bleed and bleed:IsValid() then
+			bleed:AddDamage(self.BleedDamage)
+			bleed.Damager = self:GetOwner()
+		end
+	end
+
+	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
+end
+end)

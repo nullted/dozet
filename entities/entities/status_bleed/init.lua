@@ -14,7 +14,7 @@ function ENT:Think()
 
 	local dmg = math.Clamp(self:GetDamage(), 1, 2)
 
-	owner:TakeDamage(dmg, self.Damager and self.Damager:IsValid() and self.Damager:IsPlayer() and self.Damager:Team() ~= owner:Team() and self.Damager or owner, self)
+	owner:TakeDamage(dmg, self.Damager and self.Damager:IsValid() and self.Damager:IsPlayer() and self.Damager or owner, self)
 	self:AddDamage(-dmg)
 
 	local dir = VectorRand()

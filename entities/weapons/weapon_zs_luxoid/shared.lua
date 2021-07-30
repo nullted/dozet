@@ -9,10 +9,10 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 166
-SWEP.MeleeRange = 91
+SWEP.MeleeDamage = 132
+SWEP.MeleeRange = 83
 SWEP.MeleeSize = 3
-SWEP.MeleeKnockBack = 240
+SWEP.MeleeKnockBack = 61
 
 SWEP.MeleeDamageSecondaryMul = 1.5
 SWEP.MeleeKnockBackSecondaryMul = 3

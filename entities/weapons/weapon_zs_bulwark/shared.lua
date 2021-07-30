@@ -11,11 +11,11 @@ SWEP.ShowViewModel = false
 SWEP.ShowWorldModel = false
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 9
-SWEP.Primary.NumShots = 2
-SWEP.Primary.Delay = 0.13
+SWEP.Primary.Damage = 5
+SWEP.Primary.NumShots = 5
+SWEP.Primary.Delay = 0.18
 
-SWEP.Primary.ClipSize = 1200
+SWEP.Primary.ClipSize = 200
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "smg1"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)

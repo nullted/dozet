@@ -17,11 +17,11 @@ end
 SWEP.ShadeControl = "env_shadecontrollux"
 SWEP.ShadeProjectile = "projectile_luxrock"
 
-SWEP.MeleeDamage = 121
+SWEP.MeleeDamage = 87
 SWEP.MeleeRange = 61
 SWEP.MeleeSize = 0.76
 SWEP.PrimaryDelay = 0.47
-SWEP.Tier = 5
+SWEP.Tier = 4
 
 
 function SWEP:PrimaryAttack()
