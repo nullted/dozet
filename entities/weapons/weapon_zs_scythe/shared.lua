@@ -246,3 +246,14 @@ function SWEP:MeleeHitEntity(tr, hitent, damagemultiplier, damage)
 		util.Effect("Impact", effectdata)
 	end
 end
+function SWEP:OnZombieKilled()
+	local killer = self:GetOwner()
+
+	if killer:IsValid() then
+		local reaperstatus = killer:GiveStatus("reaper", 14)
+		if reaperstatus and reaperstatus:IsValid() then
+			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 6))
+			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
+		end
+	end
+end

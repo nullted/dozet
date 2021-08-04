@@ -15,7 +15,7 @@ function ENT:EntityTakeDamage(ent, dmginfo)
 	local attacker = dmginfo:GetAttacker()
 	if attacker ~= self:GetOwner() then return end
 	if attacker:IsValid() and attacker:IsPlayer() and attacker:Team() == TEAM_HUMAN then
-		dmginfo:SetDamage(dmginfo:GetDamage() * (1 + 0.08 * self:GetDTInt(1)))
+		dmginfo:SetDamage(dmginfo:GetDamage() * (1 + 0.13 * self:GetDTInt(1)))
 	end
 end
 
