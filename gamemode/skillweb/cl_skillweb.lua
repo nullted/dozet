@@ -203,6 +203,7 @@ local hoveredskill
 
 local REMORT_SKILL = {Name = "Remort", Description = "Go even further beyond.\nLose all skills, experience, skill points, and levels.\nStart at level 1 but with 1 extra skill point.\nCan remort multiple times for multiple extra skill points."}
 
+
 local PANEL = {}
 
 AccessorFunc( PANEL, "vCamPos",			"CamPos" )
@@ -220,11 +221,12 @@ PANEL.ShadeVelocity = 0
 
 local offsets = {
 	[TREE_HEALTHTREE] = {0, 16},
-	[TREE_SPEEDTREE] = {0, -12},
+	[TREE_SPEEDTREE] = {0, -14},
 	[TREE_GUNTREE] = {13, -7},
 	[TREE_MELEETREE] = {13, 8},
-	[TREE_BUILDINGTREE] = {-14, 8},
-	[TREE_SUPPORTTREE] = {-13, -7}
+	[TREE_BUILDINGTREE] = {-14, 9},
+	[TREE_SUPPORTTREE] = {-11, -7},
+	[TREE_POINTTREE] = {-20, 0}
 }
 
 function PANEL:Init()
@@ -233,13 +235,13 @@ function PANEL:Init()
 
 	self.LastPaint = RealTime()
 	self.DirectionalLight = {}
-	self.FarZ = 32000
+	self.FarZ = 640000
 
-	self:SetCamPos( Vector( 15000, 0, 0 ) )
+	self:SetCamPos( Vector( 30004, 0, 0 ) )
 	self:SetLookAt( Vector( 0, 0, 0 ) )
-	self:SetFOV(6)
+	self:SetFOV(8)
 
-	self:SetAmbientLight( Color( 50, 50, 50 ) )
+	self:SetAmbientLight( Color( 10, 0, 220 ) )
 
 	self:SetDirectionalLight( BOX_TOP, color_white )
 	self:SetDirectionalLight( BOX_FRONT, color_white )
@@ -252,7 +254,7 @@ function PANEL:Init()
 				node:SetNoDraw(true)
 				node:SetPos(Vector(0, (skill.x + offsets[skill.Tree][1]) * 20, (skill.y + offsets[skill.Tree][2]) * 20))
 				if skill.Disabled then
-					node:SetModelScale(0.46, 0)
+					node:SetModelScale(0.90, 0)
 				else
 					node:SetModelScale(0.66, 0)
 				end
@@ -269,7 +271,7 @@ function PANEL:Init()
 	if IsValid(node) then
 		node:SetNoDraw(true)
 		node:SetPos(Vector(0, 0, 10))
-		node:SetModelScale(1.5, 0)
+		node:SetModelScale(4, 0)
 
 		node.Skill = REMORT_SKILL
 		node.SkillID = -1
@@ -683,10 +685,10 @@ function PANEL:GenerateParticles()
 	for i=1, 140 do
 		-- struct: Position, Roll, Roll rate, Size, Alpha
 		particle = {}
-		particle[1] = Vector(math.Rand(-1524, -32), math.Rand(-610, 610), math.Rand(-610, 610))
+		particle[1] = Vector(math.Rand(-500, -600), math.Rand(-10020, 10020), math.Rand(-10020, 10020))
 		particle[2] = math.Rand(0, 360)
-		particle[3] = math.Rand(-5, 5)
-		particle[4] = math.Rand(180, 240)
+		particle[3] = math.Rand(-1, 5)
+		particle[4] = math.Rand(6002, 4002)
 		particle[5] = math.Rand(30, 90)
 		particles[i] = particle
 	end
@@ -805,7 +807,8 @@ local nodecolors = {
 	[TREE_SUPPORTTREE] = {3, 1.5, 6},
 	[TREE_BUILDINGTREE] = {2, 6, 3},
 	[TREE_MELEETREE] = {1.5, 7, 7},
-	[TREE_GUNTREE] = {5, 2, 2}
+	[TREE_GUNTREE] = {5, 2, 2},
+	[TREE_POINTTREE] = {7, 10, 4}
 }
 
 local matBeam = Material("effects/laser1")
@@ -1124,7 +1127,7 @@ function PANEL:OnMousePressed(mc)
 
 				return
 			elseif hoveredskill == -1 then
-				self:DisplayMessage("You need to be level 50 to remort!", COLOR_RED)
+				self:DisplayMessage("You need to be level 60 to remort!", COLOR_RED)
 				surface.PlaySound("buttons/button8.wav")
 
 				return

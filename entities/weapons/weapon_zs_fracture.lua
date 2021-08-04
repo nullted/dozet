@@ -4,7 +4,7 @@ SWEP.Base = "weapon_zs_baseshotgun"
 DEFINE_BASECLASS("weapon_zs_baseshotgun")
 
 SWEP.PrintName = "'Fracture' Shotgun"
-SWEP.Description = "A pump shotgun that shoots in a line spread.(but have A VERY MORE BULLETS)"
+SWEP.Description = "A pump shotgun that shoots in a line spread."
 
 if CLIENT then
 	SWEP.ViewModelFlip = false
@@ -49,8 +49,8 @@ SWEP.ShowWorldModel = false
 SWEP.ReloadDelay = 0.9
 
 SWEP.Primary.Sound = Sound("Weapon_M3.Single")
-SWEP.Primary.Damage = 23
-SWEP.Primary.NumShots = 5
+SWEP.Primary.Damage = 7
+SWEP.Primary.NumShots = 15
 SWEP.Primary.Delay = 1
 
 SWEP.Primary.ClipSize = 6
@@ -58,8 +58,8 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "buckshot"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
-SWEP.ConeMax = 5
-SWEP.ConeMin = 1
+SWEP.ConeMax = 6
+SWEP.ConeMin = 1.3
 
 SWEP.FireAnimSpeed = 1
 SWEP.WalkSpeed = SPEED_SLOWER

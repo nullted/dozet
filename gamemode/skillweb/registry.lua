@@ -82,6 +82,7 @@ TREE_SUPPORTTREE = 3
 TREE_BUILDINGTREE = 4
 TREE_MELEETREE = 5
 TREE_GUNTREE = 6
+TREE_POINTTREE = 7
 
 -- Dummy skill used for "connecting" to their trees.
 SKILL_NONE = 0
@@ -356,9 +357,11 @@ SKILLMOD_TURRET_RANGE_MUL = 97
 SKILLMOD_AIM_SHAKE_MUL = 98
 SKILLMOD_MEDDART_EFFECTIVENESS_MUL = 99
 SKILLMOD_DAMAGE = 100
+SKILLMOD_HEADSHOT_MUL = 101
 
 local GOOD = "^"..COLORID_GREEN
 local BAD = "^"..COLORID_RED
+local NEUTRAL = "^"..COLORID_GRAY
 --
 
 -- Health Tree
@@ -695,6 +698,40 @@ GM:AddSkill(SKILL_BRASH, "Brash", GOOD.."-16% melee swing impact delay\n"..BAD..
 GM:AddSkill(SKILL_FOUR_IN_ONE, "2 in 1", GOOD.."-50% melee swing impact delay\n"..BAD.."-20 health",
 																-2,			-2,					{}, TREE_MELEETREE)
 
+SKILL_POINTI = 157
+GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.03)
+GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.09 Luck,+3% Point MUL",
+																0,			0,					{SKILL_NONE}, TREE_POINTTREE)
+SKILL_POINTII = 158
+GM:AddSkillModifier(SKILL_POINTII, SKILLMOD_POINT_MULTIPLIER, 0.05)
+GM:AddSkill(SKILL_POINTII, "Point II", GOOD.."+0.11 Luck,+5% Point MUL",
+																-0.5,			-1,					{SKILL_POINTI}, TREE_POINTTREE)
+SKILL_POINTIII = 159
+GM:AddSkillModifier(SKILL_POINTIII, SKILLMOD_POINT_MULTIPLIER, 0.08)
+GM:AddSkill(SKILL_POINTIII, "Point III", NEUTRAL.."+0.15 Luck\n"..GOOD.."+8% Point MUL",
+																-1,			-2,					{SKILL_POINTII}, TREE_POINTTREE)
+SKILL_POINTIIII = 160
+	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINT_MULTIPLIER, 0.11)
+	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINTS, 5)
+GM:AddSkill(SKILL_POINTIIII, "Point IIII", NEUTRAL.."+0.19 Luck\n"..GOOD.."+11% Point MUL\n" ..GOOD.. "+5 Start Points",
+																-2,			-3,					{SKILL_POINTIII}, TREE_POINTTREE)
+	SKILL_LUCK = 161
+	GM:AddSkillModifier(SKILL_LUCK, SKILLMOD_POINT_MULTIPLIER, 0.15)
+GM:AddSkill(SKILL_LUCK, "Luck", NEUTRAL.."+1 luck",
+																-3,			-3,					{SKILL_POINTIIII}, TREE_POINTTREE)
+SKILL_LUCKE = 162
+GM:AddSkillModifier(SKILL_LUCKE, SKILLMOD_POINT_MULTIPLIER, 0.13)
+GM:AddSkill(SKILL_LUCKE, "Luckiest", NEUTRAL.."+2 luck\n" ..BAD.. "-10% Points MUL",
+	1,			-2,					{SKILL_POINTIIII}, TREE_POINTTREE)
+	SKILL_BLUCK = 163
+	GM:AddSkillModifier(SKILL_BLUCK, SKILLMOD_POINT_MULTIPLIER, 0.07)
+GM:AddSkill(SKILL_BLUCK, "Debuff:Bad Luck", GOOD.."Luck is better\n" ..BAD.. "Luck is worse",
+	2,			-2.75,					{SKILL_LUCKE}, TREE_POINTTREE)
+	SKILL_PILLUCK = 164
+	GM:AddSkillModifier(SKILL_PILLUCK, SKILLMOD_POINT_MULTIPLIER, -0.20)
+GM:AddSkill(SKILL_PILLUCK, "LUCK UP!!!Or down", GOOD.."Luck up if you eat good pill\n" ..BAD.. "Luck Down if you eat bad pill",
+	-1,			-4,					{SKILL_POINTIIII}, TREE_POINTTREE)
+
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
 end)
@@ -705,6 +742,9 @@ end)
 
 GM:SetSkillModifierFunction(SKILLMOD_MEDKIT_COOLDOWN_MUL, function(pl, amount)
 	pl.MedicCooldownMul = math.Clamp(amount + 1.0, 0.0, 1000.0)
+end)
+GM:SetSkillModifierFunction(SKILLMOD_HEADSHOT_MUL, function(pl, amount)
+	pl.HeadshotMulti = math.Clamp(amount + 1.0, 0.0, 1000.0)
 end)
 
 GM:SetSkillModifierFunction(SKILLMOD_WORTH, function(pl, amount)
