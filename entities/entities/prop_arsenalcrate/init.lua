@@ -22,6 +22,7 @@ function ENT:Initialize()
 	local phys = self:GetPhysicsObject()
 	if phys:IsValid() then
 		phys:EnableMotion(false)
+		phys:AddGameFlag(FVPHYSICS_NO_IMPACT_DMG)
 	end
 
 	self:SetMaxObjectHealth(400)

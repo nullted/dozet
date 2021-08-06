@@ -9,6 +9,16 @@ function ENT:Initialize()
 	self:SetModel("models/props_wasteland/medbridge_post01.mdl")
 	self:PhysicsInitBox(Vector(-16.285, -16.285, -0.29) * self.ModelScale, Vector(16.285, 16.285, 104.29) * self.ModelScale)
 	self:SetUseType(SIMPLE_USE)
+	
+	
+	
+	self:SetCollisionGroup(COLLISION_GROUP_WORLD)
+	self:PhysicsInit(SOLID_VPHYSICS)
+	self:CollisionRulesChanged()
+		local phys = self:GetPhysicsObject()
+		if phys:IsValid() then
+			phys:EnableMotion(false)
+		end
 
 	self:CollisionRulesChanged()
 
@@ -37,8 +47,8 @@ function ENT:Initialize()
 		ent:SetAngles(self:GetAngles())
 		ent:Spawn()
 		ent:SetOwner(self)
-		--ent:SetParent(self) -- Prevents collisions
-		self:DeleteOnRemove(ent)
+		ent:SetParent(self) -- Prevents collisions
+	
 	end
 end
 
@@ -53,9 +63,9 @@ function ENT:Use(pl)
 			local status = pl:GiveStatus("sigilteleport")
 			if status:IsValid() then
 				status:SetFromSigil(self)
-				status:SetEndTime(CurTime() + 2 * (pl.SigilTeleportTimeMul or 1))
+				status:SetEndTime(CurTime() + 1 * (pl.SigilTeleportTimeMul or 1))
 
-				pl.NextSigilTPTry = CurTime() + 1
+				pl.NextSigilTPTry = CurTime() + 2
 			end
 		end
 	end

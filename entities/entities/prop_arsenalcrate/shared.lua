@@ -5,8 +5,9 @@ ENT.NoNails = true
 
 ENT.CanPackUp = true
 
-ENT.IsBarricadeObject = true
-ENT.AlwaysGhostable = true
+ENT.IgnoreBullets = true
+ENT.IsBarricadeObject = false
+ENT.AlwaysGhostable = false
 
 function ENT:SetObjectHealth(health)
 	self:SetDTFloat(0, health)

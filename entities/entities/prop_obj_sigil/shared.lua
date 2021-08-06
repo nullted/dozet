@@ -1,14 +1,15 @@
 ENT.Type = "anim"
 
-ENT.MaxHealth = 1020
-ENT.HealthRegen = 300
-ENT.RegenDelay = 3
+ENT.MaxHealth = 450
+ENT.HealthRegen = 100
+ENT.RegenDelay = 9
 
-ENT.ModelScale = 0.55
+ENT.ModelScale = 0.70
 
 ENT.m_NoNailUnfreeze = true
 ENT.NoNails = true
-ENT.IsBarricadeObject = true
+ENT.IsBarricadeObject = false
+ENT.IgnoreBullets = true
 
 AccessorFuncDT(ENT, "SigilHealthBase", "Float", 0)
 AccessorFuncDT(ENT, "SigilHealthRegen", "Float", 1)
