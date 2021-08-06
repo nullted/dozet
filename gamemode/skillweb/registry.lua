@@ -734,6 +734,14 @@ GM:AddSkill(SKILL_BLUCK, "Debuff:Bad Luck", GOOD.."Luck is better\n" ..BAD.. "Lu
 	GM:AddSkillModifier(SKILL_PILLUCK, SKILLMOD_POINT_MULTIPLIER, -0.20)
 GM:AddSkill(SKILL_PILLUCK, "LUCK UP!!!Or down", GOOD.."Luck up if you eat good pill\n" ..BAD.. "Luck Down if you eat bad pill",
 	-1,			-4,					{SKILL_POINTIIII}, TREE_POINTTREE)
+	SKILL_DUDEE = 166
+	GM:AddSkillModifier(SKILL_DUDEE, SKILLMOD_POINT_MULTIPLIER, 0.20)
+GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+10 Luck\n" ..BAD.. "-30% Point MUL",
+	2,			-5,					{SKILL_LUCKE,SKILL_WORTHINESS4}, TREE_POINTTREE)
+	SKILL_BADTRIP = 167
+	GM:AddSkillModifier(SKILL_BADTRIP, SKILLMOD_POINT_MULTIPLIER, 0.10)
+	GM:AddSkill(SKILL_BADTRIP, "Bad Trip", GOOD.."Luck is reversed\n" ..BAD.. "LUCK IS REVERSED",
+		2,			-6,					{SKILL_DUDEE}, TREE_POINTTREE)
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
