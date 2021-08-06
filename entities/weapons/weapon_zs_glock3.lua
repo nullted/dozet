@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Goset' Glock 3"
+SWEP.PrintName = "'Goset' Glock 3"
 SWEP.Description = "Fires 2 shots at once. Not very accurate, but very damaging up close."
 
 SWEP.Slot = 1
