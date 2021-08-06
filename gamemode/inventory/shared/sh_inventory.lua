@@ -237,12 +237,12 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_POWERATTACK_MUL, 0.25)
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Cutlery Set", "cutlery", false, hpveles, hpweles, nil, "-80% time to eat food"), SKILLMOD_FOODEATTIME_MUL, -0.8)
-trinket, trinketwep = GM:AddTrinket("Self-killer pack", "killer", false, hpveles, hpweles, 2, "+210 max blood armor and consumes 110 health ,you take by 77% more damage, blood armor convert by 90%,and blood armor reduction 20%")
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 210)
+trinket, trinketwep = GM:AddTrinket("Self-killer pack", "killer", false, hpveles, hpweles, 2, "+110 max blood armor and consumes 110 health ,you take by 77% more damage, blood armor convert by 50%,and blood armor reduction 9%")
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 110)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -110)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.77)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.90)
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.20)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.50)
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.09)
 trinketwep.PermitDismantle = true
 
 -- Melee Trinkets

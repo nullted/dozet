@@ -119,8 +119,9 @@ end
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
 	wept.Primary.Delay = wept.Primary.Delay * 0.6
 	wept.MeleeDamage = wept.MeleeDamage * 0.4
-	wept.PointsMultiplier = 0.2
-	wept.Secondary.Delay = wept.Primary.Delay * 1.3
+	wept.PointsMultiplier = 0.6
+	wept.Secondary.Delay = wept.Primary.Delay * 2
+	wept.MeleeDamageSecondaryMul = 3
 	
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()
@@ -129,7 +130,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faste
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 1.3)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 2)
 			end)
 
 			local effectdata = EffectData()
