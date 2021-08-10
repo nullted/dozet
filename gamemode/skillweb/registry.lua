@@ -788,6 +788,12 @@ SKILL_STRENGHT = 176
 GM:AddSkillModifier(SKILL_STRENGHT, SKILLMOD_MELEE_DAMAGE_MUL, 0.15)
 GM:AddSkill(SKILL_STRENGHT, "Strongman", GOOD.."Vos sunt 15% fortior!",
 					1,			-5,					{SKILL_STRICTE}, TREE_ANCIENTTREE)
+SKILL_EX = 177
+GM:AddSkill(SKILL_EX, "Exsecrandus", GOOD.."Exsecrandus!",
+					0,			-6,					{SKILL_PIGNUS,SKILL_STRENGHT}, TREE_ANCIENTTREE)
+SKILL_EX2 = 178					
+GM:AddSkill(SKILL_EX2, "Scientia", GOOD.."pretium enim scientia!",
+					0,			-7,					{SKILL_EX}, TREE_ANCIENTTREE)
 					
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
