@@ -68,3 +68,25 @@ function SWEP:GetViewModelPosition(pos, ang)
 
 	return pos, ang
 end
+if not CLIENT then return end
+
+
+function SWEP:Draw3DHUD(vm, pos, ang)
+	self.BaseClass.Draw3DHUD(self, vm, pos, ang)
+
+	local wid, hei = 180, 200
+	local x, y = wid * -0.6, hei * -0.5
+
+	cam.Start3D2D(pos, ang, self.HUD3DScale)
+		local owner = self:GetOwner()
+		local ownerstatus = owner:GetStatus("reaper")
+		if ownerstatus then
+			local text = ""
+			for i = 0, ownerstatus:GetDTInt(1)-1 do
+				text = text .. "+"
+			end
+			draw.SimpleTextBlurry(text, "ZS3D2DFontSmall", x + wid/2, y + hei * 0.15, Color(60, 30, 175, 230), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		end
+	cam.End3D2D()
+end
+
