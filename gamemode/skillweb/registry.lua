@@ -731,7 +731,7 @@ GM:AddSkill(SKILL_LUCKE, "Luckiest", NEUTRAL.."+2 luck\n" ..BAD.. "-10% Points M
 GM:AddSkill(SKILL_BLUCK, "Debuff:Bad Luck", GOOD.."Luck is better\n" ..BAD.. "Luck is worse",
 	2,			-2.75,					{SKILL_LUCKE}, TREE_POINTTREE)
 	SKILL_PILLUCK = 164
-	GM:AddSkillModifier(SKILL_PILLUCK, SKILLMOD_POINT_MULTIPLIER, -0.20)
+	GM:AddSkillModifier(SKILL_PILLUCK, SKILLMOD_POINT_MULTIPLIER, 0.03)
 GM:AddSkill(SKILL_PILLUCK, "LUCK UP!!!Or down", GOOD.."Luck up if you eat good pill\n" ..BAD.. "Luck Down if you eat bad pill",
 	-1,			-4,					{SKILL_POINTIIII}, TREE_POINTTREE)
 	SKILL_DUDEE = 166
@@ -746,6 +746,11 @@ GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+10 Luck\n" ..BAD.. "-30% Point MUL
 		GM:AddSkillModifier(SKILL_SCAM, SKILLMOD_POINT_MULTIPLIER, 0.10)
 		GM:AddSkill(SKILL_SCAM, "Scam", GOOD.."+10% Points Multiplier \n" ..BAD.. "Luck Multiplier changed",
 			3,			-8,					{SKILL_BADTRIP}, TREE_POINTTREE)
+			SKILL_SOLARUZ = 169
+			GM:AddSkillModifier(SKILL_SOLARUZ, SKILLMOD_POINT_MULTIPLIER, 0.30)
+			GM:AddSkillModifier(SKILL_SOLARUZ, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.40)
+			GM:AddSkill(SKILL_SOLARUZ, "Debuff:Mortiferum Fortuna", GOOD.."+30% Points Multiplicator \n" ..BAD.. "Vos adepto 40% Plus damni",
+				3,			-9,					{SKILL_SCAM}, TREE_POINTTREE)
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
