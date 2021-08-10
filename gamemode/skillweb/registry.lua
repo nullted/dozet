@@ -817,7 +817,7 @@ SKILL_ANCIENT = 183
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.87)
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_MUL, 0.4)		
 GM:AddSkill(SKILL_ANCIENT, "Adventum Antiqua", GOOD.."Potentia liberator sine fortis decrescat\n" ..BAD.."Sed non evanescunt usquam",
-					-4,			-9,					{SKILL_DEATH}, TREE_ANCIENTTREE)
+					-4,			-9,					{SKILL_SIGILIBERATOR}, TREE_ANCIENTTREE)
 										
 					
 
