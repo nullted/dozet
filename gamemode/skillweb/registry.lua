@@ -770,8 +770,8 @@ GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
 GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
 					1,			-3,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
 SKILL_STRICTE = 173
-GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
-GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
+GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.05)
+GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 5% fortior!",
 					1,			-4,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
 SKILL_VERUS = 174
 GM:AddSkillModifier(SKILL_VERUS, SKILLMOD_MANHACK_DAMAGE_MUL, 0.33)
@@ -785,8 +785,8 @@ GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_RANGE_MUL, 0.33)
 GM:AddSkill(SKILL_PIGNUS, "Pignus", GOOD.."Turris est melius!",
 					-1,			-5,					{SKILL_VERUS}, TREE_ANCIENTTREE)
 SKILL_STRENGHT = 176
-GM:AddSkillModifier(SKILL_STRENGHT, SKILLMOD_MELEE_DAMAGE_MUL, 0.15)
-GM:AddSkill(SKILL_STRENGHT, "Strongman", GOOD.."Vos sunt 15% fortior!",
+GM:AddSkillModifier(SKILL_STRENGHT, SKILLMOD_MELEE_DAMAGE_MUL, 0.1)
+GM:AddSkill(SKILL_STRENGHT, "Strongman", GOOD.."Vos sunt 10% fortior!",
 					1,			-5,					{SKILL_STRICTE}, TREE_ANCIENTTREE)
 SKILL_EX = 177
 GM:AddSkill(SKILL_EX, "Exsecrandus", GOOD.."Exsecrandus!",
@@ -794,6 +794,11 @@ GM:AddSkill(SKILL_EX, "Exsecrandus", GOOD.."Exsecrandus!",
 SKILL_EX2 = 178					
 GM:AddSkill(SKILL_EX2, "Scientia", GOOD.."pretium enim scientia",
 					0,			-7,					{SKILL_EX}, TREE_ANCIENTTREE)
+					SKILL_ANIMA = 179		
+GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_MUL, 0.15)
+GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.10)			
+GM:AddSkill(SKILL_ANIMA, "Fines de anima", GOOD.."Libero te, et tandem fieri fortior!\n" BAD.."Tu dolebis",
+					-3,			-7,					{SKILL_EX2}, TREE_ANCIENTTREE)
 					
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)

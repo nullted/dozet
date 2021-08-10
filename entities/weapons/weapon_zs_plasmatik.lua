@@ -28,10 +28,11 @@ SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadSound = Sound("Weapon_SMG1.Reload")
 SWEP.Primary.Sound = Sound("Airboat.FireGunHeavy")
-SWEP.Primary.Damage = 55
+SWEP.Primary.Damage = 46
 SWEP.Primary.NumShots = 3
-SWEP.Primary.Delay = 0.26
+SWEP.Primary.Delay = 0.44
 SWEP.Culinary = true
+SWEP.RequiredClip = 3
 
 SWEP.Primary.ClipSize = 28
 SWEP.Primary.Automatic = true

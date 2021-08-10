@@ -107,7 +107,7 @@ GM.MaxArmDamage = 20
 GM.UtilityKey = IN_SPEED
 GM.MenuKey = IN_WALK -- I would use the spawn menu but it has no IN_ key assignment.
 
-GM.ArsenalCrateCommission = 0.27
+GM.ArsenalCrateCommission = 0.11
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 
@@ -115,7 +115,7 @@ GM.ExtraHealthPerExtraNail = 60
 GM.MaxNails = 4
 
 -- Moved from options to globals because the game is now balanced around it being static. The gamemode will BREAK if this is not 6!!
-GM.NumberOfWaves = 10
+GM.NumberOfWaves = 12
 
 GM.PulsePointsMultiplier = 1.35
 
@@ -128,14 +128,14 @@ GM.TorsoZombiePointRatio = 80
 GM.LegsZombiePointRatio = 60
 GM.SkeletonPointRatio = GM.HumanoidZombiePointRatio/3
 
-SPEED_NORMAL = 225
+SPEED_NORMAL = 230
 SPEED_SLOWEST = SPEED_NORMAL - 60
 SPEED_SLOWER = SPEED_NORMAL - 30
 SPEED_SLOW = SPEED_NORMAL - 8
 SPEED_FAST = SPEED_NORMAL + 7
 SPEED_FASTER = SPEED_NORMAL + 11
 SPEED_FASTEST = SPEED_NORMAL + 33
-SPEED_VKID = SPEED_NORMAL + 120
+SPEED_VKID = SPEED_NORMAL + 65
 
 SPEED_ZOMBIEESCAPE_SLOWEST = 240
 SPEED_ZOMBIEESCAPE_SLOWER = 260
