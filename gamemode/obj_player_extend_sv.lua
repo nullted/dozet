@@ -1748,6 +1748,9 @@ function meta:GetRandomStartingItem()
 	if self:IsSkillActive(SKILL_SOULNET) then
 		pool[#pool + 1] = GAMEMODE.StarterSoul[math.random(#GAMEMODE.StarterSoul)]
 	end
+	if self:IsSkillActive(SKILL_CLASSIX1) then
+		pool[#pool + 1] = GAMEMODE.Via[math.random(#GAMEMODE.Via)]
+	end
 
 	if #pool > 0 then
 		return pool[math.random(#pool)]

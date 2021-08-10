@@ -32,6 +32,12 @@ GM.StarterSoul = {
 	"trinket_forsoul",  -- 20
 	"trinket_starsoul"  -- 21
 }
+GM.Via = {
+	"trinket_via",
+	"trinket_via1",
+	"trinket_via2",
+	"trinket_via3",
+}
 
 function GM:AddWorldPropConversionRecipe(model, result)
 	local datatab = {Result = result, Index = wcindex}

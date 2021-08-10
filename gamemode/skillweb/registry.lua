@@ -761,14 +761,7 @@ GM:AddSkill(SKILL_ANCK1, "Ancient Volume 1", GOOD.."Learn The Ancint knowledge\n
 SKILL_ANCK2 = 172
 GM:AddSkill(SKILL_ANCK2, "Ancient Volume 2", GOOD.."You Know 100%!",
 					0,			-2,					{SKILL_ANCK1}, TREE_ANCIENTTREE)
-SKILL_STRICTE = 173
-GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
-GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
-					1,			-3,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
-SKILL_STRICTE = 173
-GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
-GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
-					1,			-3,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
+
 SKILL_STRICTE = 173
 GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.05)
 GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 5% fortior!",
@@ -799,6 +792,10 @@ GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_MUL, 0.15)
 GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.10)			
 GM:AddSkill(SKILL_ANIMA, "Fines de anima", GOOD.."Libero te, et tandem fieri fortior!\n" ..BAD.."Tu dolebis",
 					-3,			-7,					{SKILL_EX2}, TREE_ANCIENTTREE)
+	SKILL_MERCUS = 184
+					GM:AddSkillModifier(SKILL_MERCUS, SKILLMOD_RESUPPLY_DELAY_MUL, -0.30)			
+					GM:AddSkill(SKILL_MERCUS, "Mortiferum Pompam", GOOD.."Nimis scientia,tu es obrutus celeritas replenishment!",
+										-4,			-7,					{SKILL_ANIMA}, TREE_ANCIENTTREE)
 SKILL_SIGILIBERATOR = 180	
 GM:AddSkillModifier(SKILL_SIGILIBERATOR, SKILLMOD_MELEE_DAMAGE_MUL, 2)
 	GM:AddSkillModifier(SKILL_SIGILIBERATOR, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 2)			
@@ -818,6 +815,9 @@ GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.87)
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_MUL, 0.4)		
 GM:AddSkill(SKILL_ANCIENT, "Adventum Antiqua", GOOD.."Potentia liberator sine fortis decrescat\n" ..BAD.."Sed non evanescunt usquam",
 					-4,			-9,					{SKILL_SIGILIBERATOR}, TREE_ANCIENTTREE)
+					SKILL_CLASSIX1 = 185	
+GM:AddSkill(SKILL_CLASSIX1, "Classical scientia mundi", GOOD.."Iter est mutabilis",
+					-5,			-8,					{SKILL_ALLPOWER}, TREE_ANCIENTTREE)
 										
 					
 
@@ -1336,7 +1336,7 @@ GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_ENDWAVE_POINTS, 1)
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_HEALTH, -30)
 
 GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_WORTH, -10)
-GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_RESUPPLY_DELAY_MUL, 0.75)
+GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_RESUPPLY_DELAY_MUL, -0.05)
 GM:AddSkillFunction(SKILL_D_WIDELOAD, function(pl, active)
 	pl.NoGhosting = active
 end)
