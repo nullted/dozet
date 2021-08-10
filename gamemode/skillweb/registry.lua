@@ -742,6 +742,10 @@ GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+10 Luck\n" ..BAD.. "-30% Point MUL
 	GM:AddSkillModifier(SKILL_BADTRIP, SKILLMOD_POINT_MULTIPLIER, 0.10)
 	GM:AddSkill(SKILL_BADTRIP, "Bad Trip", GOOD.."Luck is reversed\n" ..BAD.. "LUCK IS REVERSED!!!",
 		2,			-6,					{SKILL_DUDEE}, TREE_POINTTREE)
+		SKILL_SCAM = 168
+		GM:AddSkillModifier(SKILL_SCAM, SKILLMOD_POINT_MULTIPLIER, 0.10)
+		GM:AddSkill(SKILL_SCAM, "Scam", GOOD.."+10% Points Multiplier \n" ..BAD.. "Luck Multiplier changed",
+			3,			-8,					{SKILL_BADTRIP}, TREE_POINTTREE)
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
