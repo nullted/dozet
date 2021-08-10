@@ -83,6 +83,7 @@ TREE_BUILDINGTREE = 4
 TREE_MELEETREE = 5
 TREE_GUNTREE = 6
 TREE_POINTTREE = 7
+TREE_ANCIENTTREE = 8
 
 -- Dummy skill used for "connecting" to their trees.
 SKILL_NONE = 0
@@ -751,6 +752,39 @@ GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+10 Luck\n" ..BAD.. "-30% Point MUL
 			GM:AddSkillModifier(SKILL_SOLARUZ, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.40)
 			GM:AddSkill(SKILL_SOLARUZ, "Debuff:Mortiferum Fortuna", GOOD.."+30% Points Multiplicator \n" ..BAD.. "Vos adepto 40% Plus damni",
 				3,			-9,					{SKILL_SCAM}, TREE_POINTTREE)
+SKILL_ANCK = 170
+GM:AddSkill(SKILL_ANCK, "Ancient knowledge", GOOD.."Learn The Ancint knowledge \n" ..BAD.. "The cost of knowledge",
+					0,			0,					{SKILL_SOLARUZ}, TREE_ANCIENTTREE)
+SKILL_ANCK1 = 171
+GM:AddSkill(SKILL_ANCK1, "Ancient Volume 1", GOOD.."Learn The Ancint knowledge\n You know only 50%",
+					0,			-1,					{SKILL_ANCK}, TREE_ANCIENTTREE)
+SKILL_ANCK2 = 172
+GM:AddSkill(SKILL_ANCK2, "Ancient Volume 2", GOOD.."You Know 100%!",
+					0,			-2,					{SKILL_ANCK1}, TREE_ANCIENTTREE)
+SKILL_STRICTE = 173
+GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
+GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
+					1,			-3,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
+SKILL_STRICTE = 173
+GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
+GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
+					1,			-3,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
+SKILL_STRICTE = 173
+GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
+GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 10% fortior!",
+					1,			-4,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
+SKILL_VERUS = 174
+GM:AddSkillModifier(SKILL_VERUS, SKILLMOD_MANHACK_DAMAGE_MUL, 0.33)
+GM:AddSkillModifier(SKILL_VERUS, SKILLMOD_MANHACK_HEALTH_MUL, 0.33)
+GM:AddSkill(SKILL_VERUS, "Verus", GOOD.."Tua sunt laminis 33% melius!",
+					-1,			-4,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
+SKILL_PIGNUS = 175
+GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_SCANSPEED_MUL, 0.33)
+GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_HEALTH_MUL, 0.33)
+GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_RANGE_MUL, 0.33)
+GM:AddSkill(SKILL_PIGNUS, "Pignus", GOOD.."Turris est melius!",
+					-1,			-5,					{SKILL_VERUS}, TREE_ANCIENTTREE)
+					
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
