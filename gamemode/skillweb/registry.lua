@@ -797,8 +797,28 @@ GM:AddSkill(SKILL_EX2, "Scientia", GOOD.."pretium enim scientia",
 					SKILL_ANIMA = 179		
 GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_MUL, 0.15)
 GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.10)			
-GM:AddSkill(SKILL_ANIMA, "Fines de anima", GOOD.."Libero te, et tandem fieri fortior!\n" BAD.."Tu dolebis",
+GM:AddSkill(SKILL_ANIMA, "Fines de anima", GOOD.."Libero te, et tandem fieri fortior!\n" ..BAD.."Tu dolebis",
 					-3,			-7,					{SKILL_EX2}, TREE_ANCIENTTREE)
+SKILL_SIGILIBERATOR = 180	
+GM:AddSkillModifier(SKILL_SIGILIBERATOR, SKILLMOD_MELEE_DAMAGE_MUL, 2)
+	GM:AddSkillModifier(SKILL_SIGILIBERATOR, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 2)			
+GM:AddSkill(SKILL_SIGILIBERATOR, "Liberator", GOOD.."Libero domum tuam\n" ..BAD.."Es vulnerable",
+										-3,			-9,					{SKILL_EX2}, TREE_ANCIENTTREE)
+										SKILL_DEATH = 181	
+GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.2)
+GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.2)		
+GM:AddSkill(SKILL_DEATH, "Morieris", GOOD.."Scis nimium\n" ..BAD.."et hoc est maledictum\n"..GOOD.."Factus es medicus",
+										-3,			-8,					{SKILL_EX2}, TREE_ANCIENTTREE)
+										SKILL_ALLPOWER = 182
+GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.4)		
+GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Tu melius quam ordinarium creator\n" ..GOOD.."In reparatione qualitas est melius",
+					-4,			-8,					{SKILL_DEATH}, TREE_ANCIENTTREE)
+SKILL_ANCIENT = 183
+GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.87)
+GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_MUL, 0.4)		
+GM:AddSkill(SKILL_ANCIENT, "Adventum Antiqua", GOOD.."Potentia liberator sine fortis decrescat\n" ..BAD.."Sed non evanescunt usquam",
+					-4,			-9,					{SKILL_DEATH}, TREE_ANCIENTTREE)
+										
 					
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
