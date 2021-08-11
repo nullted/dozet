@@ -482,23 +482,23 @@ GM:AddSkill(SKILL_CARDIOTONIC, "Cardiotonic", GOOD.."Hold shift to run whilst dr
 GM:AddSkill(SKILL_UNBOUND, "Unbound", GOOD.."-60% reduced delay from switching weapons affecting movement speed\n"..BAD.."-4 movement speed",
 																-4,			-4,					{}, TREE_SPEEDTREE)
 -- Medic Tree
-GM:AddSkill(SKILL_SURGEON1, "Surgeon I", GOOD.."-10% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEON1, "Surgeon I", GOOD.."-6% medical kit cooldown",
 																-4,			6,					{SKILL_NONE, SKILL_SURGEON2}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_SURGEON2, "Surgeon II", GOOD.."-14% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEON2, "Surgeon II", GOOD.."-9% medical kit cooldown",
 																-3,			3,					{SKILL_WORTHINESS4, SKILL_SURGEON3}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_SURGEON3, "Surgeon III", GOOD.."-17% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEON3, "Surgeon III", GOOD.."-11% medical kit cooldown",
 																-2,			0,					{SKILL_U_MEDICCLOUD, SKILL_D_FRAIL, SKILL_SURGEONIV}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_SURGEONIV, "Surgeon IV", GOOD.."-33% medical kit cooldown",
+GM:AddSkill(SKILL_SURGEONIV, "Surgeon IV", GOOD.."-21% medical kit cooldown",
 																-2,			-3,					{}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYI, "Biology I", GOOD.."+1% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYI, "Biology I", GOOD.."+8% medic tool effectiveness",
 																4,			6,					{SKILL_NONE, SKILL_BIOLOGYII}, TREE_SUPPORTTREE)
 GM:AddSkill(SKILL_BIOLOGYII, "Biology II", GOOD.."+13% medic tool effectiveness",
 																3,			3,					{SKILL_BIOLOGYIII, SKILL_SMARTTARGETING}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYIII, "Biology III", GOOD.."+30% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYIII, "Biology III", GOOD.."+18% medic tool effectiveness",
 																2,			0,					{SKILL_U_MEDICCLOUD, SKILL_U_ANTITODESHOT, SKILL_BIOLOGYIV}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_BIOLOGYIV, "Biology IV", GOOD.."+41% medic tool effectiveness",
+GM:AddSkill(SKILL_BIOLOGYIV, "Biology IV", GOOD.."+21% medic tool effectiveness",
 																2,			-3,					{}, TREE_SUPPORTTREE)
-GM:AddSkill(SKILL_D_FRAIL, "Debuff: Frail", GOOD.."+20 starting Worth\n"..GOOD.."+5 starting points\n"..BAD.."Cannot be healed above 25% health",
+GM:AddSkill(SKILL_D_FRAIL, "Debuff: Frail", GOOD.."-33% medical kit cooldown\n"..GOOD.."+33% medic tool effectiveness\n"..BAD.."Cannot be healed above 44% health",
 																-4,			-2,					{}, TREE_SUPPORTTREE)
 GM:AddSkill(SKILL_U_MEDICCLOUD, "Unlock: Medic Cloud Bomb", GOOD.."Unlocks purchasing the Medic Cloud Bomb\nSlowly heals all humans inside the cloud",
 																0,			-2,					{SKILL_DISPERSION}, TREE_SUPPORTTREE)
@@ -811,13 +811,16 @@ GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.4)
 GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Tu melius quam ordinarium creator\n" ..GOOD.."In reparatione qualitas est melius",
 					-4,			-8,					{SKILL_DEATH}, TREE_ANCIENTTREE)
 SKILL_ANCIENT = 183
-GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.87)
-GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_MUL, 0.4)		
+GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.47)
+GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_MUL, 0.2)		
 GM:AddSkill(SKILL_ANCIENT, "Adventum Antiqua", GOOD.."Potentia liberator sine fortis decrescat\n" ..BAD.."Sed non evanescunt usquam",
 					-4,			-9,					{SKILL_SIGILIBERATOR}, TREE_ANCIENTTREE)
 					SKILL_CLASSIX1 = 185	
 GM:AddSkill(SKILL_CLASSIX1, "Classical scientia mundi", GOOD.."Iter est mutabilis",
 					-5,			-8,					{SKILL_ALLPOWER}, TREE_ANCIENTTREE)
+SKILL_BLOODMARY = 186
+GM:AddSkill(SKILL_BLOODMARY, "Sanguinum Messis", GOOD.."Sanguinem protegit",
+										-5,			-9,					{SKILL_ANCIENT}, TREE_ANCIENTTREE)
 										
 					
 
@@ -1195,15 +1198,15 @@ GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_SELF_DAMAGE_MUL, -0.40)
 GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_RELOADSPEED_MUL, -0.10)
 GM:AddSkillModifier(SKILL_BLASTPROOF, SKILLMOD_DEPLOYSPEED_MUL, -0.12)
 
-GM:AddSkillModifier(SKILL_SURGEON1, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.1)
-GM:AddSkillModifier(SKILL_SURGEON2, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.14)
-GM:AddSkillModifier(SKILL_SURGEON3, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.17)
-GM:AddSkillModifier(SKILL_SURGEONIV, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.33)
+GM:AddSkillModifier(SKILL_SURGEON1, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.06)
+GM:AddSkillModifier(SKILL_SURGEON2, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.09)
+GM:AddSkillModifier(SKILL_SURGEON3, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.11)
+GM:AddSkillModifier(SKILL_SURGEONIV, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.21)
 
-GM:AddSkillModifier(SKILL_BIOLOGYI, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.1)
+GM:AddSkillModifier(SKILL_BIOLOGYI, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.08)
 GM:AddSkillModifier(SKILL_BIOLOGYII, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.13)
-GM:AddSkillModifier(SKILL_BIOLOGYIII, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.3)
-GM:AddSkillModifier(SKILL_BIOLOGYIV, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.41)
+GM:AddSkillModifier(SKILL_BIOLOGYIII, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.18)
+GM:AddSkillModifier(SKILL_BIOLOGYIV, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.21)
 
 GM:AddSkillModifier(SKILL_HANDY1, SKILLMOD_REPAIRRATE_MUL, 0.08)
 GM:AddSkillModifier(SKILL_HANDY2, SKILLMOD_REPAIRRATE_MUL, 0.09)
@@ -1372,8 +1375,8 @@ GM:AddSkillModifier(SKILL_LANKY, SKILLMOD_MELEE_RANGE_MUL, 0.15)
 GM:AddSkillModifier(SKILL_LANKYII, SKILLMOD_MELEE_DAMAGE_MUL, -0.25)
 GM:AddSkillModifier(SKILL_LANKYII, SKILLMOD_MELEE_RANGE_MUL, 0.2)
 
-GM:AddSkillModifier(SKILL_D_FRAIL, SKILLMOD_WORTH, 20)
-GM:AddSkillModifier(SKILL_D_FRAIL, SKILLMOD_POINTS, 5)
+GM:AddSkillModifier(SKILL_D_FRAIL, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.33)
+GM:AddSkillModifier(SKILL_D_FRAIL, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.33)
 GM:AddSkillFunction(SKILL_D_FRAIL, function(pl, active)
 	pl:SetDTBool(DT_PLAYER_BOOL_FRAIL, active)
 end)

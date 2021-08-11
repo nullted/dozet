@@ -1238,7 +1238,7 @@ function GM:Think()
 					pl:GiveStatus("drown")
 				end
 
-				local healmax = pl:IsSkillActive(SKILL_D_FRAIL) and math.floor(pl:GetMaxHealth() * 0.25) or pl:GetMaxHealth()
+				local healmax = pl:IsSkillActive(SKILL_D_FRAIL) and math.floor(pl:GetMaxHealth() * 0.44) or pl:GetMaxHealth()
 
 				if pl:IsSkillActive(SKILL_REGENERATOR) and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.6) then
 					pl.NextRegenerate = time + 6
@@ -1262,6 +1262,11 @@ function GM:Think()
 					pl.NextBloodArmorRegen = time + 8
 					pl:SetBloodArmor(math.min(pl.MaxBloodArmor, pl:GetBloodArmor() + (1 * pl.BloodarmorGainMul)))
 				end
+				if pl:IsSkillActive(SKILL_BLOODMARY) and pl.MaxBloodArmor > 0 and time >= pl.NextBloodArmorRegen and pl:GetBloodArmor() < pl.MaxBloodArmor then
+					pl.NextBloodArmorRegen = time + 2
+					pl:SetBloodArmor(math.min(pl.MaxBloodArmor, pl:GetBloodArmor() + (5 * pl.BloodarmorGainMul)))
+				end
+
 
 				if pl:KeyDown(IN_SPEED) and pl:GetVelocity() ~= vector_origin and pl:IsSkillActive(SKILL_CARDIOTONIC) then
 					if pl:GetBloodArmor() > 0 then
@@ -3385,7 +3390,7 @@ function GM:PlayerUse(pl, ent)
 	elseif entclass == "item_healthcharger" then
 		if pl:Team() == TEAM_UNDEAD then
 			return false
-		elseif pl:IsSkillActive(SKILL_D_FRAIL) and pl:Health() >= math.floor(pl:GetMaxHealth() * 0.25) then
+		elseif pl:IsSkillActive(SKILL_D_FRAIL) and pl:Health() >= math.floor(pl:GetMaxHealth() * 0.44) then
 			return false
 		end
 	elseif pl:Team() == TEAM_HUMAN and not pl:IsCarrying() and pl:KeyPressed(IN_USE) then
@@ -3779,7 +3784,7 @@ function GM:PlayerCanPickupItem(pl, ent)
 		local class = ent:GetClass()
 		if class == "item_healthkit" or class == "item_healthvial" then
 			local healamount = #class == 14 and 25 or 10
-			if pl:Health() + healamount > math.floor(pl:GetMaxHealth() * 0.25) then
+			if pl:Health() + healamount > math.floor(pl:GetMaxHealth() * 0.44) then
 				return false
 			end
 		end
