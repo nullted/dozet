@@ -58,11 +58,11 @@ SWEP.UseHands = true
 
 SWEP.Primary.Sound = Sound("weapons/zs_inner/innershot.ogg")
 SWEP.ReloadSound = Sound("ambient/machines/thumper_startup1.wav")
-SWEP.Primary.Damage = 34
-SWEP.Primary.NumShots = 6
+SWEP.Primary.Damage = 18
+SWEP.Primary.NumShots = 3
 SWEP.Primary.Delay = 1.5
-SWEP.Primary.MaxDistance = 600
-SWEP.Primary.BurstShots = 5
+SWEP.Primary.MaxDistance = 248
+SWEP.Primary.BurstShots = 7
 
 SWEP.Primary.ClipSize = 14
 SWEP.Primary.Automatic = true

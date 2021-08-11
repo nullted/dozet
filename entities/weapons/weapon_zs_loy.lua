@@ -32,7 +32,7 @@ SWEP.MaxStock = 2
 SWEP.MeleeDamage = 161
 SWEP.MeleeRange = 78
 SWEP.MeleeSize = 4
-SWEP.MeleeKnockBack = 450
+SWEP.MeleeKnockBack = 1000
 
 SWEP.WalkSpeed = 160
 

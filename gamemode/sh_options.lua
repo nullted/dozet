@@ -362,6 +362,7 @@ GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			180,			"weapon_zs_gluon")
 GM:AddPointShopItem("barrage",			ITEMCAT_GUNS,			180,			"weapon_zs_barrage")
 GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			180,			"weapon_zs_classic")
 GM:AddPointShopItem("toxico",			ITEMCAT_GUNS,			180,			"weapon_zs_toxicshooter")
+GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			180,			"weapon_zs_gaeagle")
 -- Tier 5
 GM:AddPointShopItem("novacolt",			ITEMCAT_GUNS,			260,			"weapon_zs_novacolt")
 GM:AddPointShopItem("bulwark",			ITEMCAT_GUNS,		    260,			"weapon_zs_bulwark")

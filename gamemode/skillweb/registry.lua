@@ -821,6 +821,9 @@ GM:AddSkill(SKILL_CLASSIX1, "Classical scientia mundi", GOOD.."Iter est mutabili
 SKILL_BLOODMARY = 186
 GM:AddSkill(SKILL_BLOODMARY, "Sanguinum Messis", GOOD.."Sanguinem protegit",
 										-5,			-9,					{SKILL_ANCIENT}, TREE_ANCIENTTREE)
+SKILL_TRUEPOWER = 187
+GM:AddSkill(SKILL_TRUEPOWER, "Future Knowledge Vol.3", GOOD.."Cost Of Knowledge",
+																				-5,			-10,					{SKILL_BLOODMARY}, TREE_ANCIENTTREE)
 										
 					
 
