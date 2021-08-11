@@ -94,5 +94,5 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shredder' SOCOM Mark 23"
 	end
 end)
 branch.Colors = {Color(170, 170, 170), Color(120, 120, 120), Color(70, 70, 70)}
-branch.NewNames = {"Cloaked", "Covert", "Silent"}
+branch.NewNames = {"Cloaked", "Covert", "Silent", "Darkness"}
 branch.Killicon = "weapon_zs_shroud"
