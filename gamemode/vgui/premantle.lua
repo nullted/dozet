@@ -116,7 +116,7 @@ function PANEL:Init()
 
 	self:SetCamPos( Vector( 20000, 0, 0 ) )
 	self:SetLookAt( Vector( 0, 0, 0 ) )
-	self:SetFOV( 5 )
+	self:SetFOV( 10 )
 
 	self:SetAmbientLight( Color( 50, 50, 50 ) )
 

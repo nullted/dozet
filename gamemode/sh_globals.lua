@@ -299,7 +299,7 @@ GM.ScrapValsTrinkets = {
 }
 
 GM.DismantleMultipliers = {
-	3, 6, 7, 8
+	3, 6, 7, 8, 20
 }
 
 -- Handled in languages file.

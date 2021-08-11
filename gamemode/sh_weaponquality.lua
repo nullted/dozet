@@ -2,13 +2,15 @@ GM.WeaponQualityModifiers = {}
 GM.WeaponQualities = {
 	{"Sturdy", 1.15, "Tuned"},
 	{"Honed", 1.30, "Modified"},
-	{"Perfected", 1.60, "Reformed"}
+	{"Perfected", 1.60, "Reformed"},
+	{"heavenly", 2, "Deadly"}
 	
 }
 GM.WeaponQualityColors = {
 	{Color(235, 110, 165), Color(172, 111, 105)},
 	{Color(120, 90, 175), Color(35, 110, 245)},
-	{Color(160, 3, 5), Color(0, 100, 100)}
+	{Color(160, 3, 5), Color(0, 100, 100)},
+	{Color(255, 3, 5), Color(0, 100, 200)}
 	
 }
 
@@ -38,6 +40,7 @@ WEAPON_MODIFIER_TURRET_SPREAD = 23
 WEAPON_MODIFIER_HEALING = 24
 WEAPON_MODIFIER_HEADSHOT_MULTI = 25
 WEAPON_MODIFIER_MELEE_KNOCK = 26
+WEAPON_MODIFIER_POTENTIAL_DAMAGE = 27
 
 local index = 1
 function GM:AddWeaponQualityModifier(id, name, displayraw, vartable)
@@ -95,7 +98,7 @@ GM:AddWeaponQualityModifier(WEAPON_MODIFIER_TURRET_SPREAD,				"Turret Bullet Spr
 GM:AddWeaponQualityModifier(WEAPON_MODIFIER_HEALING,					"Healing Amount", 			false, 	{Heal = false})
 GM:AddWeaponQualityModifier(WEAPON_MODIFIER_HEADSHOT_MULTI,				"Headshot Damage Bonus", 	false, 	{HeadshotMulti = false})
 GM:AddWeaponQualityModifier(WEAPON_MODIFIER_MELEE_KNOCK,				"Knockback", 				false, 	{MeleeKnockBack = false})
-
+GM:AddWeaponQualityModifier(WEAPON_MODIFIER_POTENTIAL_DAMAGE,				"Potential Damage", 				false,	{PotentialDamage = false})
 local function ApplyWeaponModifier(modinfo, wept, datatab, remantledescs, i)
 	local displayed = false
 	local mtbl, basestat, newstat, qfactor
@@ -144,7 +147,7 @@ function GM:CreateWeaponOfQuality(i, orig, quality, classname, branch)
 	wept.Branch = branch and branch.No
 
 	if wept.PrintName then
-		wept.PrintName = (branch and branch.NewNames and branch.NewNames[i] or branch and quality[3] or quality[1]).." "..(branch and branch.PrintName or wept.PrintName)
+		wept.PrintName = (branch and branch.NewNames and branch.NewNames[i] or branch and quality[4] or quality[1]).." "..(branch and branch.PrintName or wept.PrintName)
 	end
 
 	if wept.PrimaryRemantleModifier then
@@ -287,5 +290,5 @@ function GM:GetUpgradeScrap(wtbl, qualitychoice)
 end
 
 function GM:PointsToScrap(points)
-	return points / (70 / 32)
+	return points / (72 / 30)
 end
