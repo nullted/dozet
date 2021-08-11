@@ -10,7 +10,7 @@ GM.WeaponQualityColors = {
 	{Color(235, 110, 165), Color(172, 111, 105)},
 	{Color(120, 90, 175), Color(35, 110, 245)},
 	{Color(160, 3, 5), Color(0, 100, 100)},
-	{Color(255, 3, 5), Color(0, 100, 200)}
+	{Color(255, 3, 5), Color(0, 166, 200)}
 	
 }
 
