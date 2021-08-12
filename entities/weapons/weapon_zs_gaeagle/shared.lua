@@ -32,10 +32,10 @@ SWEP.ViewModelBoneMods = {}
 SWEP.Primary.Sound = Sound("Weapon_Deagle.Single")
 SWEP.Primary.Damage = 54
 SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.32
+SWEP.Primary.Delay = 0.27
 SWEP.Primary.KnockbackScale = 4
 SWEP.MaxStock = 3
-SWEP.Primary.ClipSize = 16
+SWEP.Primary.ClipSize = 14
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "pistol"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
@@ -43,7 +43,9 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.ConeMax = 3.4
 SWEP.ConeMin = 1.25
 
-SWEP.FireAnimSpeed = 1.3
+SWEP.ReloadSpeed = 0.7
+
+SWEP.FireAnimSpeed = 1.8
 
 SWEP.Tier = 4
 
