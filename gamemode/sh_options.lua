@@ -171,21 +171,22 @@ GM:AddStartingItem("8nails",			ITEMCAT_AMMO,			15,				nil,			"8 nails",						nil
 GM:AddStartingItem("12nails",			ITEMCAT_AMMO,			20,				nil,			"12 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(12, "GaussEnergy", true) end)
 GM:AddStartingItem("60mkit",			ITEMCAT_AMMO,			20,				nil,			"100 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(100, "Battery", true) end)
 GM:AddStartingItem("90mkit",			ITEMCAT_AMMO,			25,				nil,			"120 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(120, "Battery", true) end)
-GM:AddStartingItem("scrap",			ITEMCAT_AMMO,			20,				nil,			"Scrap 15",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(15, "Scrap", true) end)
+GM:AddStartingItem("scrap",		    	ITEMCAT_AMMO,			20,				nil,			"Scrap 15",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(15, "Scrap", true) end)
+GM:AddStartingItem("scraper",			ITEMCAT_AMMO,			30,				nil,			"Scrap 25",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(25, "Scrap", true) end)
 
 
 
-GM:AddStartingItem("brassknuckles",		ITEMCAT_MELEE,			20,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
-GM:AddStartingItem("zpaxe",				ITEMCAT_MELEE,			40,				"weapon_zs_axe")
-GM:AddStartingItem("stnbtn",			ITEMCAT_MELEE,			40,				"weapon_zs_stunbaton")
-GM:AddStartingItem("csknf",				ITEMCAT_MELEE,			20,				"weapon_zs_swissarmyknife")
-GM:AddStartingItem("zpplnk",			ITEMCAT_MELEE,			20,				"weapon_zs_plank")
-GM:AddStartingItem("zpfryp",			ITEMCAT_MELEE,			30,				"weapon_zs_fryingpan")
-GM:AddStartingItem("zpcpot",			ITEMCAT_MELEE,			30,				"weapon_zs_pot")
-GM:AddStartingItem("ladel",				ITEMCAT_MELEE,			30,				"weapon_zs_ladel")
-GM:AddStartingItem("pipe",				ITEMCAT_MELEE,			40,				"weapon_zs_pipe")
-GM:AddStartingItem("hook",				ITEMCAT_MELEE,			40,				"weapon_zs_hook")
-GM:AddStartingItem("lamp",				ITEMCAT_MELEE,			40,				"weapon_zs_lamp")
+GM:AddStartingItem("brassknuckles",		ITEMCAT_MELEE,			25,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
+GM:AddStartingItem("zpaxe",				ITEMCAT_MELEE,			25,				"weapon_zs_axe")
+GM:AddStartingItem("stnbtn",			ITEMCAT_MELEE,			25,				"weapon_zs_stunbaton")
+GM:AddStartingItem("csknf",				ITEMCAT_MELEE,			10,				"weapon_zs_swissarmyknife")
+GM:AddStartingItem("zpplnk",			ITEMCAT_MELEE,			25,				"weapon_zs_plank")
+GM:AddStartingItem("zpfryp",			ITEMCAT_MELEE,			25,				"weapon_zs_fryingpan")
+GM:AddStartingItem("zpcpot",			ITEMCAT_MELEE,			25,				"weapon_zs_pot")
+GM:AddStartingItem("ladel",				ITEMCAT_MELEE,			25,				"weapon_zs_ladel")
+GM:AddStartingItem("pipe",				ITEMCAT_MELEE,			25,				"weapon_zs_pipe")
+GM:AddStartingItem("hook",				ITEMCAT_MELEE,			25,				"weapon_zs_hook")
+GM:AddStartingItem("lamp",				ITEMCAT_MELEE,			25,				"weapon_zs_lamp")
 
 local item
 GM:AddStartingItem("medkit",			ITEMCAT_TOOLS,			30,				"weapon_zs_medicalkit")
@@ -380,23 +381,23 @@ GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
 -- Tier 6 beta
 GM:AddPointShopItem("null",			ITEMCAT_GUNS,			360,			"weapon_zs_null")
 
-GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
-GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			9,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)
-GM:AddPointShopItem("smgammo",			ITEMCAT_AMMO,			9,				nil,							"36 SMG ammo",					nil,									"ammo_smg",							function(pl) pl:GiveAmmo(36, "smg1", true) end)
-GM:AddPointShopItem("rifleammo",		ITEMCAT_AMMO,			9,				nil,							"8 rifle ammo",					nil,									"ammo_rifle",						function(pl) pl:GiveAmmo(8, "357", true) end)
+GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"24 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(25, "pistol", true) end)
+GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			9,				nil,							"14 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(14, "buckshot", true) end)
+GM:AddPointShopItem("smgammo",			ITEMCAT_AMMO,			9,				nil,							"55 SMG ammo",					nil,									"ammo_smg",							function(pl) pl:GiveAmmo(55, "smg1", true) end)
+GM:AddPointShopItem("rifleammo",		ITEMCAT_AMMO,			9,				nil,							"12 rifle ammo",					nil,									"ammo_rifle",						function(pl) pl:GiveAmmo(12, "357", true) end)
 GM:AddPointShopItem("crossbowammo",		ITEMCAT_AMMO,			9,				nil,							"8 crossbow bolts",				nil,									"ammo_bolts",						function(pl) pl:GiveAmmo(8,	"XBowBolt",	true) end)
-GM:AddPointShopItem("assaultrifleammo",	ITEMCAT_AMMO,			9,				nil,							"32 assault rifle ammo",		nil,									"ammo_assault",						function(pl) pl:GiveAmmo(32, "ar2", true) end)
-GM:AddPointShopItem("pulseammo",		ITEMCAT_AMMO,			9,				nil,							"30 pulse ammo",				nil,									"ammo_pulse",						function(pl) pl:GiveAmmo(30, "pulse", true) end)
-GM:AddPointShopItem("impactmine",		ITEMCAT_AMMO,			9,				nil,							"3 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(3, "impactmine", true) end)
-GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			9,				nil,							"20 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(20, "chemical", true) end)
+GM:AddPointShopItem("assaultrifleammo",	ITEMCAT_AMMO,			9,				nil,							"46 assault rifle ammo",		nil,									"ammo_assault",						function(pl) pl:GiveAmmo(46, "ar2", true) end)
+GM:AddPointShopItem("pulseammo",		ITEMCAT_AMMO,			9,				nil,							"35 pulse ammo",				nil,									"ammo_pulse",						function(pl) pl:GiveAmmo(35, "pulse", true) end)
+GM:AddPointShopItem("impactmine",		ITEMCAT_AMMO,			9,				nil,							"5 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(5, "impactmine", true) end)
+GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			9,				nil,							"35 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(35, "chemical", true) end)
 item =
-GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"100 Medical Kit power",			"100 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(50, "Battery", true) end)
+GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"50 Medical Kit power",			"50 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(50, "Battery", true) end)
 item.CanMakeFromScrap = true
 GM:AddPointShopItem("nailsz",			ITEMCAT_AMMO,			1,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
 
 item.NoClassicMode = true
 -- Tier 1
-GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			5,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
+GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			15,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
 GM:AddPointShopItem("knife",			ITEMCAT_MELEE,			15,				"weapon_zs_swissarmyknife")
 GM:AddPointShopItem("zpplnk",			ITEMCAT_MELEE,			15,				"weapon_zs_plank")
 GM:AddPointShopItem("axe",				ITEMCAT_MELEE,			15,				"weapon_zs_axe")

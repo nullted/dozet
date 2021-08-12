@@ -46,10 +46,10 @@ function ENT:Think()
 	if parent:IsValid() and parent:IsPlayer() then
 		if parent:IsValidLivingZombie() and not parent.SpawnProtection then
 			if CurTime() >= self.NextDamage then
-				self.NextDamage = CurTime() + 0.11
+				self.NextDamage = CurTime() + 0.15
 
 				util.Blood((parent:NearestPoint(self:GetPos()) + parent:WorldSpaceCenter()) / 2, math.random(4, 9), Vector(0, 0, 1), 100)
-				parent:TakeSpecialDamage((self.ProjDamage or 71) * 0.101, DMG_SLASH, self:GetOwner(), self)
+				parent:TakeSpecialDamage((self.ProjDamage or 55) * 0.085, DMG_SLASH, self:GetOwner(), self)
 			end
 		else
 			self:Remove()
@@ -80,7 +80,7 @@ function ENT:Hit(vHitPos, vHitNormal, vel, hitent)
 
 		self.Exploded = true
 
-		hitent:TakeSpecialDamage(self.ProjDamage or 35, DMG_GENERIC, owner, self, self:GetPos())
+		hitent:TakeSpecialDamage(self.ProjDamage or 24, DMG_GENERIC, owner, self, self:GetPos())
 		hitent:EmitSound("npc/strider/strider_skewer1.wav", 70, 112)
 
 		self.DieTime = CurTime() + 7

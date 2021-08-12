@@ -18,14 +18,17 @@ if CLIENT then
 	SWEP.IronSightsPos = Vector(-6.35, 5, 1.7)
 end
 
+
 SWEP.Base = "weapon_zs_base"
-
-SWEP.HoldType = "revolver"
-
-SWEP.ViewModel = "models/weapons/cstrike/c_pist_deagle.mdl"
+SWEP.HoldType = "pistol"
+SWEP.ViewModelFOV = 70
+SWEP.ViewModelFlip = true
+SWEP.UseHands = false
+SWEP.ViewModel = "models/weapons/v_pist_deagle.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_deagle.mdl"
-SWEP.UseHands = true
-
+SWEP.ShowViewModel = true
+SWEP.ShowWorldModel = true
+SWEP.ViewModelBoneMods = {}
 SWEP.Primary.Sound = Sound("Weapon_Deagle.Single")
 SWEP.Primary.Damage = 54
 SWEP.Primary.NumShots = 1

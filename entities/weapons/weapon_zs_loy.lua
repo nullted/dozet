@@ -29,7 +29,7 @@ SWEP.Tier = 5
 SWEP.MaxStock = 2
 
 
-SWEP.MeleeDamage = 161
+SWEP.MeleeDamage = 154
 SWEP.MeleeRange = 78
 SWEP.MeleeSize = 4
 SWEP.MeleeKnockBack = 1000
@@ -45,7 +45,7 @@ SWEP.HitDecal = "Manhackcut"
 
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 3)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 0,6)
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/iceaxe/iceaxe_swing1.wav", 75, math.random(65, 70))
