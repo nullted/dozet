@@ -32,6 +32,7 @@ GM.SpeedToText = {
 	[SPEED_FAST] = "Fast",
 	[SPEED_FASTER] = "Quite Fast",
 	[SPEED_FASTEST] = "Very Fast",
+	[SPEED_VKID] = "Dudeeee",
 	[-1] = "Ultra Slow",
 }
 

@@ -317,7 +317,6 @@ GM:AddPointShopItem("crklr",			ITEMCAT_GUNS,			20,				"weapon_zs_crackler", nil,
 GM:AddPointShopItem("sling",			ITEMCAT_GUNS,			20,				"weapon_zs_slinger", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_slinger") end)
 GM:AddPointShopItem("z9000",			ITEMCAT_GUNS,			20,				"weapon_zs_z9000", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_z9000") end)
 GM:AddPointShopItem("minelayer",		ITEMCAT_GUNS,			20,				"weapon_zs_minelayer", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_minelayer") end)
-GM:AddPointShopItem("mladawerq",		ITEMCAT_GUNS,			4,				"weapon_zs_null")
 -- Tier 2
 GM:AddPointShopItem("glock3",			ITEMCAT_GUNS,			55,				"weapon_zs_glock3")
 GM:AddPointShopItem("magnum",			ITEMCAT_GUNS,			55,				"weapon_zs_magnum")
@@ -378,6 +377,8 @@ GM:AddPointShopItem("spinfusor",		ITEMCAT_GUNS,			260,			"weapon_zs_spinfusor")
 GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			260,			"weapon_zs_broadside")
 GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			260,			"weapon_zs_smelter")
 GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
+-- Tier 6 beta
+GM:AddPointShopItem("null",			ITEMCAT_GUNS,			360,			"weapon_zs_null")
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
 GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			9,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)
@@ -730,7 +731,7 @@ cvars.AddChangeCallback("zs_zombiedamagemultiplier", function(cvar, oldvalue, ne
 	GAMEMODE.ZombieDamageMultiplier = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
 end)
 
-GM.TimeLimit = CreateConVar("zs_timelimit", "66", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time in minutes before the game will change maps. It will not change maps if a round is currently in progress but after the current round ends. -1 means never switch maps. 0 means always switch maps."):GetInt() * 60
+GM.TimeLimit = CreateConVar("zs_timelimit", "25", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time in minutes before the game will change maps. It will not change maps if a round is currently in progress but after the current round ends. -1 means never switch maps. 0 means always switch maps."):GetInt() * 60
 cvars.AddChangeCallback("zs_timelimit", function(cvar, oldvalue, newvalue)
 	GAMEMODE.TimeLimit = tonumber(newvalue) or 2500
 	if GAMEMODE.TimeLimit ~= -1 then
@@ -738,7 +739,7 @@ cvars.AddChangeCallback("zs_timelimit", function(cvar, oldvalue, newvalue)
 	end
 end)
 
-GM.RoundLimit = CreateConVar("zs_roundlimit", "-1", FCVAR_ARCHIVE + FCVAR_NOTIFY, "How many times the game can be played on the same map. -1 means infinite or only use time limit. 0 means once."):GetInt()
+GM.RoundLimit = CreateConVar("zs_roundlimit", "3", FCVAR_ARCHIVE + FCVAR_NOTIFY, "How many times the game can be played on the same map. -1 means infinite or only use time limit. 0 means once."):GetInt()
 cvars.AddChangeCallback("zs_roundlimit", function(cvar, oldvalue, newvalue)
 	GAMEMODE.RoundLimit = tonumber(newvalue) or 3
 end)
@@ -789,7 +790,7 @@ GM.UseOnlineProfiles = true
 
 -- This multiplier of points will save over to the next round. 1 is full saving. 0 is disabled.
 -- Setting this to 0 will not delete saved points and saved points do not "decay" if this is less than 1.
-GM.PointSaving = 1
+GM.PointSaving = 0.1
 
 -- Lock item purchases to waves. Tier 2 items can only be purchased on wave 2, tier 3 on wave 3, etc.
 -- HIGHLY suggested that this is on if you enable point saving. Always false if objective map, zombie escape, classic mode, or wave number is changed by the map.
