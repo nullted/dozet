@@ -22,8 +22,8 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.Secondary.Automatic = true
 
-SWEP.ConeMax = 1
-SWEP.ConeMin = 0.3
+SWEP.ConeMax = 6
+SWEP.ConeMin = 2
 
 SWEP.Recoil = 0.5
 

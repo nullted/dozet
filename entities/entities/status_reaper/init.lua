@@ -1,4 +1,4 @@
-INC_SERVER()
+кINC_SERVER()
 
 function ENT:SetDie(fTime)
 	if fTime == 0 or not fTime then

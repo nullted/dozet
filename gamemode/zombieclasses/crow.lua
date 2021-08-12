@@ -2,7 +2,7 @@ CLASS.Name = "Crow"
 CLASS.TranslationName = "class_crow"
 CLASS.Description = "description_crow"
 
-CLASS.Health = 120
+CLASS.Health = 5
 CLASS.Wave = 0
 CLASS.Threshold = 0
 CLASS.SWEP = "weapon_zs_crow"
@@ -29,10 +29,10 @@ CLASS.NoGibs = true
 CLASS.NoCollideAll = false
 CLASS.NoFallDamage = true
 CLASS.NoFallSlowdown = true
-CLASS.NeverAlive = true
+CLASS.NeverAlive = false
 CLASS.AllowTeamDamage = true
 CLASS.NoDeaths = true
-CLASS.Points = 5
+CLASS.Points = 9
 
 local ACT_RUN = ACT_RUN
 local ACT_IDLE = ACT_IDLE

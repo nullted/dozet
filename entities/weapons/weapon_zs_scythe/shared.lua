@@ -11,7 +11,7 @@ SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 97.5
+SWEP.MeleeDamage = 87
 SWEP.PotentialDamage = 1000
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 3.5
@@ -251,7 +251,7 @@ function SWEP:OnZombieKilled()
 	local killer = self:GetOwner()
 
 	if killer:IsValid() then
-		local reaperstatus = killer:GiveStatus("reaper",math.random (14,40))
+		local reaperstatus = killer:GiveStatus("reaper",math.random (5,20))
 		if reaperstatus and reaperstatus:IsValid() then
 			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 40))
 			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
