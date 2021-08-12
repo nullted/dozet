@@ -704,7 +704,7 @@ GM:AddSkill(SKILL_FOUR_IN_ONE, "2 in 1", GOOD.."-50% melee swing impact delay\n"
 
 SKILL_POINTI = 157
 GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.03)
-GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.09 Luck,+3% Point MUL",
+GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.09 Luck,+3% Point MUL\n The quality system increases the chances of getting a better soul",
 																0,			0,					{SKILL_NONE}, TREE_POINTTREE)
 SKILL_POINTII = 158
 GM:AddSkillModifier(SKILL_POINTII, SKILLMOD_POINT_MULTIPLIER, 0.05)
@@ -717,7 +717,7 @@ GM:AddSkill(SKILL_POINTIII, "Point III", NEUTRAL.."+0.15 Luck\n"..GOOD.."+8% Poi
 SKILL_POINTIIII = 160
 	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINT_MULTIPLIER, 0.11)
 	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINTS, 5)
-GM:AddSkill(SKILL_POINTIIII, "Point IIII", NEUTRAL.."+0.19 Luck\n"..GOOD.."+11% Point MUL\n" ..GOOD.. "+5 Start Points",
+GM:AddSkill(SKILL_POINTIIII, "Pointer", NEUTRAL.."+0.40 Luck\n"..GOOD.."+11% Point MUL\n" ..GOOD.. "+5 Start Points",
 																-2,			-3,					{SKILL_POINTIII}, TREE_POINTTREE)
 	SKILL_LUCK = 161
 	GM:AddSkillModifier(SKILL_LUCK, SKILLMOD_POINT_MULTIPLIER, 0.15)
@@ -729,7 +729,7 @@ GM:AddSkill(SKILL_LUCKE, "Luckiest", NEUTRAL.."+2 luck\n" ..BAD.. "-10% Points M
 	1,			-2,					{SKILL_POINTIIII}, TREE_POINTTREE)
 	SKILL_BLUCK = 163
 	GM:AddSkillModifier(SKILL_BLUCK, SKILLMOD_POINT_MULTIPLIER, 0.07)
-GM:AddSkill(SKILL_BLUCK, "Debuff:Bad Luck", GOOD.."Luck is better\n" ..BAD.. "Luck is worse",
+GM:AddSkill(SKILL_BLUCK, "Quad", GOOD.."On quality system\n" ..BAD.. "-3% Points Multiplier",
 	2,			-2.75,					{SKILL_LUCKE}, TREE_POINTTREE)
 	SKILL_PILLUCK = 164
 	GM:AddSkillModifier(SKILL_PILLUCK, SKILLMOD_POINT_MULTIPLIER, 0.03)
@@ -737,15 +737,15 @@ GM:AddSkill(SKILL_PILLUCK, "LUCK UP!!!Or down", GOOD.."Luck up if you eat good p
 	-1,			-4,					{SKILL_POINTIIII}, TREE_POINTTREE)
 	SKILL_DUDEE = 166
 	GM:AddSkillModifier(SKILL_DUDEE, SKILLMOD_POINT_MULTIPLIER, 0.20)
-GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+10 Luck\n" ..BAD.. "-30% Point MUL",
+GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+2 Luck\n",
 	2,			-5,					{SKILL_LUCKE,SKILL_WORTHINESS4}, TREE_POINTTREE)
 	SKILL_BADTRIP = 167
 	GM:AddSkillModifier(SKILL_BADTRIP, SKILLMOD_POINT_MULTIPLIER, 0.10)
-	GM:AddSkill(SKILL_BADTRIP, "Bad Trip", GOOD.."Luck is reversed\n" ..BAD.. "LUCK IS REVERSED!!!",
+	GM:AddSkill(SKILL_BADTRIP, "Bad Trip", GOOD.."+10% Points multiplier\n" ..BAD.. "System of Quality does not work",
 		2,			-6,					{SKILL_DUDEE}, TREE_POINTTREE)
 		SKILL_SCAM = 168
 		GM:AddSkillModifier(SKILL_SCAM, SKILLMOD_POINT_MULTIPLIER, 0.10)
-		GM:AddSkill(SKILL_SCAM, "Scam", GOOD.."+10% Points Multiplier \n" ..BAD.. "Luck Multiplier changed",
+		GM:AddSkill(SKILL_SCAM, "Scam", GOOD.."+10% Points Multiplier \n" ..BAD.. "Quality is worse",
 			3,			-8,					{SKILL_BADTRIP}, TREE_POINTTREE)
 			SKILL_SOLARUZ = 169
 			GM:AddSkillModifier(SKILL_SOLARUZ, SKILLMOD_POINT_MULTIPLIER, 0.30)
