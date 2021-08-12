@@ -41,7 +41,7 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.07)
 function SWEP:Initialize()
 	self.BaseClass.Initialize(self)
 
-	self.ChargeSound = CreateSound(self, "nox/scatterfrost.ogg")
+	self.ChargeSound = CreateSound(self, "weapons/physcannon/energy_sing_flyby2.wav")
 end
 
 function SWEP:CanSecondaryAttack()
