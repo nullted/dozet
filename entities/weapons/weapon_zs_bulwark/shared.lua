@@ -22,8 +22,8 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.Secondary.Automatic = true
 
-SWEP.ConeMax = 6
-SWEP.ConeMin = 2
+SWEP.ConeMax = 10
+SWEP.ConeMin = 3
 
 SWEP.Recoil = 0.5
 
@@ -53,7 +53,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Citadel' Minicannon", "Uses 3 ammo per 
 	end
 end)
 
-SWEP.WalkSpeed = SPEED_SLOWEST * 0.45
+SWEP.WalkSpeed = SPEED_SLOWEST * 0.30
 SWEP.FireAnimSpeed = 0.3
 
 function SWEP:Initialize()

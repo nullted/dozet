@@ -2,7 +2,7 @@ AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
 SWEP.PrintName = "'Gauss Eagle'"
-SWEP.Description = "Lesser damage if have lesser clip." --SWEP.Description = "This high-powered handgun has the ability to pierce through multiple zombies. The bullet's power decreases by half which each zombie it hits."
+SWEP.Description = "Big damage for first shoot,less damage for last shot." --SWEP.Description = "This high-powered handgun has the ability to pierce through multiple zombies. The bullet's power decreases by half which each zombie it hits."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 
@@ -35,7 +35,7 @@ SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.27
 SWEP.Primary.KnockbackScale = 4
 SWEP.MaxStock = 3
-SWEP.Primary.ClipSize = 14
+SWEP.Primary.ClipSize = 8
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "pistol"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
@@ -49,9 +49,9 @@ SWEP.FireAnimSpeed = 1.8
 
 SWEP.Tier = 4
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 2)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 function SWEP:ShootBullets(dmg, numbul, cone)
-	dmg = dmg + dmg * (3 * self:Clip1() / self.Primary.ClipSize)
+	dmg = dmg + dmg * (5 * self:Clip1() / self.Primary.ClipSize)
 
 	BaseClass.ShootBullets(self, dmg, numbul, cone)
 end

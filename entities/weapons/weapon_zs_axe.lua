@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Axe"
-SWEP.Description = "A simple axe, with balanced stats across the board in terms of damage, range and swing speed."
+SWEP.PrintName = "Baxe"
+SWEP.Description = "Balance."
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55
@@ -25,14 +25,14 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 45
-SWEP.MeleeRange = 55
-SWEP.MeleeSize = 1.5
-SWEP.MeleeKnockBack = 125
+SWEP.MeleeDamage = 71
+SWEP.MeleeRange = 71
+SWEP.MeleeSize = 1.71
+SWEP.MeleeKnockBack =  71
 
 SWEP.WalkSpeed = SPEED_FAST
 
-SWEP.SwingTime = 0.6
+SWEP.SwingTime = 0.71
 SWEP.SwingRotation = Angle(0, -20, -40)
 SWEP.SwingOffset = Vector(10, 0, 0)
 SWEP.SwingHoldType = "melee"

@@ -32,7 +32,7 @@ CLASS.NoFallSlowdown = true
 CLASS.NeverAlive = false
 CLASS.AllowTeamDamage = true
 CLASS.NoDeaths = true
-CLASS.Points = 9
+CLASS.Points = 0
 
 local ACT_RUN = ACT_RUN
 local ACT_IDLE = ACT_IDLE
