@@ -1,5 +1,5 @@
 SWEP.PrintName = "Luxoid"
-SWEP.Description = "An axe made from frost. Secondary attack unleashes a powerful swing, creating an icy explosion when aimed at the ground. Slows zombie movement and attack speed."
+SWEP.Description = "Ancient Luxoid. Secondary attack unleashes a powerful swing, creating an icy explosion when aimed at the ground. Slows zombie movement and attack speed."
 
 SWEP.Base = "weapon_zs_basemelee"
 
@@ -117,10 +117,10 @@ function SWEP:GetCharge()
 end
 
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.6
-	wept.MeleeDamage = wept.MeleeDamage * 0.4
-	wept.PointsMultiplier = 0.6
-	wept.Secondary.Delay = wept.Primary.Delay * 2
+	wept.Primary.Delay = wept.Primary.Delay * 0.55
+	wept.MeleeDamage = wept.MeleeDamage * 0.3
+	wept.PointsMultiplier = 0.4
+	wept.Secondary.Delay = wept.Primary.Delay * 3
 	wept.MeleeDamageSecondaryMul = 3
 	
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)

@@ -421,6 +421,7 @@ GM:AddPointShopItem("longsword",		ITEMCAT_MELEE,			60,				"weapon_zs_longsword")
 GM:AddPointShopItem("executioner",		ITEMCAT_MELEE,			60,				"weapon_zs_executioner")
 GM:AddPointShopItem("rebarmace",		ITEMCAT_MELEE,			60,				"weapon_zs_rebarmace")
 GM:AddPointShopItem("meattenderizer",	ITEMCAT_MELEE,			60,				"weapon_zs_meattenderizer")
+GM:AddPointShopItem("iceeluxx",	ITEMCAT_MELEE,			60,				"weapon_zs_icelux")
 -- Tier 4
 GM:AddPointShopItem("graveshvl",		ITEMCAT_MELEE,			95,			"weapon_zs_graveshovel")
 GM:AddPointShopItem("kongol",			ITEMCAT_MELEE,			95,			"weapon_zs_kongolaxe")
