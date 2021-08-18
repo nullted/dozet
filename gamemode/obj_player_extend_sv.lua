@@ -829,7 +829,7 @@ function meta:SecondWind(pl)
 	self.DeathClass = dclass
 	self:SetLastAttacker(lastattacker)
 	self:SetPos(pos)
-	self:SetHealth(self:Health() * 0.2)
+	self:SetHealth(self:Health() * 0.44)
 	self:SetEyeAngles(angles)
 
 	self:CallZombieFunction0("OnSecondWind")
@@ -995,7 +995,7 @@ function meta:Resupply(owner, obj)
 
 		self:GiveAmmo(amount, ammotype)
 
-		if self:IsSkillActive(SKILL_FORAGER) and math.random(2) == 1 and #GAMEMODE.Food > 0 then
+		if self:IsSkillActive(SKILL_FORAGER) and math.random(3) == 1 and #GAMEMODE.Food > 0 then
 			self:Give(GAMEMODE.Food[math.random(#GAMEMODE.Food)])
 		end
 

@@ -145,7 +145,7 @@ function CLASS:BuildBonePositions(pl)
 end
 
 local function CreateFlesh(pl, damage, damagepos, damagedir)
-	damage = math.min(damage, 300)
+	damage = math.min(damage, 120)
 
 	pl:EmitSound(string.format("physics/body/body_medium_break%d.wav", math.random(2, 4)), 74, 125 - damage * 0.50)
 
