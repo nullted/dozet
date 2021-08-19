@@ -250,6 +250,7 @@ LANGUAGE.message_beacon_25							= "БАРАКОТ!!!!!"
 
 -- Class names
 LANGUAGE.class_zombie								= "Zombie"
+LANGUAGE.class_zombienie             ="Zombine"
 LANGUAGE.class_baracat								= "Baracat"
 LANGUAGE.class_zombie_gore_blaster					= "Gore Blaster Zombie"
 LANGUAGE.class_poison_zombie						= "Poison Zombie"
