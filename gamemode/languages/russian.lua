@@ -146,6 +146,7 @@ LANGUAGE.message_beacon_25							= "ААА БАРАКОТЫ"
 
 -- Class names
 LANGUAGE.class_zombie								= "Зомби"
+LANGUAGE.class_eraditor								= "Еродитор"
 LANGUAGE.class_poison_zombie						= "Ядовитый Зомби"
 LANGUAGE.class_fast_zombie							= "Быстрый зомби"
 LANGUAGE.class_bloated_zombie						= "Жирный зомби"

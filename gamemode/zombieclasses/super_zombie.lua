@@ -4,10 +4,11 @@ CLASS.Hidden = true
 
 CLASS.Name = "Super Zombie"
 CLASS.TranslationName = "class_super_zombie"
+CLASS.Wave = 11 / 12
 
-CLASS.Health = 1500
+CLASS.Health = 15000
 CLASS.Speed = SPEED_ZOMBIEESCAPE_ZOMBIE
-CLASS.Points = 5
+CLASS.Points = 100
 
 CLASS.SWEP = "weapon_zs_superzombie"
 

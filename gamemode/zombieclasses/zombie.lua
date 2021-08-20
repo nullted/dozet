@@ -3,14 +3,14 @@ CLASS.TranslationName = "class_zombie"
 CLASS.Description = "description_zombie"
 CLASS.Help = "controls_zombie"
 
-CLASS.BetterVersion = "Eradicator"
+CLASS.BetterVersion = "Eraditor"
 
 CLASS.Wave = 0
 CLASS.Unlocked = true
 CLASS.IsDefault = true
 CLASS.Order = 0
 
-CLASS.Health = 310
+CLASS.Health = 670
 CLASS.Speed = 175
 CLASS.Revives = true
 
