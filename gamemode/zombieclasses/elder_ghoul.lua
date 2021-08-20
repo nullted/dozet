@@ -9,7 +9,7 @@ CLASS.Help = "controls_elderghoul"
 
 CLASS.BetterVersion = "Noxious Ghoul"
 
-CLASS.Health = 800
+CLASS.Health = 310
 CLASS.Speed = 175
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio

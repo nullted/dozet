@@ -44,7 +44,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 341
+SWEP.MeleeDamage = 281
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 350
