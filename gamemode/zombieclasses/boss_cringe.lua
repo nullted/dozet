@@ -1,20 +1,21 @@
-CLASS.Name = "The Tickle Monster"
-CLASS.TranslationName = "class_the_tickle_monster"
+CLASS.Name = "The Cringe"
+CLASS.TranslationName = "class_cringe"
 CLASS.Description = "description_the_tickle_monster"
 CLASS.Help = "controls_the_tickle_monster"
 
-CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
+CLASS.Wave = 1
 
-CLASS.Health = 9000
-CLASS.Speed = 150
+CLASS.Health = 70000
+CLASS.Speed = 110
 
 CLASS.FearPerInstance = 1
 
 CLASS.CanTaunt = true
 
-CLASS.Points = 30
+CLASS.Points = 1200
+
 
 CLASS.SWEP = "weapon_zs_ticklemonster"
 
@@ -133,6 +134,7 @@ end
 if not CLIENT then return end
 
 CLASS.Icon = "zombiesurvival/killicons/tickle"
+CLASS.IconColor = Color(100, 0, 220)
 
 local vecSpineOffset = Vector(8, 0, 0)
 local SpineBones = {"ValveBiped.Bip01_Spine2", "ValveBiped.Bip01_Spine4", "ValveBiped.Bip01_Spine3"}

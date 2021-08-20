@@ -7,10 +7,10 @@ CLASS.Help = "controls_ancient_nightmare"
 
 CLASS.Boss = true
 
-CLASS.Health = 3601
+CLASS.Health = 7900
 CLASS.Speed = 165
 
-CLASS.Points = 30
+CLASS.Points = 70
 
 CLASS.SWEP = "weapon_zs_anightmare"
 

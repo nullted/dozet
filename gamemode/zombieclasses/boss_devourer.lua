@@ -7,7 +7,7 @@ CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 3500
+CLASS.Health = 11000
 CLASS.Speed = 231
 
 CLASS.CanTaunt = true

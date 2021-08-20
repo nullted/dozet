@@ -73,7 +73,11 @@ include_library("ammoexpand")
 ----------------------
 
 GM.EndRound = true
+<<<<<<< Updated upstream
 GM.StartingWorth = 160
+=======
+GM.StartingWorth = 500
+>>>>>>> Stashed changes
 GM.ZombieVolunteers = {}
 
 team.SetUp(TEAM_ZOMBIE, "Undead", Color(0, 255, 0, 255))

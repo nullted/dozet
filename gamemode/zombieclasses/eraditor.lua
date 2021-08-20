@@ -1,12 +1,13 @@
-CLASS.Name = "Eradicator"
-CLASS.TranslationName = "class_eradicator"
+CLASS.Name = "Eraditor"
+CLASS.TranslationName = "class_eraditor"
 CLASS.Description = "description_eradicator"
 CLASS.Help = "controls_eradicator"
 
-CLASS.Wave = 9 / 12
-CLASS.BetterVersion = "Super Zombie"
+CLASS.BetterVersion = "Eradicator"
 
-CLASS.Health = 4000
+CLASS.Wave = 1 / 2
+
+CLASS.Health = 1299
 CLASS.Speed = 177
 
 CLASS.CanTaunt = true
