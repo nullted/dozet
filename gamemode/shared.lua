@@ -72,7 +72,7 @@ include_library("ammoexpand")
 
 ----------------------
 
-GM.EndRound = false
+GM.EndRound = true
 GM.StartingWorth = 160
 GM.ZombieVolunteers = {}
 
