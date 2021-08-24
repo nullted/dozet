@@ -8,22 +8,6 @@ GM.Credits = {
 	{"Toyka", "HEHE", "Programmer"},
 	{"Lmao", "HAHA", "none"},
 	{"hehe", "HIHI", "none"},
-	{"Austin \"Little Nemo\" Killey", "austin_odyssey@yahoo.com", "Ambient music"},
-	{"Zombie Panic: Source", "http://www.zombiepanic.org/", "Melee weapon sounds"},
-	{"Samuel", "samuel_games@hotmail.com", "Board Kit models"},
-	{"Typhon", "lukas-tinel@hotmail.com", "Fear-o-meter textures"},
-	{"Benjy, The Darker One, Raox, Scott", "", "Code contributions"},
-
-	{"Mr. Darkness", "", "Russian translation"},
-	{"honsal", "", "Korean translation"},
-	{"rui_troia", "", "Portuguese translation"},
-	{"Shinyshark", "", "Dutch translation"},
-	{"Kradar", "", "Italian translation"},
-	{"Raptor", "", "German translation"},
-	{"The Special Duckling", "", "Danish translation"},
-	{"ptown, Dr. Broly", "", "Spanish translation"},
-
-	{"Anyone else on GitHub or who I've forgotten", "", "Various contributions"},
 }
 
 if file.Exists(GM.FolderName.."/gamemode/maps/"..game.GetMap()..".lua", "LUA") then
@@ -571,7 +555,7 @@ function GM:OnPlayerHitGround(pl, inwater, hitfloater, speed)
 end
 
 function GM:PlayerCanBeHealed(pl)
-	local maxhp = pl:IsSkillActive(SKILL_D_FRAIL) and math.floor(pl:GetMaxHealth() * 0.25) or pl:GetMaxHealth()
+	local maxhp = pl:IsSkillActive(SKILL_D_FRAIL) and math.floor(pl:GetMaxHealth() * 0.44) or pl:GetMaxHealth()
 
 	return pl:Health() < maxhp or pl:GetPoisonDamage() > 0 or pl:GetBleedDamage() > 0
 end
@@ -610,7 +594,7 @@ end
 
 function GM:GetDamageResistance(fearpower)
 	if self.MaxSigils > 0 and self:GetUseSigils() then
-		return fearpower * 0.1 + self:NumSigilsCorrupted() / self.MaxSigils * 0.2
+		return fearpower * 0.06 + self:NumSigilsCorrupted() / self.MaxSigils * 0.2
 	end
 
 	return fearpower * 0.15
@@ -818,15 +802,15 @@ end
 function GM:IsSpecialPerson(pl, image)
 	local img, tooltip
 
-	if pl:SteamID() == "STEAM_0:1:3307510" then
+	if pl:SteamID() == "https://steamcommunity.com/id/ToyTheLegendary/" then
 		img = "VGUI/steam/games/icon_sourcesdk"
-		tooltip = "JetBoom\nCreator of Zombie Survival!"
-	elseif pl:IsAdmin() then
+		tooltip = "Toyka\nCreator!!"
+	elseif pl:IsAdmin() == "" then
 		img = "VGUI/servers/icon_robotron"
 		tooltip = "Admin"
-	elseif pl:IsNoxSupporter() then
+	elseif pl:SteamID() == "STEAM_0:1:196107962" then
 		img = "noxiousnet/noxicon.png"
-		tooltip = "Nox Supporter"
+		tooltip = "Good Man"
 	end
 
 	if img then
