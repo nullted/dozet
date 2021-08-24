@@ -1134,6 +1134,8 @@ function GM:DrawRemantlerIndicators()
 		if not remantler:IsValid() then continue end
 		deployable = remantler.GetObjectOwner
 
+		
+
 		pos = remantler:GetPos()
 		pos.z = pos.z + (remantler:IsPlayer() and 32 or (deployable and 12 or -8))
 		distance = eyepos:DistToSqr(pos)
@@ -1143,6 +1145,7 @@ function GM:DrawRemantlerIndicators()
 			ang:RotateAroundAxis(ang:Right(), 270)
 			ang:RotateAroundAxis(ang:Up(), 90)
 			alpha = math.min(220, math.sqrt(distance / 4))
+		
 
 			cam_IgnoreZ(true)
 			cam_Start3D2D(pos, ang, math.max(250, math.sqrt(distance)) / 5000)

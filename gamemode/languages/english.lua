@@ -196,7 +196,7 @@ LANGUAGE.trinket_recharged							= "Your %s has recharged and is ready to use ag
 LANGUAGE.evolves_in_to_x_on_wave_y					= "Evolves in to %s on wave %d."
 
 -- Sigils point objectives
-LANGUAGE.sigil										= "Сигил"
+LANGUAGE.sigil										= "Sigil"
 --LANGUAGE.sigil_destroyed							= "A Sanity Sigil has been destroyed. The Undead grow stronger!"
 LANGUAGE.sigil_corrupted							= "A Sanity Sigil has been corrupted. The Undead grow more resilient."
 LANGUAGE.sigil_corrupted_last						= "The last Sanity Sigil has been corrupted! The Undead grow very resilient!"
@@ -222,7 +222,7 @@ LANGUAGE.x_has_remorted_to_rl_y						= "%s has remorted to remort level %d!!"
 LANGUAGE.you_have_reset_all							= "All of your skills, XP, and skill points have been reset."
 
 -- Message beacon messages
-LANGUAGE.message_beacon_1							= "Досет лучший"
+LANGUAGE.message_beacon_1							= "Doset is best"
 LANGUAGE.message_beacon_2							= "Need defense here"
 LANGUAGE.message_beacon_3							= "Need turrets here"
 LANGUAGE.message_beacon_4							= "Need arsenal crates here"

@@ -805,7 +805,7 @@ function GM:IsSpecialPerson(pl, image)
 	if pl:SteamID() == "https://steamcommunity.com/id/ToyTheLegendary/" then
 		img = "VGUI/steam/games/icon_sourcesdk"
 		tooltip = "Toyka\nCreator!!"
-	elseif pl:IsAdmin() == "" then
+	elseif pl:IsAdmin() then
 		img = "VGUI/servers/icon_robotron"
 		tooltip = "Admin"
 	elseif pl:SteamID() == "STEAM_0:1:196107962" then
