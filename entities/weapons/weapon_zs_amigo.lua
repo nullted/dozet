@@ -38,9 +38,9 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.ConeMax = 30
 SWEP.ConeMin = 0.8
-SWEP.HeadshotMulti = 6
+SWEP.HeadshotMulti = 2.3
 
-SWEP.ReloadSpeed = 2
+SWEP.ReloadSpeed = 1.2
 
 SWEP.WalkSpeed = SPEED_SLOW
 

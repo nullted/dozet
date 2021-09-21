@@ -89,7 +89,7 @@ function SWEP:MeleeSwing()
 	end
 
 	if combo == 2 then
-		damagemultiplier = damagemultiplier * 1.35
+		damagemultiplier = damagemultiplier * 1.55
 	end
 
 	for _, trace in ipairs(tr) do

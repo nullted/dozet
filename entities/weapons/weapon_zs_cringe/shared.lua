@@ -1,17 +1,41 @@
-AddCSLuaFile()
-
-SWEP.PrintName = "The Tickle Monster"
-
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 38
-SWEP.MeleeDamageVsProps = 33
-SWEP.MeleeReach = 211
+SWEP.PrintName = "CRINGE"
+
+SWEP.Secondary.Delay = 3.5
+SWEP.Primary.Delay = 1.2
+
+
+SWEP.NextPuke = 3
+SWEP.PukeLeft = 10
+
+SWEP.MeleeDamage = 56
+SWEP.MeleeDamageVsProps = 84
+SWEP.MeleeReach = 111
 SWEP.MeleeSize = 3
 
-function SWEP:Reload()
-	self:SecondaryAttack()
+
+function SWEP:SecondaryAttack()
+	if CurTime() < self:GetNextSecondaryFire() then return end
+	local owner = self:GetOwner()
+	self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
+
+	self.PukeLeft = 35
+
+	owner:EmitSound("npc/barnacle/barnacle_die2.wav")
+	owner:EmitSound("npc/barnacle/barnacle_digesting1.wav")
+	owner:EmitSound("npc/barnacle/barnacle_digesting2.wav")
 end
+
+function SWEP:SecondaryAttack()
+end
+
+function SWEP:Reload()
+end
+
+
+
+
 
 function SWEP:MeleeHit(ent, trace, damage, forcescale)
 	if not ent:IsPlayer() then

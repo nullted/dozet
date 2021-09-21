@@ -4,7 +4,7 @@ SWEP.PrintName = "Ancient Nightmare"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 75
+SWEP.MeleeDamage = 67
 SWEP.SlowDownScale = 0.3
 
 function SWEP:Reload()

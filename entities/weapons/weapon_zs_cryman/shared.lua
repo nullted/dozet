@@ -16,7 +16,7 @@ SWEP.Primary.ClipSize = 3
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 3
-SWEP.Primary.Damage = 23
+SWEP.Primary.Damage = 11
 
 SWEP.ConeMin = 0.0001
 SWEP.ConeMax = 0.0001
@@ -25,11 +25,11 @@ SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 5
 
-SWEP.MaxBombs = 10
+SWEP.MaxBombs = 4
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Better crygas", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 1.2
+	wept.Primary.Damage = wept.Primary.Damage * 2
 	if SERVER then
 		wept.EntModify = function(self, ent)
 			self:SetNextSecondaryFire(CurTime() + 0.2)
@@ -40,7 +40,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Better crygas", function(wept)
 		wept.VElements.clipbase.color = Color(30, 95, 150)
 	end
 end)
-
+wept.MaxBombs = 1
 function SWEP:CanPrimaryAttack()
 	if self.BaseClass.CanPrimaryAttack(self) then
 		local c = 0
