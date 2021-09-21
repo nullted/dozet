@@ -261,13 +261,13 @@ trinket = GM:AddTrinket("Boxing Training Manual", "boxingtraining", false, mvele
 GM:AddSkillModifier(trinket, SKILLMOD_UNARMED_SWING_DELAY_MUL, -0.4)
 GM:AddSkillFunction(trinket, function(pl, active) pl.BoxingTraining = active end)
 
-trinket, trinketwep = GM:AddTrinket("Momentum Support", "momentumsupsysii", false, mveles, mweles, 2, "-13% Melee delay\n+30% Melee knockback\n-13% К времени след удара\n +30% К мили отдачи")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.13)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.3)
+trinket, trinketwep = GM:AddTrinket("Momentum Support", "momentumsupsysii", false, mveles, mweles, 2, "- 9% Melee delay\n+10% Melee knockback\n-9% К времени след удара\n +10% К мили отдачи")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.09)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.10)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Momentum Scaffold", "momentumsupsysiii", false, mveles, mweles, 3, "-20% Melee delay\n+12% Melee knockback\n-20% К времени след удара\n +12% К мили отдачи")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.20)
+trinket = GM:AddTrinket("Momentum Scaffold", "momentumsupsysiii", false, mveles, mweles, 3, "-13% Melee delay\n+12% Melee knockback\n-13% К времени след удара\n +12% К мили отдачи")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.12)
 
 GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter I", "hemoadrenali", false, mveles, mweles, nil, "+6% blood armor convert but you take more damage by 2%.\n+6% К Конвертации кровавой брони от мили удара\n Больше урон по вам на 2%"), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.06)
@@ -280,16 +280,17 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.05)
 trinket = GM:AddTrinket("Damager", "damage222", false, mveles, mweles, 3, "Q: Ultimate\n Качество:Ультима")
 GM:AddSkillModifier(trinket, SKILLMOD_HEADSHOT_MUL, 0.90)
 
-trinket = GM:AddTrinket("Thermia", "flashlo", false, mveles, mweles, 3, "+8% blood armor convert and you take by 16% more damage,+55 speed\n+8% Конвертации кровавой брони от удара\n Вы получаете на 16% Больше урона,+55 к скорости")
+trinket = GM:AddTrinket("Thermia", "flashlo", false, mveles, mweles, 3, "+8% blood armor convert and you take by 7% more damage,+55 speed\n+8% Конвертации кровавой брони от удара\n Вы получаете на 16% Больше урона,+55 к скорости")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.08)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.16)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.07)
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 55)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 55)
 
 GM:AddSkillModifier(GM:AddTrinket("Hemo-Adrenal Converter II", "hemoadrenaliii", false, mveles, mweles, 4, "+22% blood armor convert.\n +22% К Конвертации кровавой брони"), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.22)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.04)
-GM:AddSkillModifier(GM:AddTrinket("AntiThermia", "sharpkt", false, mveles, mweles, 4, "-9% blood armor convert, -999% speed when you kill zombie on time, and you take by 20% less damage.\n -9% К конвертации кровавой брони,-999% К скорости при убийстве зомби,на 20% меньше получаемый урон"), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.09)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.20)
+GM:AddSkillModifier(GM:AddTrinket("AntiThermia", "sharpkt", false, mveles, mweles, 4, "-8% blood armor convert, -999% speed when you kill zombie on time, and you take by 5% less damage.\n -8% К конвертации кровавой брони,-999% К скорости при убийстве зомби,на 5% меньше получаемый урон"), SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.09)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.05)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.08)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, -280)
 
 GM:AddSkillModifier(GM:AddTrinket("Power Gauntlet", "powergauntlet", false, mveles, mweles, 3, "Charges your melee damage up to +45% with each hit\nMissing resets damage\n Заряжает каждый удар на 45% за каждое попадание,сбрасывает счетчик при пропуске"), SKILLMOD_MELEE_POWERATTACK_MUL, 0.45)
@@ -318,34 +319,33 @@ GM:AddSkillFunction(trinket, function(pl, active)
 end)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Portable Weapons Satchel", "portablehole", false, pveles, pweles, nil, "+15% deployable speed convert, reload speed 3% and sale by 6%\n -15% К времени подбиранию деплоябла,перезарядка увеличена на 3%")
+trinket = GM:AddTrinket("Portable Weapons Satchel", "portablehole", false, pveles, pweles, nil, "+15% deployable speed convert, reload speed 3% and sale by 1%\n -15% К времени подбиранию деплоябла,перезарядка увеличена на 3%")
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.15)
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.03)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.06)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.01)
 
 trinket = GM:AddTrinket("Agility Magnifier", "pathfinder", false, pveles, pweles, 2, "+55% Phase Speed multipier\n-45% by the time of teleportation\n+20% jump power\n+55% скорости в фазе перехода между баррикадами\n-45% к скорости телепортирования сигила \n+20% силе прыжка")
 GM:AddSkillModifier(trinket, SKILLMOD_BARRICADE_PHASE_SPEED_MUL, 0.55)
 GM:AddSkillModifier(trinket, SKILLMOD_SIGIL_TELEPORT_MUL, -0.45)
 GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.2)
 
-trinket = GM:AddTrinket("Store", "store", false, pveles, pweles, 2, "Sale by 6%\n Скидка в 6%")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.06)
-trinket = GM:AddTrinket("Upgraded Store", "superstore", false, pveles, pweles, 2, "Sale by 9%\n Скидка в 9%")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
-trinket = GM:AddTrinket("Credit Card", "store2", false, pveles, pweles, 2, "Sale by 9%\n Скидка в 9%")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
+trinket = GM:AddTrinket("Store", "store", false, pveles, pweles, 2, "Sale by 4%\n Скидка в 4%")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.04)
+trinket = GM:AddTrinket("Upgraded Store", "superstore", false, pveles, pweles, 2, "Sale by 5%\n Скидка в 5%")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.05)
+trinket = GM:AddTrinket("Credit Card", "store2", false, pveles, pweles, 2, "Sale by 3%\n Скидка в 3%")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.03)
 
-trinket = GM:AddTrinket("Galvanizer Implant", "analgestic", false, pveles, pweles, 3, "-50% Slow effect multiplier\n-50% Low hp slow multiplier\n-70% кулдаун падения\n-66% duration of pulling attacks\n+25% weapon switch speed\n -70% To time for ragdoll debuff\n-50% замедления от неполного хп\n-70% кулдаун падения но цены в магазине на 4% дороже")
+trinket = GM:AddTrinket("Galvanizer Implant", "analgestic", false, pveles, pweles, 3, "-50% Slow effect multiplier\n-50% Low hp slow multiplier\n-70% кулдаун падения\n-66% duration of pulling attacks\n+25% weapon switch speed\n -70% To time for ragdoll debuff\n-50% замедления от неполного хп\n-30% кулдаун падения")
 GM:AddSkillModifier(trinket, SKILLMOD_SLOW_EFF_TAKEN_MUL, -0.50)
 GM:AddSkillModifier(trinket, SKILLMOD_LOW_HEALTH_SLOW_MUL, -0.50)
-GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.7)
+GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYSPEED_MUL, 0.25)
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.04)
 trinket = GM:AddTrinket("INVALID", "invalid", false, pveles, pweles, 3, "baracat  sucks dicks,you have immune to knockdown\n Ебанный баракот сосет,иммунитет к дебаффу падения")
-GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -1)
+GM:AddSkillModifier(trinket, SKILLMOD_KNOCKDOWN_RECOVERY_MUL, -0.6)
 
-trinket = GM:AddTrinket("Credit", "kre", false, pveles, pweles, 3, "Sale by 7%\n Скидка в 7%")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.07)
+trinket = GM:AddTrinket("Credit", "kre", false, pveles, pweles, 3, "Sale by 4%\n Скидка в 4%")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.04)
 
 GM:AddSkillModifier(GM:AddTrinket("Ammo Vest", "ammovestii", false, ammoveles, ammoweles, 2, "+7% reload speed\n +7% К скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.07)
 GM:AddSkillModifier(GM:AddTrinket("Ammo Bandolier", "ammovestiii", false, ammoveles, ammoweles, 4, "+11% Reload speed\n+11% К скорости перезарядки"), SKILLMOD_RELOADSPEED_MUL, 0.11)
@@ -424,8 +424,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_DAMAGE_MUL, -0.65)
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_THRESHOLD_MUL, 0.30)
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, -0.75)
 
-trinket = GM:AddTrinket("Супер-Скидка", "stopit", false, develes, deweles, 3, "Sale by 13%\nдает скидку в 13%")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.13)
+trinket = GM:AddTrinket("Супер-Скидка", "stopit", false, develes, deweles, 3, "Sale by 9%\nдает скидку в 9%")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.09)
 
 trinketwep.PermitDismantle = true
 
@@ -534,12 +534,12 @@ trinket = GM:AddTrinket("Hate O me", "hateome", false, supveles, supweles, 4, "F
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_TAKEN_MUL, -0.4)
 GM:AddSkillModifier(trinket, SKILLMOD_EXP_DAMAGE_RADIUS, 1.8)
 -- Super Trinkets
-trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-24% Ressuply Delay.")
-GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.24)
-trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, book, bookw, 4, "+30% Points Multiplier.")
-GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.30)
-trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+33% Arsenal Discount\n  +33% Скидка.")
-GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.33)
+trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, "-19% Ressuply Delay.")
+GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.19)
+trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, book, bookw, 4, "+11% Points Multiplier.")
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.11)
+trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+33% Arsenal Discount\n  +18% Скидка.")
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.18)
 trinket = GM:AddTrinket("FutureBluePrints", "futureblu", false, supveles, supweles, 4, "BluePrint From future!.+30% repair rate\n +30% К силе починке")
 GM:AddSkillModifier(trinket, SKILLMOD_REPAIRRATE_MUL, 0.30)
 
@@ -571,8 +571,8 @@ trinket = GM:AddTrinket("Soul of BlueBaby", "spiritess", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 255, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(255, 255, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil, "+33% jump height.")
-GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.33)
+}, nil, "+22% jump height.")
+GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.22)
 
 trinket = GM:AddTrinket("Samson Soul", "samsonsoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 0, 0, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
@@ -596,9 +596,9 @@ trinket = GM:AddTrinket("Soul of Jacob&Jesau", "jacobjesausoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 0, 0, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(0, 5, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 0, 255, 255), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil,"Вы не сможете получать поинты после волны но теперь вы получаете на 33% больше поинтов. \n Q:5")
+}, nil,"Вы не сможете получать поинты после волны но теперь вы получаете на 11% больше поинтов. \n Q:5")
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS , -9999)
-GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.33)
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.11)
 
 trinket = GM:AddTrinket("Soul of Isaac", "isaacsoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(34, 120, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
@@ -667,8 +667,8 @@ trinket = GM:AddTrinket(" Soul of Classix", "classixsoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(5, 25, 211, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(5, 0, 25, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(155, 110, 15, 255), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil,"Классикс одарил вас силой бомбежки! Перезарядка винтовок на быстрее 35% и лучше точность на 20%\n Q:0")
-GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_RIFLE_MUL, 0.35)
+}, nil,"Классикс одарил вас силой бомбежки! Перезарядка винтовок на быстрее 56% и лучше точность на 20%\n Q:0")
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_RIFLE_MUL, 0.56)
 GM:AddSkillModifier(trinket, SKILLMOD_AIMSPREAD_MUL, -0.20)
 
 trinket = GM:AddTrinket("Soul of Darkness", "darksoul", false, nil, {

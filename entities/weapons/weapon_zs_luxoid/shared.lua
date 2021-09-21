@@ -9,16 +9,16 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 132
+SWEP.MeleeDamage = 125
 SWEP.MeleeRange = 83
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 61
 
-SWEP.MeleeDamageSecondaryMul = 1.5
+SWEP.MeleeDamageSecondaryMul = 1.2
 SWEP.MeleeKnockBackSecondaryMul = 3
 
 SWEP.Primary.Delay = 0.79
-SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.8
+SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.5
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
@@ -117,20 +117,20 @@ function SWEP:GetCharge()
 end
 
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
-	wept.Primary.Delay = wept.Primary.Delay * 0.55
-	wept.MeleeDamage = wept.MeleeDamage * 0.3
-	wept.PointsMultiplier = 0.4
-	wept.Secondary.Delay = wept.Primary.Delay * 3
-	wept.MeleeDamageSecondaryMul = 3
+	wept.Primary.Delay = wept.Primary.Delay * 0.66
+	wept.MeleeDamage = wept.MeleeDamage * 0.45
+	wept.PointsMultiplier = 0.6
+	wept.Secondary.Delay = wept.Primary.Delay * 2
+	wept.MeleeDamageSecondaryMul = 1.4
 	
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()
 		local minushp = -zombie:Health()
-		if killer:IsValid() and minushp > 20 then
+		if killer:IsValid() and minushp > -2 then
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 2)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 0.92)
 			end)
 
 			local effectdata = EffectData()

@@ -57,7 +57,7 @@ include_library("ammoexpand")
 ----------------------
 
 GM.EndRound = true
-GM.StartingWorth = 160
+GM.StartingWorth = 100
 GM.ZombieVolunteers = {}
 
 team.SetUp(TEAM_ZOMBIE, "Undead", Color(0, 255, 0, 255))
@@ -667,6 +667,7 @@ function GM:GetTeamRallyGroups(teamid)
 
 	local plys = team.GetPlayers(teamid)
 	local plpos, group
+	
 
 	for _, pl in pairs(plys) do
 		if not ingroup[pl] and pl:Alive() then
