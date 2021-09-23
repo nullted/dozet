@@ -75,6 +75,18 @@ SWEP.ConeMin = 4
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.75)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.5)
 
+function SWEP:OnZombieKilled()
+	local killer = self:GetOwner()
+
+	if killer:IsValid() then
+		local reaperstatus = killer:GiveStatus("reaper", 20)
+		if reaperstatus and reaperstatus:IsValid() then
+			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 10))
+			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
+		end
+	end
+end
+
 SWEP.Tier = 5
 SWEP.MaxStock = 2
 
@@ -134,28 +146,9 @@ function SWEP:GetTracerOrigin()
 	end
 end
 
-function SWEP:OnZombieKilled()
-	local killer = self:GetOwner()
 
-	if killer:IsValid() then
-		local reaperstatus = killer:GiveStatus("reaper", 10)
-		if reaperstatus and reaperstatus:IsValid() then
-			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 100))
-			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
-		end
-	end
-end
 
-function SWEP.BulletCallback(attacker, tr)
-	local hitent = tr.Entity
-	if hitent:IsValidLivingZombie() and hitent:Health() <= hitent:GetMaxHealthEx() * 0.04 and gamemode.Call("PlayerShouldTakeDamage", hitent, attacker) then
-		if SERVER then
-			hitent:SetWasHitInHead()
-		end
-		hitent:TakeSpecialDamage(hitent:Health(), DMG_DIRECT, attacker, attacker:GetActiveWeapon(), tr.HitPos)
-		hitent:EmitSound("npc/roller/blade_out.wav", 80, 125)
-	end
-end
+
 
 if not CLIENT then return end
 
