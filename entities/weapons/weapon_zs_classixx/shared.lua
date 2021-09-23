@@ -12,11 +12,11 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 133
+SWEP.Primary.Damage = 99
 SWEP.Primary.NumShots = 2
 SWEP.Primary.Delay = 0.6
 SWEP.Primary.KnockbackScale = 0.1
-SWEP.Primary.MaxDistance = 1024
+SWEP.Primary.MaxDistance = 1028
 
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
@@ -34,11 +34,11 @@ SWEP.HeatBuildLong = 0.045
 SWEP.HeatVentShort = 0.16
 SWEP.HeatVentLong = 0.13
 SWEP.HeatDecayShort = 0.1
-SWEP.HeatDecayLong = 0.01
+SWEP.HeatDecayLong = 0.05
 SWEP.HeatInitialLong = 0.05
 
-SWEP.WalkSpeed = SPEED_SLOWEST * 0.9
-SWEP.FireAnimSpeed = 0.24
+SWEP.WalkSpeed = SPEED_SLOWEST * 1.5
+SWEP.FireAnimSpeed = 0.27
 SWEP.FireSoundPitch = 125
 
 SWEP.TracerName = "tracer_gluon"
