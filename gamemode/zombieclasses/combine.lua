@@ -1,4 +1,4 @@
-CLASS.Name = "Combine"
+CLASS.Name = "Prushor Luminos"
 CLASS.TranslationName = "class_zombienie"
 CLASS.Description = "description_zombie"
 CLASS.Help = "controls_zombie"
@@ -10,7 +10,7 @@ CLASS.CanTaunt = true
 CLASS.SWEP = "weapon_zs_zombinie"
 
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")
-CLASS.OverrideModel = Model("models/player/zombie_lacerator2.mdl")
+
 if SERVER then
 function CLASS:ProcessDamage(pl, dmginfo)
 	if dmginfo:GetInflictor().IsMelee then

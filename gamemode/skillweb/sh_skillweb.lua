@@ -8,7 +8,7 @@ end
 
 function GM:XPForLevel(level)
 	--return level * level - 2 * level + 1
-	return 16 * level * level - 32 * level + 16
+	return 32 * level * level - 32 * level + 32
 end
 
 function GM:ProgressForXP(xp)
@@ -21,7 +21,7 @@ function GM:ProgressForXP(xp)
 	return (xp - current_level_xp) / (next_level_xp - current_level_xp)
 end
 
-GM.MaxLevel = 60
+GM.MaxLevel = 100
 GM.MaxXP = GM:XPForLevel(GM.MaxLevel)
 
 -- Makes sure all skill connections are double linked

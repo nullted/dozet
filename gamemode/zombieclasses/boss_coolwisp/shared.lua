@@ -19,7 +19,7 @@ end
 end
 
 
-CLASS.Points = 20
+CLASS.Points = 56
 
 CLASS.ResistFrost = true
 
