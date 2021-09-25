@@ -1,4 +1,4 @@
-CLASS.Name = "The Genius"
+CLASS.Name = "God of Shitcade"
 CLASS.TranslationName = "class_antimelee"
 CLASS.Description = "description_butcher"
 CLASS.Help = "controls_butcher"

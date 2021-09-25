@@ -6,7 +6,7 @@ SWEP.MeleeKnockBack = 160
 
 SWEP.Primary.Delay = 0.4
 
-SWEP.ViewModel = Model("models/weapons/v_pza.mdl")
+SWEP.ViewModel = Model("models/weapons/c_crowbar.mdl")
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 
 AccessorFuncDT(SWEP, "HookTime", "Float", 1)
@@ -31,7 +31,7 @@ function SWEP:Think()
 		self:SetHookTime(0)
 
 		self:EmitSound("physics/flesh/flesh_squishy_impact_hard"..math.random(2, 4)..".wav", 72, math.random(70, 83))
-		self:SendWeaponAnim(ACT_VM_SECONDARYATTACK)
+		
 
 		if SERVER then
 			self:ThrowHook()
