@@ -754,6 +754,8 @@ function meta:RemoveAllStatus(bSilent, bInstant)
 	end
 end
 
+
+
 function meta:RemoveStatus(sType, bSilent, bInstant, sExclude)
 	local removed
 

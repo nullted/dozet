@@ -258,6 +258,7 @@ SKILL_SIGILOL = 154
 SKILL_UNSIGIL = 155
 SKILL_SOULNET = 156
 SKILL_GLASSMAN = 165
+SKILL_THREE_IN_ONE = 188
 
 
 SKILLMOD_HEALTH = 1
@@ -667,7 +668,7 @@ GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+10% melee damage\n"..BAD.."-16%
 																0,			2,					{SKILL_GLASSWEAPONS, SKILL_BLOODLUST}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LASTSTAND, "Last Stand", GOOD.."Double melee damage when below 25% health\n"..BAD.."0.85x melee weapon damage at any other time",
 																0,			6,					{}, TREE_MELEETREE)
-GM:AddSkill(SKILL_SOULNET, "Soul Eater", GOOD.."In Start Gave random soul\n"..BAD.."-10% melee damage",
+GM:AddSkill(SKILL_SOULNET, "Soul Eater", GOOD.."In Start Gave random soul\n"..GOOD.."Gave +6% Damage for scythe\n"..BAD.."-10% melee damage",
 																0,			4,					{SKILL_LASTSTAND}, TREE_MELEETREE)
 GM:AddSkill(SKILL_GLASSWEAPONS, "Glass Weapons", GOOD.."3.5x melee weapon damage vs. zombies\n"..BAD.."Your melee weapons have a 50% chance to break when hitting a zombie",
 																2,			4,					{}, TREE_MELEETREE)
@@ -699,8 +700,10 @@ GM:AddSkill(SKILL_BLOODLUST, "Bloodlust", "Gain phantom health equal to half the
 																-2,			4,					{SKILL_LASTSTAND}, TREE_MELEETREE)
 GM:AddSkill(SKILL_BRASH, "Brash", GOOD.."-16% melee swing impact delay\n"..BAD.."-15 speed on melee kill for 10 seconds",
 																6,			0,					{}, TREE_MELEETREE)
-GM:AddSkill(SKILL_FOUR_IN_ONE, "2 in 1", GOOD.."-50% melee swing impact delay\n"..BAD.."-20 health",
+GM:AddSkill(SKILL_FOUR_IN_ONE, "2 in 1", GOOD.."-9% melee swing impact delay\n"..BAD.."-7 health",
 																-2,			-2,					{}, TREE_MELEETREE)
+GM:AddSkill(SKILL_THREE_IN_ONE, "3 in 1", GOOD.."-16% melee swing impact delay\n"..BAD.."-10 health",
+																-3,			-3,					{SKILL_FOUR_IN_ONE}, TREE_MELEETREE)
 
 SKILL_POINTI = 157
 GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.03)
@@ -898,6 +901,9 @@ end)
 GM:SetSkillModifierFunction(SKILLMOD_MELEE_DAMAGE_MUL, function(pl, amount)
 	pl.MeleeDamageMultiplier = math.Clamp(amount + 1.0, 0.0, 100.0)
 end)
+GM:SetSkillModifierFunction(SKILLMOD_DAMAGE, function(pl, amount, damagemultiplier)
+	pl.damagemultiplier = math.Clamp(amount + 1.0, 0.0, 100.0)
+end)
 
 GM:SetSkillModifierFunction(SKILLMOD_SELF_DAMAGE_MUL, function(pl, amount)
 	pl.SelfDamageMul = math.Clamp(amount + 1.0, 0.0, 100.0)
@@ -1078,9 +1084,7 @@ end)
 GM:SetSkillModifierFunction(SKILLMOD_POISON_SPEED_MUL, function(pl, amount)
 	pl.PoisonSpeedMul = math.Clamp(amount + 1.0, 0.1, 1000.0)
 end)
-GM:SetSkillModifierFunction(SKILLMOD_DAMAGE, function(pl, amount)
-	pl.WEAPON_MODIFIER_DAMAGE = math.Clamp(amount + 1.0, 0.0, 100.0)
-end)
+
 
 GM:SetSkillModifierFunction(SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, GM:MkGenericMod("ProjDamageTakenMul"))
 GM:SetSkillModifierFunction(SKILLMOD_EXP_DAMAGE_RADIUS, GM:MkGenericMod("ExpDamageRadiusMul"))
@@ -1436,8 +1440,11 @@ GM:AddSkillModifier(SKILL_DISPERSION, SKILLMOD_CLOUD_TIME, -0.1)
 GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.16)
 GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, -15)
 
-GM:AddSkillModifier(SKILL_BRASH, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.50)
-GM:AddSkillModifier(SKILL_FOUR_IN_ONE, SKILLMOD_HEALTH, 20)
+GM:AddSkillModifier(SKILL_FOUR_IN_ONE, SKILLMOD_HEALTH, -7)
+GM:AddSkillModifier(SKILL_FOUR_IN_ONE, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.09)
+
+GM:AddSkillModifier(SKILL_THREE_IN_ONE, SKILLMOD_HEALTH, -14)
+GM:AddSkillModifier(SKILL_THREE_IN_ONE, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.16)
 
 GM:AddSkillModifier(SKILL_CIRCULATION, SKILLMOD_BLOODARMOR, 1)
 
