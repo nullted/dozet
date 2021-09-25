@@ -37,7 +37,7 @@ SWEP.ConeMax = 2.5
 SWEP.ConeMin = 1.25
 
 SWEP.ReloadSpeed = 1
-SWEP.HeadshotMulti = 2
+SWEP.HeadshotMulti = 2.4
 
 SWEP.Tier = 2
 
@@ -49,7 +49,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Cleanser' Tactical Pistol", "Less reloa
 	wept.ConeMax = wept.ConeMax * 1.7
 	wept.ConeMin = wept.ConeMin * 2.1
 	wept.ReloadSpeed = wept.ReloadSpeed * 0.7
-	wept.HeadshotMulti = wept.HeadshotMulti * 1.2
+	wept.HeadshotMulti = wept.HeadshotMulti * 0.8
 
 	wept.BulletCallback = function(attacker, tr, dmginfo)
 		dmginfo:SetDamage(dmginfo:GetDamage() + dmginfo:GetDamage() * GAMEMODE:GetWave()/44)

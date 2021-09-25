@@ -116,7 +116,7 @@ function SWEP:GetCharge()
 	return self:GetDTFloat(1)
 end
 
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Have big chance to create explosive than kill, faster but less damage and knockback", function(wept)
 	wept.Primary.Delay = wept.Primary.Delay * 0.66
 	wept.MeleeDamage = wept.MeleeDamage * 0.45
 	wept.PointsMultiplier = 0.6
