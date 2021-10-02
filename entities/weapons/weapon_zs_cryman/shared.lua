@@ -39,8 +39,9 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Better crygas", function(wept)
 	if CLIENT then
 		wept.VElements.clipbase.color = Color(30, 95, 150)
 	end
-end)
+
 wept.MaxBombs = 1
+end)
 function SWEP:CanPrimaryAttack()
 	if self.BaseClass.CanPrimaryAttack(self) then
 		local c = 0
