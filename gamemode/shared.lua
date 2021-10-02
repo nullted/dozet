@@ -55,7 +55,7 @@ include_library("ammoexpand")
 ----------------------
 
 GM.EndRound = true
-GM.StartingWorth = 100
+GM.StartingWorth = 125 
 GM.ZombieVolunteers = {}
 
 team.SetUp(TEAM_ZOMBIE, "Undead", Color(0, 255, 0, 255))
@@ -518,7 +518,7 @@ function GM:OnPlayerHitGround(pl, inwater, hitfloater, speed)
 			if groundent:IsHeadcrab() then
 				groundent:TakeSpecialDamage(groundent:Health() + 70, DMG_DIRECT, pl, pl, pl:GetPos())
 			elseif groundent:IsTorso() then
-				groundent:TakeSpecialDamage(50, DMG_CLUB, pl, pl, pl:GetPos())
+				groundent:TakeSpecialDamage(77, DMG_CLUB, pl, pl, pl:GetPos())
 			end
 
 			if math.floor(damage) > 0 then
@@ -801,9 +801,12 @@ end
 function GM:IsSpecialPerson(pl, image)
 	local img, tooltip
 
-	if pl:SteamID() == "https://steamcommunity.com/id/ToyTheLegendary/" then
+	if pl:SteamID() == "STEAM_0:0:426833142" then
 		img = "VGUI/steam/games/icon_sourcesdk"
 		tooltip = "Toyka\nCreator!!"
+	elseif pl:SteamID() == "STEAM_0:1:245602574" then
+			img = "noxiousnet/noxicon.png"
+			tooltip = "Erioxis\nHelper"
 	elseif pl:IsAdmin() then
 		img = "VGUI/servers/icon_robotron"
 		tooltip = "Admin"
