@@ -49,13 +49,32 @@ SWEP.DismantleDiv = 2
 
 SWEP.OnZombieKilled = function(self, zombie, total, dmginfo)
 	local killer = self:GetOwner()
+	local attacker = self:IsPlayer()
 
 	if killer:IsValid() then
 		killer:GiveStatus("medrifledefboost", 3) 
 		killer:GiveStatus("strengthdartboost", 4)
 		killer:GiveStatus("keyboard", 7)
-		killer:GiveStatus("bleed")
 		end
+		
+end
+function SWEP:ApplyMeleeDamage(ent, trace, damage)
+	if SERVER and ent:IsPlayer() then
+		local gt = ent:GiveStatus("enfeeble", damage * self.EnfeebleDurationMul)
+		if gt and gt:IsValid() then
+			gt.Applier = self:GetOwner()
+		end
+
+		ent:GiveStatus("dimvision", 3)
+
+		local bleed = ent:GiveStatus("bleed")
+		if bleed and bleed:IsValid() then
+			bleed:AddDamage(self.BleedDamage)
+			bleed.Damager = self:GetOwner()
+		end
+	end
+
+	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
 end
 
 
