@@ -188,7 +188,7 @@ function GM:ShowHelp()
 
 	but = vgui.Create("DButton", menu)
 	but:SetFont("ZSHUDFontSmaller")
-	but:SetText("Credits")
+	but:SetText("ZS Version")
 	but:SetTall(buttonhei)
 	but:DockMargin(0, 0, 0, 12)
 	but:DockPadding(0, 12, 0, 12)

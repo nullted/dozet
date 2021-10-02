@@ -1345,7 +1345,7 @@ end
 
 function GM:PlayerSwitchWeapon(pl, old, new)
 	if pl:HasTrinket("autoreload") then
-		pl.NextAutomatedReload = CurTime() + 3.95
+		pl.NextAutomatedReload = CurTime() + 2.5
 		pl.OldWeaponToReload = old
 	end
 end

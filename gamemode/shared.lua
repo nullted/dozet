@@ -1,11 +1,13 @@
 GM.Name		=	"Zombie Survival"
 GM.Author	=	"Toyka"
 GM.Email	=	"nope"
-GM.Website	=	"why"
+GM.Website	=	"https://github.com/erioxis/dozet"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Version", "Beta", "0.83"},
+	{"Version", "Beta", "0.84"},
+	{"erioxis", "Phantom coder", "dead"},
+	{"Server in", "december!", "(or april)"},
 }
 
 if file.Exists(GM.FolderName.."/gamemode/maps/"..game.GetMap()..".lua", "LUA") then

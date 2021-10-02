@@ -53,6 +53,7 @@ SWEP.OnZombieKilled = function(self, zombie, total, dmginfo)
 	if killer:IsValid() then
 		killer:GiveStatus("medrifledefboost", 3) 
 		killer:GiveStatus("strengthdartboost", 4)
+		killer:GiveStatus("keyboard", 7)
 		killer:GiveStatus("bleed")
 		end
 end

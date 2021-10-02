@@ -92,6 +92,13 @@ local statusdisplays = {
 	Icon = Material("zombiesurvival/speed_up.png")
 },
 {
+	Color = Color(170, 0, 120),
+	Name = "KEYBOARD?!",
+	ValFunc = statusValueFunction("keyboard"),
+	Max = 20,
+	Icon = Material("zombiesurvival/speed_up.png")
+},
+{
 	Color = Color(130, 220, 110),
 	Name = "SPEED!",
 	ValFunc = statusValueFunction("healdartboost"),

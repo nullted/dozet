@@ -1,7 +1,7 @@
 local PANEL = {}
 
 PANEL.IdealPing = 50
-PANEL.MaxPing = 400
+PANEL.MaxPing = 1000
 PANEL.RefreshTime = 1
 PANEL.PingBars = 5
 
