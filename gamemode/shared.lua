@@ -5,9 +5,7 @@ GM.Website	=	"why"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Toyka", "HEHE", "Programmer"},
-	{"Lmao", "HAHA", "none"},
-	{"hehe", "HIHI", "none"},
+	{"Version", "Beta", "0.83"},
 }
 
 if file.Exists(GM.FolderName.."/gamemode/maps/"..game.GetMap()..".lua", "LUA") then
