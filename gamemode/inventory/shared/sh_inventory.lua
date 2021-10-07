@@ -61,6 +61,8 @@ GM:AddWeaponBreakdownRecipe("weapon_zs_minelayer",							"comp_launcher")
 GM:AddWeaponBreakdownRecipe("weapon_zs_fracture",							"comp_linearactuator")
 GM:AddWeaponBreakdownRecipe("weapon_zs_harpoon",							"comp_metalpole")
 GM:AddWeaponBreakdownRecipe("weapon_zs_cryman",							"comp_mommy")
+GM:AddWeaponBreakdownRecipe("weapon_zs_m5",							"comp_sacred_soul")
+GM:AddWeaponBreakdownRecipe("trinket_sharpstone",							"comp_sacred_soul")
 GM:AddWeaponBreakdownRecipe("weapon_zs_crymam",							"trinket_toysoul")
 
 -- Assemblies (Assembly, Component, Weapon)
@@ -99,6 +101,7 @@ GM.Assemblies["trinket_classixsoul"]							= {"comp_cpuparts",			"comp_scoper"}
 GM.Assemblies["comp_scoper"]						        	= {"trinket_electromagnet",	"trinket_classix"}
 GM.Assemblies["weapon_zs_cryman"] 				     			= {"comp_gaussframe",		"weapon_zs_hyena"}
 GM.Assemblies["trinket_invalid"]						        	= {"trinket_classil",	"trinket_analgestic"}
+GM.Assemblies["weapon_zs_m5"]						        	= {"comp_sacred_soul",	"weapon_zs_m4"}
 
 
 GM:AddInventoryItemData("comp_modbarrel",		"Modular Barrel",			"A modular barrel suited for pairing up with another gun barrel.",								"models/props_c17/trappropeller_lever.mdl")
@@ -135,6 +138,8 @@ GM:AddInventoryItemData("comp_pulsespool",		"Pulse Spool",				"Used to inject mo
 GM:AddInventoryItemData("comp_flak",			"Flak Chamber",				"An internal chamber for projecting heated scrap.",												"models/weapons/w_rocket_launcher.mdl")
 GM:AddInventoryItemData("comp_precision",		"Precision Chassis",		"A suite setup for rewarding precise shots on moving targets.",									"models/Items/combine_rifle_cartridge01.mdl")
 GM:AddInventoryItemData("comp_mommy",		"Mommy",		"Mom from Cryman.",									"models/Items/combine_rifle_cartridge01.mdl")
+GM:AddInventoryItemData("comp_sacred_soul",		"Sacred Soul",		"This sacred cartridge...",									"models/Items/combine_rifle_cartridge01.mdl")
+
 
 -- Trinkets
 local trinket, description, trinketwep

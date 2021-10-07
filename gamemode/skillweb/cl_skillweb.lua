@@ -227,7 +227,8 @@ local offsets = {
 	[TREE_BUILDINGTREE] = {-14, 9},
 	[TREE_SUPPORTTREE] = {-11, -7},
 	[TREE_POINTTREE] = {-20, 0},
-	[TREE_ANCIENTTREE] = {-17, -10}
+	[TREE_ANCIENTTREE] = {-17, -10},
+	[TREE_DEFENSETREE] = {0, -1}
 }
 
 function PANEL:Init()
@@ -810,7 +811,8 @@ local nodecolors = {
 	[TREE_MELEETREE] = {1.5, 7, 7},
 	[TREE_GUNTREE] = {5, 2, 2},
 	[TREE_POINTTREE] = {7, 10, 4},
-	[TREE_ANCIENTTREE] = {255, 255, 255}
+	[TREE_ANCIENTTREE] = {2, 2, 2.5},
+	[TREE_DEFENSETREE] = {4, 4, 4.6}
 }
 
 local matBeam = Material("effects/laser1")

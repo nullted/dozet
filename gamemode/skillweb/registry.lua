@@ -84,6 +84,7 @@ TREE_MELEETREE = 5
 TREE_GUNTREE = 6
 TREE_POINTTREE = 7
 TREE_ANCIENTTREE = 8
+TREE_DEFENSETREE = 9
 
 -- Dummy skill used for "connecting" to their trees.
 SKILL_NONE = 0
@@ -824,11 +825,43 @@ GM:AddSkill(SKILL_CLASSIX1, "Classical scientia mundi", GOOD.."Iter est mutabili
 SKILL_BLOODMARY = 186
 GM:AddSkill(SKILL_BLOODMARY, "Sanguinum Messis", GOOD.."Sanguinem protegit",
 										-5,			-9,					{SKILL_ANCIENT}, TREE_ANCIENTTREE)
-SKILL_TRUEPOWER = 187
+										SKILL_TRUEPOWER = 187
 GM:AddSkill(SKILL_TRUEPOWER, "Future Knowledge Vol.3", GOOD.."Cost Of Knowledge",
 																				-5,			-10,					{SKILL_BLOODMARY}, TREE_ANCIENTTREE)
-										
-					
+
+SKILL_DEFEND = 190
+GM:AddSkill(SKILL_DEFEND, "Defender of the Sigil I", GOOD.."You get 2% less damage"..BAD.."Speed -1",
+				                                                            	0,			0,					{SKILL_NONE}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFEND, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.02)
+GM:AddSkillModifier(SKILL_DEFEND, SKILLMOD_SPEED, -1)
+
+SKILL_DEFEND1 = 191
+GM:AddSkill(SKILL_DEFEND1, "Defender of the Sigil II", GOOD.."You get 3% less damage"..BAD.."Speed -2",
+				                                                            	0.75,			0,					{SKILL_DEFEND}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFEND1, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.03)
+GM:AddSkillModifier(SKILL_DEFEND1, SKILLMOD_SPEED, -2)
+SKILL_DEFEND2 = 192
+GM:AddSkill(SKILL_DEFEND2, "Defender of the Sigil III", GOOD.."You get 4% less damage"..BAD.."Speed -4",
+				                                                            	1.5,			1,					{SKILL_DEFEND1}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFEND2, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.04)
+GM:AddSkillModifier(SKILL_DEFEND2, SKILLMOD_SPEED, -4)
+SKILL_DEFEND3 = 193
+GM:AddSkill(SKILL_DEFEND3, "Defender of the Sigil IV", GOOD.."You get 5% less damage\n"..BAD.."Speed -6",
+				                                                            	1.5,			2,					{SKILL_DEFEND2}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFEND3, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.05)
+GM:AddSkillModifier(SKILL_DEFEND3, SKILLMOD_SPEED, -6)
+SKILL_DEFEND4 = 194
+GM:AddSkill(SKILL_DEFEND4, "Defender of the Sigil IV", GOOD.."You get 8% less damage"..BAD.."Speed -12",
+				                                                            	0.75,			3,					{SKILL_DEFEND3}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFEND4, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.08)
+GM:AddSkillModifier(SKILL_DEFEND4, SKILLMOD_SPEED, -12)
+
+
 
 GM:SetSkillModifierFunction(SKILLMOD_SPEED, function(pl, amount)
 	pl.SkillSpeedAdd = amount
