@@ -733,7 +733,7 @@ GM:AddSkill(SKILL_LUCKE, "Luckiest", NEUTRAL.."+2 luck\n" ..BAD.. "-10% Points M
 	1,			-2,					{SKILL_POINTIIII}, TREE_POINTTREE)
 	SKILL_BLUCK = 163
 	GM:AddSkillModifier(SKILL_BLUCK, SKILLMOD_POINT_MULTIPLIER, 0.07)
-GM:AddSkill(SKILL_BLUCK, "Quad", GOOD.."On quality system\n" ..BAD.. "-3% Points Multiplier",
+GM:AddSkill(SKILL_BLUCK, "Quad", GOOD.."Better quality system\n" ..BAD.. "-3% Points Multiplier",
 	2,			-2.75,					{SKILL_LUCKE}, TREE_POINTTREE)
 	SKILL_PILLUCK = 164
 	GM:AddSkillModifier(SKILL_PILLUCK, SKILLMOD_POINT_MULTIPLIER, 0.03)
@@ -831,7 +831,7 @@ GM:AddSkill(SKILL_TRUEPOWER, "Future Knowledge Vol.3", GOOD.."Cost Of Knowledge"
 
 SKILL_DEFEND = 190
 GM:AddSkill(SKILL_DEFEND, "Defender of the Sigil I", GOOD.."You get 2% less damage"..BAD.."Speed -1",
-				                                                            	0,			0,					{SKILL_NONE}, TREE_DEFENSETREE)
+				                                                            	-0.25,			-0.5,					{SKILL_NONE}, TREE_DEFENSETREE)
 
 GM:AddSkillModifier(SKILL_DEFEND, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.02)
 GM:AddSkillModifier(SKILL_DEFEND, SKILLMOD_SPEED, -1)
@@ -855,11 +855,24 @@ GM:AddSkill(SKILL_DEFEND3, "Defender of the Sigil IV", GOOD.."You get 5% less da
 GM:AddSkillModifier(SKILL_DEFEND3, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.05)
 GM:AddSkillModifier(SKILL_DEFEND3, SKILLMOD_SPEED, -6)
 SKILL_DEFEND4 = 194
-GM:AddSkill(SKILL_DEFEND4, "Defender of the Sigil IV", GOOD.."You get 8% less damage"..BAD.."Speed -12",
+GM:AddSkill(SKILL_DEFEND4, "Defender of the Sigil V", GOOD.."You get 8% less damage"..BAD.."Speed -12",
 				                                                            	0.75,			3,					{SKILL_DEFEND3}, TREE_DEFENSETREE)
 
 GM:AddSkillModifier(SKILL_DEFEND4, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.08)
 GM:AddSkillModifier(SKILL_DEFEND4, SKILLMOD_SPEED, -12)
+SKILL_DEFEND5 = 195
+GM:AddSkill(SKILL_DEFEND5, "Defender of the Sigil VI", GOOD.."You get 11% less damage"..BAD.."Speed -16",
+				                                                            	0,			3.5,					{SKILL_DEFEND4}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFEND5, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
+GM:AddSkillModifier(SKILL_DEFEND5, SKILLMOD_SPEED, -16)
+SKILL_DEFENDER = 196
+GM:AddSkill(SKILL_DEFENDER, "Defender of Humans", GOOD.."You get 4% less damage\n"..BAD.."Melee damage multiplier 0.96x",
+				                                                            	-1.5,			0,					{SKILL_DEFEND}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_DEFENDER, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
+GM:AddSkillModifier(SKILL_DEFENDER, SKILLMOD_MELEE_DAMAGE_MUL, -0.04)
+
 
 
 
