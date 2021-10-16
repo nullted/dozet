@@ -260,6 +260,7 @@ SKILL_UNSIGIL = 155
 SKILL_SOULNET = 156
 SKILL_GLASSMAN = 165
 SKILL_THREE_IN_ONE = 188
+SKILL_BANDOLIER = 200
 
 
 SKILLMOD_HEALTH = 1
@@ -622,7 +623,9 @@ GM:AddSkill(SKILL_FOCUSIII, "Focus III", GOOD.."+12% tighter aiming reticule\n".
 GM:AddSkill(SKILL_QUICKRELOAD, "Quick Reload", GOOD.."+10% weapon reload speed\n"..BAD.."-25% weapon draw speed",
 																-5,			1,					{SKILL_SLEIGHTOFHAND}, TREE_GUNTREE)
 GM:AddSkill(SKILL_SLEIGHTOFHAND, "Sleight of Hand", GOOD.."+10% weapon reload speed\n"..BAD.."-5% tighter aiming reticule",
-																-5,			-1,					{}, TREE_GUNTREE)
+																-5,			-2,					{}, TREE_GUNTREE)
+GM:AddSkill(SKILL_BANDOLIER, "Bandolier", GOOD.."Give specific buff for reload speed for every weapon\n+13% For Assault;+9% To Explosive\n+21% To Pistol;+11% to Pulse\n+20% To Rifle;+44% For Shotgun\n+12% To SMG;+9% To crossbow",
+																-6,			-1,					{SKILL_SLEIGHTOFHAND}, TREE_GUNTREE)
 GM:AddSkill(SKILL_U_CRYGASGREN, "Unlock: Cryo Gas Grenade", GOOD.."Unlocks purchasing the Cryo Gas Grenade\nVariant of the Corrosive Gas Grenade\nCryo gas deals a bit of damage over time\nZombies are slowed in the effect",
 																2,			-3,					{SKILL_EGOCENTRIC}, TREE_GUNTREE)
 GM:AddSkill(SKILL_SOFTDET, "Soft Detonation", GOOD.."-40% explosive damage taken\n"..BAD.."-10% explosive damage radius",
@@ -879,11 +882,17 @@ GM:AddSkill(SKILL_DEFENDEROFM, "Defender of Monsters", BAD.."You get 5% more dam
 GM:AddSkillModifier(SKILL_DEFENDEROFM, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.05)
 GM:AddSkillModifier(SKILL_DEFENDEROFM, SKILLMOD_MELEE_DAMAGE_MUL, 0.05)
 SKILL_TRIP = 198
-GM:AddSkill(SKILL_TRIP, "Trip of Wall", GOOD.."-50% Damage taken\n"..BAD.."Melee damage multiplier 0.3x\nYou have power of the wall!",
+GM:AddSkill(SKILL_TRIP, "Wall curse", GOOD.."-50% Damage taken\n"..BAD.."Melee damage multiplier 0.3x\nYou have power of the wall!",
 				                                                            	-2,			2,					{SKILL_DEFENDEROFM}, TREE_DEFENSETREE)
 
 GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.50)
 GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_MELEE_DAMAGE_MUL, -0.7)
+SKILL_MERIS = 199
+GM:AddSkill(SKILL_MERIS, "Meris", GOOD.."-10% Damage taken\n"..BAD.."Melee damage multiplier 0.8x!",
+				                                                            	-1,			3.5,					{SKILL_TRIP}, TREE_DEFENSETREE)
+
+GM:AddSkillModifier(SKILL_MERIS, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.10)
+GM:AddSkillModifier(SKILL_MERIS, SKILLMOD_MELEE_DAMAGE_MUL, -0.2)
 
 
 
@@ -1192,6 +1201,16 @@ GM:SetSkillModifierFunction(SKILLMOD_EXP_DAMAGE_MUL, GM:MkGenericMod("ExplosiveD
 GM:SetSkillModifierFunction(SKILLMOD_PROJECTILE_DAMAGE_MUL, GM:MkGenericMod("ProjectileDamageMul"))
 GM:SetSkillModifierFunction(SKILLMOD_TURRET_RANGE_MUL, GM:MkGenericMod("TurretRangeMul"))
 GM:SetSkillModifierFunction(SKILLMOD_AIM_SHAKE_MUL, GM:MkGenericMod("AimShakeMul"))
+
+
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_ASSAULT_MUL, 0.13)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_EXP_MUL, 0.09)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_PISTOL_MUL, 0.21)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_PULSE_MUL, 0.11)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_RIFLE_MUL, 0.20)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_SHELL_MUL, 0.44)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_SMG_MUL, 0.12)
+GM:AddSkillModifier(SKILL_BANDOLIER, SKILLMOD_RELOADSPEED_XBOW_MUL, 0.09)
 
 GM:AddSkillModifier(SKILL_SPEED1, SKILLMOD_SPEED, 2)
 GM:AddSkillModifier(SKILL_SPEED1, SKILLMOD_HEALTH, -1)
