@@ -30,7 +30,7 @@ function meta:ProcessDamage(dmginfo)
 
 	if P_Team(self) == TEAM_UNDEAD then
 		if self.SpawnProtection then
-			dmginfo:SetDamage(0)
+			dmginfo:SetDamage(1)
 			dmginfo:ScaleDamage(0)
 			dmginfo:SetDamageForce(vector_origin)
 			return
@@ -71,7 +71,7 @@ function meta:ProcessDamage(dmginfo)
 					dmginfo:SetDamage(dmginfo:GetDamage() * (1 + self:GetFlatLegDamage()/75))
 				end
 
-				if wep.Culinary and attacker:IsSkillActive(SKILL_MASTERCHEF) and math.random(9) == 1 then
+				if wep.Culinary and attacker:IsSkillActive(SKILL_MASTERCHEF) and math.random(5) == 1 then
 					self.ChefMarkOwner = attacker
 					self.ChefMarkTime = CurTime() + 1
 				end
@@ -1676,6 +1676,7 @@ local bossdrops = {
 	"trinket_lazarussoul",	-- 19
 	"trinket_forsoul",  -- 20
 	"trinket_starsoul"  -- 21
+	-- "trinket_voidsoul"
 }
 
 function meta:MakeBossDrop()
