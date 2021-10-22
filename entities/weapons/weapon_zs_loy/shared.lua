@@ -1,7 +1,7 @@
 
 
-SWEP.PrintName = " X axe  "
-SWEP.Description = "This is really big AXEEEE."
+SWEP.PrintName = "Axel"
+SWEP.Description = "The Ancient axe of Toy,Have 1.5x points multiplier.Big Damage for big knockback"
 
 
 

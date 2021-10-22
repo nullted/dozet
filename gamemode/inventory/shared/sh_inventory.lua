@@ -628,8 +628,7 @@ trinket = GM:AddTrinket("Soul of Lilith", "lilithsoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 0, 0, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(0, 0, 0, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(0, 0, 0, 255), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil,"Дает большой бафф к туррелям и дронам с амуницией,дрон может тащить пропы на 30% тяжелее,радиус чинильной станции увеличен на 30%,на 30% длительность ресапла,на 30% больше хп у всех деплояблов,туррели имеют в 50% больше хп и скорость сканирования на 40% больше
-\n Give huge buff for turrets and drones\n Q:4")
+}, nil,"Дает большой бафф к туррелям и дронам с амуницией,дрон может тащить пропы на 30% тяжелее,радиус чинильной станции увеличен на 30%,на 30% длительность ресапла,на 30% больше хп у всех деплояблов,туррели имеют в 50% больше хп и скорость сканирования на 40% больше\n Give huge buff for turrets and drones\n Q:4")
 GM:AddSkillModifier(trinket, SKILLMOD_DRONE_CARRYMASS_MUL, 0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_FIELD_RANGE_MUL, 0.3)
 GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.3)

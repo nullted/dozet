@@ -31,7 +31,7 @@ function meta:ProcessDamage(dmginfo)
 	if P_Team(self) == TEAM_UNDEAD then
 		if self.SpawnProtection then
 			dmginfo:SetDamage(1)
-			dmginfo:ScaleDamage(0)
+			dmginfo:ScaleDamage(0.1)
 			dmginfo:SetDamageForce(vector_origin)
 			return
 		end
@@ -1676,7 +1676,6 @@ local bossdrops = {
 	"trinket_lazarussoul",	-- 19
 	"trinket_forsoul",  -- 20
 	"trinket_starsoul"  -- 21
-	-- "trinket_voidsoul"
 }
 
 function meta:MakeBossDrop()
