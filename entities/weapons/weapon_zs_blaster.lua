@@ -23,7 +23,7 @@ SWEP.UseHands = false
 SWEP.ReloadDelay = 0.67
 
 SWEP.Primary.Sound = Sound("Weapon_Shotgun.NPC_Single")
-SWEP.Primary.Damage = 11
+SWEP.Primary.Damage = 12.5
 SWEP.Primary.NumShots = 6
 SWEP.Primary.Delay = 0.6
 
