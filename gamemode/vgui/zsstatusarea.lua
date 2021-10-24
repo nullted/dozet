@@ -125,6 +125,13 @@ local statusdisplays = {
 	ValFunc = statusValueFunction("renegade"),
 	Max = 14,
 	Icon = Material("zombiesurvival/headshot_stacks.png")
+},
+{
+	Color = Color(255, 0, 0),
+	Name = "BLOODLUST!",
+	ValFunc = statusValueFunction("bloodlust"),
+	Max = 10,
+	Icon = Material("zombiesurvival/bleed.png")
 }
 }
 

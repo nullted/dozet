@@ -263,3 +263,17 @@ function SWEP:OnZombieKilled()
 		end
 	end
 end
+
+--[[if owner:IsSkillActive(SKILL_BLOODLOST) then
+
+function SWEP:OnZombieKilled()
+	 local killer = self:GetOwner()
+
+	 if killer:IsValid() then
+		 local reaperstatus1 = killer:GiveStatus("bloodlust", 10)
+		 if reaperstatus1 and reaperstatus1:IsValid() then
+			reaperstatus1:SetDTInt(1, math.min(reaperstatus1:GetDTInt(1) + 1, 10))
+			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus1:GetDTInt(1) * 10, 0.45)
+		 end
+	 end
+end]]

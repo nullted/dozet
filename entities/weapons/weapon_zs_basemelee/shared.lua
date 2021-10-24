@@ -46,6 +46,8 @@ local MAT_BLOODYFLESH = MAT_BLOODYFLESH
 local MAT_ANTLION = MAT_ANTLION
 local MAT_ALIENFLESH = MAT_ALIENFLESH
 
+
+
 function SWEP:Initialize()
 	GAMEMODE:DoChangeDeploySpeed(self)
 	self:SetWeaponHoldType(self.HoldType)
@@ -192,6 +194,18 @@ function SWEP:MeleeSwing()
 			damagemultiplier = damagemultiplier * 0.85
 		end
 	end
+	
+    --[[if owner:IsSkillActive(SKILL_BLOODLOST) then
+	function OnZombieKilled() then
+			 local reaperstatus1 = owner:GiveStatus("bloodlust", 10)
+			 if reaperstatus1 and reaperstatus1:IsValid() then
+				reaperstatus1:SetDTInt(1, math.min(reaperstatus1:GetDTInt(1) + 1, 10))
+			 end
+		 end
+	end
+end]]
+	
+
 
 	local hitent = tr.Entity
 	local hitflesh = tr.MatType == MAT_FLESH or tr.MatType == MAT_BLOODYFLESH or tr.MatType == MAT_ANTLION or tr.MatType == MAT_ALIENFLESH
@@ -310,6 +324,7 @@ function SWEP:MeleeHitEntity(tr, hitent, damagemultiplier)
 		owner.GlassWeaponShouldBreak = not owner.GlassWeaponShouldBreak
 	end
 
+
 	local damage = self.MeleeDamage * damagemultiplier
 
 	local dmginfo = DamageInfo()
@@ -344,6 +359,8 @@ function SWEP:MeleeHitEntity(tr, hitent, damagemultiplier)
 
 	self:PostHitUtil(owner, hitent, dmginfo, tr, vel)
 end
+
+
 
 function SWEP:StopSwinging()
 	self:SetSwingEnd(0)
@@ -428,3 +445,4 @@ function SWEP:TranslateActivity( act )
 
 	return self.ActivityTranslate and self.ActivityTranslate[act] or -1
 end
+

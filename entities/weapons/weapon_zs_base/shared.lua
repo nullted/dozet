@@ -105,6 +105,7 @@ function SWEP:Reload()
 	end
 end
 
+
 function SWEP:GetPrimaryClipSize()
 	local owner = self:GetOwner()
 	local multi = self.Primary.ClipSize/self.RequiredClip >= 8 and owner:HasTrinket("extendedmag") and 1.15 or 1
