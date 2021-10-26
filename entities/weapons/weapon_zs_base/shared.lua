@@ -65,6 +65,7 @@ function SWEP:Initialize()
 	end
 end
 
+
 function SWEP:PrimaryAttack()
 	if not self:CanPrimaryAttack() then return end
 
