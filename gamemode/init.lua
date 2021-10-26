@@ -1030,8 +1030,8 @@ function GM:PlayerSelectSpawn(pl)
 end
 
 local function BossZombieSort(za, zb)
-	local ascore = za.WaveBarricadeDamage * 0.05 + za.WaveHumanDamage
-	local bscore = zb.WaveBarricadeDamage * 0.05 + zb.WaveHumanDamage
+	local ascore = za.WaveBarricadeDamage * 0.33 + za.WaveHumanDamage
+	local bscore = zb.WaveBarricadeDamage * 0.33 + zb.WaveHumanDamage
 	if ascore == bscore then
 		return za:Deaths() < zb:Deaths()
 	end
@@ -1264,6 +1264,10 @@ function GM:Think()
 				end
 				if pl:IsSkillActive(SKILL_BLOODMARY) and pl.MaxBloodArmor > 0 and time >= pl.NextBloodArmorRegen and pl:GetBloodArmor() < pl.MaxBloodArmor then
 					pl.NextBloodArmorRegen = time + 2
+					pl:SetBloodArmor(math.min(pl.MaxBloodArmor, pl:GetBloodArmor() + (5 * pl.BloodarmorGainMul)))
+				end
+				if pl:IsSkillActive(SKILL_BLOODLOST) and pl.EndWavePointsExtra > 0 and time >= pl.NextBloodArmorRegen and pl:GetBloodArmor() < pl.MaxBloodArmor then
+					pl.NextBloodArmorRegen = time + 3
 					pl:SetBloodArmor(math.min(pl.MaxBloodArmor, pl:GetBloodArmor() + (5 * pl.BloodarmorGainMul)))
 				end
 

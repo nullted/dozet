@@ -6,8 +6,9 @@ SWEP.Secondary.Delay = 3.5
 SWEP.Primary.Delay = 1.2
 
 
-SWEP.NextPuke = 3
-SWEP.PukeLeft = 10
+SWEP.NextPuke = 2
+SWEP.PukeLeft = 11
+SWEP.BleedDamage = 55
 
 SWEP.MeleeDamage = 56
 SWEP.MeleeDamageVsProps = 84
@@ -20,7 +21,7 @@ function SWEP:SecondaryAttack()
 	local owner = self:GetOwner()
 	self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
 
-	self.PukeLeft = 35
+	self.PukeLeft = 11
 
 	owner:EmitSound("npc/barnacle/barnacle_die2.wav")
 	owner:EmitSound("npc/barnacle/barnacle_digesting1.wav")
@@ -63,4 +64,16 @@ end
 local matSheet = Material("Models/Charple/Charple1_sheet")
 function SWEP:PreDrawViewModel(vm)
 	render.ModelMaterialOverride(matSheet)
+end
+
+function SWEP:ApplyMeleeDamage(ent, trace, damage)
+	if SERVER and ent:IsPlayer() then
+		local bleed = ent:GiveStatus("bleed")
+		if bleed and bleed:IsValid() then
+			bleed:AddDamage(self.BleedDamage)
+			bleed.Damager = self:GetOwner()
+		end
+	end
+
+	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
 end

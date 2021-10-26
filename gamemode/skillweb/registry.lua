@@ -973,7 +973,7 @@ end)
 GM:SetSkillModifierFunction(SKILLMOD_MELEE_DAMAGE_MUL, function(pl, amount)
 	pl.MeleeDamageMultiplier = math.Clamp(amount + 1.0, 0.0, 100.0)
 end)
-GM:SetSkillModifierFunction(SKILLMOD_DAMAGE, function(pl, amount,)
+GM:SetSkillModifierFunction(SKILLMOD_DAMAGE, function(pl, amount)
 	pl.DamageMultiplier = math.Clamp(amount + 1.0, 0.0, 100.0)
 end)
 

@@ -5,7 +5,7 @@ GM.Website	=	"https://github.com/erioxis/dozet"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Version", "Release Beta", "0.91"},
+	{"Version", "Release Beta", "0.92"},
 	{"erioxis", "Phantom coder", "dead"},
 	{"Server in", "december!", "(or april)"},
 }
@@ -594,10 +594,10 @@ end
 
 function GM:GetDamageResistance(fearpower)
 	if self.MaxSigils > 0 and self:GetUseSigils() then
-		return fearpower * 0.06 + self:NumSigilsCorrupted() / self.MaxSigils * 0.2
+		return fearpower * 0.04 + self:NumSigilsCorrupted() / self.MaxSigils * 0.22
 	end
 
-	return fearpower * 0.15
+	return fearpower * 0.12
 end
 
 function GM:FindUseEntity(pl, ent)
