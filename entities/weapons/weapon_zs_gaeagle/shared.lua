@@ -50,8 +50,12 @@ SWEP.FireAnimSpeed = 1.8
 SWEP.Tier = 4
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
+
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1, 1)
+
 function SWEP:ShootBullets(dmg, numbul, cone)
-	dmg = dmg + dmg * (5 * self:Clip1() / self.Primary.ClipSize)
+	dmg = dmg + dmg * (4.3 * self:Clip1() / self.Primary.ClipSize)
 
 	BaseClass.ShootBullets(self, dmg, numbul, cone)
 end
+

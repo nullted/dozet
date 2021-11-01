@@ -1,57 +1,62 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Stalker' M4"
-SWEP.Description = "Using this gun will severely reduce the distance in which zombies can see your aura."
-SWEP.Slot = 2
+SWEP.PrintName = "'Forager' M6"
+SWEP.Description = "Very Strange weapon,have silencer but this strange silencer..."
+SWEP.Slot = 4
 SWEP.SlotPos = 0
 
+
 if CLIENT then
-	SWEP.ViewModelFlip = false
+	SWEP.ViewModelFlip = true
 	SWEP.ViewModelFOV = 60
 
+	SWEP.VElements = {
+		["01"] = { type = "Model", model = "models/props_c17/canister02a.mdl", bone = "v_weapon.m4_Eject", rel = "", pos = Vector(0.371, 0.287, 12.675), angle = Angle(-179.616, -4.031, 0.769), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	}
+	SWEP.WElements = {
+		["zerotwo"] = { type = "Model", model = "models/props_c17/canister02a.mdl", bone = "ValveBiped.Anim_Attachment_RH", rel = "", pos = Vector(-0.642, -7.402, 22.31), angle = Angle(179.67101, -5.116, 11.197), size = Vector(0.3, 0.3, 0.3), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["zerotwo2"] = { type = "Model", model = "models/props_c17/lampshade001a.mdl", bone = "ValveBiped.Anim_Attachment_RH", rel = "", pos = Vector(-0.579, -9.517, 31.578), angle = Angle(-2.027, 4.705, -19.274), size = Vector(0.2, 0.2, 0.2), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+	}
+	
+	
 	SWEP.HUD3DBone = "v_weapon.m4_Parent"
-	SWEP.HUD3DPos = Vector(-0.5, -5, -1.2)
-	SWEP.HUD3DAng = Angle(0, -5, 0)
-	SWEP.HUD3DScale = 0.015
+
 end
+
+SWEP.AllowQualityWeapons = false
 
 SWEP.Base = "weapon_zs_base"
 
-SWEP.HoldType = "ar2"
 
-SWEP.ViewModel = "models/weapons/cstrike/c_rif_m4a1.mdl"
+SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
-SWEP.UseHands = true
-
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 21.5
-SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.13
+SWEP.Primary.Damage = 77
+SWEP.Primary.NumShots = 2
+SWEP.Primary.Delay = 0.18
 
-SWEP.Primary.ClipSize = 25
+SWEP.Primary.ClipSize = 15
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "ar2"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
+SWEP.HoldType = "ar2"
 
-SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
-SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_SMG1
 
-SWEP.ConeMax = 4
-SWEP.ConeMin = 1.3
+SWEP.ConeMax = 3
+SWEP.ConeMin = 1.1
 
 SWEP.WalkSpeed = SPEED_SLOW
 
-SWEP.Tier = 4
-SWEP.MaxStock = 3
+SWEP.Tier = 5
+SWEP.MaxStock = 2
 
 SWEP.IronSightsPos = Vector(-3, 0, 2)
-
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.325)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.625)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.187)
-local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Aspirant' Burst M4", "Increased damage, shoots in a slower, more accurate 3 round burst", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 1.1
-	wept.Primary.Delay = wept.Primary.Delay * 5.7
+local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Jualon' Burst M6", "Increased damage, shoots is a slower, more accurate 3 round burst", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 1.2
+	wept.Primary.Delay = wept.Primary.Delay * 2.3
 	wept.Primary.BurstShots = 3
 	wept.ConeMin = wept.ConeMin * 0.6
 	wept.ConeMax = wept.ConeMax * 0.5
@@ -138,5 +143,5 @@ function SWEP:GetShotsLeft()
 end
 
 function SWEP:GetAuraRange()
-	return 512
+	return 256
 end

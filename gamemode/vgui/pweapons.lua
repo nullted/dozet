@@ -36,7 +36,7 @@ local function SetWeaponViewerSWEP(self, swep, category, comps)
 	viewer.ModelPanel:SetModel(sweptable.WorldModel)
 	local mins, maxs = viewer.ModelPanel.Entity:GetRenderBounds()
 	viewer.ModelPanel:SetCamPos(mins:Distance(maxs) * Vector(1.15, 0.75, 0.5))
-	viewer.ModelPanel:SetLookAt((mins + maxs) / 2)
+	viewer.ModelPanel:SetLookAt((mins + maxs) / 3)
 	viewer.m_VBG:SetVisible(true)
 
 	if sweptable.NoDismantle then
