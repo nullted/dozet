@@ -25,7 +25,7 @@ SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.UseHands = true
 
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 21.5
+SWEP.Primary.Damage = 19
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.13
 
@@ -42,8 +42,7 @@ SWEP.ConeMin = 1.3
 
 SWEP.WalkSpeed = SPEED_SLOW
 
-SWEP.Tier = 4
-SWEP.MaxStock = 3
+SWEP.Tier = 3
 
 SWEP.IronSightsPos = Vector(-3, 0, 2)
 
