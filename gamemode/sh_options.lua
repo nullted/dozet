@@ -330,6 +330,7 @@ GM:AddPointShopItem("amigo",			ITEMCAT_GUNS,			55,				"weapon_zs_amigo")
 GM:AddPointShopItem("hurricane",		ITEMCAT_GUNS,			55,				"weapon_zs_hurricane")
 GM:AddPointShopItem("nome",		        ITEMCAT_GUNS,			55,				"weapon_zs_nome")
 GM:AddPointShopItem("popl",		        ITEMCAT_GUNS,			55,				"weapon_zs_popluttar")
+GM:AddPointShopItem("relsogun",		        ITEMCAT_GUNS,			55,				"weapon_zs_relsous")
 GM:AddPointShopItem("fracture",		        ITEMCAT_GUNS,			55,				"weapon_zs_fracture")
 -- Tier 3
 GM:AddPointShopItem("deagle",			ITEMCAT_GUNS,			100,				"weapon_zs_deagle")

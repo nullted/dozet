@@ -232,7 +232,7 @@ function meta:SetUnlockedSkills(skills, nosend)
 end
 
 function meta:SkillsRemort()
-	local rl = self:GetZSRemortLevel() + 1
+	local rl = self:GetZSRemortLevel() + 4
 	local myname = self:Name()
 
 	self:SetZSRemortLevel(rl)
@@ -257,7 +257,7 @@ end
 function meta:SkillsReset()
 	self:SetUnlockedSkills({})
 	self:SetDesiredActiveSkills({})
-	self.NextSkillReset = os.time() + 0 -- 1 week
+	self.NextSkillReset = os.time() + 0 
 
 	self:CenterNotify(COLOR_CYAN, translate.ClientGet(self, "you_have_reset_all"))
 end

@@ -11,21 +11,21 @@ local function ContentsPaint(self, w, h)
 		local healthperc = math.Clamp(health / lp:GetMaxHealthEx(), 0, 1)
 		local wid, hei = 300 * screenscale, 18 * screenscale
 
-		colHealth.r = (1 - healthperc) * 255
-		colHealth.g = healthperc * 10
-		colHealth.b = 40
+		colHealth.r = (1 - healthperc) * 100
+		colHealth.g = healthperc * 30
+		colHealth.b = 2
 
 		local x = 18 * screenscale
 		local y = 115 * screenscale
 
 		local subwidth = healthperc * wid
 
-		draw.SimpleTextBlurry(health, "ZSHUDFont", x + wid + 12 * screenscale, y + 8 * screenscale, colHealth, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
+		draw.SimpleTextBlurry(health, "ZSHUDFont", x + wid + 18 * screenscale, y + 8 * screenscale, colHealth, TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER)
 
 		surface.SetDrawColor(0, 0, 0, 230)
 		surface.DrawRect(x, y, wid, hei)
 
-		surface.SetDrawColor(colHealth.r * 0.6, colHealth.g * 0.6, colHealth.b, 160)
+		surface.SetDrawColor(colHealth.r * 1, colHealth.g * 0.2, colHealth.b, 40)
 		surface.SetTexture(texDownEdge)
 		surface.DrawTexturedRect(x + 2, y + 1, subwidth - 4, hei - 2)
 		surface.SetDrawColor(colHealth.r * 0.6, colHealth.g * 0.6, colHealth.b, 30)
@@ -39,11 +39,11 @@ local function ContentsPaint(self, w, h)
 		healthperc = math.Clamp(phantomhealth / lp:GetMaxHealthEx(), 0, 1)
 
 		colHealth.r = 255
-		colHealth.g = 120
-		colHealth.b = 90
+		colHealth.g = 199
+		colHealth.b = 20
 		local phantomwidth = healthperc * wid
 
-		surface.SetDrawColor(colHealth.r, colHealth.g, colHealth.b, 160)
+		surface.SetDrawColor(colHealth.r, colHealth.g, colHealth.b, 40)
 		surface.SetTexture(texDownEdge)
 		surface.DrawTexturedRect(x + 2 + subwidth - 4, y + 1, phantomwidth, hei - 2)
 		surface.SetDrawColor(colHealth.r, colHealth.g, colHealth.b, 30)
@@ -57,8 +57,8 @@ local function ContentsPaint(self, w, h)
 				wid, hei = 240 * screenscale, 14 * screenscale
 
 				healthperc = math.Clamp(bloodarmor / (lp.MaxBloodArmor or 10), 0, 1)
-				colHealth.r = 50 + healthperc * 205
-				colHealth.g = 0
+				colHealth.r = 50 + healthperc * 2.5
+				colHealth.g = 50
 				colHealth.b = (1 - healthperc) * 50
 
 				subwidth = healthperc * wid

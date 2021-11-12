@@ -116,7 +116,7 @@ function PANEL:Init()
 
 	self:SetCamPos( Vector( 20000, 0, 0 ) )
 	self:SetLookAt( Vector( 0, 0, 0 ) )
-	self:SetFOV( 7 )
+	self:SetFOV( 6 )
 
 	self:SetAmbientLight( Color( 50, 50, 50 ) )
 
@@ -256,15 +256,15 @@ function PANEL:Paint(w, h)
 
 						local beamsize = 4
 						if othernode.Unlocked then
-							colBeam.r = 32
-							colBeam.g = 128
-							colBeam.b = 255
+							colBeam.r = 60
+							colBeam.g = 255
+							colBeam.b = 120
 						elseif node.Unlocked then
 							colBeam.r = 255
 							colBeam.g = 192
 							colBeam.b = 0
 						else
-							colBeam.r = 128
+							colBeam.r = 0
 							colBeam.g = 40
 							colBeam.b = 40
 

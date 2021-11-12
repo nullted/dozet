@@ -40,15 +40,15 @@ function PANEL:PerformLayout()
 
 	self.m_Text1:SetWide(self:GetWide())
 	self.m_Text1:SizeToContentsY()
-	self.m_Text1:MoveRightOf(self.m_HumanCount, 12)
+	self.m_Text1:MoveRightOf(self.m_HumanCount, 16)
 	self.m_Text1:AlignTop(4)
 	self.m_Text2:SetWide(self:GetWide())
 	self.m_Text2:SizeToContentsY()
-	self.m_Text2:MoveRightOf(self.m_HumanCount, 12)
+	self.m_Text2:MoveRightOf(self.m_HumanCount, 16)
 	self.m_Text2:CenterVertical()
 	self.m_Text3:SetWide(self:GetWide())
 	self.m_Text3:SizeToContentsY()
-	self.m_Text3:MoveRightOf(self.m_HumanCount, 12)
+	self.m_Text3:MoveRightOf(self.m_HumanCount, 16)
 	self.m_Text3:AlignBottom(4)
 end
 
@@ -68,10 +68,10 @@ function PANEL:Text1Paint()
 			text = translate.Get("zombie_escape")
 
 			-- I'm gonna leave this as 2 for now, since it is 2 on NoX.
-			--if GAMEMODE.RoundLimit > 0 then
+			if GAMEMODE.RoundLimit > 0 then
 				round = GAMEMODE.CurrentRound
 				text = text .. " - " .. translate.Format("round_x_of_y", round, 2)
-			--end
+			end
 		else
 			local maxwaves = GAMEMODE:GetNumberOfWaves()
 			if maxwaves ~= -1 then
