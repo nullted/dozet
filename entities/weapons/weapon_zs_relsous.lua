@@ -91,6 +91,7 @@ SWEP.Pierces = 6
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.032)
 
+
 function SWEP:ShootBullets(dmg, numbul, cone)
 	local owner = self:GetOwner()
 	self:SendWeaponAnimation()
@@ -123,6 +124,7 @@ function SWEP:ShootBullets(dmg, numbul, cone)
 	owner:FireBulletsLua(start, dir, cone, numbul, 0, nil, self.Primary.KnockbackScale, self.TracerName, self.BulletCallback, self.Primary.HullSize, nil, self.Primary.MaxDistance, nil, self)
 	owner:LagCompensation(false)
 end
+
 
 function SWEP:SendWeaponAnimation()
 	self:SendWeaponAnim(ACT_VM_PRIMARYATTACK)
@@ -186,7 +188,6 @@ function SWEP.BulletCallback(attacker, tr, dmginfo)
 end
 
 function SWEP:EmitReloadSound()
-
 end
 
 function SWEP:EmitReloadFinishSound()
@@ -196,3 +197,4 @@ function SWEP:EmitFireSound()
 	self:EmitSound("weapons/m4a1/m4a1_unsil-1.wav", 76, 45, 0.35)
 	self:EmitSound("weapons/zs_rail/rail.wav", 76, 100, 0.95, CHAN_WEAPON + 20)
 end
+
