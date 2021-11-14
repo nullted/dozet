@@ -325,11 +325,11 @@ function GM:OpenInventory()
 	end
 
 	local screenscale = BetterScreenScale()
-	local wid, hei = math.max(400, math.min(ScrW(), 400) * screenscale), math.min(ScrH(), 370) * screenscale
+	local wid, hei = math.max(400, math.min(ScrW(), 200) * screenscale), math.min(ScrH(), 370) * screenscale
 
 	local frame = vgui.Create("DFrame")
 	frame:SetSize(wid, hei)
-	frame:CenterHorizontal(0.385)
+	frame:CenterHorizontal(0.45)
 	frame:CenterVertical(0.25)
 	frame:SetDeleteOnClose(false)
 	frame:SetTitle(" ")
@@ -349,7 +349,7 @@ function GM:OpenInventory()
 
 	local _, y = title:GetPos()
 	topspace:SetTall(y + title:GetTall() + 2)
-	topspace:AlignTop(8)
+	topspace:AlignTop(-8)
 	topspace:CenterHorizontal()
 
 	local invListPanel = vgui.Create("DScrollPanel", frame)
