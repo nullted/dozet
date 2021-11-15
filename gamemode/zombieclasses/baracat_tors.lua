@@ -6,14 +6,13 @@ CLASS.Model = Model("models/Zombie/Classic_torso.mdl")
 
 CLASS.SWEP = "weapon_zs_baratorso"
 
-CLASS.Wave = 1
+CLASS.Wave = 3
 CLASS.Threshold = 0
-CLASS.Unlocked = true
 CLASS.Hidden = false
 
-CLASS.Health = 1200
-CLASS.Speed = 266
-CLASS.JumpPower = 340
+CLASS.Health = 600
+CLASS.Speed = 210
+CLASS.JumpPower = 300
 
 CLASS.Points = CLASS.Health/GM.TorsoZombiePointRatio
 
