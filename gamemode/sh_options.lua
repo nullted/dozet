@@ -357,7 +357,7 @@ GM:AddPointShopItem("quicksilver",		ITEMCAT_GUNS,			180,			"weapon_zs_quicksilve
 GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			180,			"weapon_zs_slugrifle")
 GM:AddPointShopItem("artemis",			ITEMCAT_GUNS,			180,			"weapon_zs_artemis")
 GM:AddPointShopItem("zeus",				ITEMCAT_GUNS,			180,			"weapon_zs_zeus")
-GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			180,			"weapon_zs_m6")
+GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			260,			"weapon_zs_m6")
 GM:AddPointShopItem("inferno",			ITEMCAT_GUNS,			180,			"weapon_zs_inferno")
 GM:AddPointShopItem("quasar",			ITEMCAT_GUNS,			180,			"weapon_zs_quasar")
 GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			180,			"weapon_zs_gluon")

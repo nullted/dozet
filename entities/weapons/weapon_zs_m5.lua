@@ -33,9 +33,9 @@ SWEP.Base = "weapon_zs_base"
 SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 68
-SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.09 
+SWEP.Primary.Damage = 77
+SWEP.Primary.NumShots = 2
+SWEP.Primary.Delay = 0.09
 
 SWEP.Primary.ClipSize = 55
 SWEP.Primary.Automatic = true
