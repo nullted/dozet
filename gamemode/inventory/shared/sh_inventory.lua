@@ -548,6 +548,22 @@ trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.18)
 trinket = GM:AddTrinket("FutureBluePrints", "futureblu", false, supveles, supweles, 4, "BluePrint From future!.+30% repair rate\n +30% К силе починке")
 GM:AddSkillModifier(trinket, SKILLMOD_REPAIRRATE_MUL, 0.30)
+trinket = GM:AddTrinket("Book Of Knowledge", "knowbook", false, book, bookw, 4, "+7% Points Multiplier,+5% Reload Speed.+1% Melee damage.\n+7% К поинтам,+5% К перезарядке,+1% К мили урону")
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.07)
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.05)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.01)
+trinket = GM:AddTrinket("Bloodlust", "bloodlust", false, book, bookw, 4, "-10 HP,+20% Damage per attack(Reset if miss).\n-10 хп,+20% к мили урону за каждый удар(Сбрасывается при промахе)")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_POWERATTACK_MUL, 0.20)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -10)
+trinket = GM:AddTrinket("Additional Battery", "adbat", false, supveles, supweles, 4, "+50% Reload Speed For Pulse Weapon\n+50% К скорости перезарядки для пульс оружия")
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_PULSE_MUL, 0.50)
+trinket = GM:AddTrinket("Mech Arm", "marm", false, supveles, supweles, 4, "+22% Reload Speed\n+22% К скорости перезарядки")
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.22)
+trinket = GM:AddTrinket("Steel Shield", "sshield", false, supveles, supweles, 4, "-20% Taken Damage,-12% Reload Speed\n-12% К скорости перезарядки,-20% получаемого урона")
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, -0.12)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.20)
+
+
 
 
 

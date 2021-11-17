@@ -441,6 +441,14 @@ GM:AddPointShopItem("futureblu",			ITEMCAT_SUPER,			200,			"trinket_futureblu")
 GM:AddPointShopItem("sman",			ITEMCAT_SUPER,			200,			"trinket_sman")
 GM:AddPointShopItem("stutor",			ITEMCAT_SUPER,			200,			"trinket_stutor")
 GM:AddPointShopItem("gstore",			ITEMCAT_SUPER,			200,			"trinket_gstore")
+GM:AddPointShopItem("bloodlu",			ITEMCAT_SUPER,			200,			"trinket_bloodlust")
+GM:AddPointShopItem("knowev",			ITEMCAT_SUPER,			200,			"trinket_knowbook")
+GM:AddPointShopItem("adbat",			ITEMCAT_SUPER,			200,			"trinket_adbat")
+GM:AddPointShopItem("marm",			ITEMCAT_SUPER,			200,			"trinket_marm")
+GM:AddPointShopItem("sshield",			ITEMCAT_SUPER,			200,			"trinket_sshield")
+
+
+
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			25,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(5, "GaussEnergy") end)
 GM:AddPointShopItem("wrench",			ITEMCAT_TOOLS,			20,				"weapon_zs_wrench").NoClassicMode = true
