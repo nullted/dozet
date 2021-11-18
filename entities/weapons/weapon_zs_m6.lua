@@ -2,7 +2,7 @@ AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
 SWEP.PrintName = "'Forager' M6"
-SWEP.Description = "Very Strange weapon,have silencer but this strange silencer..."
+SWEP.Description = "Very Strange weapon,have silencer but this strange silencer,upgrade per kill(if you don't kill zombie every 120 sec updrage has dismantled)..."
 SWEP.Slot = 4
 SWEP.SlotPos = 0
 
@@ -32,9 +32,10 @@ SWEP.Base = "weapon_zs_base"
 SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 77
+SWEP.Primary.Damage = 45
 SWEP.Primary.NumShots = 2
 SWEP.Primary.Delay = 0.18
+
 
 SWEP.Primary.ClipSize = 15
 SWEP.Primary.Automatic = true
@@ -50,6 +51,18 @@ SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 5
 SWEP.MaxStock = 2
+function SWEP:OnZombieKilled()
+	local killer = self:GetOwner()
+
+	if killer:IsValid() then
+		local reaperstatus = killer:GiveStatus("bloodlust", 120)
+		if reaperstatus and reaperstatus:IsValid() then
+			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 120))
+			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
+		end
+	end
+end
+
 
 SWEP.IronSightsPos = Vector(-3, 0, 2)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.625)
