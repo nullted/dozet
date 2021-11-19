@@ -3,7 +3,7 @@ DEFINE_BASECLASS("weapon_zs_base")
 
 SWEP.PrintName = "'Forager' M6"
 SWEP.Description = "Very Strange weapon,have silencer but this strange silencer,upgrade per kill(if you don't kill zombie every 120 sec updrage has dismantled)..."
-SWEP.Slot = 4
+SWEP.Slot = 2
 SWEP.SlotPos = 0
 
 
@@ -32,20 +32,20 @@ SWEP.Base = "weapon_zs_base"
 SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 45
-SWEP.Primary.NumShots = 2
-SWEP.Primary.Delay = 0.18
+SWEP.Primary.Damage = 43
+SWEP.Primary.NumShots = 1
+SWEP.Primary.Delay = 0.16
 
 
-SWEP.Primary.ClipSize = 15
+SWEP.Primary.ClipSize = 13
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "ar2"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.HoldType = "ar2"
 
 
-SWEP.ConeMax = 3
-SWEP.ConeMin = 1.1
+SWEP.ConeMax = 4
+SWEP.ConeMin = 0.9
 
 SWEP.WalkSpeed = SPEED_SLOW
 

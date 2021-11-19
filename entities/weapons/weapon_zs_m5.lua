@@ -33,9 +33,9 @@ SWEP.Base = "weapon_zs_base"
 SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 77
-SWEP.Primary.NumShots = 2
-SWEP.Primary.Delay = 0.09
+SWEP.Primary.Damage = 98
+SWEP.Primary.NumShots = 1
+SWEP.Primary.Delay = 0.12
 
 SWEP.Primary.ClipSize = 55
 SWEP.Primary.Automatic = true
@@ -44,13 +44,25 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.HoldType = "ar2"
 
 
-SWEP.ConeMax = 3
-SWEP.ConeMin = 1.1
+SWEP.ConeMax = 2
+SWEP.ConeMin = 0.7
 
 SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 5
 SWEP.MaxStock = 2
+function SWEP:OnZombieKilled()
+	local killer = self:GetOwner()
+
+	if killer:IsValid() then
+		local reaperstatus = killer:GiveStatus("bloodlust", 120)
+		if reaperstatus and reaperstatus:IsValid() then
+			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 120))
+			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
+		end
+	end
+end
+
 
 SWEP.IronSightsPos = Vector(-3, 0, 2)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.625)
