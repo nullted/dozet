@@ -8,7 +8,7 @@ function ENT:Think()
 		return
 	end
 
-	local dmg = math.Clamp(self:GetDamage(), 3, 2)
+	local dmg = math.Clamp(self:GetDamage(), 7, 2)
 
 	owner:TakeSpecialDamage(dmg, DMG_BURN, self.Damager and self.Damager:IsValid() and self.Damager:IsPlayer() and self.Damager:Team() ~= owner:Team() and self.Damager or owner, self)
 	self:AddDamage(-dmg)

@@ -33,7 +33,7 @@ SWEP.Base = "weapon_zs_base"
 SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 98
+SWEP.Primary.Damage = 67
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.12
 
@@ -55,9 +55,9 @@ function SWEP:OnZombieKilled()
 	local killer = self:GetOwner()
 
 	if killer:IsValid() then
-		local reaperstatus = killer:GiveStatus("bloodlust", 120)
+		local reaperstatus = killer:GiveStatus("bloodlust", 3600)
 		if reaperstatus and reaperstatus:IsValid() then
-			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 1, 120))
+			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 10, 120))
 			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
 		end
 	end

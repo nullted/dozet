@@ -28,11 +28,11 @@ SWEP.UseHands = true
 
 
 SWEP.MeleeDamage = 20
-SWEP.MeleeRange = 10008
+SWEP.MeleeRange = 2021
 SWEP.MeleeSize = 1.15
 SWEP.Knockback = 120
 
-SWEP.Primary.Delay = 0.4
+SWEP.Primary.Delay = 0.31
 
 SWEP.UseMelee1 = true
 
