@@ -5,7 +5,7 @@ GM.Website	=	"https://github.com/erioxis/dozet"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Version", "Release Beta", "0.933"},
+	{"Version", "Release Beta", "0.947"},
 	{"erioxis", "Phantom coder", "dead"},
 	{"Server in", "december!", "(or april)"},
 }
@@ -57,7 +57,7 @@ include_library("ammoexpand")
 ----------------------
 
 GM.EndRound = true
-GM.StartingWorth = 125 
+GM.StartingWorth = 135 
 GM.ZombieVolunteers = {}
 
 team.SetUp(TEAM_ZOMBIE, "Undead", Color(0, 255, 0, 255))
@@ -805,7 +805,7 @@ function GM:IsSpecialPerson(pl, image)
 
 	if pl:SteamID() == "STEAM_0:0:426833142" then
 		img = "VGUI/steam/games/icon_sourcesdk"
-		tooltip = "Toyka\nCreator!!"
+		tooltip = "Toyka\nCoder"
 	elseif pl:SteamID() == "STEAM_0:1:245602574" then
 			img = "noxiousnet/noxicon.png"
 			tooltip = "Erioxis\nHelper"
@@ -815,7 +815,13 @@ function GM:IsSpecialPerson(pl, image)
 	elseif pl:SteamID() == "STEAM_0:1:196107962" then
 		img = "noxiousnet/noxicon.png"
 		tooltip = "Good Man"
-	end
+	elseif pl:SteamID() == "STEAM_0:1:92937109" then
+		img = "noxiousnet/arsenalcrate.png"
+		tooltip = "Bruh"
+    elseif pl:SteamID() == "STEAM_0:1:157024537" then
+	img = "noxiousnet/noxicon.png"
+	tooltip = "Old Player"
+    end
 
 	if img then
 		if CLIENT then

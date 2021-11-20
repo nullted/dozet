@@ -400,8 +400,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_WEAPON_WEIGHT_SLOW_MUL, -0.35)
 
 
 -- Defensive Trinkets
-trinket, trinketwep = GM:AddTrinket("Kevlar underbody", "kevlar", false, develes, deweles, 2, "-11% melee damage taken\n-11% projectile damage taken\n-11% полученного урона в ближнем бою\n-11% полученного урона от снаряда")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
+trinket, trinketwep = GM:AddTrinket("Kevlar underbody", "kevlar", false, develes, deweles, 2, "-9% melee damage taken\n-11% projectile damage taken\n-9% полученного урона в ближнем бою\n-11% полученного урона от снаряда")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.01)
 trinketwep.PermitDismantle = true
@@ -452,13 +452,13 @@ GM:AddSkillFunction(GM:AddTrinket("Necrotic Senses Distorter", "necrosense", fal
 trinket, trinketwep = GM:AddTrinket("Reactive Flasher", "reactiveflasher", false, develes, deweles, 2, "Blinds and disorients melee attacker for 2 seconds\nRecharges every 75 seconds\nОслепляет и дезориентирует атакующего в ближнем бою на 2 секунды\nперезаряжается каждые 75 секунд")
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket("Composite Underlay", "composite", false, develes, deweles, 4, "-16% melee damage taken\n-16% projectile damage taken and you take -7% blood armor convert\n-16% полученного урона в ближнем бою\n-16% полученного урона от снаряда, и вы получаете -7% преобразования кровавой брони")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.16)
+trinket = GM:AddTrinket("Composite Underlay", "composite", false, develes, deweles, 4, "-11% melee damage taken\n-16% projectile damage taken and you take -7% blood armor convert\n-11% полученного урона в ближнем бою\n-16% полученного урона от снаряда, и вы получаете -7% преобразования кровавой брони")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.16)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.07)
 
-trinket = GM:AddTrinket("Toy Armor", "toysite", false, develes, deweles, 4, "You get 21% less damage, but the blood armor is ineffective, it is produced in 10%\nВы получаете на 21% меньше урона но кровавая броня неэффективна вырабатываеться в 10%")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.21)
+trinket = GM:AddTrinket("Toy Armor", "toysite", false, develes, deweles, 4, "You get 12% less damage, but the blood armor is ineffective, it is produced in 10%\nВы получаете на 12% меньше урона но кровавая броня неэффективна вырабатываеться в 10%")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.12)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.21)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.10)
 

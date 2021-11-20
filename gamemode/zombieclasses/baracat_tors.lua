@@ -6,7 +6,7 @@ CLASS.Model = Model("models/Zombie/Classic_torso.mdl")
 
 CLASS.SWEP = "weapon_zs_baratorso"
 
-CLASS.Wave = 3
+CLASS.Wave = 3 / 6
 CLASS.Threshold = 0
 CLASS.Hidden = false
 

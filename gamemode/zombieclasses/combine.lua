@@ -19,7 +19,7 @@ function CLASS:ProcessDamage(pl, dmginfo)
 end
 end
 
-CLASS.Wave = 3 
+CLASS.Wave = 4 / 12
 CLASS.Health = 600
 CLASS.Speed = 210
 
