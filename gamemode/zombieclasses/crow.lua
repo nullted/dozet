@@ -26,7 +26,7 @@ CLASS.Mass = 2
 
 CLASS.NoUse = false
 CLASS.NoGibs = true
-CLASS.NoCollideAll = false
+CLASS.NoCollideAll = true
 CLASS.NoFallDamage = true
 CLASS.NoFallSlowdown = true
 CLASS.NeverAlive = false
