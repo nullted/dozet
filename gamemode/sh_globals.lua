@@ -89,9 +89,9 @@ DEFAULT_MASS = 80
 DEFAULT_MODELSCALE = 1
 
 -- Humans can not carry OR drag anything heavier than this (in kg.)
-CARRY_MAXIMUM_MASS = 300
+CARRY_MAXIMUM_MASS = 450
 -- Humans can not carry anything with a volume more than this (OBBMins():Length() + OBBMaxs():Length()).
-CARRY_MAXIMUM_VOLUME = 300
+CARRY_MAXIMUM_VOLUME = 450
 -- Objects with more mass than this will be dragged instead of carried.
 CARRY_DRAG_MASS = 145
 -- Anything bigger than this is dragged regardless of mass.
@@ -111,7 +111,7 @@ GM.ArsenalCrateCommission = 0.11
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 
-GM.ExtraHealthPerExtraNail = 60
+GM.ExtraHealthPerExtraNail = 120
 GM.MaxNails = 4
 
 -- Moved from options to globals because the game is now balanced around it being static. The gamemode will BREAK if this is not 6!!
@@ -147,11 +147,11 @@ ZE_KNOCKBACKSCALE = 0.1
 
 MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GRATE, CONTENTS_WINDOW, CONTENTS_HITBOX)
 
-GM.BarricadeHealthMin = 510
+GM.BarricadeHealthMin = 600
 GM.BarricadeHealthMax = 5600 * 0.85
 GM.BarricadeHealthMassFactor = 3 * 0.85
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
-GM.BarricadeRepairCapacity = 1.9
+GM.BarricadeRepairCapacity = 3
 
 GM.BossZombiePlayersRequired = 4
 
