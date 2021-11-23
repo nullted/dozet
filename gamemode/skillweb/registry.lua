@@ -693,7 +693,7 @@ GM:AddSkill(SKILL_HEAVYSTRIKES, "Heavy Strikes", GOOD.."+100% melee knockback\n"
 																2,			0,					{SKILL_BATTLER5, SKILL_JOUSTER}, TREE_MELEETREE)
 GM:AddSkill(SKILL_JOUSTER, "Jouster", GOOD.."+20% melee damage\n"..BAD.."-90% melee knockback",
 																2,			2,					{SKILL_BLOODLOST}, TREE_MELEETREE)
-GM:AddSkill(SKILL_BLOODLOST, "Bloodlust", GOOD.."+0.33% Melee damage multiplier for 10 sec(stackable)\n"..BAD.."Have chance to eat random trinket",
+GM:AddSkill(SKILL_BLOODLOST, "Bloodlust", GOOD.."+25% Damage Multiplier for  6 secs if take damage\n"..BAD.."-30 health",
 																3,			2,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LANKY, "Lanky I", GOOD.."+10% melee range\n"..BAD.."-15% melee damage",
 																-4,			0,					{SKILL_LANKYII}, TREE_MELEETREE)
@@ -897,6 +897,8 @@ GM:AddSkill(SKILL_MERIS, "Meris", GOOD.."-10% Damage taken\n"..BAD.."-20% Melee 
 
 GM:AddSkillModifier(SKILL_MERIS, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.10)
 GM:AddSkillModifier(SKILL_MERIS, SKILLMOD_MELEE_DAMAGE_MUL, -0.2)
+
+GM:AddSkillModifier(SKILL_BLOODLOST, SKILLMOD_HEALTH, -30)
 
 
 

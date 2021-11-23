@@ -304,6 +304,8 @@ GM:AddTrinket("Finesse Kit", "sharpkit", false, mveles, mweles, 2, "Deal up to +
 
 
 GM:AddTrinket("Sharp Stone", "sharpstone", false, mveles, mweles, 3, "+5% melee damage\n +5% К мили урону")
+--perfomance
+GM:AddSkillModifier(GM:AddTrinket("Adrenaline", "adrenaline", false, pveles, pweles, nil, "Each hit on you gives 15 seconds of buffs.\nКаждый удар по вам будет давать 15 сек баффов"), SKILLMOD_JUMPPOWER_MUL, 0.01)
 
 -- Performance Trinkets
 GM:AddTrinket("Oxygen Tank", "oxygentank", true, nil, {
@@ -544,7 +546,7 @@ trinket = GM:AddTrinket("Super Manifest", "sman", false, supveles, supweles, 4, 
 GM:AddSkillModifier(trinket, SKILLMOD_RESUPPLY_DELAY_MUL, -0.19)
 trinket = GM:AddTrinket("Tutorial for Pro", "stutor", false, book, bookw, 4, "+11% Points Multiplier.")
 GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.11)
-trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+33% Arsenal Discount\n  +18% Скидка.")
+trinket = GM:AddTrinket("Gaben Store", "gstore", false, supveles, supweles, 4, "+18% Arsenal Discount\n  +18% Скидка.")
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.18)
 trinket = GM:AddTrinket("FutureBluePrints", "futureblu", false, supveles, supweles, 4, "BluePrint From future!.+30% repair rate\n +30% К силе починке")
 GM:AddSkillModifier(trinket, SKILLMOD_REPAIRRATE_MUL, 0.30)

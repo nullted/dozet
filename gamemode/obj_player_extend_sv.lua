@@ -194,7 +194,7 @@ function meta:ProcessDamage(dmginfo)
 					self.LastBleakSoul = CurTime()
 					self.BleakSoulMessage = nil
 				end
-								if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 1 < CurTime()) then
+		        if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 1 < CurTime()) then
 					attacker:GiveStatus("burn", 50)
 					attacker:SetGroundEntity(nil)
 					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
@@ -204,6 +204,13 @@ function meta:ProcessDamage(dmginfo)
 
 					self.LastBleakSoul = CurTime()
 					self.BleakSoulMessage = nil
+				end
+				if self:HasTrinket("adrenaline") and (not self.LastBleakSoul or self.LastBleakSoul + 60 < CurTime()) then
+					self:GiveStatus("strengthdartboost", 15)
+					self:GiveStatus("speed", 15)
+				end
+				if self:IsSkillActive(SKILL_BLOODLOST)  then
+					self:GiveStatus("bloodrage", 6)
 				end
 				
 				

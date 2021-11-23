@@ -50,6 +50,13 @@ local statusdisplays = {
 	Icon = Material("zombiesurvival/slow.png")
 },
 {
+	Color = Color(75, 255, 0),
+	Name = "SPEED!",
+	ValFunc = statusValueFunction("speed"),
+	Max = 100,
+	Icon = Material("zombiesurvival/slow.png")
+},
+{
 	Color = Color(0, 135, 255),
 	Name = "FROST!",
 	ValFunc = statusValueFunction("frost"),
@@ -131,6 +138,13 @@ local statusdisplays = {
 	Name = "BLOODLUST!",
 	ValFunc = statusValueFunction("bloodlust"),
 	Max = 10,
+	Icon = Material("zombiesurvival/bleed.png")
+},
+{
+	Color = Color(120, 0, 0),
+	Name = "BLOOD RAGE!",
+	ValFunc = statusValueFunction("bloodrage"),
+	Max = 6,
 	Icon = Material("zombiesurvival/bleed.png")
 }
 }

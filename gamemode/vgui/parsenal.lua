@@ -742,18 +742,18 @@ function GM:OpenArsenalMenu()
 			local subcats = GAMEMODE.ItemSubCategories
 			if usecats then
 				local ind, tbn = 1
-				for i = ind, (trinkets and #subcats or 6) do
-					local ispacer = trinkets and ((i-1) % 3)+1 or i
+				for i = ind, (trinkets and #subcats or 7) do
+					local ispacer = trinkets and ((i-1) % 4)+1 or i
 					local start = i == (catid == ITEMCAT_GUNS and 2 or ind)
 
-					tbn = EasyButton(tabpane, trinkets and subcats[i] or ("Tier " .. i), 2, 8)
+					tbn = EasyButton(tabpane, trinkets and subcats[i] or ("Tier " .. i), 1, 6)
 					tbn:SetFont(trinkets and "ZSHUDFontSmallest" or "ZSHUDFontSmall")
 					tbn:SetAlpha(start and 255 or 70)
 					tbn:AlignRight((trinkets and -35 or -15) * screenscale -
 						(ispacer - ind) * (ind == 1 and (trinkets and 190 or 110) or 200) * screenscale
 					)
-					tbn:AlignTop(trinkets and i <= 3 and 0 or trinkets and 28 or 16)
-					tbn:SetContentAlignment(6)
+					tbn:AlignTop(trinkets and i <= 4 and 0 or trinkets and 32 or 16)
+					tbn:SetContentAlignment(7)
 					tbn:SizeToContents()
 					tbn.DoClick = function(me)
 						for k, v in pairs(tabpane.Grids) do
