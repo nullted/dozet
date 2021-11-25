@@ -306,6 +306,16 @@ GM:AddTrinket("Finesse Kit", "sharpkit", false, mveles, mweles, 2, "Deal up to +
 GM:AddTrinket("Sharp Stone", "sharpstone", false, mveles, mweles, 3, "+5% melee damage\n +5% К мили урону")
 --perfomance
 GM:AddSkillModifier(GM:AddTrinket("Adrenaline", "adrenaline", false, pveles, pweles, nil, "Each hit on you gives 15 seconds of buffs.\nКаждый удар по вам будет давать 15 сек баффов"), SKILLMOD_JUMPPOWER_MUL, 0.01)
+GM:AddSkillModifier(GM:AddTrinket("Forgotten Ascorbic Acid", "ass", false, pveles, pweles, nil, "+6 health,-2% Accuracy.\n+6 хп,-2% К аккуратности"), SKILLMOD_HEALTH, 6)
+trinket = GM:AddTrinket("Sports armband", "sarmband", true, pveles, pweles, 2, "+4% Jump Power\n+4% К прыжку")
+GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.04)
+trinket = GM:AddTrinket("Engineer Gaming", "engineer", true, pveles, pweles, 2, "+12% Deployable convert speed\n+12% К складыванию деплояблов")
+GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYABLE_PACKTIME_MUL, 0.12)
+trinket = GM:AddTrinket("Scout Gaming", "scout", true, pveles, pweles, 2, "+10 speed\n+10% к скорости")
+GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 10)
+trinket = GM:AddTrinket("Broken hammer", "scour", true, pveles, pweles, 2, "+30% repair hammer,-15% Point multiplier\n+30% к силе починке,-15% К поинтам")
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, -0.15)
+GM:AddSkillModifier(trinket, SKILLMOD_REPAIRRATE_MUL,  0.30)
 
 -- Performance Trinkets
 GM:AddTrinket("Oxygen Tank", "oxygentank", true, nil, {
