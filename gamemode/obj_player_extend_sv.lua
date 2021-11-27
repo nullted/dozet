@@ -208,6 +208,7 @@ function meta:ProcessDamage(dmginfo)
 				if self:HasTrinket("adrenaline") and (not self.LastBleakSoul or self.LastBleakSoul + 60 < CurTime()) then
 					self:GiveStatus("strengthdartboost", 15)
 					self:GiveStatus("speed", 15)
+					self:GiveStatus("adrenalineamp", 15)
 				end
 				if self:IsSkillActive(SKILL_BLOODLOST)  then
 					self:GiveStatus("bloodrage", 6)
