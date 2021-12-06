@@ -30,7 +30,9 @@ GM.StarterSoul = {
 	"trinket_cainsoul",   --18
 	"trinket_lazarussoul",	-- 19
 	"trinket_forsoul",  -- 20
-	"trinket_starsoul"  -- 21
+	"trinket_starsoul",  -- 21
+	"trinket_teasoul",  -- 22
+	"trinket_sugersoul"  -- 23
 }
 GM.Via = {
 	"trinket_via",
