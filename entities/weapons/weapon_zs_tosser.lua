@@ -28,7 +28,7 @@ SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadSound = Sound("Weapon_SMG1.Reload")
 SWEP.Primary.Sound = Sound("Weapon_AR2.NPC_Single")
-SWEP.Primary.Damage = 18
+SWEP.Primary.Damage = 16.5
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.15
 
@@ -51,7 +51,7 @@ SWEP.IronSightsPos = Vector(-6.425, 5, 1.02)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.015)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Thrower' Burst SMG", "Increased damage but makes the tosser burst fire", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 1.1
-	wept.Primary.Delay = wept.Primary.Delay * 3.9
+	wept.Primary.Delay = wept.Primary.Delay * 1.5
 	wept.Primary.BurstShots = 3
 
 	wept.PrimaryAttack = function(self)

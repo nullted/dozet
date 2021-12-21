@@ -126,7 +126,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lux", "Have big chance to create explosi
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()
 		local minushp = -zombie:Health()
-		if killer:IsValid() and minushp > -2 then
+		if killer:IsValid() and minushp > 10 then
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
