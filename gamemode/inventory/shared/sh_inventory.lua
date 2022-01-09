@@ -213,7 +213,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.11)
 --GM:AddWeaponModifier(trinket, WEAPON_MODIFIER_DAMAGE, 3)
 
 
-trinket = GM:AddTrinket("Greed eye", "greedeye", false, hpveles, hpweles, 4, "You receive 20 end wave points but arsenal item more expensive by 5%...\n Ты  получаешь на 20 поинтов больше под конец волны,но предметы в арсенале дороже на 5% ")
+trinket = GM:AddTrinket("Rich Eye", "greedeye", false, hpveles, hpweles, 4, "You receive 20 end wave points but arsenal item more expensive by 5%...\n Ты  получаешь на 20 поинтов больше под конец волны,но предметы в арсенале дороже на 5% ")
 GM:AddSkillModifier(trinket, SKILLMOD_ENDWAVE_POINTS, 20)
 GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, 0.05)
 
@@ -261,9 +261,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 10)
 
 -- Melee Trinkets
 
-description = "5 hits from fist weapons applies significant leg and arm damage\n-40% time before next unarmed strike\n Первые 5 ударов кулаками всегда будет преобразова в урон в ноги или руки,-40% к времени удара после удара кулаками для кулаков "
+description = "5 hits from fist weapons applies significant leg and arm damage\n-25% time before next unarmed strike\n Первые 5 ударов кулаками всегда будет преобразова в урон в ноги или руки,-25% к времени удара после удара кулаками для кулаков "
 trinket = GM:AddTrinket("Boxing Training Manual", "boxingtraining", false, mveles, mweles, nil, description)
-GM:AddSkillModifier(trinket, SKILLMOD_UNARMED_SWING_DELAY_MUL, -0.4)
+GM:AddSkillModifier(trinket, SKILLMOD_UNARMED_SWING_DELAY_MUL, -0.25)
 GM:AddSkillFunction(trinket, function(pl, active) pl.BoxingTraining = active end)
 
 trinket, trinketwep = GM:AddTrinket("Momentum Support", "momentumsupsysii", false, mveles, mweles, 2, "- 9% Melee delay\n+10% Melee knockback\n-9% К времени след удара\n +10% К мили отдачи")
