@@ -713,12 +713,12 @@ GM:AddSkill(SKILL_THREE_IN_ONE, "3 in 1", GOOD.."-16% melee swing impact delay\n
 																-3,			-3,					{SKILL_FOUR_IN_ONE}, TREE_MELEETREE)
 
 SKILL_POINTI = 157
-GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.03)
-GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.09 Luck,+3% Point MUL\n The quality system increases the chances of getting a better soul",
+GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.05)
+GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.04 Luck,+5% Point MUL\n The quality system increases the chances of getting a better soul",
 																0,			0,					{SKILL_NONE}, TREE_POINTTREE)
 SKILL_POINTII = 158
-GM:AddSkillModifier(SKILL_POINTII, SKILLMOD_POINT_MULTIPLIER, 0.05)
-GM:AddSkill(SKILL_POINTII, "Point II", GOOD.."+0.11 Luck,+5% Point MUL",
+GM:AddSkillModifier(SKILL_POINTII, SKILLMOD_POINT_MULTIPLIER, 0.06)
+GM:AddSkill(SKILL_POINTII, "Point II", GOOD.."+0.06 Luck,+6% Point MUL",
 																-0.5,			-1,					{SKILL_POINTI}, TREE_POINTTREE)
 SKILL_POINTIII = 159
 GM:AddSkillModifier(SKILL_POINTIII, SKILLMOD_POINT_MULTIPLIER, 0.08)
