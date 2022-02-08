@@ -1,6 +1,6 @@
 CLASS.Base = "wraith"
 
-CLASS.Name = "Corrupted Boss"
+CLASS.Name = "Soul Of Child"
 CLASS.TranslationName = "class_tormented_boss"
 CLASS.Description = "description_tormented_wraith"
 CLASS.Help = "controls_tormented_wraith"
