@@ -5,7 +5,7 @@ GM.Website	=	"https://github.com/erioxis/dozet"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Version", "Pre-Release", "0.974"},
+	{"Version", "Pre-Release", "0.98"},
 	{"erioxis", "Phantom coder", "dead"},
 	{"Server in", "december!", "(or april)"},
 }
@@ -524,7 +524,22 @@ function GM:OnPlayerHitGround(pl, inwater, hitfloater, speed)
 			end
 
 			if math.floor(damage) > 0 then
-				groundent:TakeSpecialDamage(damage * 5, DMG_CLUB, pl, pl, pl:GetPos())
+				groundent:TakeSpecialDamage(damage * 3, DMG_CLUB, pl, pl, pl:GetPos())
+				return true
+			end
+		end
+	end
+	if SERVER then
+		local groundent = pl:GetGroundEntity()
+		if groundent:IsValid() and groundent:IsPlayer() and PTeam(groundent) == TEAM_UNDEAD and pl:HasTrinket("toysite") then
+			if groundent:IsHeadcrab() then
+				groundent:TakeSpecialDamage(groundent:Health() + 200, DMG_DIRECT, pl, pl, pl:GetPos())
+			elseif groundent:IsTorso() then
+				groundent:TakeSpecialDamage(207, DMG_CLUB, pl, pl, pl:GetPos())
+			end
+
+			if math.floor(damage) > 0 then
+				groundent:TakeSpecialDamage(damage * 8, DMG_CLUB, pl, pl, pl:GetPos())
 				return true
 			end
 		end

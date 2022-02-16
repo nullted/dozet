@@ -400,7 +400,7 @@ trinket = GM:AddTrinket("Pulse Impedance Module", "pulseimpedance", false, ovele
 GM:AddSkillFunction(trinket, function(pl, active) pl.PulseImpedance = active end)
 GM:AddSkillModifier(trinket, SKILLMOD_PULSE_WEAPON_SLOW_MUL, 0.24)
 
-trinket = GM:AddTrinket("Curb Stompers", "curbstompers", false, oveles, oweles, 2, "Instantly kills headcrabs deals 50 damage to the thor class you jumped on \ndeals 500% damage from falling on the zombie you fell on\nyou will not be able to receive damage from falling when you fall on a zombie\t-25% Deceleration after falling\nМоментально убивает хедкрабов наносит 50 урона к торс классу на которого вы прыгнули \nНаносит 500% Урона от падения на зомби на которого вы упали\nВы не сможете получить урон от падения когда упадете на зомби\n-25% Замедлению после падения")
+trinket = GM:AddTrinket("Curb Stompers", "curbstompers", false, oveles, oweles, 2, "Instantly kills headcrabs deals 50 damage to the thor class you jumped on \ndeals 300% damage from falling on the zombie you fell on\nyou will not be able to receive damage from falling when you fall on a zombie\t-25% Deceleration after falling\nМоментально убивает хедкрабов наносит 50 урона к торс классу на которого вы прыгнули \nНаносит 300% Урона от падения на зомби на которого вы упали\nВы не сможете получить урон от падения когда упадете на зомби\n-25% Замедлению после падения")
 GM:AddSkillModifier(trinket, SKILLMOD_FALLDAMAGE_SLOWDOWN_MUL, -0.25)
 
 GM:AddTrinket("Superior Assembly", "supasm", false, oveles, oweles, 5, "Increase weapon damage if weapon tier 2 or lower\nУвеличивает урон оружия если тир 2 или выше")
@@ -469,8 +469,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.16)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.07)
 
-trinket = GM:AddTrinket("Toy Armor", "toysite", false, develes, deweles, 4, "You get 12% less damage, but the blood armor is ineffective, it is produced in 10%\nВы получаете на 12% меньше урона но кровавая броня неэффективна вырабатываеться в 10%")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.12)
+trinket = GM:AddTrinket("Diamond armor", "toysite", false, develes, deweles, 4, "You get 9% less damage, but the blood armor is ineffective, it is produced in 10%,you can stump headcrabs\nВы получаете на 09% меньше урона но кровавая броня неэффективна вырабатываеться в 10%,вы можете давить крабов")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.21)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.10)
 
