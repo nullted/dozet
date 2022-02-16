@@ -469,7 +469,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.16)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.07)
 
-trinket = GM:AddTrinket("Diamond armor", "toysite", false, develes, deweles, 4, "You get 9% less damage, but the blood armor is ineffective, it is produced in 10%,you can stump headcrabs\nВы получаете на 09% меньше урона но кровавая броня неэффективна вырабатываеться в 10%,вы можете давить крабов")
+trinket = GM:AddTrinket("Diamond armor", "toysite", false, develes, deweles, 4, "You get 9% less damage, but the blood armor is ineffective, it is produced in 10%,you can stump headcrabs\nВы получаете на 9% меньше урона но кровавая броня неэффективна вырабатываеться в 10%,вы можете давить крабов")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.21)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.10)
