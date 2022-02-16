@@ -32,6 +32,7 @@ ITEMCAT_TOOLS = 4
 ITEMCAT_DEPLOYABLES = 5
 ITEMCAT_TRINKETS = 6
 ITEMCAT_OTHER = 7
+ITEMCAT_SPECIAL = 8
 
 
 ITEMSUBCAT_TRINKETS_DEFENSIVE = 1
@@ -50,7 +51,8 @@ GM.ItemCategories = {
 	[ITEMCAT_TOOLS] = "Tools",
 	[ITEMCAT_DEPLOYABLES] = "Deployables",
 	[ITEMCAT_TRINKETS] = "Trinkets",
-	[ITEMCAT_OTHER] = "Other"
+	[ITEMCAT_OTHER] = "Other",
+	[ITEMCAT_SPECIAL] = "Skill"
 }
 
 GM.ItemSubCategories = {
@@ -646,6 +648,15 @@ item.SkillRequirement = SKILL_U_CORRUPTEDFRAGMENT
 item =
 GM:AddPointShopItem("nanitecloud",		ITEMCAT_OTHER,			40,				"weapon_zs_nanitecloudbomb")
 item.SkillRequirement = SKILL_U_NANITECLOUD
+item =
+GM:AddPointShopItem("nulledher",		ITEMCAT_SPECIAL,			80,				"trinket_nulledher")
+item.SkillRequirement = SKILL_HEARTS
+item =
+GM:AddPointShopItem("voidheart",		ITEMCAT_SPECIAL,			80,				"trinket_voidheart")
+item.SkillRequirement = SKILL_HEARTS
+item =
+GM:AddPointShopItem("kheart",		ITEMCAT_SPECIAL,			120,				"trinket_kheart")
+item.SkillRequirement = SKILL_HEARTS
 
 -- These are the honorable mentions that come at the end of the round.
 

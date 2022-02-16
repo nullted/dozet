@@ -1252,6 +1252,7 @@ function GM:Think()
 					pl.NextRegenerate = time + 60
 					pl:SetHealth(math.min(healmax, pl:Health() + 500))
 				end
+
 				if pl:HasTrinket("adrenaline") and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.85) then
 					pl.NextRegenerate = time + 60
 					pl:GiveStatus("strengthdartboost", 20)
@@ -1261,6 +1262,15 @@ function GM:Think()
 					pl.NextRegenTrinket = time + 7
 					pl:SetHealth(math.min(healmax, pl:Health() + 7))
 				end
+				if pl:HasTrinket("nulledher") and time >= pl.NextRegenTrinket and pl:Health() < healmax then
+					pl.NextRegenTrinket = time + 3
+					pl:SetHealth(math.min(healmax, pl:Health() - 2))
+				end
+				if pl:HasTrinket("kheart") and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.15) then
+					pl.NextRegenerate = time + 200
+					pl:SetHealth(math.min(healmax, pl:Health() + 500))
+				end
+
 
 				if pl:IsSkillActive(SKILL_BLOODARMOR) and pl.MaxBloodArmor > 0 and time >= pl.NextBloodArmorRegen and pl:GetBloodArmor() < pl.MaxBloodArmor then
 					pl.NextBloodArmorRegen = time + 8

@@ -834,6 +834,9 @@ GM:AddSkill(SKILL_BLOODMARY, "Sanguinum Messis", GOOD.."Sanguinem protegit",
 										SKILL_TRUEPOWER = 187
 GM:AddSkill(SKILL_TRUEPOWER, "Future Knowledge Vol.3", GOOD.."Cost Of Knowledge",
 																				-5,			-10,					{SKILL_BLOODMARY}, TREE_ANCIENTTREE)
+																														SKILL_HEARTS = 202
+GM:AddSkill(SKILL_HEARTS, "Ancient Hearts", GOOD.."Unlock Heart Trinkets",
+																				-5,			-11,					{SKILL_TRUEPOWER}, TREE_ANCIENTTREE)
 
 SKILL_DEFEND = 190
 GM:AddSkill(SKILL_DEFEND, "Defender of the Sigil I", GOOD.."You get 2% less damage\n"..BAD.."Speed -1",

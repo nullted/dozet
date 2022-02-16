@@ -575,8 +575,16 @@ trinket = GM:AddTrinket("Steel Shield", "sshield", false, supveles, supweles, 4,
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, -0.12)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.20)
 
-
-
+--Special Trinkets
+trinket = GM:AddTrinket("Null heart", "nulledher", false, supveles, supweles, 4, "+10% Melee Damage,+20 health,slowly dying after taking damage\n+10% мили урона,+20 хп,медленно умираешь после получения урона")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.1)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 20)
+trinket = GM:AddTrinket("Heart of the void", "voidheart", false, supveles, supweles, 4, "+25% К мили урону,-30хп\n+25% Melee damage,-30 health")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.25)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -30)
+trinket = GM:AddTrinket("King Heart", "kheart", false, supveles, supweles, 4, "+5% К полученым поинтам,-30хп\n+5% Point Multiplier,-30 health")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.25)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -30)
 
 
 
