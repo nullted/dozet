@@ -657,6 +657,9 @@ item.SkillRequirement = SKILL_HEARTS
 item =
 GM:AddPointShopItem("kheart",		ITEMCAT_SPECIAL,			120,				"trinket_kheart")
 item.SkillRequirement = SKILL_HEARTS
+item =
+GM:AddPointShopItem("cursedtrinket",		ITEMCAT_SPECIAL,			120,				"trinket_cursedtrinket")
+item.SkillRequirement = SKILL_CURSEDTRINKETS
 
 -- These are the honorable mentions that come at the end of the round.
 
