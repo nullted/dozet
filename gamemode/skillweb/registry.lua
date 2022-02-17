@@ -261,6 +261,7 @@ SKILL_SOULNET = 156
 SKILL_GLASSMAN = 165
 SKILL_THREE_IN_ONE = 188
 SKILL_BANDOLIER = 200
+SKILL_CURSEDTRINKETS = 201
 SKILL_BLOODLOST = 210
 
 
@@ -458,7 +459,8 @@ GM:AddSkill(SKILL_WARP, "Warp", GOOD.."-5% sigil teleportation time",
 																2,			2,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_SIGILOL, "Sigil Infection", GOOD.."+300% Speed in phasing phase\n"..BAD.."+100% sigil teleportation time",
 																2,			4,					{SKILL_WARP}, TREE_SPEEDTREE)
-
+GM:AddSkill(SKILL_CURSEDTRINKETS, "Worth Trinkets", GOOD.."Cursed?\n"..BAD.."Cursed?\n"..GOOD.."Cursed?\n"..BAD.."Cursed?\n"..GOOD.."Cursed?\n"..BAD.."Cursed?\n"..GOOD.."Cursed?",
+																2,		    5,					{SKILL_SIGILOL}, TREE_SPEEDTREE)
 
 GM:AddSkill(SKILL_UNSIGIL, "Uncorrupter", GOOD.."+24% Reload speed\n"..BAD.."-80% Melee damage",
 																0,			2,					{SKILL_LEVELHEADED}, TREE_GUNTREE)
