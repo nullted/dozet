@@ -85,6 +85,7 @@ TREE_GUNTREE = 6
 TREE_POINTTREE = 7
 TREE_ANCIENTTREE = 8
 TREE_DEFENSETREE = 9
+TREE_DONATETREE = 10
 
 -- Dummy skill used for "connecting" to their trees.
 SKILL_NONE = 0
@@ -262,6 +263,7 @@ SKILL_GLASSMAN = 165
 SKILL_THREE_IN_ONE = 188
 SKILL_BANDOLIER = 200
 SKILL_CURSEDTRINKETS = 201
+SKILL_DONATE1 = 203
 SKILL_BLOODLOST = 210
 
 
@@ -902,7 +904,21 @@ GM:AddSkill(SKILL_MERIS, "Meris", GOOD.."-10% Damage taken\n"..BAD.."-20% Melee 
 
 GM:AddSkillModifier(SKILL_MERIS, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.10)
 GM:AddSkillModifier(SKILL_MERIS, SKILLMOD_MELEE_DAMAGE_MUL, -0.2)
+GM:AddSkill(SKILL_DONATE1, "Donate I", GOOD.."-3% Damage taken\n"..GOOD.."+2% Melee damage! Thank Null",
+				                                                            	21,			20,					{SKILL_NONE}, TREE_DONATETREE)
 
+GM:AddSkillModifier(SKILL_DONATE1, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.03)
+GM:AddSkillModifier(SKILL_DONATE1, SKILLMOD_MELEE_DAMAGE_MUL, 0.02)
+SKILL_DONATE2 = 204
+GM:AddSkill(SKILL_DONATE2, "Donate II", GOOD.."+5 Blood armor\n"..GOOD.."-5% Poison Speed!Thank Null",
+				                                                            	20,			21,					{SKILL_DONATE1}, TREE_DONATETREE)
+
+GM:AddSkillModifier(SKILL_DONATE2, SKILLMOD_BLOODARMOR, 5)
+GM:AddSkillModifier(SKILL_DONATE2, SKILLMOD_POISON_SPEED_MUL, -0.05)
+SKILL_HELPFORPROJECT = 205
+GM:AddSkill(SKILL_HELPFORPROJECT, "Donate", GOOD.."Donate if you want to get new skills\n"..BAD.."+1 skill for every donate",
+				                                                            	20,			20,					{}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_HELPFORPROJECT, SKILLMOD_BLOODARMOR, 1)
 GM:AddSkillModifier(SKILL_BLOODLOST, SKILLMOD_HEALTH, -30)
 
 
