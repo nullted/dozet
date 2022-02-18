@@ -367,6 +367,7 @@ SKILLMOD_AIM_SHAKE_MUL = 98
 SKILLMOD_MEDDART_EFFECTIVENESS_MUL = 99
 SKILLMOD_DAMAGE = 100
 SKILLMOD_HEADSHOT_MUL = 101
+SKILLMOD_XP = 102
 
 local GOOD = "^"..COLORID_GREEN
 local BAD = "^"..COLORID_RED
@@ -919,6 +920,10 @@ SKILL_HELPFORPROJECT = 205
 GM:AddSkill(SKILL_HELPFORPROJECT, "Donate", GOOD.."Donate if you want to get new skills\n"..BAD.."+1 skill for every donate",
 				                                                            	20,			20,					{}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_HELPFORPROJECT, SKILLMOD_BLOODARMOR, 1)
+SKILL_DONATE3 = 206
+GM:AddSkill(SKILL_DONATE3, "Donate III", GOOD.."+100% For XP\n"..BAD.."Donate For take this skill",
+				                                                            	20,			22,					{}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_DONATE3, SKILLMOD_XP, 1)
 GM:AddSkillModifier(SKILL_BLOODLOST, SKILLMOD_HEALTH, -30)
 
 
@@ -1156,6 +1161,9 @@ GM:SetSkillModifierFunction(SKILLMOD_DIMVISION_EFF_MUL, function(pl, amount)
 	pl.DimVisionEffMul = math.Clamp(amount + 1.0, 0.0, 1000.0)
 end)
 
+GM:SetSkillModifierFunction(SKILLMOD_XP, function(pl, amount)
+	GAMEMODE.HumanXPMulti = math.Clamp(amount + 1.0, 0.0, 1000.0)
+end)
 GM:SetSkillModifierFunction(SKILLMOD_PROP_CARRY_SLOW_MUL, function(pl, amount)
 	pl.PropCarrySlowMul = math.Clamp(amount + 1.0, 0.0, 1000.0)
 end)
