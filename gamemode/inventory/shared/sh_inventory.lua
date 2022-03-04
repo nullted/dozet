@@ -258,7 +258,10 @@ GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 40)
 trinket, trinketwep = GM:AddTrinket("Status", "via3", false, hpveles, hpweles, 2, "Vera Via,bloodoarmoro +8")
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 10)
 
+-- Hohol
+trinket, trinketwep = GM:AddTrinket("Сало", "salo", false, mveles, mweles, 2, "Доигрались хохлы?")
 
+trinketwep.PermitDismantle = true
 -- Melee Trinkets
 
 description = "5 hits from fist weapons applies significant leg and arm damage\n-25% time before next unarmed strike\n Первые 5 ударов кулаками всегда будет преобразова в урон в ноги или руки,-25% к времени удара после удара кулаками для кулаков "
