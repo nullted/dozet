@@ -921,9 +921,9 @@ GM:AddSkill(SKILL_HELPFORPROJECT, "Donate", GOOD.."Donate if you want to get new
 				                                                            	20,			20,					{}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_HELPFORPROJECT, SKILLMOD_BLOODARMOR, 1)
 SKILL_DONATE3 = 206
-GM:AddSkill(SKILL_DONATE3, "Donate III", GOOD.."+50% For XP\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	20,			22,					{}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE3, SKILLMOD_XP, 0.5)
+GM:AddSkill(SKILL_DONATE3, "Donate III", GOOD.."+25% For XP\n"..BAD.."Free skill",
+				                                                            	20,			22,					{SKILL_DONATE2}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_DONATE3, SKILLMOD_XP, 0.25)
 SKILL_DONATE4 = 207
 GM:AddSkill(SKILL_DONATE4, "Donate IV", GOOD.."+10% Reload Speed\n"..BAD.."Donate if you want to unlock this skill",
 				                                                            	21,			23,					{SKILL_DONATE3}, TREE_DONATETREE)
