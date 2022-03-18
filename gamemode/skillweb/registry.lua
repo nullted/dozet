@@ -925,12 +925,12 @@ GM:AddSkill(SKILL_DONATE3, "Donate III", GOOD.."+25% For XP\n"..BAD.."Free skill
 				                                                            	20,			22,					{SKILL_DONATE2}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE3, SKILLMOD_XP, 0.25)
 SKILL_DONATE4 = 207
-GM:AddSkill(SKILL_DONATE4, "Donate IV", GOOD.."+10% Reload Speed\n"..BAD.."Donate if you want to unlock this skill",
+GM:AddSkill(SKILL_DONATE4, "Donate IV", GOOD.."+14% Reload Speed\n"..BAD.."THX cheetus",
 				                                                            	21,			23,					{SKILL_DONATE3}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE4, SKILLMOD_RELOADSPEED_MUL, 0.1)
+GM:AddSkillModifier(SKILL_DONATE4, SKILLMOD_RELOADSPEED_MUL, 0.14)
 SKILL_DONATE5 = 208
 GM:AddSkill(SKILL_DONATE5, "Donate V", GOOD.."Sale by 10%\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	22,			23,					{SKILL_DONATE4}, TREE_DONATETREE)
+				                                                            	22,			23,					{SKILL_DONATE6}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE5, SKILLMOD_ARSENAL_DISCOUNT, -0.1)
 SKILL_DONATE6 = 209
 GM:AddSkill(SKILL_DONATE6, "Donate VI", GOOD.."+% To blood armor convert\n"..BAD.."Donate if you want to unlock this skill",
