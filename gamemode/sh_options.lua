@@ -350,6 +350,7 @@ GM:AddPointShopItem("hyena",			ITEMCAT_GUNS,			100,				"weapon_zs_hyena")
 GM:AddPointShopItem("pollutor",			ITEMCAT_GUNS,			100,				"weapon_zs_pollutor")
 GM:AddPointShopItem("smgstick",			ITEMCAT_GUNS,			100,				"weapon_zs_smgstick")
 GM:AddPointShopItem("stalker",			ITEMCAT_GUNS,			100,			"weapon_zs_m4")
+GM:AddPointShopItem("binocle",			ITEMCAT_GUNS,			100,			"weapon_zs_binocle")
 -- Tier 4
 GM:AddPointShopItem("longarm",			ITEMCAT_GUNS,			180,			"weapon_zs_longarm")
 GM:AddPointShopItem("sweeper",			ITEMCAT_GUNS,			180,			"weapon_zs_sweepershotgun")
