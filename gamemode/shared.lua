@@ -5,9 +5,9 @@ GM.Website	=	"https://github.com/erioxis/dozet"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Version", "Pre-Release", "0.99"},
+	{"Version", "Release", "1.0"},
 	{"erioxis", "Phantom coder", "dead"},
-	{"Server in", "december!", "(or april)"},
+	{"Server in", "April", "(TRUE FACT)"},
 }
 
 if file.Exists(GM.FolderName.."/gamemode/maps/"..game.GetMap()..".lua", "LUA") then
