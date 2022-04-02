@@ -5,7 +5,7 @@ GM.Website	=	"https://github.com/erioxis/dozet"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"Version", "Release", "1.05"},
+	{"Version", "Release", "1.07"},
 	{"erioxis", "Phantom coder", "dead"},
 	{"Server in", "April", "(TRUE FACT)"},
 }
@@ -828,6 +828,9 @@ function GM:IsSpecialPerson(pl, image)
 		img = "VGUI/servers/icon_robotron"
 		tooltip = "Admin"
 	elseif pl:SteamID() == "STEAM_0:1:196107962" then
+		img = "noxiousnet/noxicon.png"
+		tooltip = "Good Man"
+	elseif pl:SteamID() == "STEAM_0:1:434267757" then
 		img = "noxiousnet/noxicon.png"
 		tooltip = "Good Man"
 	elseif pl:SteamID() == "STEAM_0:1:92937109" then

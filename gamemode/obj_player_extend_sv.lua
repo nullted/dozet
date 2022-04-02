@@ -342,7 +342,7 @@ function meta:GetBossZombieIndex()
 	if GAMEMODE:IsBabyMode() then
 		desired = "Giga Gore Child"
 	elseif desired == "[RANDOM]" or desired == "" then
-		desired = "Giga Gore Child"
+		desired = "[RANDOM]"
 	end
 
 	local bossindex
@@ -1685,7 +1685,8 @@ local bossdrops = {
 	"trinket_forsoul",  -- 20
 	"trinket_starsoul",  -- 21
 	"trinket_teasoul",  -- 22
-	"trinket_sugersoul"  -- 23
+	"trinket_sugersoul",  -- 23
+	"weapon_zs_m6"
 }
 
 function meta:MakeBossDrop()

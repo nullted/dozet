@@ -16,7 +16,7 @@ SWEP.Primary.ClipSize = 3
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 3
-SWEP.Primary.Damage = 87
+SWEP.Primary.Damage = 188
 
 SWEP.ConeMin = 0.0001
 SWEP.ConeMax = 0.0001
@@ -25,7 +25,7 @@ SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 3
 
-SWEP.MaxBombs = 3
+SWEP.MaxBombs = 15
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Cryo Sticky Launcher", "Fires cryo bombs that deal less damage but slow zombies", function(wept)
