@@ -400,7 +400,7 @@ GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			9,				nil,							"35 chemical 
 item =
 GM:AddPointShopItem("100mkit",			ITEMCAT_AMMO,			10,				nil,							"50 Medical Kit power",			"50 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(50, "Battery", true) end)
 item.CanMakeFromScrap = true
-GM:AddPointShopItem("nailsz",			ITEMCAT_AMMO,			1,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
+GM:AddPointShopItem("nailsz",			ITEMCAT_AMMO,			7,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
 
 item.NoClassicMode = true
 -- Tier 1

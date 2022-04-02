@@ -7,7 +7,7 @@ CLASS.Help = "controls_the_tickle_monster"
 CLASS.KnockbackScale = 0
 CLASS.Wave = 1
 
-CLASS.Health = 11000
+CLASS.Health = 51000
 CLASS.Speed = 60
 CLASS.Hidden = true
 
@@ -18,7 +18,7 @@ CLASS.CanTaunt = true
 CLASS.Points = 1200
 
 
-CLASS.SWEP = "weapon_zs_ticklemonster"
+CLASS.SWEP = "weapon_zs_megacringe"
 
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")
 CLASS.OverrideModel = Model("models/player/zombie_fast.mdl")

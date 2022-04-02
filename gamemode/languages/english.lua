@@ -322,6 +322,7 @@ LANGUAGE.class_tormented_boss						= "Soul Of Death"
 LANGUAGE.class_shadow_r      						= "Shadow nigger"
 LANGUAGE.class_bartor        						= "Baracat Torso"
 LANGUAGE.class_baw								    = "Bad Marrow"
+LANGUAGE.class_eraditor							= "Eraditor"
 -- Class descriptions
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
 LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."

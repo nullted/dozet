@@ -444,7 +444,7 @@ GM:AddSkill(SKILL_AGILEII, "Agile II", GOOD.."+5% jumping power\n"..BAD.."-3 mov
 																4,			2,					{SKILL_AGILEIII, SKILL_WORTHINESS3}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_AGILEIII, "Agile III", GOOD.."+6% jumping power\n"..BAD.."-4 movement speed",
 																4,			-2,					{SKILL_SAFEFALL, SKILL_ULTRANIMBLE, SKILL_SURESTEP, SKILL_INTREPID}, TREE_SPEEDTREE)
-GM:AddSkill(SKILL_D_SLOW, "Slow", GOOD.."+30 starting Worth\n"..GOOD.."+20 end of wave points\n"..BAD.."-13.75 movement speed",
+GM:AddSkill(SKILL_D_SLOW, "Slow", GOOD.."+30 starting Worth\n"..GOOD.."+20 end of wave points\n"..BAD.."-68.75 movement speed",
 																0,			-4,					{}, TREE_SPEEDTREE)
 GM:AddSkill(SKILL_MOTIONI, "Motion I", GOOD.."+5 movement speed",
 																-2,			-2,					{SKILL_MOTIONII}, TREE_SPEEDTREE)
@@ -893,11 +893,11 @@ GM:AddSkill(SKILL_DEFENDEROFM, "Defender of Monsters", BAD.."You get 5% more dam
 GM:AddSkillModifier(SKILL_DEFENDEROFM, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.05)
 GM:AddSkillModifier(SKILL_DEFENDEROFM, SKILLMOD_MELEE_DAMAGE_MUL, 0.05)
 SKILL_TRIP = 198
-GM:AddSkill(SKILL_TRIP, "Wall curse", GOOD.."-35% Damage taken\n"..BAD.."Melee damage multiplier 0.53x\n"..BAD.."-60 Speed\nYou have power of the wall!",
+GM:AddSkill(SKILL_TRIP, "Wall curse", GOOD.."-20% Damage taken\n"..BAD.."Melee damage multiplier 0.73x\n"..BAD.."-60 Speed\nYou have power of the wall!",
 				                                                            	-2,			2,					{SKILL_DEFENDEROFM}, TREE_DEFENSETREE)
 
-GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.35)
-GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_MELEE_DAMAGE_MUL, -0.47)
+GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.20)
+GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_MELEE_DAMAGE_MUL, -0.27)
 GM:AddSkillModifier(SKILL_TRIP, SKILLMOD_SPEED, -60)
 SKILL_MERIS = 199
 GM:AddSkill(SKILL_MERIS, "Meris", GOOD.."-10% Damage taken\n"..BAD.."-20% Melee damage!",
@@ -1374,7 +1374,7 @@ GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.50)
 
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_WORTH, 30)
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_ENDWAVE_POINTS, 20)
-GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_SPEED, -13.75)
+GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_SPEED, -68.75)
 
 GM:AddSkillModifier(SKILL_GOURMET, SKILLMOD_FOODEATTIME_MUL, 2.0)
 GM:AddSkillModifier(SKILL_GOURMET, SKILLMOD_FOODRECOVERY_MUL, 4.0)

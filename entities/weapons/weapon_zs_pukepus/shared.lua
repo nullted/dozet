@@ -2,7 +2,7 @@ SWEP.Base = "weapon_zs_zombie"
 
 SWEP.PrintName = "Puke Pus"
 
-SWEP.Primary.Delay = 3.5
+SWEP.Primary.Delay = 6
 
 SWEP.ViewModel = "models/weapons/v_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
@@ -22,7 +22,7 @@ function SWEP:PrimaryAttack()
 	local delay = owner:GetMeleeSpeedMul()
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay * delay)
 
-	self.PukeLeft = 35
+	self.PukeLeft = 15
 
 	owner:EmitSound("npc/barnacle/barnacle_die2.wav")
 	owner:EmitSound("npc/barnacle/barnacle_digesting1.wav")

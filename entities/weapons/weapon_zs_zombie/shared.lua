@@ -9,7 +9,7 @@ SWEP.WorldModel = ""
 SWEP.MeleeDelay = 0.74
 SWEP.MeleeReach = 48
 SWEP.MeleeSize = 4.5 --1.5
-SWEP.MeleeDamage = 46
+SWEP.MeleeDamage = 33
 SWEP.MeleeForceScale = 1
 SWEP.MeleeDamageType = DMG_SLASH
 

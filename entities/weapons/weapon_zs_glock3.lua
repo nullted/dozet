@@ -24,7 +24,7 @@ SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.UseHands = true
 
 SWEP.Primary.Sound = Sound("Weapon_Glock.Single")
-SWEP.Primary.Damage = 30
+SWEP.Primary.Damage = 22
 SWEP.Primary.NumShots = 2
 SWEP.Primary.Delay = 0.3
 
@@ -43,9 +43,9 @@ SWEP.IronSightsPos = Vector(-5.75, 10, 2.7)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.9, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.5, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 9 less but more accurate shots, lesser base damage, and a chance to gain reaper stacks", function(wept)
-	wept.Primary.NumShots = 9
-	wept.Primary.Damage = wept.Primary.Damage * 0.90
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 4 less but more accurate shots, lesser base damage, and a chance to gain reaper stacks", function(wept)
+	wept.Primary.NumShots = 4
+	wept.Primary.Damage = wept.Primary.Damage * 0.7
 	wept.ConeMin = wept.ConeMin * 0.65
 	wept.ConeMax = wept.ConeMax * 0.65
 
@@ -61,7 +61,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 9 less but m
 end)
 local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shredder' SOCOM Mark 23", "Fires 1 shot, hides your aura, deals HIGHER total damage but is more accurate", function(wept)
 	wept.Primary.NumShots = 1
-	wept.Primary.Damage = wept.Primary.Damage * 6
+	wept.Primary.Damage = wept.Primary.Damage * 3
 	wept.Primary.Delay = 1.6
 	wept.ConeMin = wept.ConeMin * 0.3
 	wept.ConeMax = wept.ConeMax * 0.4

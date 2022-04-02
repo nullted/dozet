@@ -588,9 +588,9 @@ GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -30)
 trinket = GM:AddTrinket("King Heart", "kheart", false, supveles, supweles, 4, "+5% К полученым поинтам,-30хп\n+5% Point Multiplier,-30 health")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.25)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -30)
-trinket = GM:AddTrinket("Cursed Trinket", "cursedtrinket", false, supveles, supweles, 4, "Всегда меняется(5% К мили урону)x2 Опыт\nEver Change(+10% Melee damage)-25% Points MUL ")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
-GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, -0.25)
+trinket = GM:AddTrinket("Cursed Trinket", "cursedtrinket", false, supveles, supweles, 4, "Всегда меняется(-15% К мили урону)+12% К множителю\nEver Change(-15% Melee damage)+12% Points MUL ")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, -0.15)
+GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, 0.12)
 
 
 
