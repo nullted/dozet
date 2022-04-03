@@ -91,6 +91,13 @@ function CLASS:UpdateAnimation(pl, velocity, maxseqgroundspeed)
 	return true
 end
 
+if SERVER then
+	function CLASS:ProcessDamage(pl, dmginfo)
+		if dmginfo:GetInflictor().IsMelee then
+			dmginfo:SetDamage(dmginfo:GetDamage() / 2)
+		end
+	end
+
 function CLASS:DoAnimationEvent(pl, event, data)
 	if event == PLAYERANIMEVENT_ATTACK_PRIMARY then
 		pl:AnimRestartGesture(GESTURE_SLOT_ATTACK_AND_RELOAD, ACT_GMOD_GESTURE_RANGE_ZOMBIE_SPECIAL, true)

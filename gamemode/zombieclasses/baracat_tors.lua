@@ -10,7 +10,7 @@ CLASS.Wave = 3 / 6
 CLASS.Threshold = 0
 CLASS.Hidden = false
 
-CLASS.Health = 600
+CLASS.Health = 200
 CLASS.Speed = 210
 CLASS.JumpPower = 300
 
