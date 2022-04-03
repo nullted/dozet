@@ -265,6 +265,7 @@ SKILL_BANDOLIER = 200
 SKILL_CURSEDTRINKETS = 201
 SKILL_DONATE1 = 203
 SKILL_BLOODLOST = 210
+SKILL_ABUSE = 218
 
 
 SKILLMOD_HEALTH = 1
@@ -413,7 +414,7 @@ GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+8 maximum health",
 																0,			-2,					{SKILL_VITALITY3}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+8 maximum health",
 																0,			-0,					{SKILL_D_WEAKNESS}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+20 maximum health and +30 speed",
+GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+10 maximum health and +10 speed",
 																1,			1,					{SKILL_GOURMET}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_TANKER, "Tanker", GOOD.."+60 maximum health\n"..BAD.."-40 movement speed",
 																-5,			4,					{}, TREE_HEALTHTREE)
@@ -677,7 +678,9 @@ GM:AddSkill(SKILL_BATTLER4, "Battler IV", GOOD.."+9% melee damage\n"..BAD.."-13%
 GM:AddSkill(SKILL_BATTLER5, "Battler V", GOOD.."+10% melee damage\n"..BAD.."-16% weapon reload speed",
 																0,			2,					{SKILL_GLASSWEAPONS, SKILL_BLOODLUST}, TREE_MELEETREE)
 GM:AddSkill(SKILL_LASTSTAND, "Last Stand", GOOD.."Double melee damage when below 25% health\n"..BAD.."0.85x melee weapon damage at any other time",
-																0,			6,					{}, TREE_MELEETREE)
+																0,			6,					{SKILL_ABUSE}, TREE_MELEETREE)
+GM:AddSkill(SKILL_ABUSE, "Last abuse", GOOD.."+10% Melee damage\n"..BAD.."25% Max health for heal",
+																0,			7,					{}, TREE_MELEETREE)
 GM:AddSkill(SKILL_SOULNET, "Soul Eater", GOOD.."In Start Gave random soul\n"..GOOD.."Gave +6% Damage for scythe\n"..BAD.."-10% melee damage",
 																0,			4,					{SKILL_LASTSTAND}, TREE_MELEETREE)
 GM:AddSkill(SKILL_GLASSWEAPONS, "Glass Weapons", GOOD.."3.5x melee weapon damage vs. zombies\n"..BAD.."Your melee weapons have a 50% chance to break when hitting a zombie",
@@ -952,6 +955,18 @@ SKILL_DONATE10 = 214
 GM:AddSkill(SKILL_DONATE10, "Donate X", GOOD.."+ Worth\n"..BAD.."Donate if you want to unlock this skill",
 				                                                            	21,			26,					{SKILL_DONATE9}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE10, SKILLMOD_WORTH, 10)
+SKILL_CHALLENGER1 = 215
+GM:AddSkill(SKILL_CHALLENGER1, "Challenger I", GOOD.."+20 Health,help for challenges!\n"..GOOD.."Can use in any challenge",
+				                                                            	25,			26,					{SKILL_CHALLENGER2}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_CHALLENGER1, SKILLMOD_HEALTH, 20)
+SKILL_CHALLENGER2 = 216
+GM:AddSkill(SKILL_CHALLENGER2, "Challenger II", GOOD.."+20% Reload speed\n"..GOOD.."Can use in any challenge",
+				                                                            	25,			24,					{SKILL_CHALLENGER3}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_CHALLENGER2, SKILLMOD_RELOADSPEED_MUL, 0.2)
+SKILL_CHALLENGER3 = 217
+GM:AddSkill(SKILL_CHALLENGER3, "Challenger III", GOOD.."+100% XP Multiplier\n"..GOOD.."Can use in any challenge",
+				                                                            	25,			20,					{SKILL_CHALLENGER2}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_CHALLENGER3, SKILLMOD_XP, 1)
 
 
 
@@ -959,7 +974,7 @@ GM:AddSkillModifier(SKILL_DONATE10, SKILLMOD_WORTH, 10)
 
 
 GM:AddSkillModifier(SKILL_BLOODLOST, SKILLMOD_HEALTH, -30)
-
+GM:AddSkillModifier(SKILL_ABUSE, SKILLMOD_MELEE_DAMAGE_MUL, 0.1)
 
 
 
@@ -1315,8 +1330,8 @@ GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_SPEED, -10)
 GM:AddSkillModifier(SKILL_VITALITY1, SKILLMOD_HEALTH, 8)
 GM:AddSkillModifier(SKILL_VITALITY2, SKILLMOD_HEALTH, 8)
 GM:AddSkillModifier(SKILL_VITALITY3, SKILLMOD_HEALTH, 8)
-GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_HEALTH, 20)
-GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 30)
+GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_HEALTH, 10)
+GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 10)
 
 GM:AddSkillModifier(SKILL_MOTIONI, SKILLMOD_SPEED, 5)
 GM:AddSkillModifier(SKILL_MOTIONII, SKILLMOD_SPEED, 9)

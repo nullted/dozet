@@ -1239,6 +1239,7 @@ function GM:Think()
 				end
 
 				local healmax = pl:IsSkillActive(SKILL_D_FRAIL) and math.floor(pl:GetMaxHealth() * 0.44) or pl:GetMaxHealth()
+				local healmax = pl:IsSkillActive(SKILL_ABUSE) and math.floor(pl:GetMaxHealth() * 0.25) or pl:GetMaxHealth()
 
 				if pl:IsSkillActive(SKILL_REGENERATOR) and time >= pl.NextRegenerate and pl:Health() < math.min(healmax, pl:GetMaxHealth() * 0.6) then
 					pl.NextRegenerate = time + 6
@@ -3409,6 +3410,8 @@ function GM:PlayerUse(pl, ent)
 		if pl:Team() == TEAM_UNDEAD then
 			return false
 		elseif pl:IsSkillActive(SKILL_D_FRAIL) and pl:Health() >= math.floor(pl:GetMaxHealth() * 0.44) then
+			return false
+		elseif pl:IsSkillActive(SKILL_ABUSE) and pl:Health() >= math.floor(pl:GetMaxHealth() * 0.25) then
 			return false
 		end
 	elseif pl:Team() == TEAM_HUMAN and not pl:IsCarrying() and pl:KeyPressed(IN_USE) then
