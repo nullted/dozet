@@ -4,6 +4,6 @@ function ENT:ShouldNotCollide(ent)
 	return ent:IsPlayer() and ent:Team() == TEAM_HUMAN
 end
 
-ENT.Damage = 670
+ENT.Damage = 120
 
-ENT.PointsMultiplier = 0.3
+ENT.PointsMultiplier = 2
