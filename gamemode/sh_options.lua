@@ -785,10 +785,10 @@ end)
 -- Static values that don't need convars...
 
 -- Initial length for wave 1.
-GM.WaveOneLength = 140
+GM.WaveOneLength = 100
 
 -- Add this many seconds for each additional wave.
-GM.TimeAddedPerWave = 20
+GM.TimeAddedPerWave = 10
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
 GM.NoNewHumansWave = 4

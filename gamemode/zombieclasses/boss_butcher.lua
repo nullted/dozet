@@ -7,14 +7,13 @@ CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 3211
-CLASS.Speed = 370
+CLASS.Health = 1200
+CLASS.Speed = 300
 
 CLASS.CanTaunt = true
 
 CLASS.FearPerInstance = 1
 
-CLASS.Points = 120
 
 CLASS.SWEP = "weapon_zs_butcherknifez"
 
