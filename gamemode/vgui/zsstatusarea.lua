@@ -146,6 +146,13 @@ local statusdisplays = {
 	ValFunc = statusValueFunction("bloodrage"),
 	Max = 6,
 	Icon = Material("zombiesurvival/bleed.png")
+},
+{
+	Color = Color(100, 100, 100),
+	Name = "CURSED!",
+	ValFunc = statusValueFunction("cursed"),
+	Max = 100,
+	Icon = Material("zombiesurvival/cursed.png")
 }
 }
 

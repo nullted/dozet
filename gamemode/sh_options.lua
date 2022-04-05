@@ -843,7 +843,7 @@ GM.WaveOneLengthClassic = 30
 GM.TimeAddedPerWaveClassic = 15
 
 -- Max amount of damage left to tick on these. Any more pending damage is ignored.
-GM.MaxPoisonDamage = 1000
+GM.MaxRotDamage = 2000
 GM.MaxBleedDamage = 230
 
 -- Give humans this many points when the wave ends.

@@ -536,6 +536,11 @@ function meta:AddPoisonDamage(damage, attacker)
 	end
 end
 
+function meta:AddCursed(attacker, count)
+	--damage = math.ceil(damage)
+	local status = self:GiveStatus("cursed", count)
+end
+
 
 function meta:AddBleedDamage(damage, attacker)
 	--damage = math.ceil(damage)
