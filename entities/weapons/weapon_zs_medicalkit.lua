@@ -127,14 +127,6 @@ end
 function SWEP:Deploy()
 	gamemode.Call("WeaponDeployed", self:GetOwner(), self)
 
-	local cursed = self:GetOwner():GetStatus("cursed")
-	if (cursed) then 
-		self:GetOwner():AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 10)
-	end
-	if (not cursed) then 
-		self:GetOwner():AddCursed(self:GetOwner(), 10)
-	end
-
 	self.IdleAnimation = CurTime() + self:SequenceDuration()
 
 	if CLIENT then
