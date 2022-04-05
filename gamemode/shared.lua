@@ -571,6 +571,7 @@ end
 
 function GM:PlayerCanBeHealed(pl)
 	local maxhp = pl:IsSkillActive(SKILL_D_FRAIL) and math.floor(pl:GetMaxHealth() * 0.44) or pl:GetMaxHealth()
+	local maxhp = pl:IsSkillActive(SKILL_ABUSE) and math.floor(pl:GetMaxHealth() * 0.25) or pl:GetMaxHealth()
 
 	return pl:Health() < maxhp or pl:GetPoisonDamage() > 0 or pl:GetBleedDamage() > 0
 end
@@ -836,6 +837,9 @@ function GM:IsSpecialPerson(pl, image)
 	elseif pl:SteamID() == "STEAM_0:1:92937109" then
 		img = "noxiousnet/arsenalcrate.png"
 		tooltip = "Bruh"
+	elseif pl:SteamID() == "STEAM_0:0:103817403" then
+		img = "noxiousnet/arsenalcrate.png"
+		tooltip = "Absolute Pro"
     elseif pl:SteamID() == "STEAM_0:1:157024537" then
 	img = "noxiousnet/noxicon.png"
 	tooltip = "Old Player"
