@@ -32,14 +32,14 @@ GM.StarterSoul = {
 	"trinket_forsoul",  -- 20
 	"trinket_starsoul",  -- 21
 	"trinket_teasoul",  -- 22
-	"trinket_sugersoul"  -- 23
-	"trinket_nulledsoul",  -- 24
+	"trinket_sugersoul", -- 23
+	"trinket_nulledsoul"  -- 24
 }
 GM.Via = {
 	"trinket_via",
 	"trinket_via1",
 	"trinket_via2",
-	"trinket_via3",
+	"trinket_via3"
 }
 
 function GM:AddWorldPropConversionRecipe(model, result)
