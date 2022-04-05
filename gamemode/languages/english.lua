@@ -326,6 +326,7 @@ LANGUAGE.class_eraditor							= "Eraditor"
 LANGUAGE.class_megacringe							= "Cringe++"
 LANGUAGE.class_cringe   						= "Cringe+"
 LANGUAGE.class_cringe2   						= "Crif"
+LANGUAGE.class_bnightmare   						= "Bloody Nightmare"
 -- Class descriptions
 LANGUAGE.description_zombie							= "The basic zombie is very durable and has powerful claws.\nIt's hard to keep down, especially if not shot in the head."
 LANGUAGE.description_zombie_gore_blaster			= "Gore Blaster Zombies send viscera in all direction when killed which can cause minor harm.\nTheir claws can also inflict bleeding."
@@ -388,6 +389,7 @@ LANGUAGE.description_lacerator_charging				= "These brutes can run deceptively f
 LANGUAGE.description_eradicator						= "Bringers of death and destruction. The Eradicators sport a durable body that require a lot of fire power to take down.\nUnless shot in the head, they are almost garanteed to rise again."
 LANGUAGE.description_howler							= "A terrifying flesh titan with a piercing shriek.\nIts howl inspires the undead and instills fear in the living."
 LANGUAGE.description_extinctioncrab					= "Vile diseases churn within this giant headcrab.\nThe spores it spits will afflict those near it, reducing the effectiveness of healing."
+LANGUAGE.description_bnightmare						= "An extremely rare mutation gives the Nightmare its abnormal abilities.\nStronger than the every day zombie in almost every way, the Nightmare is a force to be reckoned with.\nOne swipe of its claws is enough to put down almost any person."
 
 -- Class control schemes
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"
