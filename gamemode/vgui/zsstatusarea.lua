@@ -16,7 +16,7 @@ local statusdisplays = {
 	ValFunc = function(self, lp)
 		return lp:GetPoisonDamage()
 	end,
-	Max = GM.MaxPoisonDamage or 50,
+	Max = GM.MaxPoisonDamage or 1000,
 	Icon = Material("zombiesurvival/poison.png")
 },
 {
