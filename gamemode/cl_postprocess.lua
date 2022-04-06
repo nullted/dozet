@@ -110,15 +110,15 @@ local tColorModZombie = {
 }
 
 local tColorModZombieVision = {
-	["$pp_colour_colour"] = 3,
+	["$pp_colour_colour"] = 1,
 	["$pp_colour_brightness"] = -0.1,
 	["$pp_colour_contrast"] = 1,
 	["$pp_colour_mulr"]	= 0,
 	["$pp_colour_mulg"] = 0,
 	["$pp_colour_mulb"] = 0,
-	["$pp_colour_addr"] = 0.3,
-	["$pp_colour_addg"] = 0,
-	["$pp_colour_addb"] = 0.6
+	["$pp_colour_addr"] = 0,
+	["$pp_colour_addg"] = 0,02,
+	["$pp_colour_addb"] = 0
 }
 
 local tColorModNightVision = {
