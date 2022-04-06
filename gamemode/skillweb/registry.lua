@@ -771,10 +771,10 @@ GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+2 Luck\n",
 			GM:AddSkill(SKILL_SOLARUZ, "Debuff:Mortiferum Fortuna", GOOD.."+30% Points Multiplicator \n" ..BAD.. "Vos adepto 40% Plus damni",
 				3,			-9,					{SKILL_SCAM}, TREE_POINTTREE)
 SKILL_ANCK = 170
-GM:AddSkill(SKILL_ANCK, "Ancient knowledge", GOOD.."Learn The Ancint knowledge \n" ..BAD.. "The cost of knowledge",
+GM:AddSkill(SKILL_ANCK, "Ancient knowledge", GOOD.."Learn The Ancient knowledge \n" ..BAD.. "The cost of knowledge",
 					0,			0,					{SKILL_SOLARUZ}, TREE_ANCIENTTREE)
 SKILL_ANCK1 = 171
-GM:AddSkill(SKILL_ANCK1, "Ancient Volume 1", GOOD.."Learn The Ancint knowledge\n You know only 50%",
+GM:AddSkill(SKILL_ANCK1, "Ancient Volume 1", GOOD.."Learn The Ancient knowledge\n You know only 50%",
 					0,			-1,					{SKILL_ANCK}, TREE_ANCIENTTREE)
 SKILL_ANCK2 = 172
 GM:AddSkill(SKILL_ANCK2, "Ancient Volume 2", GOOD.."You Know 100%!",

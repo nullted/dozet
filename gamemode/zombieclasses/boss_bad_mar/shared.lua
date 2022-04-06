@@ -1,6 +1,6 @@
 CLASS.Name = "Bad Marrow"
 CLASS.TranslationName = "class_baw"
-CLASS.Description = "description_red_marrow"
+CLASS.Description = "description_baw"
 CLASS.Help = "controls_red_marrow"
 
 CLASS.Boss = true

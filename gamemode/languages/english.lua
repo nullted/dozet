@@ -389,7 +389,8 @@ LANGUAGE.description_lacerator_charging				= "These brutes can run deceptively f
 LANGUAGE.description_eradicator						= "Bringers of death and destruction. The Eradicators sport a durable body that require a lot of fire power to take down.\nUnless shot in the head, they are almost garanteed to rise again."
 LANGUAGE.description_howler							= "A terrifying flesh titan with a piercing shriek.\nIts howl inspires the undead and instills fear in the living."
 LANGUAGE.description_extinctioncrab					= "Vile diseases churn within this giant headcrab.\nThe spores it spits will afflict those near it, reducing the effectiveness of healing."
-LANGUAGE.description_bnightmare						= "An extremely rare mutation gives the Nightmare its abnormal abilities.\nStronger than the every day zombie in almost every way, the Nightmare is a force to be reckoned with.\nOne swipe of its claws is enough to put down almost any person."
+LANGUAGE.description_bnightmare						= "An extremely rare mutation gives the Nightmare its abnormal abilities.\nStronger than the every day zombie in almost every way, the Bloody Nightmare is a force to be reckoned with.\nOne swipe of its claws is enough to put down almost any person."
+LANGUAGE.description_baw						= "Zombie last fate.\nStronger than the every day zombie in almost every way, have immune to high damage.\nFast swips of the claws."
 
 -- Class control schemes
 LANGUAGE.controls_zombie							= "> PRIMARY: Claws\n> SECONDARY: Scream\n> RELOAD: Moan\n> SPRINT: Feign death\n> ON FATAL HIT IN LEGS: Revive / Transform"

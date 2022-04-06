@@ -10,7 +10,7 @@ SWEP.NextPuke = 2
 SWEP.PukeLeft = 11
 SWEP.BleedDamage = 55
 
-SWEP.MeleeDamage = 56
+SWEP.MeleeDamage = 32
 SWEP.MeleeDamageVsProps = 84
 SWEP.MeleeReach = 111
 SWEP.MeleeSize = 3
