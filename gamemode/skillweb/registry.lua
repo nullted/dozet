@@ -768,7 +768,7 @@ GM:AddSkill(SKILL_DUDEE, "Lucky man", GOOD.."+2 Luck\n",
 			SKILL_SOLARUZ = 169
 			GM:AddSkillModifier(SKILL_SOLARUZ, SKILLMOD_POINT_MULTIPLIER, 0.30)
 			GM:AddSkillModifier(SKILL_SOLARUZ, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.40)
-			GM:AddSkill(SKILL_SOLARUZ, "Debuff:Mortiferum Fortuna", GOOD.."+30% Points Multiplicator \n" ..BAD.. "Vos adepto 40% Plus damni",
+			GM:AddSkill(SKILL_SOLARUZ, "Debuff:Deadly Fortuna", GOOD.."+30% Points Multiplicator \n" ..BAD.. "+40% damage taken melee",
 				3,			-9,					{SKILL_SCAM}, TREE_POINTTREE)
 SKILL_ANCK = 170
 GM:AddSkill(SKILL_ANCK, "Ancient knowledge", GOOD.."Learn The Ancient knowledge \n" ..BAD.. "The cost of knowledge",
@@ -782,62 +782,62 @@ GM:AddSkill(SKILL_ANCK2, "Ancient Volume 2", GOOD.."You Know 100%!",
 
 SKILL_STRICTE = 173
 GM:AddSkillModifier(SKILL_STRICTE, SKILLMOD_MELEE_DAMAGE_MUL, 0.05)
-GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."Vos sunt 5% fortior!",
+GM:AddSkill(SKILL_STRICTE, "Stricte praecepta", GOOD.."+ 5% Melee damage!",
 					1,			-4,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
 SKILL_VERUS = 174
 GM:AddSkillModifier(SKILL_VERUS, SKILLMOD_MANHACK_DAMAGE_MUL, 0.33)
 GM:AddSkillModifier(SKILL_VERUS, SKILLMOD_MANHACK_HEALTH_MUL, 0.33)
-GM:AddSkill(SKILL_VERUS, "Verus", GOOD.."Tua sunt laminis 33% melius!",
+GM:AddSkill(SKILL_VERUS, "Verus", GOOD.."Better  +33% manhack!",
 					-1,			-4,					{SKILL_ANCK2}, TREE_ANCIENTTREE)
 SKILL_PIGNUS = 175
 GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_SCANSPEED_MUL, 0.33)
 GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_HEALTH_MUL, 0.33)
 GM:AddSkillModifier(SKILL_PIGNUS, SKILLMOD_TURRET_RANGE_MUL, 0.33)
-GM:AddSkill(SKILL_PIGNUS, "Pignus", GOOD.."Turris est melius!",
+GM:AddSkill(SKILL_PIGNUS, "Pignus", GOOD.."Better turrets!",
 					-1,			-5,					{SKILL_VERUS}, TREE_ANCIENTTREE)
 SKILL_STRENGHT = 176
 GM:AddSkillModifier(SKILL_STRENGHT, SKILLMOD_MELEE_DAMAGE_MUL, 0.1)
-GM:AddSkill(SKILL_STRENGHT, "Strongman", GOOD.."Vos sunt 10% fortior!",
+GM:AddSkill(SKILL_STRENGHT, "Strongman", GOOD.."+10% Melee damage!",
 					1,			-5,					{SKILL_STRICTE}, TREE_ANCIENTTREE)
 SKILL_EX = 177
-GM:AddSkill(SKILL_EX, "Exsecrandus", GOOD.."Exsecrandus!",
+GM:AddSkill(SKILL_EX, "Exsecrandus", GOOD.."USELESS!",
 					0,			-6,					{SKILL_PIGNUS,SKILL_STRENGHT}, TREE_ANCIENTTREE)
 SKILL_EX2 = 178					
-GM:AddSkill(SKILL_EX2, "Scientia", GOOD.."pretium enim scientia",
+GM:AddSkill(SKILL_EX2, "Scientia", GOOD.."Science!",
 					0,			-7,					{SKILL_EX}, TREE_ANCIENTTREE)
 					SKILL_ANIMA = 179		
 GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_MUL, 0.15)
 GM:AddSkillModifier(SKILL_ANIMA, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.10)			
-GM:AddSkill(SKILL_ANIMA, "Fines de anima", GOOD.."Libero te, et tandem fieri fortior!\n" ..BAD.."Tu dolebis",
+GM:AddSkill(SKILL_ANIMA, "Fines de anima", GOOD.."+15% melee damage\n" ..BAD.."+10% Melee damage taken!",
 					-3,			-7,					{SKILL_EX2}, TREE_ANCIENTTREE)
 	SKILL_MERCUS = 184
-					GM:AddSkillModifier(SKILL_MERCUS, SKILLMOD_RESUPPLY_DELAY_MUL, -0.30)			
-					GM:AddSkill(SKILL_MERCUS, "Mortiferum Pompam", GOOD.."Nimis scientia,tu es obrutus celeritas replenishment!",
+					GM:AddSkillModifier(SKILL_MERCUS, SKILLMOD_RESUPPLY_DELAY_MUL, -0.10)			
+					GM:AddSkill(SKILL_MERCUS, "Mortiferum Pompam", GOOD.."-10% Ressuply Delay",
 										-4,			-7,					{SKILL_ANIMA}, TREE_ANCIENTTREE)
 SKILL_SIGILIBERATOR = 180	
 GM:AddSkillModifier(SKILL_SIGILIBERATOR, SKILLMOD_MELEE_DAMAGE_MUL, 2)
 	GM:AddSkillModifier(SKILL_SIGILIBERATOR, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 2)			
-GM:AddSkill(SKILL_SIGILIBERATOR, "Liberator", GOOD.."Libero domum tuam\n" ..BAD.."Es vulnerable",
+GM:AddSkill(SKILL_SIGILIBERATOR, "Liberator", GOOD.."x2 damage\n" ..BAD.."x2 damage taken",
 										-3,			-9,					{SKILL_EX2}, TREE_ANCIENTTREE)
 										SKILL_DEATH = 181	
-GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_COOLDOWN_MUL, -0.2)
+GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_COOLDOWN_MUL, 0.2)
 GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.2)		
-GM:AddSkill(SKILL_DEATH, "Morieris", GOOD.."Scis nimium\n" ..BAD.."et hoc est maledictum\n"..GOOD.."Factus es medicus",
+GM:AddSkill(SKILL_DEATH, "Morieris", GOOD.."Better medicine\n" ..BAD.."+20% Medkit Cooldown\n"..GOOD.."+20% Medkit effectiveness",
 										-3,			-8,					{SKILL_EX2}, TREE_ANCIENTTREE)
 										SKILL_ALLPOWER = 182
 GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.4)		
-GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Tu melius quam ordinarium creator\n" ..GOOD.."In reparatione qualitas est melius",
+GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Better cades\n" ..GOOD.."+40% Repair Mul",
 					-4,			-8,					{SKILL_DEATH}, TREE_ANCIENTTREE)
 SKILL_ANCIENT = 183
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.47)
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_MUL, 0.2)		
-GM:AddSkill(SKILL_ANCIENT, "Adventum Antiqua", GOOD.."Potentia liberator sine fortis decrescat\n" ..BAD.."Sed non evanescunt usquam",
+GM:AddSkill(SKILL_ANCIENT, "Adventum Antiqua", GOOD.."+20% Damage melee\n" ..BAD.."+47% Damage taken mul",
 					-4,			-9,					{SKILL_SIGILIBERATOR}, TREE_ANCIENTTREE)
 					SKILL_CLASSIX1 = 185	
-GM:AddSkill(SKILL_CLASSIX1, "Classical scientia mundi", GOOD.."Iter est mutabilis",
+GM:AddSkill(SKILL_CLASSIX1, "Classical scientia mundi", GOOD.."Random bloodarmor",
 					-5,			-8,					{SKILL_ALLPOWER}, TREE_ANCIENTTREE)
 SKILL_BLOODMARY = 186
-GM:AddSkill(SKILL_BLOODMARY, "Sanguinum Messis", GOOD.."Sanguinem protegit",
+GM:AddSkill(SKILL_BLOODMARY, "Sanguinum Messis", GOOD.."useless",
 										-5,			-9,					{SKILL_ANCIENT}, TREE_ANCIENTTREE)
 										SKILL_TRUEPOWER = 187
 GM:AddSkill(SKILL_TRUEPOWER, "Future Knowledge Vol.3", GOOD.."Cost Of Knowledge",
@@ -1503,7 +1503,7 @@ GM:AddSkillModifier(SKILL_BLOODARMOR, SKILLMOD_HEALTH, -5)
 
 GM:AddSkillModifier(SKILL_HAEMOSTASIS, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.16)
 
-GM:AddSkillModifier(SKILL_REGENERATOR, SKILLMOD_HEALTH, 4)
+GM:AddSkillModifier(SKILL_REGENERATOR, SKILLMOD_HEALTH, -6)
 
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_WORTH, 60)
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_ENDWAVE_POINTS, 1)

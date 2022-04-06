@@ -35,7 +35,7 @@ SWEP.ViewModel = "models/weapons/v_sledgehammer/c_sledgehammer.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 290
+SWEP.MeleeDamage = 342
 SWEP.MeleeRange = 81
 SWEP.MeleeSize = 3.55
 SWEP.MeleeKnockBack = 1

@@ -8,7 +8,7 @@ ENT.Radius = 700
 if CLIENT then return end
 
 ENT.Classes = table.ToAssoc(
-	{"prop_ammo", "prop_invitem", "prop_weapon", "prop_physics_multiplayer", "prop_physics"}
+	{"prop_ammo", "prop_invitem", "prop_weapon"}
 )
 ENT.Force = 30
 ENT.ForceDelay = 0.1
