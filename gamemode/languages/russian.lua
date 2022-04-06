@@ -170,7 +170,7 @@ LANGUAGE.class_fast_zombie_legs						= "Ноги быстрого зомби"
 LANGUAGE.class_chem_zombie							= "Химический зомби"
 LANGUAGE.class_shade								= "Шейд"
 LANGUAGE.class_baw								= "Бред разума"
-LANGUAGE.class_cringe2								= "Приемник кринжа"
+LANGUAGE.class_cringe2								= "Проводник кринжа"
 LANGUAGE.class_cringe								= "Кринж+"
 LANGUAGE.class_megacringe								= "Мега кринж++"
 LANGUAGE.class_eraditor							= "Густный зомби"
@@ -213,6 +213,8 @@ LANGUAGE.description_chem_zombie					= "Тело Химического Зара
 LANGUAGE.description_shade							= "Создавая сильное магнитическое поле вокруг себя, все пули и рукопашне аттаки бесполезны против него.\nОднако, по какой-то причине Shade раним ярким светом."
 LANGUAGE.description_ancient_nightmare				= "Очень древний кошмар,блуждающие за поисками мозгов.\nЕго тело лишилось почти всего,он медлен но силен,проклятый зомби."
 LANGUAGE.description_bnightmare						= "Дает редкую мутации в крови.\nСильнее во всех путях,кровяной может убить человека с 1 удара.\nДостаточно много ран оставляет за 1 удар."
+LANGUAGE.description_asskicker						= "Неудачный эксперимент сына хехиха.\nСильнее баракота в 2-3 раза,может убить человека с 2 ударов.\nБывший барагот мутировал в это создание."
+
 LANGUAGE.description_baw						= "Бред зомби.\nОни думали что это спасенье а на самом деле это лишь и иллюзия.\nКидает куски мяса которые восстанавливают здоровье зомбям,хорош в атаку,защиту и помощника."
 
 -- Class control schemes

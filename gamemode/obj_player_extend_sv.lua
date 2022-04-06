@@ -207,12 +207,15 @@ function meta:ProcessDamage(dmginfo)
 					self.BleakSoulMessage = nil
 				end
 				if self:HasTrinket("adrenaline") and (not self.LastBleakSoul or self.LastBleakSoul + 60 < CurTime()) then
-					self:GiveStatus("strengthdartboost", 15)
-					self:GiveStatus("speed", 15)
-					self:GiveStatus("adrenalineamp", 15)
+					self:GiveStatus("strengthdartboost", 7)
+					self:GiveStatus("speed", 7)
+					self:GiveStatus("adrenalineamp", 7)
 				end
 				if self:IsSkillActive(SKILL_BLOODLOST)  then
 					self:GiveStatus("bloodrage", 6)
+				end
+				if self:HasTrinket("cursedtrinket")  then
+					self:GiveStatus("cursed", 80)
 				end
 				
 				
