@@ -102,6 +102,9 @@ GM.Assemblies["comp_scoper"]						        	= {"trinket_electromagnet",	"trinket_
 GM.Assemblies["weapon_zs_cryman"] 				     			= {"comp_gaussframe",		"weapon_zs_hyena"}
 GM.Assemblies["trinket_invalid"]						        	= {"trinket_classil",	"trinket_analgestic"}
 GM.Assemblies["weapon_zs_m5"]						        	= {"comp_sacred_soul",	"weapon_zs_m4"}
+GM.Assemblies["trinket_aposoul"]						        	= {"trinket_targetingvisori",	"trinket_blanksoul"}
+GM.Assemblies["trinket_greedsoul"]						        	= {"trinket_superstore",	"trinket_blanksoul"}
+GM.Assemblies["trinket_evesoul"]						        	= {"trinket_bloodpack",	"trinket_blanksoul"}
 
 
 GM:AddInventoryItemData("comp_modbarrel",		"Modular Barrel",			"A modular barrel suited for pairing up with another gun barrel.",								"models/props_c17/trappropeller_lever.mdl")
@@ -197,7 +200,7 @@ local bookw = {
 }
 -- some text
 -- Health Trinkets
-trinket, trinketwep = GM:AddTrinket("Health Package", "vitpackagei", false, hpveles, hpweles, 2, "+10 Hp and +9% heal received\n +20 хп и на 9% увеличено получаемое лечение")
+trinket, trinketwep = GM:AddTrinket("Health Package", "vitpackagei", false, hpveles, hpweles, 2, "+10 Hp and +9% heal received\n +10 хп и на 9% увеличено получаемое лечение")
 GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, 10)
 GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.09)
 trinketwep.PermitDismantle = true
@@ -415,8 +418,8 @@ GM:AddSkillModifier(trinket, SKILLMOD_WEAPON_WEIGHT_SLOW_MUL, -0.35)
 
 
 -- Defensive Trinkets
-trinket, trinketwep = GM:AddTrinket("Kevlar underbody", "kevlar", false, develes, deweles, 2, "-9% melee damage taken\n-11% projectile damage taken\n-9% полученного урона в ближнем бою\n-11% полученного урона от снаряда")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.09)
+trinket, trinketwep = GM:AddTrinket("Kevlar underbody", "kevlar", false, develes, deweles, 2, "-6% melee damage taken\n-11% projectile damage taken\n-6% полученного урона в ближнем бою\n-11% полученного урона от снаряда")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.06)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.11)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.01)
 trinketwep.PermitDismantle = true
@@ -475,7 +478,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.07)
 trinket = GM:AddTrinket("Diamond armor", "toysite", false, develes, deweles, 4, "You get 9% less damage, but the blood armor is ineffective, it is produced in 10%,you can stump headcrabs\nВы получаете на 9% меньше урона но кровавая броня неэффективна вырабатываеться в 10%,вы можете давить крабов")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_PROJECTILE_DAMAGE_TAKEN_MUL, -0.21)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, -0.10)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.10)
 
 -- Support Trinkets
 trinket, trinketwep = GM:AddTrinket("Arsenal Pack", "arsenalpack", false, {
@@ -574,9 +577,9 @@ trinket = GM:AddTrinket("Additional Battery", "adbat", false, supveles, supweles
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_PULSE_MUL, 0.50)
 trinket = GM:AddTrinket("Mech Arm", "marm", false, supveles, supweles, 4, "+22% Reload Speed\n+22% К скорости перезарядки")
 GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, 0.22)
-trinket = GM:AddTrinket("Steel Shield", "sshield", false, supveles, supweles, 4, "-20% Taken Damage,-12% Reload Speed\n-12% К скорости перезарядки,-20% получаемого урона")
-GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, -0.12)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.20)
+trinket = GM:AddTrinket("Steel Shield", "sshield", false, supveles, supweles, 4, "-10% Taken Damage,-6% Reload Speed\n-6% К скорости перезарядки,-10% получаемого урона")
+GM:AddSkillModifier(trinket, SKILLMOD_RELOADSPEED_MUL, -0.06)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.10)
 
 --Special Trinkets
 trinket = GM:AddTrinket("Null heart", "nulledher", false, supveles, supweles, 4, "+10% Melee Damage,+20 health,slowly dying after taking damage\n+10% мили урона,+20 хп,медленно умираешь после получения урона")
@@ -706,8 +709,8 @@ trinket = GM:AddTrinket("Blank Soul", "blanksoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 255, 211, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(255, 255, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(255, 210, 255, 255), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil,"Пустая душа поглощает 15% урона по вам\nblank soul absorb 15% damage to you \n Q:0 ")
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.15)
+}, nil,"Пустая душа поглощает 5% урона по вам\nblank soul absorb 5% damage to you \n Q:0 ")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.05)
 
 trinket = GM:AddTrinket(" Soul of Classix", "classixsoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(5, 25, 211, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
@@ -823,6 +826,15 @@ trinket = GM:AddTrinket("Soul of Sugger", "sugersoul", false, nil, {
 }, nil, "+10% К мили урону,-2% получаемого урона\n +10% for melee damage,-2% Damage taken mul\n Q:1")
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.10)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, -0.02)
+trinket = GM:AddTrinket("Soul of N3ll", "nulledsoul", false, nil, {
+	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(255, 255, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
+	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(255, 255, 255, 25), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
+	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(55, 55, 5, 100), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
+}, nil, "+20% К мuли урону,+12% п0лучаемого ур0на,+12% к п0луч1ем0му хиллу,ск3дк1 в 6%\n +20% f0r meleE damAge,+12% Damag3 tak3n mul,+12% Heal rec3ived,s1l3 by 6%\n Q:Ultimate")
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, 0.20)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.12)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALING_RECEIVED, 0.12)
+GM:AddSkillModifier(trinket, SKILLMOD_ARSENAL_DISCOUNT, -0.06)
 -- Starter Trinkets
 
 trinket, trinketwep = GM:AddTrinket("Armband", "armband", false, mveles, mweles, nil, "-20% melee swing impact delay\n-16% melee damage taken\n-20% Скорости атаки\n-16% Получаемого мили урона")

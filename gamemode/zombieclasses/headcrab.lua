@@ -145,7 +145,21 @@ if SERVER then
 		local wep = pl:GetActiveWeapon()
 		if wep:IsValid() then wep:Reload() end
 	end
+
+	function CLASS:ProcessDamage(pl, dmginfo)
+		if dmginfo:GetInflictor().IsMelee then
+			dmginfo:SetDamage(dmginfo:GetDamage() / 2)
+			local cursed = pl:GetStatus("cursed")
+			if (cursed) then 
+				pl:AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 10)
+			end
+			if (not cursed) then 
+				pl:AddCursed(pl:GetOwner(), 10)
+			end
+		end
+	end
 end
+
 
 if not CLIENT then return end
 

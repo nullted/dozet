@@ -4,7 +4,7 @@ SWEP.PrintName = "The Tickle Monster"
 
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.MeleeDamage = 38
+SWEP.MeleeDamage = 25
 SWEP.MeleeDamageVsProps = 33
 SWEP.MeleeReach = 211
 SWEP.MeleeSize = 3
