@@ -66,14 +66,15 @@ function SWEP:PreDrawViewModel(vm)
 	render.ModelMaterialOverride(matSheet)
 end
 
-function SWEP:ApplyMeleeDamage(ent, trace, damage)
-	if SERVER and ent:IsPlayer() then
-		local bleed = ent:GiveStatus("bleed")
-		if bleed and bleed:IsValid() then
-			bleed:AddDamage(self.BleedDamage)
-			bleed.Damager = self:GetOwner()
+function SWEP:ApplyMeleeDamage(pl, trace, damage)
+	if SERVER and pl:IsPlayer() then
+		local cursed = pl:GetStatus("cursed")
+		if (cursed) then 
+			pl:AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 10)
+		end
+		if (not cursed) then 
+			pl:AddCursed(pl:GetOwner(), 10)
 		end
 	end
-
-	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
+	self.BaseClass.ApplyMeleeDamage(self, pl, trace, damage)
 end

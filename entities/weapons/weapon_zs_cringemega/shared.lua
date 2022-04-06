@@ -10,8 +10,8 @@ SWEP.NextPuke = 2
 SWEP.PukeLeft = 11
 SWEP.BleedDamage = 88
 
-SWEP.MeleeDamage = 239
-SWEP.MeleeDamageVsProps = 84
+SWEP.MeleeDamage = 87
+SWEP.MeleeDamageVsProps = 120
 SWEP.MeleeReach = 681
 SWEP.MeleeSize = 3
 
@@ -32,6 +32,19 @@ function SWEP:SecondaryAttack()
 end
 
 function SWEP:Reload()
+end
+
+function SWEP:ApplyMeleeDamage(pl, trace, damage)
+	if SERVER and pl:IsPlayer() then
+		local cursed = pl:GetStatus("cursed")
+		if (cursed) then 
+			pl:AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 10)
+		end
+		if (not cursed) then 
+			pl:AddCursed(pl:GetOwner(), 10)
+		end
+	end
+	self.BaseClass.ApplyMeleeDamage(self, pl, trace, damage)
 end
 
 
