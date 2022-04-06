@@ -11,6 +11,19 @@ function SWEP:Reload()
 	self:SecondaryAttack()
 end
 
+function SWEP:ApplyMeleeDamage(pl, trace, damage)
+	if SERVER and pl:IsPlayer() then
+		local cursed = pl:GetStatus("cursed")
+		if (cursed) then 
+			pl:AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 10)
+		end
+		if (not cursed) then 
+			pl:AddCursed(pl:GetOwner(), 10)
+		end
+	end
+	self.BaseClass.ApplyMeleeDamage(self, pl, trace, damage)
+end
+
 function SWEP:PlayAlertSound()
 	self:GetOwner():EmitSound("npc/barnacle/barnacle_tongue_pull"..math.random(3)..".wav")
 end
