@@ -8,7 +8,7 @@ SWEP.Primary.Delay = 1.2
 
 SWEP.NextPuke = 2
 SWEP.PukeLeft = 11
-SWEP.BleedDamage = 55
+SWEP.BleedDamage = 11
 
 SWEP.MeleeDamage = 32
 SWEP.MeleeDamageVsProps = 84
