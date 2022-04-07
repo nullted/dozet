@@ -406,7 +406,7 @@ GM:AddSkill(SKILL_BLOODARMOR, "Blood Armor", GOOD.."Regenerate 1 blood armor eve
 																2,			2,					{SKILL_IRONBLOOD, SKILL_BLOODLETTER, SKILL_D_HEMOPHILIA}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_IRONBLOOD, "Iron Blood", GOOD.."+25% damage reduction from blood armor\n"..GOOD.."Bonus doubled when health is 50% or less\n"..BAD.."-50% maximum blood armor",
 																2,			4,					{SKILL_HAEMOSTASIS, SKILL_CIRCULATION}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_D_WEAKNESS, "Debuff: Weakness", GOOD.."+15 starting Worth\n"..GOOD.."+1 end of wave points\n"..BAD.."-45 maximum health",
+GM:AddSkill(SKILL_D_WEAKNESS, "Debuff: Weakness", GOOD.."+60 starting Worth\n"..GOOD.."+1 end of wave points\n"..BAD.."-100 maximum health",
 																1,			-1,					{}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_VITALITY1, "Vitality I", GOOD.."+8 maximum health",
 																0,			-4,					{SKILL_VITALITY2}, TREE_HEALTHTREE)
@@ -1507,7 +1507,7 @@ GM:AddSkillModifier(SKILL_REGENERATOR, SKILLMOD_HEALTH, -6)
 
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_WORTH, 60)
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_ENDWAVE_POINTS, 1)
-GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_HEALTH, -30)
+GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_HEALTH, -80)
 
 GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_WORTH, -10)
 GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_RESUPPLY_DELAY_MUL, -0.05)

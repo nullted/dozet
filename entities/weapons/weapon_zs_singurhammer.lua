@@ -22,7 +22,7 @@ end
 SWEP.Base = "weapon_zs_hammer"
 
 SWEP.MeleeDamage = 22
-SWEP.HealStrength = 4
+SWEP.HealStrength = 2.5
 
 SWEP.ViewModel = "models/weapons/v_hammer/c_hammer.mdl"
 SWEP.WorldModel = "models/weapons/w_hammer.mdl"
