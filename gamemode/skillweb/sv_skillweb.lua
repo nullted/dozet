@@ -232,7 +232,7 @@ function meta:SetUnlockedSkills(skills, nosend)
 end
 
 function meta:SkillsRemort()
-	local rl = self:GetZSRemortLevel() + 4
+	local rl = self:GetZSRemortLevel() + 2
 	local myname = self:Name()
 
 	self:SetZSRemortLevel(rl)
