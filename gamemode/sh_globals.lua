@@ -107,7 +107,7 @@ GM.MaxArmDamage = 20
 GM.UtilityKey = IN_SPEED
 GM.MenuKey = IN_WALK -- I would use the spawn menu but it has no IN_ key assignment.
 
-GM.ArsenalCrateCommission = 0.11
+GM.ArsenalCrateCommission = 0.17
 
 GM.BaseDeploySpeed = 1 -- Put this back to 1 to increase the value of it
 

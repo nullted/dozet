@@ -33,8 +33,8 @@ SWEP.ViewModel = "models/weapons/cstrike/c_pist_glock18.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 11
-SWEP.Primary.NumShots = 6
+SWEP.Primary.Damage = 16
+SWEP.Primary.NumShots = 4
 SWEP.Primary.Delay = 0.3
 
 SWEP.Primary.ClipSize = 9
@@ -45,7 +45,7 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.ConeMax = 2.75
 SWEP.ConeMin = 1.2
-SWEP.HeadshotMulti = 6
+SWEP.HeadshotMulti = 3
 
 SWEP.Tier = 2
 
