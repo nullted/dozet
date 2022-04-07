@@ -105,7 +105,7 @@ GM.Assemblies["weapon_zs_m5"]						        	= {"comp_sacred_soul",	"weapon_zs_m4
 GM.Assemblies["trinket_aposoul"]						        	= {"trinket_targetingvisori",	"trinket_blanksoul"}
 GM.Assemblies["trinket_greedsoul"]						        	= {"trinket_superstore",	"trinket_blanksoul"}
 GM.Assemblies["trinket_evesoul"]						        	= {"trinket_bloodpack",	"trinket_blanksoul"}
-GM.Assemblies["weapon_zs_singurhammer"] 						= {"trinket_electromagnet",	"weapon_electrohammer"}
+GM.Assemblies["weapon_zs_singurhammer"] 						= {"trinket_electromagnet",	"weapon_zs_electrohammer"}
 
 
 GM:AddInventoryItemData("comp_modbarrel",		"Modular Barrel",			"A modular barrel suited for pairing up with another gun barrel.",								"models/props_c17/trappropeller_lever.mdl")
