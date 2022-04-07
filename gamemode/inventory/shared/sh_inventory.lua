@@ -790,9 +790,9 @@ trinket = GM:AddTrinket("Soul of Sussy Stragus", "starsoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(9, 0, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core_2+"] = { type = "Sprite", sprite = "effects/splashwake1", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 10, y = 10 }, color = Color(0, 0, 255, 255), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},
 	["black_core"] = { type = "Model", model = "models/dav0r/hoverball.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4, 2, 0), angle = Angle(0, 0, 0), size = Vector(0.349, 0.349, 0.349), color = Color(55, 55, 5, 100), surpresslightning = true, material = "models/shiny", skin = 0, bodygroup = {} }
-}, nil, "Дает 200 скорости отнимая 40% дамага\n +200 speed,-40% Melee damage\n Q:lmao")
-GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 200)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, -0.40)
+}, nil, "Дает 55 скорости отнимая 10% дамага\n +55 speed,-10% Melee damage\n Q:lmao")
+GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 55)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_MUL, -0.10)
 
 trinket = GM:AddTrinket("Soul of Toy", "toysoul", false, nil, {
 	["black_core_2"] = { type = "Sprite", sprite = "effects/splashwake3", bone = "ValveBiped.Bip01_R_Hand", rel = "black_core", pos = Vector(0, 0.1, -0.201), size = { x = 7.697, y = 7.697 }, color = Color(0, 0, 0, 125), nocull = false, additive = true, vertexalpha = true, vertexcolor = true, ignorez = false},

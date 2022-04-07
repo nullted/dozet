@@ -7,7 +7,7 @@ CLASS.Help = "controls_the_tickle_monster"
 CLASS.KnockbackScale = 0
 CLASS.Wave = 11 / 12
 
-CLASS.Health = 30000
+CLASS.Health = 7000
 CLASS.Speed = 120
 CLASS.Hidden = false
 
