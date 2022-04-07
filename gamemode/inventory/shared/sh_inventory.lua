@@ -289,7 +289,7 @@ trinket = GM:AddTrinket("Hemo-Adrenaline Amplifier", "hemoadrenalii", false, mve
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_MOVEMENTSPEED_ON_KILL, 44)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.05)
-trinket = GM:AddTrinket("Damager", "damage222", false, mveles, mweles, 3, "Q: Ultimate\n Качество:Ультима")
+trinket = GM:AddTrinket("trinket_damager", "damage222", false, mveles, mweles, 3, "Q: Ultimate\n Качество:Ультима")
 GM:AddSkillModifier(trinket, SKILLMOD_DAMAGE, 0.90)
 
 trinket = GM:AddTrinket("Thermia", "flashlo", false, mveles, mweles, 3, "+8% blood armor convert and you take by 7% more damage,+55 speed\n+8% Конвертации кровавой брони от удара\n Вы получаете на 16% Больше урона,+55 к скорости")

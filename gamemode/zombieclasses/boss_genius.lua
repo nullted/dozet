@@ -7,13 +7,13 @@ CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 1750
+CLASS.Health = 1300
 CLASS.Speed = 160
 
 if SERVER then
 function CLASS:ProcessDamage(pl, dmginfo)
 	if dmginfo:GetInflictor().IsMelee then
-		dmginfo:SetDamage(dmginfo:GetDamage() / 30)
+		dmginfo:SetDamage(dmginfo:GetDamage() / 4)
 	end
 end
 end
