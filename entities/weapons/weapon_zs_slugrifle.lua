@@ -128,7 +128,7 @@ function SWEP.BulletCallback(attacker, tr, dmginfo)
 
 		if gamemode.Call("PlayerShouldTakeDamage", ent, attacker) then
 			dmginfo:SetDamageType(DMG_DIRECT)
-			dmginfo:SetDamage(dmginfo:GetDamage() + ent:GetMaxHealthEx() * 0.95)
+			dmginfo:SetDamage(dmginfo:GetDamage() + ent:GetMaxHealthEx() * 0.85)
 		end
 	end
 end
@@ -151,7 +151,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloa
 			end
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 3)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 1)
 			end)
 
 			local effectdata = EffectData()

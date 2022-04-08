@@ -56,7 +56,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Breath' Boom gun", "Большой Ша
 			local pos = zombie:GetPos()
 
 			timer.Simple(0.15, function()
-				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 2)
+				util.BlastDamagePlayer(killer:GetActiveWeapon(), killer, pos, 72, minushp, DMG_ALWAYSGIB, 1)
 			end)
 
 			local effectdata = EffectData()

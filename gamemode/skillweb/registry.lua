@@ -592,7 +592,7 @@ GM:AddSkill(SKILL_INSIGHT, "Buyer's Insight", GOOD.."Locate nearby arsenal crate
 GM:AddSkill(SKILL_U_ZAPPER_ARC, "Unlock: Arc Zapper", GOOD.."Unlocks purchasing the Arc Zapper\nZaps zombies that get nearby, and jumps in an arc\nMid tier deployable and long cooldown\nRequires a steady upkeep of pulse ammo",
 																6,			2,					{SKILL_FIELDAMP, SKILL_TECHNICIAN}, TREE_BUILDINGTREE)
 .AlwaysActive = true
-GM:AddSkill(SKILL_D_LATEBUYER, "Debuff: Late Buyer", GOOD.."+20 starting Worth\n"..GOOD.."20% arsenal discount\n"..BAD.."Unable to use points at arsenal crates until the second half of the round",
+GM:AddSkill(SKILL_D_LATEBUYER, "Debuff: Late Buyer", GOOD.."+20 starting Worth\n"..GOOD.."33% arsenal discount\n"..BAD.."Unable to use points at arsenal crates until the second half of the round",
 																8,			1,					{}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_CARRIER, "Carrier", GOOD.."+100% Speed when you take prop\n"..BAD.."-50% Deployable health\n"..BAD.."-50% Deployable packtime",
 																9,			2,					{SKILL_D_LATEBUYER}, TREE_BUILDINGTREE)
@@ -721,32 +721,32 @@ GM:AddSkill(SKILL_THREE_IN_ONE, "3 in 1", GOOD.."-16% melee swing impact delay\n
 																-3,			-3,					{SKILL_FOUR_IN_ONE}, TREE_MELEETREE)
 
 SKILL_POINTI = 157
-GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.05)
-GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.04 Luck,+5% Point MUL\n The quality system increases the chances of getting a better soul",
+GM:AddSkillModifier(SKILL_POINTI, SKILLMOD_POINT_MULTIPLIER, 0.02)
+GM:AddSkill(SKILL_POINTI, "Point I", GOOD.."+0.04 Luck,+2% Point MUL\n The quality system increases the chances of getting a better soul",
 																0,			0,					{SKILL_NONE}, TREE_POINTTREE)
 SKILL_POINTII = 158
-GM:AddSkillModifier(SKILL_POINTII, SKILLMOD_POINT_MULTIPLIER, 0.06)
-GM:AddSkill(SKILL_POINTII, "Point II", GOOD.."+0.06 Luck,+6% Point MUL",
+GM:AddSkillModifier(SKILL_POINTII, SKILLMOD_POINT_MULTIPLIER, 0.03)
+GM:AddSkill(SKILL_POINTII, "Point II", GOOD.."+0.06 Luck,+3% Point MUL",
 																-0.5,			-1,					{SKILL_POINTI}, TREE_POINTTREE)
 SKILL_POINTIII = 159
-GM:AddSkillModifier(SKILL_POINTIII, SKILLMOD_POINT_MULTIPLIER, 0.08)
-GM:AddSkill(SKILL_POINTIII, "Point III", NEUTRAL.."+0.15 Luck\n"..GOOD.."+8% Point MUL",
+GM:AddSkillModifier(SKILL_POINTIII, SKILLMOD_POINT_MULTIPLIER, 0.05)
+GM:AddSkill(SKILL_POINTIII, "Point III", NEUTRAL.."+0.15 Luck\n"..GOOD.."+5% Point MUL",
 																-1,			-2,					{SKILL_POINTII}, TREE_POINTTREE)
 SKILL_POINTIIII = 160
-	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINT_MULTIPLIER, 0.11)
+	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINT_MULTIPLIER, 0.07)
 	GM:AddSkillModifier(SKILL_POINTIIII, SKILLMOD_POINTS, 5)
-GM:AddSkill(SKILL_POINTIIII, "Pointer", NEUTRAL.."+0.40 Luck\n"..GOOD.."+11% Point MUL\n" ..GOOD.. "+5 Start Points",
+GM:AddSkill(SKILL_POINTIIII, "Pointer", NEUTRAL.."+0.40 Luck\n"..GOOD.."+7% Point MUL\n" ..GOOD.. "+5 Start Points",
 																-2,			-3,					{SKILL_POINTIII}, TREE_POINTTREE)
 	SKILL_LUCK = 161
-	GM:AddSkillModifier(SKILL_LUCK, SKILLMOD_POINT_MULTIPLIER, 0.15)
+	GM:AddSkillModifier(SKILL_LUCK, SKILLMOD_POINT_MULTIPLIER, 0.01)
 GM:AddSkill(SKILL_LUCK, "Luck", NEUTRAL.."+1 luck",
 																-3,			-3,					{SKILL_POINTIIII}, TREE_POINTTREE)
 SKILL_LUCKE = 162
-GM:AddSkillModifier(SKILL_LUCKE, SKILLMOD_POINT_MULTIPLIER, 0.13)
+GM:AddSkillModifier(SKILL_LUCKE, SKILLMOD_POINT_MULTIPLIER, 0.1)
 GM:AddSkill(SKILL_LUCKE, "Luckiest", NEUTRAL.."+2 luck\n" ..BAD.. "-10% Points MUL",
 	1,			-2,					{SKILL_POINTIIII}, TREE_POINTTREE)
 	SKILL_BLUCK = 163
-	GM:AddSkillModifier(SKILL_BLUCK, SKILLMOD_POINT_MULTIPLIER, 0.07)
+	GM:AddSkillModifier(SKILL_BLUCK, SKILLMOD_POINT_MULTIPLIER, 0.01)
 GM:AddSkill(SKILL_BLUCK, "Quad", GOOD.."Better quality system\n" ..BAD.. "-3% Points Multiplier",
 	2,			-2.75,					{SKILL_LUCKE}, TREE_POINTTREE)
 	SKILL_PILLUCK = 164
@@ -932,12 +932,12 @@ GM:AddSkill(SKILL_DONATE4, "Donate IV", GOOD.."+14% Reload Speed\n"..BAD.."THX c
 				                                                            	21,			23,					{SKILL_DONATE3}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE4, SKILLMOD_RELOADSPEED_MUL, 0.14)
 SKILL_DONATE5 = 208
-GM:AddSkill(SKILL_DONATE5, "Donate V", GOOD.."Sale by 10%\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	22,			23,					{SKILL_DONATE6}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE5, SKILLMOD_ARSENAL_DISCOUNT, -0.1)
+GM:AddSkill(SKILL_DONATE5, "Donate V", GOOD.."Sale by 2%\n"..BAD.."Thx ivan36099",
+				                                                            	22,			23,					{SKILL_DONATE4}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_DONATE5, SKILLMOD_ARSENAL_DISCOUNT, -0.02)
 SKILL_DONATE6 = 209
 GM:AddSkill(SKILL_DONATE6, "Donate VI", GOOD.."+% To blood armor convert\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	22,			24,					{SKILL_DONATE5}, TREE_DONATETREE)
+				                                                            	22,			24,					{SKILL_DONATE6}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE6, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.10)
 SKILL_DONATE7 = 211
 GM:AddSkill(SKILL_DONATE7, "Donate VII", GOOD.."+% Hammer repair mul\n"..BAD.."Donate if you want to unlock this skill",
@@ -1490,7 +1490,7 @@ GM:AddSkillFunction(SKILL_D_HEMOPHILIA, function(pl, active)
 end)
 
 GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_WORTH, 30)
-GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_ARSENAL_DISCOUNT, -0.30)
+GM:AddSkillModifier(SKILL_D_LATEBUYER, SKILLMOD_ARSENAL_DISCOUNT, -0.33)
 
 GM:AddSkillFunction(SKILL_TAUT, function(pl, active)
 	pl.BuffTaut = active
