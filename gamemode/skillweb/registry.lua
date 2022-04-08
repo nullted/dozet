@@ -957,12 +957,12 @@ GM:AddSkill(SKILL_DONATE10, "Donate X", GOOD.."+ Worth\n"..BAD.."Donate if you w
 GM:AddSkillModifier(SKILL_DONATE10, SKILLMOD_WORTH, 10)
 SKILL_CHALLENGER1 = 215
 GM:AddSkill(SKILL_CHALLENGER1, "Challenger I", GOOD.."+20 Health,+5% Sale, help for challenges!\n"..GOOD.."Can use in any challenge",
-				                                                            	25,			26,					{SKILL_NONE}, TREE_DONATETREE)
+				                                                            	25,			26,					{SKILL_NONE, SKILL_CHALLENGER2}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_CHALLENGER1, SKILLMOD_HEALTH, 20)
 GM:AddSkillModifier(SKILL_CHALLENGER1, SKILLMOD_ARSENAL_DISCOUNT, -0.05)
 SKILL_CHALLENGER2 = 216
 GM:AddSkill(SKILL_CHALLENGER2, "Challenger II", GOOD.."+20% Reload speed\n"..GOOD.."Can use in any challenge",
-				                                                            	25,			24,					{SKILL_CHALLENGERII}, TREE_DONATETREE)
+				                                                            	25,			24,					{SKILL_CHALLENGER1}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_CHALLENGER2, SKILLMOD_RELOADSPEED_MUL, 0.2)
 SKILL_CHALLENGER3 = 217
 GM:AddSkill(SKILL_CHALLENGER3, "Challenger III", GOOD.."+100% XP Multiplier\n"..GOOD.."Can use in any challenge",
