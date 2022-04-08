@@ -29,7 +29,7 @@ CLASS.ViewOffset = Vector(0, 0, 32 * CLASS.ModelScale)
 CLASS.ViewOffsetDucked = Vector(0, 0, 32 * CLASS.ModelScale)
 CLASS.StepSize = 25
 CLASS.CrouchedWalkSpeed = 1
-CLASS.Mass = DEFAULT_MASS * CLASS.ModelScale * 0.5
+CLASS.Mass = DEFAULT_MASS * CLASS.ModelScale * 0.4
 
 --CLASS.NoCollideAll = true
 
