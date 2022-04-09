@@ -26,7 +26,7 @@ end
 end
 
 
-CLASS.Health = 27450
+CLASS.Health = 2750
 CLASS.Speed = 175
 
 CLASS.VoicePitch = 0.65

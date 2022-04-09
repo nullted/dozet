@@ -5,7 +5,7 @@ CLASS.Help = "controls_skeletal_walker"
 
 CLASS.Wave = 2 / 6
 
-CLASS.Health = 1260
+CLASS.Health = 260
 CLASS.Speed = 150
 
 CLASS.CanTaunt = true
@@ -153,9 +153,9 @@ if SERVER then
 
 	function CLASS:ProcessDamage(pl, dmginfo)
 		if bit_band(dmginfo:GetDamageType(), DMG_BULLET) ~= 0 then
-			dmginfo:SetDamage(dmginfo:GetDamage() * 0.16)
+			dmginfo:SetDamage(dmginfo:GetDamage() * 0.36)
 		elseif bit_band(dmginfo:GetDamageType(), DMG_SLASH) == 0 and bit_band(dmginfo:GetDamageType(), DMG_CLUB) == 0 then
-			dmginfo:SetDamage(dmginfo:GetDamage() * 0.15)
+			dmginfo:SetDamage(dmginfo:GetDamage() * 0.45)
 		end
 	end
 end

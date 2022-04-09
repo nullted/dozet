@@ -15,7 +15,7 @@ CLASS.Model = Model("models/dav0r/hoverball.mdl")
 
 CLASS.SWEP = "weapon_zs_special_wow"
 
-CLASS.Health = 26000
+CLASS.Health = 2000
 CLASS.Speed = 360
 CLASS.JumpPower = 0
 

@@ -17,7 +17,7 @@ CLASS.VoicePitch = 0.65
 
 CLASS.SWEP = "weapon_zs_redmarrow"
 
-CLASS.Health = 42400
+CLASS.Health = 2400
 CLASS.Speed = 165
 
 CLASS.Skeletal = true
@@ -116,14 +116,14 @@ function CLASS:ProcessDamage(pl, dmginfo)
 	if newhp <= dmgthreshold and pl["bloodth"..numthreshold] then
 		pl["bloodth"..numthreshold] = false
 		dmginfo:SetDamage(dmg - nulldmg)
-		pl:GiveStatus("redmarrow", 60)
+		pl:GiveStatus("redmarrow", 10)
 
 		local effectdata = EffectData()
 			effectdata:SetOrigin(pl:WorldSpaceCenter())
 		util.Effect("explosion_bonemesh", effectdata)
 
 		pl:GodEnable()
-		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 10, DMG_CLUB)
+		util.BlastDamageEx(pl, pl, pl:GetPos(), 55, 7, DMG_CLUB)
 		pl:GodDisable()
 	end
 end

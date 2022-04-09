@@ -7,7 +7,7 @@ CLASS.Boss = true
 
 CLASS.KnockbackScale = 0
 
-CLASS.Health = 3000
+CLASS.Health = 1300
 CLASS.Speed = 160
 
 if SERVER then

@@ -9,7 +9,7 @@ CLASS.Boss = true
 
 CLASS.SWEP = "weapon_zs_coolwisp"
 
-CLASS.Health = 12000
+CLASS.Health = 4000
 if SERVER then
 function CLASS:ProcessDamage(pl, dmginfo)
 	if dmginfo:GetInflictor().IsMelee then

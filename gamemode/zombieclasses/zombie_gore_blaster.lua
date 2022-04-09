@@ -10,7 +10,7 @@ CLASS.BetterVersion = "Chem Burster"
 CLASS.Wave = 0
 CLASS.Unlocked = true
 
-CLASS.Health = 500
+CLASS.Health = 280
 CLASS.Speed = 180
 CLASS.Revives = false
 
