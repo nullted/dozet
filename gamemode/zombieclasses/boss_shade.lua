@@ -16,7 +16,7 @@ CLASS.NoAdjustPhysDamage = true
 
 CLASS.CanTaunt = true
 
-CLASS.Health = 1999 --1200
+CLASS.Health = 19299 --1200
 CLASS.Speed = 250 --125
 
 CLASS.FearPerInstance = 1

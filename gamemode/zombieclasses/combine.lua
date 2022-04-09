@@ -20,7 +20,7 @@ end
 end
 
 CLASS.Wave = 4 / 12
-CLASS.Health = 600
+CLASS.Health = 20000
 CLASS.Speed = 210
 
 CLASS.VoicePitch = 0.65

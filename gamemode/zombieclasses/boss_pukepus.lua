@@ -9,7 +9,7 @@ CLASS.KnockbackScale = 0
 
 CLASS.FearPerInstance = 1
 
-CLASS.Health = 4120
+CLASS.Health = 43120
 CLASS.SWEP = "weapon_zs_pukepus"
 
 CLASS.Model = Model("models/Zombie/Poison.mdl")

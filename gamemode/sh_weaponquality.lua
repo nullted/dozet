@@ -1,9 +1,9 @@
 GM.WeaponQualityModifiers = {}
 GM.WeaponQualities = {
-	{"Sturdy", 1.12, "Tuned"},
-	{"Honed", 1.21, "Modified"},
-	{"Perfected", 1.54, "Reformed"},
-	{"Heavenly", 1.85, "Deadly"}
+	{"Sturdy", 2, "Tuned"},
+	{"Honed", 4, "Modified"},
+	{"Perfected", 6, "Reformed"},
+	{"Heavenly", 10, "Deadly"}
 	
 }
 GM.WeaponQualityColors = {

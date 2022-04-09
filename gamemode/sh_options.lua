@@ -69,7 +69,7 @@ GM.ItemSubCategories = {
 --[[
 Humans select what weapons (or other things) they want to start with and can even save favorites. Each object has a number of 'Worth' points.
 Signature is a unique signature to give in case the item is renamed or reordered. Don't use a number or a string number!
-A human can only use 100 points (default) when they join. Redeeming or joining late starts you out with a random loadout from above.
+A human can only use 255 points (default) when they join. Redeeming or joining late starts you out with a random loadout from above.
 SWEP is a swep given when the player spawns with that perk chosen.
 Callback is a function called. Model is a display model. If model isn't defined then the SWEP model will try to be used.
 swep, callback, and model can all be nil or empty
@@ -172,7 +172,7 @@ GM:AddStartingItem("4mines",			ITEMCAT_AMMO,			15,				nil,			"6 explosives",				
 GM:AddStartingItem("6mines",			ITEMCAT_AMMO,			20,				nil,			"9 explosives",					nil,		"ammo_explosive",		function(pl) pl:GiveAmmo(9, "impactmine", true) end)
 GM:AddStartingItem("8nails",			ITEMCAT_AMMO,			15,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
 GM:AddStartingItem("12nails",			ITEMCAT_AMMO,			20,				nil,			"12 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(12, "GaussEnergy", true) end)
-GM:AddStartingItem("60mkit",			ITEMCAT_AMMO,			20,				nil,			"100 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(100, "Battery", true) end)
+GM:AddStartingItem("60mkit",			ITEMCAT_AMMO,			20,				nil,			"255 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(255, "Battery", true) end)
 GM:AddStartingItem("90mkit",			ITEMCAT_AMMO,			25,				nil,			"120 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(120, "Battery", true) end)
 GM:AddStartingItem("scrap",		    	ITEMCAT_AMMO,			20,				nil,			"Scrap 15",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(15, "Scrap", true) end)
 GM:AddStartingItem("scraper",			ITEMCAT_AMMO,			30,				nil,			"Scrap 25",				nil,		"ammo_scrap",		function(pl) pl:GiveAmmo(25, "Scrap", true) end)
@@ -311,79 +311,79 @@ GM:AddStartingItem("bloodshot",			ITEMCAT_OTHER,			35,				"weapon_zs_bloodshotbo
 ------------
 
 -- Tier 1
-GM:AddPointShopItem("pshtr",			ITEMCAT_GUNS,			20,				"weapon_zs_peashooter", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_peashooter") end)
-GM:AddPointShopItem("btlax",			ITEMCAT_GUNS,			20,				"weapon_zs_battleaxe", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_battleaxe") end)
-GM:AddPointShopItem("owens",			ITEMCAT_GUNS,			20,				"weapon_zs_owens", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_owens") end)
-GM:AddPointShopItem("blstr",			ITEMCAT_GUNS,			20,				"weapon_zs_blaster", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_blaster") end)
-GM:AddPointShopItem("tossr",			ITEMCAT_GUNS,			20,				"weapon_zs_tosser", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_tosser") end)
-GM:AddPointShopItem("stbbr",			ITEMCAT_GUNS,			20,				"weapon_zs_stubber", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_stubber") end)
-GM:AddPointShopItem("crklr",			ITEMCAT_GUNS,			20,				"weapon_zs_crackler", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_crackler") end)
-GM:AddPointShopItem("sling",			ITEMCAT_GUNS,			20,				"weapon_zs_slinger", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_slinger") end)
-GM:AddPointShopItem("z9000",			ITEMCAT_GUNS,			20,				"weapon_zs_z9000", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_z9000") end)
-GM:AddPointShopItem("minelayer",		ITEMCAT_GUNS,			20,				"weapon_zs_minelayer", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_minelayer") end)
+GM:AddPointShopItem("pshtr",			ITEMCAT_GUNS,			55,				"weapon_zs_peashooter", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_peashooter") end)
+GM:AddPointShopItem("btlax",			ITEMCAT_GUNS,			55,				"weapon_zs_battleaxe", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_battleaxe") end)
+GM:AddPointShopItem("owens",			ITEMCAT_GUNS,			55,				"weapon_zs_owens", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_owens") end)
+GM:AddPointShopItem("blstr",			ITEMCAT_GUNS,			55,				"weapon_zs_blaster", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_blaster") end)
+GM:AddPointShopItem("tossr",			ITEMCAT_GUNS,			55,				"weapon_zs_tosser", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_tosser") end)
+GM:AddPointShopItem("stbbr",			ITEMCAT_GUNS,			55,				"weapon_zs_stubber", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_stubber") end)
+GM:AddPointShopItem("crklr",			ITEMCAT_GUNS,			55,				"weapon_zs_crackler", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_crackler") end)
+GM:AddPointShopItem("sling",			ITEMCAT_GUNS,			55,				"weapon_zs_slinger", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_slinger") end)
+GM:AddPointShopItem("z9000",			ITEMCAT_GUNS,			55,				"weapon_zs_z9000", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_z9000") end)
+GM:AddPointShopItem("minelayer",		ITEMCAT_GUNS,			55,				"weapon_zs_minelayer", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_minelayer") end)
 -- Tier 2
-GM:AddPointShopItem("glock3",			ITEMCAT_GUNS,			55,				"weapon_zs_glock3")
-GM:AddPointShopItem("magnum",			ITEMCAT_GUNS,			55,				"weapon_zs_magnum")
-GM:AddPointShopItem("eraser",			ITEMCAT_GUNS,			55,				"weapon_zs_eraser")
-GM:AddPointShopItem("sawedoff",			ITEMCAT_GUNS,			55,				"weapon_zs_sawedoff")
-GM:AddPointShopItem("uzi",				ITEMCAT_GUNS,			55,				"weapon_zs_uzi")
-GM:AddPointShopItem("annabelle",		ITEMCAT_GUNS,			55,				"weapon_zs_annabelle")
-GM:AddPointShopItem("inquisitor",		ITEMCAT_GUNS,			55,				"weapon_zs_inquisitor")
-GM:AddPointShopItem("amigo",			ITEMCAT_GUNS,			55,				"weapon_zs_amigo")
-GM:AddPointShopItem("hurricane",		ITEMCAT_GUNS,			55,				"weapon_zs_hurricane")
-GM:AddPointShopItem("nome",		        ITEMCAT_GUNS,			55,				"weapon_zs_nome")
-GM:AddPointShopItem("popl",		        ITEMCAT_GUNS,			55,				"weapon_zs_popluttar")
-GM:AddPointShopItem("relsogun",		        ITEMCAT_GUNS,			55,				"weapon_zs_relsous")
-GM:AddPointShopItem("fracture",		        ITEMCAT_GUNS,			55,				"weapon_zs_fracture")
+GM:AddPointShopItem("glock3",			ITEMCAT_GUNS,			166,				"weapon_zs_glock3")
+GM:AddPointShopItem("magnum",			ITEMCAT_GUNS,			166,				"weapon_zs_magnum")
+GM:AddPointShopItem("eraser",			ITEMCAT_GUNS,			166,				"weapon_zs_eraser")
+GM:AddPointShopItem("sawedoff",			ITEMCAT_GUNS,			166,				"weapon_zs_sawedoff")
+GM:AddPointShopItem("uzi",				ITEMCAT_GUNS,			166,				"weapon_zs_uzi")
+GM:AddPointShopItem("annabelle",		ITEMCAT_GUNS,			166,				"weapon_zs_annabelle")
+GM:AddPointShopItem("inquisitor",		ITEMCAT_GUNS,			166,				"weapon_zs_inquisitor")
+GM:AddPointShopItem("amigo",			ITEMCAT_GUNS,			166,				"weapon_zs_amigo")
+GM:AddPointShopItem("hurricane",		ITEMCAT_GUNS,			166,				"weapon_zs_hurricane")
+GM:AddPointShopItem("nome",		        ITEMCAT_GUNS,			166,				"weapon_zs_nome")
+GM:AddPointShopItem("popl",		        ITEMCAT_GUNS,			166,				"weapon_zs_popluttar")
+GM:AddPointShopItem("relsogun",		        ITEMCAT_GUNS,			166,				"weapon_zs_relsous")
+GM:AddPointShopItem("fracture",		        ITEMCAT_GUNS,			166,				"weapon_zs_fracture")
 -- Tier 3
-GM:AddPointShopItem("deagle",			ITEMCAT_GUNS,			100,				"weapon_zs_deagle")
-GM:AddPointShopItem("tempest",			ITEMCAT_GUNS,			100,				"weapon_zs_tempest")
-GM:AddPointShopItem("ender",			ITEMCAT_GUNS,			100,				"weapon_zs_ender")
-GM:AddPointShopItem("shredder",			ITEMCAT_GUNS,			100,				"weapon_zs_smg")
-GM:AddPointShopItem("silencer",			ITEMCAT_GUNS,			100,				"weapon_zs_silencer")
-GM:AddPointShopItem("hunter",			ITEMCAT_GUNS,			100,				"weapon_zs_hunter")
-GM:AddPointShopItem("onyx",				ITEMCAT_GUNS,			100,				"weapon_zs_onyx")
-GM:AddPointShopItem("charon",			ITEMCAT_GUNS,			100,				"weapon_zs_charon")
-GM:AddPointShopItem("akbar",			ITEMCAT_GUNS,			100,				"weapon_zs_akbar")
-GM:AddPointShopItem("oberon",			ITEMCAT_GUNS,			100,				"weapon_zs_oberon")
-GM:AddPointShopItem("hyena",			ITEMCAT_GUNS,			100,				"weapon_zs_hyena")
-GM:AddPointShopItem("pollutor",			ITEMCAT_GUNS,			100,				"weapon_zs_pollutor")
-GM:AddPointShopItem("smgstick",			ITEMCAT_GUNS,			100,				"weapon_zs_smgstick")
-GM:AddPointShopItem("stalker",			ITEMCAT_GUNS,			100,			"weapon_zs_m4")
-GM:AddPointShopItem("binocle",			ITEMCAT_GUNS,			100,			"weapon_zs_binocle")
+GM:AddPointShopItem("deagle",			ITEMCAT_GUNS,			255,				"weapon_zs_deagle")
+GM:AddPointShopItem("tempest",			ITEMCAT_GUNS,			255,				"weapon_zs_tempest")
+GM:AddPointShopItem("ender",			ITEMCAT_GUNS,			255,				"weapon_zs_ender")
+GM:AddPointShopItem("shredder",			ITEMCAT_GUNS,			255,				"weapon_zs_smg")
+GM:AddPointShopItem("silencer",			ITEMCAT_GUNS,			255,				"weapon_zs_silencer")
+GM:AddPointShopItem("hunter",			ITEMCAT_GUNS,			255,				"weapon_zs_hunter")
+GM:AddPointShopItem("onyx",				ITEMCAT_GUNS,			255,				"weapon_zs_onyx")
+GM:AddPointShopItem("charon",			ITEMCAT_GUNS,			255,				"weapon_zs_charon")
+GM:AddPointShopItem("akbar",			ITEMCAT_GUNS,			255,				"weapon_zs_akbar")
+GM:AddPointShopItem("oberon",			ITEMCAT_GUNS,			255,				"weapon_zs_oberon")
+GM:AddPointShopItem("hyena",			ITEMCAT_GUNS,			255,				"weapon_zs_hyena")
+GM:AddPointShopItem("pollutor",			ITEMCAT_GUNS,			255,				"weapon_zs_pollutor")
+GM:AddPointShopItem("smgstick",			ITEMCAT_GUNS,			255,				"weapon_zs_smgstick")
+GM:AddPointShopItem("stalker",			ITEMCAT_GUNS,			255,			"weapon_zs_m4")
+GM:AddPointShopItem("binocle",			ITEMCAT_GUNS,			255,			"weapon_zs_binocle")
 -- Tier 4
-GM:AddPointShopItem("longarm",			ITEMCAT_GUNS,			180,			"weapon_zs_longarm")
-GM:AddPointShopItem("sweeper",			ITEMCAT_GUNS,			180,			"weapon_zs_sweepershotgun")
-GM:AddPointShopItem("jackhammer",		ITEMCAT_GUNS,			180,			"weapon_zs_jackhammer")
-GM:AddPointShopItem("bulletstorm",		ITEMCAT_GUNS,			180,			"weapon_zs_bulletstorm")
-GM:AddPointShopItem("reaper",			ITEMCAT_GUNS,			180,			"weapon_zs_reaper")
-GM:AddPointShopItem("quicksilver",		ITEMCAT_GUNS,			180,			"weapon_zs_quicksilver")
-GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			180,			"weapon_zs_slugrifle")
-GM:AddPointShopItem("artemis",			ITEMCAT_GUNS,			180,			"weapon_zs_artemis")
-GM:AddPointShopItem("zeus",				ITEMCAT_GUNS,			180,			"weapon_zs_zeus")
-GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			260,			"weapon_zs_m6")
-GM:AddPointShopItem("inferno",			ITEMCAT_GUNS,			180,			"weapon_zs_inferno")
-GM:AddPointShopItem("quasar",			ITEMCAT_GUNS,			180,			"weapon_zs_quasar")
-GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			180,			"weapon_zs_gluon")
-GM:AddPointShopItem("barrage",			ITEMCAT_GUNS,			180,			"weapon_zs_barrage")
-GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			180,			"weapon_zs_classic")
-GM:AddPointShopItem("toxico",			ITEMCAT_GUNS,			180,			"weapon_zs_toxicshooter")
-GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			180,			"weapon_zs_gaeagle")
+GM:AddPointShopItem("longarm",			ITEMCAT_GUNS,			600,			"weapon_zs_longarm")
+GM:AddPointShopItem("sweeper",			ITEMCAT_GUNS,			600,			"weapon_zs_sweepershotgun")
+GM:AddPointShopItem("jackhammer",		ITEMCAT_GUNS,			600,			"weapon_zs_jackhammer")
+GM:AddPointShopItem("bulletstorm",		ITEMCAT_GUNS,			600,			"weapon_zs_bulletstorm")
+GM:AddPointShopItem("reaper",			ITEMCAT_GUNS,			600,			"weapon_zs_reaper")
+GM:AddPointShopItem("quicksilver",		ITEMCAT_GUNS,			600,			"weapon_zs_quicksilver")
+GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			600,			"weapon_zs_slugrifle")
+GM:AddPointShopItem("artemis",			ITEMCAT_GUNS,			600,			"weapon_zs_artemis")
+GM:AddPointShopItem("zeus",				ITEMCAT_GUNS,			600,			"weapon_zs_zeus")
+GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			1000,			"weapon_zs_m6")
+GM:AddPointShopItem("inferno",			ITEMCAT_GUNS,			600,			"weapon_zs_inferno")
+GM:AddPointShopItem("quasar",			ITEMCAT_GUNS,			600,			"weapon_zs_quasar")
+GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			600,			"weapon_zs_gluon")
+GM:AddPointShopItem("barrage",			ITEMCAT_GUNS,			600,			"weapon_zs_barrage")
+GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			600,			"weapon_zs_classic")
+GM:AddPointShopItem("toxico",			ITEMCAT_GUNS,			600,			"weapon_zs_toxicshooter")
+GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			600,			"weapon_zs_gaeagle")
 -- Tier 5
-GM:AddPointShopItem("novacolt",			ITEMCAT_GUNS,			260,			"weapon_zs_novacolt")
-GM:AddPointShopItem("bulwark",			ITEMCAT_GUNS,		    260,			"weapon_zs_bulwark")
-GM:AddPointShopItem("juggernaut",		ITEMCAT_GUNS,		    260,			"weapon_zs_juggernaut")
-GM:AddPointShopItem("scar",				ITEMCAT_GUNS,			260,			"weapon_zs_scar")
-GM:AddPointShopItem("boomstick",		ITEMCAT_GUNS,			260,			"weapon_zs_boomstick")
-GM:AddPointShopItem("deathdlrs",		ITEMCAT_GUNS,			260,			"weapon_zs_deathdealers")
-GM:AddPointShopItem("colossus",			ITEMCAT_GUNS,			260,			"weapon_zs_colossus")
-GM:AddPointShopItem("renegade",			ITEMCAT_GUNS,			260,			"weapon_zs_renegade")
-GM:AddPointShopItem("crossbow",			ITEMCAT_GUNS,			260,			"weapon_zs_crossbow")
-GM:AddPointShopItem("pulserifle",		ITEMCAT_GUNS,			260,			"weapon_zs_pulserifle")
-GM:AddPointShopItem("spinfusor",		ITEMCAT_GUNS,			260,			"weapon_zs_spinfusor")
-GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			260,			"weapon_zs_broadside")
-GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			260,			"weapon_zs_smelter")
-GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
+GM:AddPointShopItem("novacolt",			ITEMCAT_GUNS,			1000,			"weapon_zs_novacolt")
+GM:AddPointShopItem("bulwark",			ITEMCAT_GUNS,		    1000,			"weapon_zs_bulwark")
+GM:AddPointShopItem("juggernaut",		ITEMCAT_GUNS,		    1000,			"weapon_zs_juggernaut")
+GM:AddPointShopItem("scar",				ITEMCAT_GUNS,			1000,			"weapon_zs_scar")
+GM:AddPointShopItem("boomstick",		ITEMCAT_GUNS,			1000,			"weapon_zs_boomstick")
+GM:AddPointShopItem("deathdlrs",		ITEMCAT_GUNS,			1000,			"weapon_zs_deathdealers")
+GM:AddPointShopItem("colossus",			ITEMCAT_GUNS,			1000,			"weapon_zs_colossus")
+GM:AddPointShopItem("renegade",			ITEMCAT_GUNS,			1000,			"weapon_zs_renegade")
+GM:AddPointShopItem("crossbow",			ITEMCAT_GUNS,			1000,			"weapon_zs_crossbow")
+GM:AddPointShopItem("pulserifle",		ITEMCAT_GUNS,			1000,			"weapon_zs_pulserifle")
+GM:AddPointShopItem("spinfusor",		ITEMCAT_GUNS,			1000,			"weapon_zs_spinfusor")
+GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			1000,			"weapon_zs_broadside")
+GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			1000,			"weapon_zs_smelter")
+GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			1000,			"weapon_zs_plasmatik")
 -- Tier 6 beta
 GM:AddPointShopItem("null",			ITEMCAT_GUNS,			20,			"weapon_zs_null")
 GM:AddPointShopItem("null",			ITEMCAT_MELEE,			20,			"weapon_zs_null")
@@ -404,43 +404,43 @@ GM:AddPointShopItem("nailsz",			ITEMCAT_AMMO,			7,				nil,			"8 nails",						nil
 
 item.NoClassicMode = true
 -- Tier 1
-GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			15,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
-GM:AddPointShopItem("knife",			ITEMCAT_MELEE,			15,				"weapon_zs_swissarmyknife")
-GM:AddPointShopItem("zpplnk",			ITEMCAT_MELEE,			15,				"weapon_zs_plank")
-GM:AddPointShopItem("axe",				ITEMCAT_MELEE,			15,				"weapon_zs_axe")
-GM:AddPointShopItem("zpfryp",			ITEMCAT_MELEE,			15,				"weapon_zs_fryingpan")
-GM:AddPointShopItem("zpcpot",			ITEMCAT_MELEE,			15,				"weapon_zs_pot")
-GM:AddPointShopItem("ladel",			ITEMCAT_MELEE,			15,				"weapon_zs_ladel")
-GM:AddPointShopItem("pipe",				ITEMCAT_MELEE,			15,				"weapon_zs_pipe")
-GM:AddPointShopItem("stunbaton",		ITEMCAT_MELEE,			15,				"weapon_zs_stunbaton")
-GM:AddPointShopItem("hook",				ITEMCAT_MELEE,			15,				"weapon_zs_hook")
-GM:AddPointShopItem("syx",				ITEMCAT_MELEE,			15,				"weapon_zs_syx")
+GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			100,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
+GM:AddPointShopItem("knife",			ITEMCAT_MELEE,			100,				"weapon_zs_swissarmyknife")
+GM:AddPointShopItem("zpplnk",			ITEMCAT_MELEE,			100,				"weapon_zs_plank")
+GM:AddPointShopItem("axe",				ITEMCAT_MELEE,			100,				"weapon_zs_axe")
+GM:AddPointShopItem("zpfryp",			ITEMCAT_MELEE,			100,				"weapon_zs_fryingpan")
+GM:AddPointShopItem("zpcpot",			ITEMCAT_MELEE,			100,				"weapon_zs_pot")
+GM:AddPointShopItem("ladel",			ITEMCAT_MELEE,			100,				"weapon_zs_ladel")
+GM:AddPointShopItem("pipe",				ITEMCAT_MELEE,			100,				"weapon_zs_pipe")
+GM:AddPointShopItem("stunbaton",		ITEMCAT_MELEE,			100,				"weapon_zs_stunbaton")
+GM:AddPointShopItem("hook",				ITEMCAT_MELEE,			100,				"weapon_zs_hook")
+GM:AddPointShopItem("syx",				ITEMCAT_MELEE,			100,				"weapon_zs_syx")
 -- Tier 2
-GM:AddPointShopItem("broom",			ITEMCAT_MELEE,			35,				"weapon_zs_pushbroom")
-GM:AddPointShopItem("shovel",			ITEMCAT_MELEE,			35,				"weapon_zs_shovel")
-GM:AddPointShopItem("sledgehammer",		ITEMCAT_MELEE,			35,				"weapon_zs_sledgehammer")
-GM:AddPointShopItem("harpoon",			ITEMCAT_MELEE,			35,				"weapon_zs_harpoon")
-GM:AddPointShopItem("butcherknf",		ITEMCAT_MELEE,			35,				"weapon_zs_butcherknife")
-GM:AddPointShopItem("keyboard",		    ITEMCAT_MELEE,			15,				"weapon_zs_keyboard")
-GM:AddPointShopItem("dash",		    ITEMCAT_MELEE,			35,				"weapon_zs_f_dash")
+GM:AddPointShopItem("broom",			ITEMCAT_MELEE,			255,				"weapon_zs_pushbroom")
+GM:AddPointShopItem("shovel",			ITEMCAT_MELEE,			255,				"weapon_zs_shovel")
+GM:AddPointShopItem("sledgehammer",		ITEMCAT_MELEE,			255,				"weapon_zs_sledgehammer")
+GM:AddPointShopItem("harpoon",			ITEMCAT_MELEE,			255,				"weapon_zs_harpoon")
+GM:AddPointShopItem("butcherknf",		ITEMCAT_MELEE,			255,				"weapon_zs_butcherknife")
+GM:AddPointShopItem("keyboard",		    ITEMCAT_MELEE,			100,				"weapon_zs_keyboard")
+GM:AddPointShopItem("dash",		    ITEMCAT_MELEE,			255,				"weapon_zs_f_dash")
 -- Tier 3
-GM:AddPointShopItem("longsword",		ITEMCAT_MELEE,			60,				"weapon_zs_longsword")
-GM:AddPointShopItem("executioner",		ITEMCAT_MELEE,			60,				"weapon_zs_executioner")
-GM:AddPointShopItem("rebarmace",		ITEMCAT_MELEE,			60,				"weapon_zs_rebarmace")
-GM:AddPointShopItem("meattenderizer",	ITEMCAT_MELEE,			60,				"weapon_zs_meattenderizer")
-GM:AddPointShopItem("iceeluxx",	ITEMCAT_MELEE,			60,				"weapon_zs_icelux")
+GM:AddPointShopItem("longsword",		ITEMCAT_MELEE,			300,				"weapon_zs_longsword")
+GM:AddPointShopItem("executioner",		ITEMCAT_MELEE,			300,				"weapon_zs_executioner")
+GM:AddPointShopItem("rebarmace",		ITEMCAT_MELEE,			300,				"weapon_zs_rebarmace")
+GM:AddPointShopItem("meattenderizer",	ITEMCAT_MELEE,			300,				"weapon_zs_meattenderizer")
+GM:AddPointShopItem("iceeluxx",	ITEMCAT_MELEE,			300,				"weapon_zs_icelux")
 -- Tier 4
-GM:AddPointShopItem("graveshvl",		ITEMCAT_MELEE,			95,			"weapon_zs_graveshovel")
-GM:AddPointShopItem("kongol",			ITEMCAT_MELEE,			95,			"weapon_zs_kongolaxe")
-GM:AddPointShopItem("scythe",			ITEMCAT_MELEE,			95,			"weapon_zs_scythe")
-GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists")
+GM:AddPointShopItem("graveshvl",		ITEMCAT_MELEE,			400,			"weapon_zs_graveshovel")
+GM:AddPointShopItem("kongol",			ITEMCAT_MELEE,			400,			"weapon_zs_kongolaxe")
+GM:AddPointShopItem("scythe",			ITEMCAT_MELEE,			400,			"weapon_zs_scythe")
+GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			400,			"weapon_zs_powerfists")
 -- Tier 5
-GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			95,			"weapon_zs_frotchet")
-GM:AddPointShopItem("luxrockj",			ITEMCAT_MELEE,			95,			"weapon_zs_luxshade")
-GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			190,			"weapon_zs_loy")
-GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			7020,			"weapon_zs_speed")
-GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			190,			"weapon_zs_luxoid")
-GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			190,			"weapon_zs_harpoon_mega")
+GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			400,			"weapon_zs_frotchet")
+GM:AddPointShopItem("luxrockj",			ITEMCAT_MELEE,			400,			"weapon_zs_luxshade")
+GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			600,			"weapon_zs_loy")
+GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			100000,			"weapon_zs_speed")
+GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			600,			"weapon_zs_luxoid")
+GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			600,			"weapon_zs_harpoon_mega")
 -- Super Trinkets ------------------------------------------------------------------------------------------------------------------------------------------------
 
 --
@@ -511,7 +511,7 @@ GM:AddPointShopItem("zapper",			ITEMCAT_DEPLOYABLES,			50,				"weapon_zs_zapper"
 item.Countables = "prop_zapper"
 item.NoClassicMode = true
 item =
-GM:AddPointShopItem("zapper_arc",		ITEMCAT_DEPLOYABLES,			100,			"weapon_zs_zapper_arc",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_zapper_arc") pl:GiveAmmo(1, "zapper_arc") pl:GiveAmmo(30, "pulse") end)
+GM:AddPointShopItem("zapper_arc",		ITEMCAT_DEPLOYABLES,			255,			"weapon_zs_zapper_arc",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_zapper_arc") pl:GiveAmmo(1, "zapper_arc") pl:GiveAmmo(30, "pulse") end)
 item.Countables = "prop_zapper_arc"
 item.NoClassicMode = true
 item.SkillRequirement = SKILL_U_ZAPPER_ARC
@@ -533,7 +533,7 @@ item =
 GM:AddPointShopItem("antidote",			ITEMCAT_TOOLS,			30,				"weapon_zs_antidoteshot")
 item.SkillRequirement = SKILL_U_ANTITODESHOT
 GM:AddPointShopItem("medrifle",			ITEMCAT_TOOLS,			55,				"weapon_zs_medicrifle")
-GM:AddPointShopItem("healray",			ITEMCAT_TOOLS,			100,			"weapon_zs_healingray")
+GM:AddPointShopItem("healray",			ITEMCAT_TOOLS,			255,			"weapon_zs_healingray")
 GM:AddPointShopItem("stone",			ITEMCAT_TOOLS,			15,			"weapon_zs_stone")
 GM:AddPointShopItem("scrap",				ITEMCAT_TOOLS,			30,				nil,							"Scrap x20",							"Scrap but is have x15.",					"ammo_scrap",						function(pl) pl:GiveAmmo(20, "Scrap", true) end)
 -- Tier 1
@@ -575,7 +575,7 @@ GM:AddPointShopItem("blueprintsi",		ITEMCAT_TRINKETS,		15,				"trinket_blueprint
 GM:AddPointShopItem("processor",		ITEMCAT_TRINKETS,		15,				"trinket_processor").SubCategory =								ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("acqmanifest",		ITEMCAT_TRINKETS,		15,				"trinket_acqmanifest").SubCategory =							ITEMSUBCAT_TRINKETS_SUPPORT
 GM:AddPointShopItem("mainsuite",		ITEMCAT_TRINKETS,		15,				"trinket_mainsuite").SubCategory =								ITEMSUBCAT_TRINKETS_SUPPORT
-GM:AddPointShopItem("hateome",		ITEMCAT_TRINKETS,		100,				"trinket_hateome").SubCategory =					    		ITEMSUBCAT_TRINKETS_SUPPORT
+GM:AddPointShopItem("hateome",		ITEMCAT_TRINKETS,		255,				"trinket_hateome").SubCategory =					    		ITEMSUBCAT_TRINKETS_SUPPORT
 -- Tier 3
 --GM:AddPointShopItem("climbinggear",  	ITEMCAT_TRINKETS,		30,				"trinket_climbinggear").SubCategory =							ITEMSUBCAT_TRINKETS_SPECIAL
 GM:AddPointShopItem("reachem",			ITEMCAT_TRINKETS,		30,				"trinket_reachem").SubCategory =								ITEMSUBCAT_TRINKETS_OFFENSIVE
@@ -747,29 +747,29 @@ GM:AddDeployableInfo("prop_tv",                   	 "TV",                    	"w
 
 GM.MaxSigils = 5
 
-GM.DefaultRedeem = CreateConVar("zs_redeem", "3", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
+GM.DefaultRedeem = CreateConVar("zs_redeem", "2", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
 	GAMEMODE.DefaultRedeem = math.max(0, tonumber(newvalue) or 0)
 end)
 
-GM.WaveOneZombies = 0.12--math.Round(CreateConVar("zs_waveonezombies", "0.1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The percentage of players that will start as zombies when the game begins."):GetFloat(), 2)
+GM.WaveOneZombies = 0.07--math.Round(CreateConVar("zs_waveonezombies", "0.1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The percentage of players that will start as zombies when the game begins."):GetFloat(), 2)
 -- cvars.AddChangeCallback("zs_waveonezombies", function(cvar, oldvalue, newvalue)
--- 	GAMEMODE.WaveOneZombies = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
+-- 	GAMEMODE.WaveOneZombies = math.ceil(255 * (tonumber(newvalue) or 1)) * 0.01
 -- end)
 
 -- Game feeling too easy? Just change these values!
 GM.ZombieSpeedMultiplier = math.Round(CreateConVar("zs_zombiespeedmultiplier", "1", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Zombie running speed will be scaled by this value."):GetFloat(), 2)
 cvars.AddChangeCallback("zs_zombiespeedmultiplier", function(cvar, oldvalue, newvalue)
-	GAMEMODE.ZombieSpeedMultiplier = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
+	GAMEMODE.ZombieSpeedMultiplier = math.ceil(255 * (tonumber(newvalue) or 1)) * 0.01
 end)
 
 -- This is a resistance, not for claw damage. 0.5 will make zombies take half damage, 0.25 makes them take 1/4, etc.
-GM.ZombieDamageMultiplier = math.Round(CreateConVar("zs_zombiedamagemultiplier", "0.90", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Scales the amount of damage that zombies take. Use higher values for easy zombies, lower for harder."):GetFloat(), 2)
+GM.ZombieDamageMultiplier = math.Round(CreateConVar("zs_zombiedamagemultiplier", "2", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "Scales the amount of damage that zombies take. Use higher values for easy zombies, lower for harder."):GetFloat(), 2)
 cvars.AddChangeCallback("zs_zombiedamagemultiplier", function(cvar, oldvalue, newvalue)
-	GAMEMODE.ZombieDamageMultiplier = math.ceil(100 * (tonumber(newvalue) or 1)) * 0.01
+	GAMEMODE.ZombieDamageMultiplier = math.ceil(255 * (tonumber(newvalue) or 1)) * 0.01
 end)
 
-GM.TimeLimit = CreateConVar("zs_timelimit", "25", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time in minutes before the game will change maps. It will not change maps if a round is currently in progress but after the current round ends. -1 means never switch maps. 0 means always switch maps."):GetInt() * 60
+GM.TimeLimit = CreateConVar("zs_timelimit", "99995", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Time in minutes before the game will change maps. It will not change maps if a round is currently in progress but after the current round ends. -1 means never switch maps. 0 means always switch maps."):GetInt() * 60
 cvars.AddChangeCallback("zs_timelimit", function(cvar, oldvalue, newvalue)
 	GAMEMODE.TimeLimit = tonumber(newvalue) or 2500
 	if GAMEMODE.TimeLimit ~= -1 then
@@ -777,7 +777,7 @@ cvars.AddChangeCallback("zs_timelimit", function(cvar, oldvalue, newvalue)
 	end
 end)
 
-GM.RoundLimit = CreateConVar("zs_roundlimit", "3", FCVAR_ARCHIVE + FCVAR_NOTIFY, "How many times the game can be played on the same map. -1 means infinite or only use time limit. 0 means once."):GetInt()
+GM.RoundLimit = CreateConVar("zs_roundlimit", "9999", FCVAR_ARCHIVE + FCVAR_NOTIFY, "How many times the game can be played on the same map. -1 means infinite or only use time limit. 0 means once."):GetInt()
 cvars.AddChangeCallback("zs_roundlimit", function(cvar, oldvalue, newvalue)
 	GAMEMODE.RoundLimit = tonumber(newvalue) or 3
 end)
@@ -791,25 +791,25 @@ GM.WaveOneLength = 100
 GM.TimeAddedPerWave = 10
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
-GM.NoNewHumansWave = 4
+GM.NoNewHumansWave = 20
 
 -- Humans can not commit suicide if the current wave is this or lower.
 GM.NoSuicideWave = 0
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
-GM.WaveZeroLength = 300
+GM.WaveZeroLength = 700
 
 -- Time humans have between waves to do stuff without NEW zombies spawning. Any dead zombies will be in spectator (crow) view and any living ones will still be living.
-GM.WaveIntermissionLength = 90
+GM.WaveIntermissionLength = 40
 
 -- Time in seconds between end round and next map.
-GM.EndGameTime = 30
+GM.EndGameTime = 70
 
 -- How many clips of ammo guns from the Worth menu start with. Some guns such as shotguns and sniper rifles have multipliers on this.
-GM.SurvivalClips = 4 --2
+GM.SurvivalClips = 10 --2
 
 -- How long do humans have to wait before being able to get more ammo from a resupply box?
-GM.ResupplyBoxCooldown = 45
+GM.ResupplyBoxCooldown = 20
 
 -- Put your unoriginal, 5MB Rob Zombie and Metallica music here.
 GM.LastHumanSound = Sound("zombiesurvival/lasthuman.ogg")
@@ -847,7 +847,7 @@ GM.MaxRotDamage = 2000
 GM.MaxBleedDamage = 230
 
 -- Give humans this many points when the wave ends.
-GM.EndWavePointsBonus = 7
+GM.EndWavePointsBonus = 3
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 3
+GM.EndWavePointsBonusPerWave = 1

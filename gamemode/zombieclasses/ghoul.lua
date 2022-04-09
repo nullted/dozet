@@ -8,7 +8,7 @@ CLASS.Unlocked = true
 
 CLASS.BetterVersion = "Noxious Ghoul"
 
-CLASS.Health = 260
+CLASS.Health = 760
 CLASS.Speed = 175
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio

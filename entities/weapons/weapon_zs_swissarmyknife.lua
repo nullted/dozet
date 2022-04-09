@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "Knife"
-SWEP.Description = "A small bladed weapon that deals x5 damage to the back.(MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE)"
+SWEP.Description = "A small bladed weapon that deals x100 damage to the back.(MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE MASSACRE)"
 
 if CLIENT then
 	SWEP.ViewModelFlip = false
@@ -53,7 +53,7 @@ end
 function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	if hitent:IsValid() and hitent:IsPlayer() and not self.m_BackStabbing and math.abs(hitent:GetForward():Angle().yaw - self:GetOwner():GetForward():Angle().yaw) <= 90 then
 		self.m_BackStabbing = true
-		self.MeleeDamage = self.MeleeDamage * 5
+		self.MeleeDamage = self.MeleeDamage * 100
 	end
 end
 

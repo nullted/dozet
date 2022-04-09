@@ -9,7 +9,7 @@ CLASS.Wave = 0
 CLASS.Unlocked = true
 CLASS.Hidden = true
 
-CLASS.Health = 180
+CLASS.Health = 1180
 CLASS.Speed = 230
 
 CLASS.Points = CLASS.Health/GM.HumanoidZombiePointRatio
