@@ -103,7 +103,7 @@ end)]]
 
 GM.RepairPointsPerHealth = CreateConVar("zs_repairpointsperhealth", "605", FCVAR_ARCHIVE + FCVAR_NOTIFY, "Specifies the amount of repairing for players to be given a point. For use with nails and such."):GetInt()
 cvars.AddChangeCallback("zs_repairpointsperhealth", function(cvar, oldvalue, newvalue)
-	GAMEMODE.RepairPointsPerHealth = tonumber(newvalue) or 1
+	GAMEMODE.RepairPointsPerHealth = tonumber(newvalue) or 10
 end)
 
 local function GetMostKey(key, top)
