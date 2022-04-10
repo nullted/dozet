@@ -9,7 +9,7 @@ CLASS.Wave = 1
 
 CLASS.Health = 30000
 CLASS.Speed = 350
-CLASS.Hidden = false
+CLASS.Hidden = true
 
 CLASS.FearPerInstance = 1
 

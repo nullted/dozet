@@ -46,7 +46,7 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Poplaer' Napalm Rifle", 
 	end
 end)
 branch.Colors = {Color(255, 160, 50), Color(215, 120, 50), Color(175, 100, 40)}
-branch.NewNames = {"Hot", "Searing", "Lavpool", "Vulkanoo"}
+branch.NewNames = {"Hot", "Searing", "Lavpool", "Vulkanoo", "Boomkalo"}
 
 branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Popupar' Cryo Rifle", "Launches cryoblobs that slow zombies down at the cost of numshot", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 2
@@ -65,7 +65,7 @@ branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Popupar' Cryo Rifle", "Launche
 	end
 end)
 branch.Colors = {Color(50, 160, 255), Color(50, 130, 215), Color(40, 115, 175)}
-branch.NewNames = {"Cold", "Arctic", "Glacial", "Iceberg"}
+branch.NewNames = {"Cold", "Arctic", "Glacial", "Iceberg", "ColdHeart"}
 
 function SWEP:EmitFireSound()
 	self:EmitSound("^weapons/mortar/mortar_fire1.wav", 70, math.random(88, 92), 0.65)

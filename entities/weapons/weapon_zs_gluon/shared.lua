@@ -54,8 +54,8 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Hades' Higgs Gun", "Has 
 	wept.FireSoundPitch = 96
 	wept.LegDamage = true
 end)
-branch.Colors = {Color(160, 160, 160), Color(105, 105, 105), Color(50, 50, 50)}
-branch.NewNames = {"Deep", "Deeplands", "Void", "Null"}
+branch.Colors = {Color(160, 160, 160), Color(105, 105, 105), Color(50, 50, 50), Color(255, 255, 255)}
+branch.NewNames = {"Deep", "Deeplands", "Void", "Null", "VOIDLING"}
 
 GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Tartarus' Muon Gun", "Deals more damage with heat, but can overheat and damage you, reduced range", function(wept)
 	wept.GluonDamage = function(self)
@@ -65,7 +65,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Tartarus' Muon Gun", "Deals more damage
 	wept.FireSoundPitch = 65
 	wept.Overheat = true
 	wept.Primary.MaxDistance = 512
-end).Colors = {Color(150, 110, 180), Color(130, 90, 160), Color(110, 60, 150)}
+end).Colors = {Color(150, 110, 180), Color(130, 90, 160), Color(110, 60, 150), Color(110, 120, 150)}
 
 function SWEP:Initialize()
 	self.FiringSound = CreateSound(self, "^thrusters/rocket02.wav")

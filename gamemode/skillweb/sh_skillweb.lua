@@ -7,7 +7,7 @@ function GM:LevelForXP(xp)
 end
 
 function GM:XPForLevel(level)
-	return 32 * level * level - 10 * level
+	return 16 * level * level - 32 * level + 16
 end
 
 function GM:ProgressForXP(xp)

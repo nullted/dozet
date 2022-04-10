@@ -3,14 +3,16 @@ GM.WeaponQualities = {
 	{"Sturdy", 1.12, "Tuned"},
 	{"Honed", 1.21, "Modified"},
 	{"Perfected", 1.54, "Reformed"},
-	{"Heavenly", 1.85, "Deadly"}
+	{"Heavenly", 1.85, "Deadly"},
+	{"Superly", 2.10, "Doomly"}
 	
 }
 GM.WeaponQualityColors = {
 	{Color(235, 110, 165), Color(172, 111, 105)},
 	{Color(120, 90, 175), Color(35, 110, 245)},
 	{Color(160, 3, 5), Color(0, 100, 100)},
-	{Color(255, 3, 5), Color(0, 166, 200)}
+	{Color(255, 3, 5), Color(0, 166, 200)},
+	{Color(255, 0, 0), Color(30, 100, 200)}
 }
 
 WEAPON_MODIFIER_MIN_SPREAD = 1
@@ -146,7 +148,7 @@ function GM:CreateWeaponOfQuality(i, orig, quality, classname, branch)
 	wept.Branch = branch and branch.No
 
 	if wept.PrintName then
-		wept.PrintName = (branch and branch.NewNames and branch.NewNames[i] or branch and quality[4] or quality[1]).." "..(branch and branch.PrintName or wept.PrintName)
+		wept.PrintName = (branch and branch.NewNames and branch.NewNames[i] or branch and quality[5] or quality[1]).." "..(branch and branch.PrintName or wept.PrintName)
 	end
 
 	if wept.PrimaryRemantleModifier then

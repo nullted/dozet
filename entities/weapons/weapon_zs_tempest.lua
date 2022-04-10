@@ -103,7 +103,7 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Cosmos' Pulse Blaster", 
 	}
 end)
 branch.Colors = {Color(100, 130, 180), Color(90, 120, 170), Color(70, 100, 160)}
-branch.NewNames = {"Jovial", "Orbital", "Celestial", "Cosmosic"}
+branch.NewNames = {"Jovial", "Orbital", "Celestial", "Cosmosic", "Radiance"}
 branch.Killicon = "weapon_zs_cosmos"
 
 function SWEP:PrimaryAttack()

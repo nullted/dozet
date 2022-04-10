@@ -116,7 +116,7 @@ function PANEL:Init()
 
 	self:SetCamPos( Vector( 20000, 0, 0 ) )
 	self:SetLookAt( Vector( 0, 0, 0 ) )
-	self:SetFOV( 6 )
+	self:SetFOV( 10 )
 
 	self:SetAmbientLight( Color( 50, 50, 50 ) )
 
@@ -517,7 +517,7 @@ function GM:OpenRemantlerMenu(remantler)
 	end
 
 	local screenscale = BetterScreenScale()
-	local wid, hei = math.min(ScrW(), 900) * screenscale, math.min(ScrH(), 800) * screenscale
+	local wid, hei = math.min(ScrW(), 1000) * screenscale, math.min(ScrH(), 800) * screenscale
 	local tabhei = 24 * screenscale
 
 	local frame = vgui.Create("DFrame")
@@ -621,7 +621,7 @@ function GM:OpenRemantlerMenu(remantler)
 			tabpane.Buttons = {}
 			tabpane:SetSize(curframe:GetWide(), curframe:GetTall())
 
-			local offset = 64 * screenscale
+			local offset = 72 * screenscale
 			local itemframe = vgui.Create("DScrollPanel", tabpane)
 			itemframe:SetSize(curframe:GetWide(), curframe:GetTall() - offset - 32)
 			itemframe:SetPos(0, offset)
@@ -669,7 +669,7 @@ function GM:OpenRemantlerMenu(remantler)
 			local list = vgui.Create("DGrid", curframe)
 			list:SetPos(0, 0)
 			list:SetSize(curframe:GetWide() - 312, curframe:GetTall())
-			list:SetCols(3)
+			list:SetCols(2)
 			list:SetColWide(290 * screenscale)
 			list:SetRowHeight(100 * screenscale)
 
