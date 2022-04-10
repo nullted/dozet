@@ -5,7 +5,7 @@ CLASS.Help = "controls_eradicator"
 
 CLASS.Wave = 7 / 12
 
-CLASS.Health = 5000
+CLASS.Health = 3000
 CLASS.Speed = 7
 
 CLASS.CanTaunt = true
