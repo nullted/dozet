@@ -13,22 +13,22 @@ if CLIENT then
 	SWEP.ViewModelFlip = false
 end
 
-SWEP.ViewModel = "models/weapons/c_shotgun.mdl"
-SWEP.WorldModel = "models/weapons/w_shotgun.mdl"
+SWEP.ViewModel = "models/weapons/cstrike/c_smg_mp5.mdl"
+SWEP.WorldModel = "models/weapons/w_smg_mp5.mdl"
 SWEP.UseHands = true
 
 SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadDelay = 1.3
 
-SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
+SWEP.Primary.Sound = Sound("Weapon_MP5Navy.Single")
 SWEP.Primary.Damage = 11
 SWEP.Primary.NumShots = 3
-SWEP.Primary.Delay = 0.73
+SWEP.Primary.Delay = 0.66
 
 SWEP.Recoil = 7.5
 
-SWEP.Primary.ClipSize = 1
+SWEP.Primary.ClipSize = 12
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.DefaultClip = 200
@@ -49,9 +49,9 @@ SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.04)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lithe Stick", "Decreased damage but faster reload, more knockback and more move speed", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 0.5
-	wept.ReloadSpeed = wept.ReloadSpeed * 3
-	wept.Primary.Delay = wept.Primary.Delay * 0.8
-	wept.Knockback = 130
+	wept.ReloadSpeed = wept.ReloadSpeed * 2
+	wept.Primary.Delay = wept.Primary.Delay * 0.6
+	wept.Knockback = 210
 	wept.WalkSpeed = SPEED_SLOW
 end)
 

@@ -1014,7 +1014,10 @@ function meta:Resupply(owner, obj)
 
 		self:GiveAmmo(amount, ammotype)
 
-		if self:IsSkillActive(SKILL_FORAGER) and math.random(3) == 1 and #GAMEMODE.Food > 0 then
+		if self:IsSkillActive(SKILL_FORAGER) and math.random(7) == 1 and #GAMEMODE.Food > 0 then
+			self:Give(GAMEMODE.Food[math.random(#GAMEMODE.Food)])
+		end
+		if self:IsSkillActive(SKILL_SOULNET) and math.random(30) == 1 and #GAMEMODE.Food > 0 then
 			self:Give(GAMEMODE.Food[math.random(#GAMEMODE.Food)])
 		end
 

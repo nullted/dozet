@@ -188,6 +188,7 @@ LANGUAGE.class_devourer								= "Пудж"
 LANGUAGE.class_ancient_nightmare					= "Древний кошмар"
 LANGUAGE.class_zombienie             ="Вечный жопник"
 LANGUAGE.class_bnightmare             ="Кровяной Кошмар"
+LANGUAGE.class_king_fast   						= "Король быстрых"
 
 -- Class descriptions
 LANGUAGE.description_zombie							= "Обычный зомби очень стойкий и довольно силен.\nЕго сложно положить, особенно если не стрелять в голову."
@@ -216,6 +217,8 @@ LANGUAGE.description_bnightmare						= "Дает редкую мутации в 
 LANGUAGE.description_asskicker						= "Неудачный эксперимент сына хехиха.\nСильнее баракота в 2-3 раза,может убить человека с 2 ударов.\nБывший барагот мутировал в это создание."
 
 LANGUAGE.description_baw						= "Бред зомби.\nОни думали что это спасенье а на самом деле это лишь и иллюзия.\nКидает куски мяса которые восстанавливают здоровье зомбям,хорош в атаку,защиту и помощника."
+LANGUAGE.description_king_fast						= "Странная эволюция быстрых.\nХороший босс!Хорошо лазит и царапет.\nВсели так плохо?."
+
 
 -- Class control schemes
 LANGUAGE.controls_zombie							= "> ПЕРВИЧНЫЙ: Когти\n> ВТОРИЧНЫЙ: Крик\n> ПЕРЕЗАРЯДКА: Плач\n> БЕГ: Притвориться мертвым\n> УБИЙСТВО В НОГИ: Шанс на реанимацию / трансформация"

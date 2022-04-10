@@ -30,12 +30,12 @@ SWEP.ShowViewModel = true
 SWEP.ShowWorldModel = true
 SWEP.ViewModelBoneMods = {}
 SWEP.Primary.Sound = Sound("Weapon_Deagle.Single")
-SWEP.Primary.Damage = 54
+SWEP.Primary.Damage = 87
 SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.27
-SWEP.Primary.KnockbackScale = 4
-SWEP.MaxStock = 3
-SWEP.Primary.ClipSize = 8
+SWEP.Primary.Delay = 0.24
+SWEP.Primary.KnockbackScale = 2
+SWEP.MaxStock = 2
+SWEP.Primary.ClipSize = 10
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "pistol"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
@@ -47,14 +47,14 @@ SWEP.ReloadSpeed = 0.7
 
 SWEP.FireAnimSpeed = 1.8
 
-SWEP.Tier = 4
+SWEP.Tier = 7
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1, 1)
 
 function SWEP:ShootBullets(dmg, numbul, cone)
-	dmg = dmg + dmg * (4.3 * self:Clip1() / self.Primary.ClipSize)
+	dmg = dmg + dmg * (4.6 * self:Clip1() / self.Primary.ClipSize)
 
 	BaseClass.ShootBullets(self, dmg, numbul, cone)
 end

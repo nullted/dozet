@@ -11,7 +11,7 @@ SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 107
+SWEP.MeleeDamage = 155
 SWEP.MeleeRange = 108
 SWEP.MeleeSize = 3.5
 SWEP.MeleeKnockBack = 122
@@ -24,13 +24,13 @@ SWEP.SwingRotation = Angle(0, -120, -70)
 SWEP.SwingOffset = Vector(0, 30, -40)
 SWEP.SwingTime = 0.97
 SWEP.SwingHoldType = "melee"
-SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.5
+SWEP.Secondary.Delay = SWEP.Primary.Delay * 1.8
 
-SWEP.MeleeDamageSecondaryMul = 1.1
+SWEP.MeleeDamageSecondaryMul = 2.3
 SWEP.MeleeKnockBackSecondaryMul = 3
 SWEP.SwingTimeSecondary = 0.99
 
-SWEP.Tier = 5
+SWEP.Tier = 6
 SWEP.PointsMultiplier = GAMEMODE.PulsePointsMultiplier
 SWEP.AllowQualityWeapons = true
 

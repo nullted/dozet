@@ -243,7 +243,7 @@ item.SkillRequirement = SKILL_U_ROLLERMINE
 
 GM:AddStartingItem("wrench",			ITEMCAT_TOOLS,			20,				"weapon_zs_wrench").NoClassicMode = true
 GM:AddStartingItem("crphmr",			ITEMCAT_TOOLS,			40,				"weapon_zs_hammer").NoClassicMode = true
-GM:AddStartingItem("electoh",			ITEMCAT_TOOLS,			80,				"weapon_zs_electrohammer").NoClassicMode = true
+GM:AddStartingItem("electoh",			ITEMCAT_TOOLS,			60,				"weapon_zs_electrohammer").NoClassicMode = true
 GM:AddStartingItem("junkpack",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_boardpack")
 GM:AddStartingItem("normpack",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_normalpack")
 GM:AddStartingItem("propanetank",		ITEMCAT_TOOLS,			30,				"comp_propanecan")
@@ -251,7 +251,7 @@ GM:AddStartingItem("busthead",			ITEMCAT_TOOLS,			35,				"comp_busthead")
 GM:AddStartingItem("sawblade",			ITEMCAT_TOOLS,			35,				"comp_sawblade")
 GM:AddStartingItem("cpuparts",			ITEMCAT_TOOLS,			35,				"comp_cpuparts")
 GM:AddStartingItem("electrobattery",	ITEMCAT_TOOLS,			45,				"comp_electrobattery")
-GM:AddStartingItem("electroh",	        ITEMCAT_TOOLS,			75,				"weapon_zs_electrohammer")
+GM:AddStartingItem("singurhamemer",	        ITEMCAT_TOOLS,			120,				"weapon_zs_singurhammer").NoClassicMode = true
 GM:AddStartingItem("msgbeacon",			ITEMCAT_DEPLOYABLES,			10,				"weapon_zs_messagebeacon").Countables = "prop_messagebeacon"
 item =
 GM:AddStartingItem("ffemitter",			ITEMCAT_DEPLOYABLES,			45,				"weapon_zs_ffemitter",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(50, "pulse") end)
@@ -278,19 +278,19 @@ GM:AddStartingItem("processor",			ITEMCAT_TRINKETS,		20,				"trinket_processor")
 GM:AddStartingItem("cardpackagei",		ITEMCAT_TRINKETS,		20,				"trinket_cardpackagei").SubCategory =			ITEMSUBCAT_TRINKETS_DEFENSIVE
 GM:AddStartingItem("bloodpack",			ITEMCAT_TRINKETS,		20,				"trinket_bloodpack").SubCategory =				ITEMSUBCAT_TRINKETS_DEFENSIVE
 GM:AddStartingItem("biocleanser",		ITEMCAT_TRINKETS,		20,				"trinket_biocleanser").SubCategory =			ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("reactiveflasher",	ITEMCAT_TRINKETS,		25,				"trinket_reactiveflasher").SubCategory =		ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("magnet",			ITEMCAT_TRINKETS,		25,				"trinket_magnet").SubCategory =					ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("arsenalpack",		ITEMCAT_TRINKETS,		35,				"trinket_arsenalpack").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
-GM:AddStartingItem("resupplypack",		ITEMCAT_TRINKETS,		35,				"trinket_resupplypack").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
+GM:AddStartingItem("reactiveflasher",	ITEMCAT_TRINKETS,		5,				"trinket_reactiveflasher").SubCategory =		ITEMSUBCAT_TRINKETS_SPECIAL
+GM:AddStartingItem("magnet",			ITEMCAT_TRINKETS,		10,				"trinket_magnet").SubCategory =					ITEMSUBCAT_TRINKETS_SPECIAL
+GM:AddStartingItem("arsenalpack",		ITEMCAT_TRINKETS,		15,				"trinket_arsenalpack").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
+GM:AddStartingItem("resupplypack",		ITEMCAT_TRINKETS,		25,				"trinket_resupplypack").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
 
-GM:AddStartingItem("stone",				ITEMCAT_OTHER,			10,				"weapon_zs_stone")
-GM:AddStartingItem("grenade",			ITEMCAT_OTHER,			30,				"weapon_zs_grenade")
+GM:AddStartingItem("stone",				ITEMCAT_OTHER,			5,				"weapon_zs_stone")
+GM:AddStartingItem("grenade",			ITEMCAT_OTHER,			20,				"weapon_zs_grenade")
 GM:AddStartingItem("flashbomb",			ITEMCAT_OTHER,			15,				"weapon_zs_flashbomb")
-GM:AddStartingItem("molotov",			ITEMCAT_OTHER,			30,				"weapon_zs_molotov")
-GM:AddStartingItem("betty",				ITEMCAT_OTHER,			30,				"weapon_zs_proxymine")
+GM:AddStartingItem("molotov",			ITEMCAT_OTHER,			20,				"weapon_zs_molotov")
+GM:AddStartingItem("betty",				ITEMCAT_OTHER,			10,				"weapon_zs_proxymine")
 GM:AddStartingItem("corgasgrenade",		ITEMCAT_OTHER,			40,				"weapon_zs_corgasgrenade")
 GM:AddStartingItem("crygasgrenade",		ITEMCAT_OTHER,			35,				"weapon_zs_crygasgrenade").SkillRequirement = SKILL_U_CRYGASGREN
-GM:AddStartingItem("detpck",			ITEMCAT_OTHER,			35,				"weapon_zs_detpack").Countables = "prop_detpack"
+GM:AddStartingItem("detpck",			ITEMCAT_OTHER,			55,				"weapon_zs_detpack").Countables = "prop_detpack"
 item =
 GM:AddStartingItem("sigfragment",		ITEMCAT_OTHER,			25,				"weapon_zs_sigilfragment")
 item.NoClassicMode = true
@@ -365,7 +365,6 @@ GM:AddPointShopItem("inferno",			ITEMCAT_GUNS,			180,			"weapon_zs_inferno")
 GM:AddPointShopItem("quasar",			ITEMCAT_GUNS,			180,			"weapon_zs_quasar")
 GM:AddPointShopItem("barrage",			ITEMCAT_GUNS,			180,			"weapon_zs_barrage")
 GM:AddPointShopItem("toxico",			ITEMCAT_GUNS,			180,			"weapon_zs_toxicshooter")
-GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			180,			"weapon_zs_gaeagle")
 -- Tier 5
 GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			260,			"weapon_zs_slugrifle")
 GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			260,			"weapon_zs_gluon")
@@ -385,11 +384,10 @@ GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			500,			"weapon_zs_classic")
 GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			500,			"weapon_zs_plasmatik")
 GM:AddPointShopItem("deathdlrs",		ITEMCAT_GUNS,			500,			"weapon_zs_deathdealers")
 GM:AddPointShopItem("boomstick",		ITEMCAT_GUNS,			500,			"weapon_zs_boomstick")
-GM:AddPointShopItem("m50",		ITEMCAT_GUNS,			500,			"weapon_zs_m5")
 GM:AddPointShopItem("hephaa",		ITEMCAT_GUNS,			500,			"weapon_zs_hephaestus")
 -- Tier 7
 GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			1000,			"weapon_zs_m6")
-GM:AddPointShopItem("crymister",			ITEMCAT_GUNS,			1000,			"weapon_zs_cryman")
+GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			1000,			"weapon_zs_gaeagle")
 
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"24 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(25, "pistol", true) end)
@@ -445,8 +443,9 @@ GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			190,			"weapon_zs_loy")
 GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			190,			"weapon_zs_luxoid")
 -- Tier 6
 GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			400,			"weapon_zs_harpoon_mega")
+GM:AddPointShopItem("teslar",			ITEMCAT_MELEE,			400,			"weapon_zs_teslorer")
 -- Tier 7
-GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			7020,			"weapon_zs_speed")
+GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			10600,			"weapon_zs_speed")
 -- Super Trinkets ------------------------------------------------------------------------------------------------------------------------------------------------
 
 --

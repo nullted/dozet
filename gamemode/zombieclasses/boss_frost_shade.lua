@@ -10,7 +10,6 @@ CLASS.Boss = true
 CLASS.Health = 1900
 CLASS.Speed = 170
 
-CLASS.Points = 30
 
 CLASS.SWEP = "weapon_zs_frostshade"
 

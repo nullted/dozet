@@ -986,7 +986,7 @@ function meta:GetRight()
 end
 
 function meta:GetZombieMeleeSpeedMul()
-	return 1 * (1 + math.Clamp(self:GetArmDamage() / GAMEMODE.MaxArmDamage, 0, 1)) / (self:GetStatus("zombie_battlecry") and 1.2 or 1)
+	return 1 * (1 + math.Clamp(self:GetArmDamage() / GAMEMODE.MaxArmDamage, 0, 1)) / (self:GetStatus("zombie_battlecry") and 1.8 or 1)
 end
 
 function meta:GetMeleeSpeedMul()
