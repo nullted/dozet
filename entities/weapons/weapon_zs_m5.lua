@@ -33,18 +33,18 @@ SWEP.Base = "weapon_zs_base"
 SWEP.ViewModel = "models/weapons/v_rif_m4a1.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
 SWEP.Primary.Sound = Sound("Weapon_m4a1.Single")
-SWEP.Primary.Damage = 55
+SWEP.Primary.Damage = 22
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.12
 
-SWEP.Primary.ClipSize = 55
+SWEP.Primary.ClipSize = 35
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "ar2"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.HoldType = "ar2"
 
 
-SWEP.ConeMax = 2
+SWEP.ConeMax = 4
 SWEP.ConeMin = 0.7
 
 SWEP.WalkSpeed = SPEED_SLOW
@@ -55,7 +55,7 @@ function SWEP:OnZombieKilled()
 	local killer = self:GetOwner()
 
 	if killer:IsValid() then
-		local reaperstatus = killer:GiveStatus("bloodlust", 3600)
+		local reaperstatus = killer:GiveStatus("bloodlust", 1200)
 		if reaperstatus and reaperstatus:IsValid() then
 			reaperstatus:SetDTInt(1, math.min(reaperstatus:GetDTInt(1) + 10, 120))
 			killer:EmitSound("hl1/ambience/particle_suck1.wav", 55, 150 + reaperstatus:GetDTInt(1) * 30, 0.45)
