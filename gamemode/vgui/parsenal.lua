@@ -641,7 +641,7 @@ function GM:OpenArsenalMenu()
 	end
 
 	local screenscale = BetterScreenScale()
-	local wid, hei = math.min(ScrW(), 900) * screenscale, math.min(ScrH(), 800) * screenscale
+	local wid, hei = math.min(ScrW(), 1200) * screenscale, math.min(ScrH(), 800) * screenscale
 	local tabhei = 24 * screenscale
 
 	local frame = vgui.Create("DFrame")
@@ -731,8 +731,8 @@ function GM:OpenArsenalMenu()
 			local mkgrid = function()
 				local list = vgui.Create("DGrid", itemframe)
 				list:SetPos(0, 0)
-				list:SetSize(propertysheet:GetWide() - 312, propertysheet:GetTall())
-				list:SetCols(2)
+				list:SetSize(propertysheet:GetWide() - 325, propertysheet:GetTall())
+				list:SetCols(3)
 				list:SetColWide(280 * screenscale)
 				list:SetRowHeight((trinkets and 64 or 100) * screenscale)
 
@@ -771,7 +771,7 @@ function GM:OpenArsenalMenu()
 			end
 
 			local sheet = propertysheet:AddSheet(catname, tabpane, GAMEMODE.ItemCategoryIcons[catid], false, false)
-			sheet.Panel:SetPos(0, tabhei + 2)
+			sheet.Panel:SetPos(50, tabhei + 2)
 
 			for i, tab in ipairs(GAMEMODE.Items) do
 				if tab.PointShop and tab.Category == catid then

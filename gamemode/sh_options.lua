@@ -387,6 +387,7 @@ GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
 -- Tier 6 beta
 GM:AddPointShopItem("null",			ITEMCAT_GUNS,			20,			"weapon_zs_null")
 GM:AddPointShopItem("null",			ITEMCAT_MELEE,			20,			"weapon_zs_null")
+GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"24 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(25, "pistol", true) end)
 GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			9,				nil,							"14 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(14, "buckshot", true) end)
