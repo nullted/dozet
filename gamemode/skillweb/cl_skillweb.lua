@@ -1123,7 +1123,7 @@ function PANEL:OnMousePressed(mc)
 
 			if hoveredskill == -1 and can_remort then
 				Derma_Query(
-					"Are you ABSOLUTELY sure you want to remort?\nYou will revert to level 1, lose all skills, but have 1 extra SP.\nThis cannot be undone!",
+					"Are you ABSOLUTELY sure you want to remort?\nYou will revert to level 1, lose all skills, but have 2 extra SP.\nThis cannot be undone!",
 					"Warning",
 					"OK",
 					function() net.Start("zs_skills_remort") net.SendToServer() end,
@@ -1133,7 +1133,7 @@ function PANEL:OnMousePressed(mc)
 
 				return
 			elseif hoveredskill == -1 then
-				self:DisplayMessage("You need to be level 60 to remort!", COLOR_RED)
+				self:DisplayMessage("You need to be level 100 to remort!", COLOR_RED)
 				surface.PlaySound("buttons/button8.wav")
 
 				return
