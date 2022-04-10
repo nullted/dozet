@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_base"
 
-SWEP.PrintName = "Smgstick"
+SWEP.PrintName = " 'Infernu,' Infinity gun"
 SWEP.Description = "Stop what?."
 
 if CLIENT then
@@ -22,36 +22,34 @@ SWEP.CSMuzzleFlashes = false
 SWEP.ReloadDelay = 1.3
 
 SWEP.Primary.Sound = Sound("Weapon_MP5Navy.Single")
-SWEP.Primary.Damage = 11
-SWEP.Primary.NumShots = 3
-SWEP.Primary.Delay = 0.66
+SWEP.Primary.Damage = 8
+SWEP.Primary.NumShots = 2
+SWEP.Primary.Delay = 0.43
 
 SWEP.Recoil = 7.5
 
-SWEP.Primary.ClipSize = 12
+SWEP.Primary.ClipSize = 1
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "smg1"
-SWEP.Primary.DefaultClip = 200
 
-SWEP.ConeMax = 11.5
-SWEP.ConeMin = 10
+
+SWEP.ConeMax = 5
+SWEP.ConeMin = 1
 
 SWEP.Tier = 3
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.FireAnimSpeed = 0.07
-SWEP.Knockback = 150
+SWEP.Knockback = 110
 
-SWEP.PumpActivity = ACT_SHOTGUN_PUMP
-SWEP.PumpSound = Sound("Weapon_Shotgun.Special1")
-SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
+
 
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.04)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Lithe Stick", "Decreased damage but faster reload, more knockback and more move speed", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 0.5
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Berjumo'", "Decreased damage but faster reload, more knockback and more move speed", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 0.3
 	wept.ReloadSpeed = wept.ReloadSpeed * 2
 	wept.Primary.Delay = wept.Primary.Delay * 0.6
-	wept.Knockback = 210
+	wept.Knockback = 120
 	wept.WalkSpeed = SPEED_SLOW
 end)
 
@@ -66,13 +64,13 @@ function SWEP:PrimaryAttack()
 
 	local clip = self:Clip1()
 
-	self:ShootBullets(self.Primary.Damage, self.Primary.NumShots * clip, self:GetCone())
+	self:ShootBullets(self.Primary.Damage, self.Primary.NumShots * 2, self:GetCone())
 
-	self:TakePrimaryAmmo(clip)
-	owner:ViewPunch(clip * 0.5 * self.Recoil * Angle(math.Rand(-0.1, -0.1), math.Rand(-0.1, 0.1), 0))
+	
+	owner:ViewPunch( 0.5 * self.Recoil * Angle(math.Rand(-0.1, -0.1), math.Rand(-0.1, 0.1), 0))
 
 	owner:SetGroundEntity(NULL)
-	owner:SetVelocity(-self.Knockback * clip * owner:GetAimVector())
+	owner:SetVelocity(-self.Knockback *  owner:GetAimVector())
 
 	self.IdleAnimation = CurTime() + self:SequenceDuration()
 end
