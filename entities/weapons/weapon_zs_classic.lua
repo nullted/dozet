@@ -57,7 +57,7 @@ SWEP.IronSightsAng = Vector(0, 0, 0)
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
-SWEP.Tier = 4
+SWEP.Tier = 6
 
 SWEP.TracerName = "AR2Tracer"
 

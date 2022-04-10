@@ -9,7 +9,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 121
+SWEP.MeleeDamage = 177
 SWEP.MeleeRange = 91
 SWEP.MeleeSize = 3
 SWEP.MeleeKnockBack = 240
@@ -31,7 +31,7 @@ SWEP.SwingHoldType = "melee"
 
 SWEP.SwingTimeSecondary = 0.85
 
-SWEP.Tier = 4
+SWEP.Tier = 5
 SWEP.MaxStock = 2
 
 SWEP.AllowQualityWeapons = true

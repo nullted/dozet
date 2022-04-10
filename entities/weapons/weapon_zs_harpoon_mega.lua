@@ -33,7 +33,7 @@ SWEP.MeleeSize = 1.6
 SWEP.MaxStock = 2
 SWEP.Primary.Delay = 1.98
 
-SWEP.Tier = 5
+SWEP.Tier = 6
 
 SWEP.WalkSpeed = SPEED_SLOWER
 

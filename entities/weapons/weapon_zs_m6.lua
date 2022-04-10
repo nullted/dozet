@@ -49,7 +49,7 @@ SWEP.ConeMin = 0.9
 
 SWEP.WalkSpeed = SPEED_SLOW
 
-SWEP.Tier = 5
+SWEP.Tier = 7
 SWEP.MaxStock = 2
 function SWEP:OnZombieKilled()
 	local killer = self:GetOwner()

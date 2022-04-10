@@ -361,21 +361,18 @@ GM:AddPointShopItem("quicksilver",		ITEMCAT_GUNS,			180,			"weapon_zs_quicksilve
 GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			180,			"weapon_zs_slugrifle")
 GM:AddPointShopItem("artemis",			ITEMCAT_GUNS,			180,			"weapon_zs_artemis")
 GM:AddPointShopItem("zeus",				ITEMCAT_GUNS,			180,			"weapon_zs_zeus")
-GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			260,			"weapon_zs_m6")
 GM:AddPointShopItem("inferno",			ITEMCAT_GUNS,			180,			"weapon_zs_inferno")
 GM:AddPointShopItem("quasar",			ITEMCAT_GUNS,			180,			"weapon_zs_quasar")
-GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			180,			"weapon_zs_gluon")
 GM:AddPointShopItem("barrage",			ITEMCAT_GUNS,			180,			"weapon_zs_barrage")
-GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			180,			"weapon_zs_classic")
 GM:AddPointShopItem("toxico",			ITEMCAT_GUNS,			180,			"weapon_zs_toxicshooter")
 GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			180,			"weapon_zs_gaeagle")
 -- Tier 5
+GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			260,			"weapon_zs_slugrifle")
+GM:AddPointShopItem("gluon",			ITEMCAT_GUNS,			260,			"weapon_zs_gluon")
 GM:AddPointShopItem("novacolt",			ITEMCAT_GUNS,			260,			"weapon_zs_novacolt")
 GM:AddPointShopItem("bulwark",			ITEMCAT_GUNS,		    260,			"weapon_zs_bulwark")
 GM:AddPointShopItem("juggernaut",		ITEMCAT_GUNS,		    260,			"weapon_zs_juggernaut")
 GM:AddPointShopItem("scar",				ITEMCAT_GUNS,			260,			"weapon_zs_scar")
-GM:AddPointShopItem("boomstick",		ITEMCAT_GUNS,			260,			"weapon_zs_boomstick")
-GM:AddPointShopItem("deathdlrs",		ITEMCAT_GUNS,			260,			"weapon_zs_deathdealers")
 GM:AddPointShopItem("colossus",			ITEMCAT_GUNS,			260,			"weapon_zs_colossus")
 GM:AddPointShopItem("renegade",			ITEMCAT_GUNS,			260,			"weapon_zs_renegade")
 GM:AddPointShopItem("crossbow",			ITEMCAT_GUNS,			260,			"weapon_zs_crossbow")
@@ -383,11 +380,17 @@ GM:AddPointShopItem("pulserifle",		ITEMCAT_GUNS,			260,			"weapon_zs_pulserifle"
 GM:AddPointShopItem("spinfusor",		ITEMCAT_GUNS,			260,			"weapon_zs_spinfusor")
 GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			260,			"weapon_zs_broadside")
 GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			260,			"weapon_zs_smelter")
-GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
 -- Tier 6 beta
-GM:AddPointShopItem("null",			ITEMCAT_GUNS,			20,			"weapon_zs_null")
-GM:AddPointShopItem("null",			ITEMCAT_MELEE,			20,			"weapon_zs_null")
-GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			260,			"weapon_zs_plasmatik")
+GM:AddPointShopItem("classixg",			ITEMCAT_GUNS,			500,			"weapon_zs_classic")
+GM:AddPointShopItem("plasmk",			ITEMCAT_GUNS,			500,			"weapon_zs_plasmatik")
+GM:AddPointShopItem("deathdlrs",		ITEMCAT_GUNS,			500,			"weapon_zs_deathdealers")
+GM:AddPointShopItem("boomstick",		ITEMCAT_GUNS,			500,			"weapon_zs_boomstick")
+GM:AddPointShopItem("m50",		ITEMCAT_GUNS,			500,			"weapon_zs_m5")
+GM:AddPointShopItem("hephaa",		ITEMCAT_GUNS,			500,			"weapon_zs_hephaestus")
+-- Tier 7
+GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			1000,			"weapon_zs_m6")
+GM:AddPointShopItem("crymister",			ITEMCAT_GUNS,			1000,			"weapon_zs_cryman")
+
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"24 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(25, "pistol", true) end)
 GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			9,				nil,							"14 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(14, "buckshot", true) end)
@@ -436,12 +439,14 @@ GM:AddPointShopItem("kongol",			ITEMCAT_MELEE,			95,			"weapon_zs_kongolaxe")
 GM:AddPointShopItem("scythe",			ITEMCAT_MELEE,			95,			"weapon_zs_scythe")
 GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			95,			"weapon_zs_powerfists")
 -- Tier 5
-GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			95,			"weapon_zs_frotchet")
+GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			190,			"weapon_zs_frotchet")
 GM:AddPointShopItem("luxrockj",			ITEMCAT_MELEE,			95,			"weapon_zs_luxshade")
 GM:AddPointShopItem("xouryc",			ITEMCAT_MELEE,			190,			"weapon_zs_loy")
-GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			7020,			"weapon_zs_speed")
 GM:AddPointShopItem("luxoid",			ITEMCAT_MELEE,			190,			"weapon_zs_luxoid")
-GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			190,			"weapon_zs_harpoon_mega")
+-- Tier 6
+GM:AddPointShopItem("megahook",			ITEMCAT_MELEE,			400,			"weapon_zs_harpoon_mega")
+-- Tier 7
+GM:AddPointShopItem("speed",			ITEMCAT_MELEE,			7020,			"weapon_zs_speed")
 -- Super Trinkets ------------------------------------------------------------------------------------------------------------------------------------------------
 
 --

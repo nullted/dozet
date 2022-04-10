@@ -294,6 +294,7 @@ killicon.Add("weapon_zs_crymam", "zombiesurvival/killicons/weapon_zs_hyena", Col
 killicon.Add("weapon_zs_cryman", "zombiesurvival/killicons/weapon_zs_hyena", Color(70, 130, 180))
 killicon.AddFont("weapon_zs_smgstick", "zsdeathnoticecs", "x")
 killicon.Add("weapon_zs_toxicshooter", "zombiesurvival/killicons/weapon_zs_seditionist2", Color(0, 63, 25))
+killicon.Add("weapon_zs_megaray", "zombiesurvival/killicons/weapon_zs_healingray.png", Color(70, 130, 180))
 
 
 killicon.Add("weapon_zs_loy", "zombiesurvival/killicons/weapon_zs_axe")

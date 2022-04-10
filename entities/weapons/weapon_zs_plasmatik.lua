@@ -54,7 +54,7 @@ SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.IronSightsPos = Vector(-3, 1, 1)
 
-SWEP.Tier = 5
+SWEP.Tier = 6
 SWEP.MaxStock = 2
 
 SWEP.PointsMultiplier = GAMEMODE.PulsePointsMultiplier

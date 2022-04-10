@@ -60,7 +60,7 @@ SWEP.WorldModel = "models/weapons/w_pist_elite.mdl"
 SWEP.FakeWorldModel = "models/weapons/w_shotgun.mdl"
 SWEP.UseHands = true
 
-SWEP.Primary.Damage = 15.75
+SWEP.Primary.Damage = 19
 SWEP.Primary.NumShots = 8
 SWEP.Primary.Delay = 0.6
 
@@ -87,7 +87,7 @@ function SWEP:OnZombieKilled()
 	end
 end
 
-SWEP.Tier = 5
+SWEP.Tier = 6
 SWEP.MaxStock = 2
 
 function SWEP:SendReloadAnimation()

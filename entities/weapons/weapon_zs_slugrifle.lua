@@ -72,7 +72,7 @@ SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 SWEP.ConeMax = 6
 SWEP.ConeMin = 0.25
 
-SWEP.Tier = 4
+SWEP.Tier = 5
 SWEP.MaxStock = 3
 
 SWEP.IronSightsPos = Vector(0, 0, 0)
