@@ -825,8 +825,8 @@ GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.2)
 GM:AddSkill(SKILL_DEATH, "Morieris", GOOD.."Better medicine\n" ..BAD.."+20% Medkit Cooldown\n"..GOOD.."+20% Medkit effectiveness",
 										-3,			-8,					{SKILL_EX2}, TREE_ANCIENTTREE)
 										SKILL_ALLPOWER = 182
-GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.4)		
-GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Better cades\n" ..GOOD.."+40% Repair Mul",
+GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.15)		
+GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Better cades\n" ..GOOD.."+15% Repair Mul",
 					-4,			-8,					{SKILL_DEATH}, TREE_ANCIENTTREE)
 SKILL_ANCIENT = 183
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.47)

@@ -388,6 +388,7 @@ GM:AddPointShopItem("hephaa",		ITEMCAT_GUNS,			500,			"weapon_zs_hephaestus")
 -- Tier 7
 GM:AddPointShopItem("sacredhh",			ITEMCAT_GUNS,			1000,			"weapon_zs_m6")
 GM:AddPointShopItem("gaysseagle",   	ITEMCAT_GUNS,			1000,			"weapon_zs_gaeagle")
+GM:AddPointShopItem("doomstick",   	ITEMCAT_GUNS,			1000,			"weapon_zs_doomstick")
 
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			9,				nil,							"24 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(25, "pistol", true) end)

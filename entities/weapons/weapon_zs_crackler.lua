@@ -23,9 +23,11 @@ SWEP.ViewModel = "models/weapons/cstrike/c_rif_famas.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_famas.mdl"
 SWEP.UseHands = true
 
+local a = math.random(100)
+
 SWEP.ReloadSound = Sound("Weapon_FAMAS.Clipout")
 SWEP.Primary.Sound = Sound("Weapon_FAMAS.Single")
-SWEP.Primary.Damage = 19
+SWEP.Primary.Damage = a
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.175
 
