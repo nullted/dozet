@@ -58,7 +58,7 @@ SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.07)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Gloom Stick", "Better damage,1 numshots, faster reload, more knockback and more move speed", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 5
+	wept.Primary.Damage = wept.Primary.Damage * 10
 	wept.ReloadSpeed = wept.ReloadSpeed * 1.3
 	wept.Primary.Delay = wept.Primary.Delay * 0.9
 	wept.Knockback = 340
