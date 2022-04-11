@@ -1,5 +1,5 @@
-SWEP.PrintName = "'Hyena' Sticky Bomb Launcher"
-SWEP.Description = "Fires explosives that will stick to surfaces and enemies until detonated. Bombs take 3 seconds to reach maximum damage. Alt fire will remotely detonate bombs."
+SWEP.PrintName = "'Cry' Crygas"
+SWEP.Description = "dsladhbsdhsa"
 
 SWEP.Base = "weapon_zs_baseproj"
 
@@ -11,25 +11,25 @@ SWEP.UseHands = true
 
 SWEP.CSMuzzleFlashes = false
 
-SWEP.Primary.Delay = 0.2
+SWEP.Primary.Delay = 0.1
 SWEP.Primary.ClipSize = 3
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 3
-SWEP.Primary.Damage = 233
+SWEP.Primary.Damage = 15
 
 SWEP.ConeMin = 0.0001
 SWEP.ConeMax = 0.0001
 
 SWEP.WalkSpeed = SPEED_SLOW
 
-SWEP.Tier = 5
+SWEP.Tier = 7
 
-SWEP.MaxBombs = 15
+SWEP.MaxBombs = 4
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Cryo Sticky Launcher", "Fires cryo bombs that deal less damage but slow zombies", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 0.8
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Better crygas", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 2
 	if SERVER then
 		wept.EntModify = function(self, ent)
 			self:SetNextSecondaryFire(CurTime() + 0.2)
@@ -39,12 +39,13 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx' Cryo Sticky Launcher", "Fires cry
 	if CLIENT then
 		wept.VElements.clipbase.color = Color(30, 95, 150)
 	end
-end)
 
+wept.MaxBombs = 1
+end)
 function SWEP:CanPrimaryAttack()
 	if self.BaseClass.CanPrimaryAttack(self) then
 		local c = 0
-		for _, ent in pairs(ents.FindByClass("projectile_bomb_sticky")) do
+		for _, ent in pairs(ents.FindByClass("projectile_crygas")) do
 			if ent:GetOwner() == self:GetOwner() then
 				c = c + 1
 			end
