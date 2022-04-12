@@ -556,7 +556,7 @@ GM:AddPointShopItem("pulseampi",		ITEMCAT_TRINKETS,		10,				"trinket_pulseampi")
 -- Tier 2
 GM:AddPointShopItem("momentumsupsysii",	ITEMCAT_TRINKETS,		15,				"trinket_momentumsupsysii").SubCategory =						ITEMSUBCAT_TRINKETS_MELEE
 GM:AddPointShopItem("sharpkit",			ITEMCAT_TRINKETS,		15,				"trinket_sharpkit").SubCategory =								ITEMSUBCAT_TRINKETS_MELEE
-GM:AddPointShopItem("sharpkt",			ITEMCAT_TRINKETS,		15,				"trinket_sharpkt").SubCategory =								ITEMSUBCAT_TRINKETS_MELEE
+GM:AddPointShopItem("sharpkt",			ITEMCAT_TRINKETS,		50,				"trinket_sharpkt").SubCategory =								ITEMSUBCAT_TRINKETS_MELEE
 GM:AddPointShopItem("nightvision",		ITEMCAT_TRINKETS,		15,				"trinket_nightvision").SubCategory =							ITEMSUBCAT_TRINKETS_SPECIAL
 GM:AddPointShopItem("loadingframe",		ITEMCAT_TRINKETS,		15,				"trinket_loadingex").SubCategory =								ITEMSUBCAT_TRINKETS_SPECIAL
 GM:AddPointShopItem("pathfinder",		ITEMCAT_TRINKETS,		15,				"trinket_pathfinder").SubCategory =								ITEMSUBCAT_TRINKETS_SPECIAL
@@ -567,7 +567,6 @@ GM:AddPointShopItem("curbstompers",		ITEMCAT_TRINKETS,		15,				"trinket_curbstom
 GM:AddPointShopItem("vitpackagei",		ITEMCAT_TRINKETS,		15,				"trinket_vitpackagei").SubCategory =							ITEMSUBCAT_TRINKETS_DEFENSIVE
 GM:AddPointShopItem("cardpackagei",		ITEMCAT_TRINKETS,		15,				"trinket_cardpackagei").SubCategory =							ITEMSUBCAT_TRINKETS_DEFENSIVE
 GM:AddPointShopItem("forcedamp",		ITEMCAT_TRINKETS,		15,				"trinket_forcedamp").SubCategory =								ITEMSUBCAT_TRINKETS_DEFENSIVE
-GM:AddPointShopItem("scout",		ITEMCAT_TRINKETS,		15,				"trinket_forcedamp").SubCategory =								ITEMSUBCAT_TRINKETS_PERFOMANCE
 GM:AddPointShopItem("sarmband",		ITEMCAT_TRINKETS,		15,				"trinket_sarmband").SubCategory =								ITEMSUBCAT_TRINKETS_PERFOMANCE
 GM:AddPointShopItem("engineer",		ITEMCAT_TRINKETS,		15,				"trinket_engineer").SubCategory =								ITEMSUBCAT_TRINKETS_PERFOMANCE
 GM:AddPointShopItem("kevlar",			ITEMCAT_TRINKETS,		15,				"trinket_kevlar").SubCategory =									ITEMSUBCAT_TRINKETS_DEFENSIVE

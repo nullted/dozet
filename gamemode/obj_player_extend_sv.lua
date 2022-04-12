@@ -1017,9 +1017,6 @@ function meta:Resupply(owner, obj)
 		if self:IsSkillActive(SKILL_FORAGER) and math.random(7) == 1 and #GAMEMODE.Food > 0 then
 			self:Give(GAMEMODE.Food[math.random(#GAMEMODE.Food)])
 		end
-		if self:IsSkillActive(SKILL_SOULNET) and math.random(30) == 1 and #GAMEMODE.Food > 0 then
-			self:Give(GAMEMODE.Food[math.random(#GAMEMODE.Food)])
-		end
 
 		if self ~= owner and owner:IsValidHuman() then
 			if obj:GetClass() == "prop_resupplybox" then
