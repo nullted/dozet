@@ -16,7 +16,7 @@ SWEP.Primary.ClipSize = 19
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 19
-SWEP.Primary.Damage = 21
+SWEP.Primary.Damage = 18
 
 SWEP.ConeMin = 0.0001
 SWEP.ConeMax = 0.0001
@@ -25,7 +25,7 @@ SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 5
 
-SWEP.MaxBombs = 7
+SWEP.MaxBombs = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Lynx'", "'Better damage but less max bombs'", function(wept)

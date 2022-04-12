@@ -834,7 +834,6 @@ function GM:IsSpecialPerson(pl, image)
 	elseif pl:SteamID() == "STEAM_0:1:434267757" then
 		img = "zombiesurvival/sigil.png"
 		tooltip = "V-I-P"
-		AddSkillModifier(SKILLMOD_XP, 1)
 	elseif pl:SteamID() == "STEAM_0:1:92937109" then
 		img = "noxiousnet/arsenalcrate.png"
 		tooltip = "Bruh"
