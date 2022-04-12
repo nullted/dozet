@@ -16,8 +16,8 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "chemical"
 SWEP.Primary.Delay = 0.267
 SWEP.Primary.DefaultClip = 80
-SWEP.Primary.Damage = 21
-SWEP.Primary.NumShots = 3
+SWEP.Primary.Damage = 25
+SWEP.Primary.NumShots = 1
 
 SWEP.ConeMax = 3
 SWEP.ConeMin = 2.5
@@ -45,7 +45,7 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Poplaer' Napalm Rifle", 
 		wept.WElements["bio++++++"].color = Color(230, 150, 100)
 	end
 end)
-branch.Colors = {Color(255, 160, 50), Color(215, 120, 50), Color(175, 100, 40)}
+branch.Colors = {Color(255, 160, 50), Color(215, 120, 50), Color(175, 100, 40), Color(10, 115, 15)}
 branch.NewNames = {"Hot", "Searing", "Lavpool", "Vulkanoo", "Boomkalo"}
 
 branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Popupar' Cryo Rifle", "Launches cryoblobs that slow zombies down at the cost of numshot", function(wept)
@@ -64,7 +64,7 @@ branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Popupar' Cryo Rifle", "Launche
 		wept.WElements["bio++++++"].color = Color(100, 190, 230)
 	end
 end)
-branch.Colors = {Color(50, 160, 255), Color(50, 130, 215), Color(40, 115, 175)}
+branch.Colors = {Color(50, 160, 255), Color(50, 130, 215), Color(40, 115, 175), Color(40, 115, 175)}
 branch.NewNames = {"Cold", "Arctic", "Glacial", "Iceberg", "ColdHeart"}
 
 function SWEP:EmitFireSound()

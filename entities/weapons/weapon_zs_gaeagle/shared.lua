@@ -18,7 +18,7 @@ if CLIENT then
 	SWEP.IronSightsPos = Vector(-6.35, 5, 1.7)
 end
 
-
+SWEP.PointsMultiplier = 0.5
 SWEP.Base = "weapon_zs_base"
 SWEP.HoldType = "pistol"
 SWEP.ViewModelFOV = 70

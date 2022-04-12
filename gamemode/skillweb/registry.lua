@@ -936,12 +936,12 @@ GM:AddSkill(SKILL_DONATE5, "Donate V", GOOD.."Sale by 6%\n"..BAD.."Thx ivan36099
 				                                                            	22,			23,					{SKILL_DONATE4}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE5, SKILLMOD_ARSENAL_DISCOUNT, -0.03)
 SKILL_DONATE6 = 209
-GM:AddSkill(SKILL_DONATE6, "Donate VI", GOOD.."+% To blood armor convert\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	22,			24,					{SKILL_DONATE6}, TREE_DONATETREE)
+GM:AddSkill(SKILL_DONATE6, "Donate VI", GOOD.."+10% To blood armor convert\n"..BAD.."THX Null",
+				                                                            	22,			24,					{SKILL_DONATE5}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE6, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.10)
 SKILL_DONATE7 = 211
 GM:AddSkill(SKILL_DONATE7, "Donate VII", GOOD.."+% Hammer repair mul\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	21,			24,					{SKILL_DONATE6}, TREE_DONATETREE)
+				                                                            	21,			24,					{SKILL_DONATE8}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE7, SKILLMOD_REPAIRRATE_MUL, 0.10)
 SKILL_DONATE8 = 212
 GM:AddSkill(SKILL_DONATE8, "Donate VIII", GOOD.."+% Reload speed\n"..BAD.."Donate if you want to unlock this skill",
