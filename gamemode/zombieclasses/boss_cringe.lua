@@ -15,7 +15,7 @@ CLASS.FearPerInstance = 1
 
 CLASS.CanTaunt = true
 
-CLASS.SWEP = "weapon_zs_megacringe"
+CLASS.SWEP = "weapon_zs_cringe"
 
 CLASS.Model = Model("models/player/zombie_classic_hbfix.mdl")
 CLASS.OverrideModel = Model("models/player/zombie_fast.mdl")
