@@ -144,7 +144,7 @@ function meta:ProcessDamage(dmginfo)
 					attacker:TakeSpecialDamage(damage * self.BarbedArmorPercent, DMG_SLASH, self, self)
 				end
 
-				if self:HasTrinket("lazarussoul") and (not self.LastReactiveFlash or self.LastReactiveFlash + 1 < CurTime()) then
+				if self:HasTrinket("lazarussoul") and (not self.LastReactiveFlash or self.LastReactiveFlash + 40 < CurTime()) then
 					attacker:ScreenFade(SCREENFADE.IN, nil, 1, 1)
 					attacker:SetDSP(36)
 					attacker:GiveStatus("disorientation", 1)
@@ -195,8 +195,8 @@ function meta:ProcessDamage(dmginfo)
 					self.LastBleakSoul = CurTime()
 					self.BleakSoulMessage = nil
 				end
-		        if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 1 < CurTime()) then
-					attacker:GiveStatus("burn", 50)
+		        if self:HasTrinket("lazarussoul") and (not self.LastBleakSoul or self.LastBleakSoul + 30 < CurTime()) then
+					attacker:GiveStatus("bleed", 50)
 					attacker:SetGroundEntity(nil)
 					attacker:SetLocalVelocity((attacker:GetPos() - self:GetPos()):GetNormalized() * 450 + Vector(0, 0, 140))
 

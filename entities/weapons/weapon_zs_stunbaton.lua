@@ -1,7 +1,10 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Stun Baton"
+SWEP.PrintName = "Stunbuton"
 SWEP.Description = "АБСОЛЮТНО БЕЗОПАСНО!(не умеет поджигать)."
+
+SWEP.TranslationName = "wep_stunbuton"
+SWEP.TranslationDesc = "wep_d_stunbuton"
 
 if CLIENT then
 	SWEP.ViewModelFOV = 50

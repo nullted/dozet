@@ -406,13 +406,13 @@ GM:AddSkill(SKILL_BLOODARMOR, "Blood Armor", GOOD.."Regenerate 1 blood armor eve
 																2,			2,					{SKILL_IRONBLOOD, SKILL_BLOODLETTER, SKILL_D_HEMOPHILIA}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_IRONBLOOD, "Iron Blood", GOOD.."+25% damage reduction from blood armor\n"..GOOD.."Bonus doubled when health is 50% or less\n"..BAD.."-50% maximum blood armor",
 																2,			4,					{SKILL_HAEMOSTASIS, SKILL_CIRCULATION}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_D_WEAKNESS, "Debuff: Weakness", GOOD.."+60 starting Worth\n"..GOOD.."+15 end of wave points\n"..BAD.."-60 maximum health",
+GM:AddSkill(SKILL_D_WEAKNESS, "Debuff: Weakness", GOOD.."+60 starting Worth\n"..GOOD.."+15 end of wave points\n"..BAD.."-60 maximum health\n"..BAD.."-30 Melee Damage\n",
 																1,			-1,					{}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_VITALITY1, "Vitality I", GOOD.."+8 maximum health",
+GM:AddSkill(SKILL_VITALITY1, "Vitality I", GOOD.."+3 maximum health",
 																0,			-4,					{SKILL_VITALITY2}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+8 maximum health",
+GM:AddSkill(SKILL_VITALITY2, "Vitality II", GOOD.."+3 maximum health",
 																0,			-2,					{SKILL_VITALITY3}, TREE_HEALTHTREE)
-GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+8 maximum health",
+GM:AddSkill(SKILL_VITALITY3, "Vitality III", GOOD.."+3 maximum health",
 																0,			-0,					{SKILL_D_WEAKNESS}, TREE_HEALTHTREE)
 GM:AddSkill(SKILL_CHEESE, "Cheese", GOOD.."+10 maximum health and +10 speed",
 																1,			1,					{SKILL_GOURMET}, TREE_HEALTHTREE)
@@ -1328,9 +1328,9 @@ GM:AddSkillModifier(SKILL_STOIC4, SKILLMOD_SPEED, -11)
 GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_HEALTH, 11)
 GM:AddSkillModifier(SKILL_STOIC5, SKILLMOD_SPEED, -10)
 
-GM:AddSkillModifier(SKILL_VITALITY1, SKILLMOD_HEALTH, 8)
-GM:AddSkillModifier(SKILL_VITALITY2, SKILLMOD_HEALTH, 8)
-GM:AddSkillModifier(SKILL_VITALITY3, SKILLMOD_HEALTH, 8)
+GM:AddSkillModifier(SKILL_VITALITY1, SKILLMOD_HEALTH, 3)
+GM:AddSkillModifier(SKILL_VITALITY2, SKILLMOD_HEALTH, 3)
+GM:AddSkillModifier(SKILL_VITALITY3, SKILLMOD_HEALTH, 3)
 GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_HEALTH, 10)
 GM:AddSkillModifier(SKILL_CHEESE, SKILLMOD_SPEED, 10)
 
@@ -1508,6 +1508,7 @@ GM:AddSkillModifier(SKILL_REGENERATOR, SKILLMOD_HEALTH, -6)
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_WORTH, 60)
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_ENDWAVE_POINTS, 15)
 GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_HEALTH, -60)
+GM:AddSkillModifier(SKILL_D_WEAKNESS, SKILLMOD_MELEE_DAMAGE_MUL, -0.3)
 
 GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_WORTH, -10)
 GM:AddSkillModifier(SKILL_D_WIDELOAD, SKILLMOD_RESUPPLY_DELAY_MUL, -0.05)

@@ -56,7 +56,8 @@ LANGUAGE.press_walk_to_spawn_as_x					= "Press %s to spawn as a %s"
 LANGUAGE.press_rmb_to_spawn_close					= "Press RMB to spawn close to survivors"
 LANGUAGE.press_left_and_right_to_cycle_targets		= "Press STRAFE LEFT and STRAFE RIGHT to cycle targets"
 
-LANGUAGE.trinket_damager		= "Damager"
+LANGUAGE.wep_d_stunbuton		= "Damager"
+LANGUAGE.wep_stunbuton		= "Damager"
 
 LANGUAGE.observing_x								= "Observing %s (%d)"
 LANGUAGE.observing_x_simple							= "Observing %s"
