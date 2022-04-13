@@ -28,7 +28,7 @@ SWEP.CSMuzzleFlashes = false
 SWEP.ReloadDelay = 0.81
 
 SWEP.Primary.Sound = Sound("weapons/shotgun/shotgun_dbl_fire.wav")
-SWEP.Primary.Damage = 22
+SWEP.Primary.Damage = 33
 SWEP.Primary.NumShots = 4
 SWEP.Primary.Delay = 1.2
 
@@ -58,10 +58,10 @@ SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.07)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Gloom Stick", "Better damage,1 numshots, faster reload, more knockback and more move speed", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 10
+	wept.Primary.Damage = wept.Primary.Damage * 40
 	wept.ReloadSpeed = wept.ReloadSpeed * 1.3
 	wept.Primary.Delay = wept.Primary.Delay * 0.9
-	wept.Knockback = 340
+	wept.Knockback = 510
 	wept.WalkSpeed = SPEED_SLOW
 	wept.ConeMax = 2
     wept.ConeMin = 0.2
@@ -70,11 +70,11 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Gloom Stick", "Better damage,1 numshots,
 end)
 
 branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Bloomstick' Classic boomstick", "Classic boomstick", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 1.5
-	wept.Primary.NumShots = 2
-	wept.Primary.Delay = 0.31
-	wept.Knockback = 90
-	wept.FireAnimSpeed = 0.51
+	wept.Primary.Damage = wept.Primary.Damage * 2
+	wept.Primary.NumShots = 6
+	wept.Primary.Delay = 0.29
+	wept.Knockback = 110
+	wept.FireAnimSpeed = 0.55
 end)
 branch.Colors = {Color(50, 160, 255), Color(50, 130, 215), Color(40, 115, 175), Color(40, 0, 175)}
 branch.NewNames = {"Clocker", "Brocker", "Mlocker", "Krelocker", "Lochet"}
@@ -103,7 +103,7 @@ end
 SWEP.BulletCallback = function(attacker, tr, dmginfo)
 	local ent = tr.Entity
 	if SERVER and math.random(100) == 1 and ent:IsValidLivingZombie() then
-		ent:Ignite(40)
+		ent:Ignite(120)
 		for __, fire in pairs(ents.FindByClass("entityflame")) do
 			if fire:IsValid() and fire:GetParent() == ent then
 				fire:SetOwner(attacker)

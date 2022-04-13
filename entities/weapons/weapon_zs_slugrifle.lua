@@ -138,7 +138,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Triple", "Uses twice as much ammo, reloa
 	wept.Primary.ClipSize = 12
 	wept.RequiredClip = 2
 	wept.ReloadSpeed = 1.1
-	wept.HeadshotMulti = 18
+	wept.HeadshotMulti = 3
 
 	wept.OnZombieKilled = function(self, zombie, total, dmginfo)
 		local killer = self:GetOwner()

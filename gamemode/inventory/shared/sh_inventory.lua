@@ -69,7 +69,7 @@ GM:AddWeaponBreakdownRecipe("weapon_zs_crymam",							"trinket_toysoul")
 GM.Assemblies["weapon_zs_waraxe"] 								= {"comp_modbarrel", 		"weapon_zs_glock3"}
 GM.Assemblies["weapon_zs_bust"] 								= {"comp_busthead", 		"weapon_zs_plank"}
 GM.Assemblies["weapon_zs_sawhack"] 								= {"comp_sawblade", 		"weapon_zs_axe"}
-GM.Assemblies["weapon_zs_manhack_saw"] 							= {"comp_sawblade", 		"weapon_zs_manhack"}
+GM.Assemblies["weapon_zs_bloodhack"] 							= {"comp_sawblade", 		"weapon_zs_manhack"}
 GM.Assemblies["weapon_zs_megamasher"] 							= {"comp_propanecan", 		"weapon_zs_sledgehammer"}
 GM.Assemblies["weapon_zs_electrohammer"] 						= {"comp_electrobattery",	"weapon_zs_hammer"}
 GM.Assemblies["weapon_zs_novablaster"] 							= {"comp_basicecore",		"weapon_zs_magnum"}
@@ -108,6 +108,7 @@ GM.Assemblies["trinket_greedsoul"]						        	= {"trinket_superstore",	"trink
 GM.Assemblies["trinket_evesoul"]						        	= {"trinket_bloodpack",	"trinket_blanksoul"}
 GM.Assemblies["weapon_zs_singurhammer"] 						= {"trinket_electromagnet",	"weapon_zs_electrohammer"}
 GM.Assemblies["weapon_zs_megaray"] 						= {"trinket_soulmedical",	"weapon_zs_healingray"}
+GM.Assemblies["weapon_zs_manhack_saw"] 						= {"comp_bloodhack",	"comp_cpuparts"}
 
 
 GM:AddInventoryItemData("comp_modbarrel",		"Modular Barrel",			"A modular barrel suited for pairing up with another gun barrel.",								"models/props_c17/trappropeller_lever.mdl")
@@ -145,6 +146,7 @@ GM:AddInventoryItemData("comp_flak",			"Flak Chamber",				"An internal chamber f
 GM:AddInventoryItemData("comp_precision",		"Precision Chassis",		"A suite setup for rewarding precise shots on moving targets.",									"models/Items/combine_rifle_cartridge01.mdl")
 GM:AddInventoryItemData("comp_mommy",		"Mommy",		"Mom from Cryman.",									"models/Items/combine_rifle_cartridge01.mdl")
 GM:AddInventoryItemData("comp_sacred_soul",		"Sacred Soul",		"This sacred cartridge...",									"models/Items/combine_rifle_cartridge01.mdl")
+GM:AddInventoryItemData("comp_bloodhack",		"Bloody Hadck",		"djasnndwhadjajs||daw...",									"models/Items/combine_rifle_cartridge01.mdl")
 
 
 -- Trinkets
@@ -248,12 +250,12 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_POWERATTACK_MUL, 0.25)
 trinketwep.PermitDismantle = true
 
 GM:AddSkillModifier(GM:AddTrinket("Cutlery Set", "cutlery", false, hpveles, hpweles, nil, "-80% time to eat food\n -80% К времени поедания"), SKILLMOD_FOODEATTIME_MUL, -0.8)
-trinket, trinketwep = GM:AddTrinket("Self-killer pack", "killer", false, hpveles, hpweles, 2, "+110 max blood armor and consumes 70 health ,you take by 77% more damage, blood armor convert by 50%,and blood armor reduction 11%\n+110 к макс кровавой броне,-70 хп,ты получаешь на 77% больше урона.кровавая броня лучше генериуется от удара на 50% и лучше защищает на 11%")
+trinket, trinketwep = GM:AddTrinket("Self-killer pack", "killer", false, hpveles, hpweles, 2, "+110 max blood armor and consumes 50 health ,you take by 37% more damage, blood armor convert by 50%,and blood armor reduction 21%\n+110 к макс кровавой броне,-50 хп,ты получаешь на 37% больше урона.кровавая броня лучше генериуется от удара на 50% и лучше защищает на 21%")
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 110)
-GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -70)
-GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.77)
+GM:AddSkillModifier(trinket, SKILLMOD_HEALTH, -50)
+GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.37)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.50)
-GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.11)
+GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR_DMG_REDUCTION, 0.21)
 trinketwep.PermitDismantle = true
 trinket, trinketwep = GM:AddTrinket("Status", "via", false, hpveles, hpweles, 2, "Vera Via,bloodoarmoro +50")
 GM:AddSkillModifier(trinket, SKILLMOD_BLOODARMOR, 50)
@@ -320,7 +322,7 @@ trinket = GM:AddTrinket("Sports armband", "sarmband", true, pveles, pweles, 2, "
 GM:AddSkillModifier(trinket, SKILLMOD_JUMPPOWER_MUL, 0.04)
 trinket = GM:AddTrinket("Engineer Gaming", "engineer", true, pveles, pweles, 2, "+12% Deployable convert speed\n+12% К складыванию деплояблов")
 GM:AddSkillModifier(trinket, SKILLMOD_DEPLOYABLE_PACKTIME_MUL, 0.12)
-trinket = GM:AddTrinket("Scout Gaming", "scout", true, pveles, pweles, 2, "+10 speed\n+10% к скорости")
+trinket = GM:AddTrinket("Scout Gaming", "scout", true, pveles, pweles, 2, "+10 speed\n+10 к скорости")
 GM:AddSkillModifier(trinket, SKILLMOD_SPEED, 10)
 trinket = GM:AddTrinket("Broken hammer", "scour", true, pveles, pweles, 2, "+30% repair hammer,-15% Point multiplier\n+30% к силе починке,-15% К поинтам")
 GM:AddSkillModifier(trinket, SKILLMOD_POINT_MULTIPLIER, -0.15)

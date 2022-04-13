@@ -357,7 +357,6 @@ GM:AddPointShopItem("jackhammer",		ITEMCAT_GUNS,			180,			"weapon_zs_jackhammer"
 GM:AddPointShopItem("bulletstorm",		ITEMCAT_GUNS,			180,			"weapon_zs_bulletstorm")
 GM:AddPointShopItem("reaper",			ITEMCAT_GUNS,			180,			"weapon_zs_reaper")
 GM:AddPointShopItem("quicksilver",		ITEMCAT_GUNS,			180,			"weapon_zs_quicksilver")
-GM:AddPointShopItem("slugrifle",		ITEMCAT_GUNS,			180,			"weapon_zs_slugrifle")
 GM:AddPointShopItem("artemis",			ITEMCAT_GUNS,			180,			"weapon_zs_artemis")
 GM:AddPointShopItem("zeus",				ITEMCAT_GUNS,			180,			"weapon_zs_zeus")
 GM:AddPointShopItem("inferno",			ITEMCAT_GUNS,			180,			"weapon_zs_inferno")
