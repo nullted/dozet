@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Relsous' Relsotron"
-SWEP.Description = "Projects rifle ammo rounds at extremely high velocity."
+--SWEP.PrintName = "'Relsous' Relsotron"
+--SWEP.Description = "Projects rifle ammo rounds at extremely high velocity."
+SWEP.PrintName = ""..translate.Get("wep_relsous")
+SWEP.Description = ""..translate.Get("wep_d_relsous")
 
 if CLIENT then
 	SWEP.Slot = 3

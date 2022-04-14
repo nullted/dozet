@@ -1,10 +1,10 @@
 GM.WeaponQualityModifiers = {}
 GM.WeaponQualities = {
-	{"Sturdy", 1.12, "Tuned"},
-	{"Honed", 1.21, "Modified"},
-	{"Perfected", 1.54, "Reformed"},
-	{"Heavenly", 1.85, "Deadly"},
-	{"Superly", 2.10, "Doomly"}
+	{""..translate.Get("wep_q_1"), 1.12, ""..translate.Get("wep_r_1")},
+	{""..translate.Get("wep_q_2"), 1.21, ""..translate.Get("wep_r_2")},
+	{""..translate.Get("wep_q_3"), 1.54, ""..translate.Get("wep_r_3")},
+	{""..translate.Get("wep_q_4"), 1.85, ""..translate.Get("wep_r_4")},
+	{""..translate.Get("wep_q_5"), 2.10, ""..translate.Get("wep_r_5")}
 	
 }
 GM.WeaponQualityColors = {

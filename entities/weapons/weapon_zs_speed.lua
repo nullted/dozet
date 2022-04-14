@@ -1,6 +1,8 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Need For VKid"
+--SWEP.PrintName = "Need For VKid"
+SWEP.PrintName = ""..translate.Get("wep_vkid")
+SWEP.Description = ""..translate.Get("wep_d_vkid")
 
 if CLIENT then
 	SWEP.ViewModelFOV = 75

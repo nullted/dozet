@@ -1,6 +1,8 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Redeemers' Dual Handguns"
+--SWEP.PrintName = "'Redeemers' Dual Handguns"
+SWEP.PrintName = ""..translate.Get("wep_redeemers")
+
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 

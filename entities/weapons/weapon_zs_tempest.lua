@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Tempest' Burst Pistol"
-SWEP.Description = "Стреляет очередью,прототипом этого оружия была прошлая версия Адониса,были взяты некоторые аспекты."
+--SWEP.PrintName = "'Tempest' Burst Pistol"
+--SWEP.Description = "Стреляет очередью,прототипом этого оружия была прошлая версия Адониса,были взяты некоторые аспекты."
+SWEP.PrintName = ""..translate.Get("wep_tempest")
+SWEP.Description = ""..translate.Get("wep_d_tempest")
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 

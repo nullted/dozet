@@ -1,8 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Shredder' SMG"
-SWEP.Description = "Simple SMG capable of very good damage output at the cost of long range accuracy."
-
+--SWEP.PrintName = "'Shredder' SMG"
+--SWEP.Description = "Simple SMG capable of very good damage output at the cost of long range accuracy."
+SWEP.PrintName = ""..translate.Get("wep_shredder")
+SWEP.Description = ""..translate.Get("wep_d_shredder")
 SWEP.Slot = 2
 SWEP.SlotPos = 0
 
@@ -57,7 +58,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Smasher' SMG", "Additional damage to sk
 
 		if SERVER and trent and trent:IsValidZombie() then
 			if trent:GetZombieClassTable().Skeletal then
-				dmginfo:SetDamage(dmginfo:GetDamage() * 1.2)
+				dmginfo:SetDamage(dmginfo:GetDamage() * 3)
 			end
 
 			if math.random(6) == 1 then

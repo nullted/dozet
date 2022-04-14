@@ -1,9 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Renegade' Rifle"
-SWEP.Description = "A rifle with high headshot damage and a decent clip size. Receives a resistance penetration buff if you score enough headshot kills with it."
-
+--SWEP.PrintName = "'Renegade' Rifle"
+--SWEP.Description = "A rifle with high headshot damage and a decent clip size. Receives a resistance penetration buff if you score enough headshot kills with it."
+SWEP.PrintName = ""..translate.Get("wep_renegade")
+SWEP.Description = ""..translate.Get("wep_d_renegade")
 SWEP.Slot = 3
 SWEP.SlotPos = 0
 

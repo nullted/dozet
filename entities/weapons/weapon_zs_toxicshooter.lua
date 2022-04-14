@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'ToxicShooter' Handgun"
-SWEP.Description = "Тратит половину своих токсичных патрон имеет хороший токсичный уронн"
+--SWEP.PrintName = "'ToxicShooter' Handgun"
+--SWEP.Description = "Тратит половину своих токсичных патрон имеет хороший токсичный уронн"
+SWEP.PrintName = ""..translate.Get("wep_toxicshooter")
+SWEP.Description = ""..translate.Get("wep_d_toxicshooter")
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0
@@ -42,7 +44,7 @@ SWEP.ConeMax = 4
 SWEP.ConeMin = 0.75
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Breath' Boom gun", "Большой Шанс взорвать зомби при смерти", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_toxicshooter_r1"), ""..translate.Get("wep_d_toxicshooter_r1"), function(wept)
 	wept.Primary.Delay = 0.243
 	wept.Primary.Automatic = true
 	wept.Primary.ClipSize = math.floor(wept.Primary.ClipSize * 1.25)

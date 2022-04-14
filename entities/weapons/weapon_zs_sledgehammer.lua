@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Sledgehammer"
-SWEP.Description = "A heavy, but powerful melee weapon. A target struck by the force of it will receive considerable knockback."
+--SWEP.PrintName = "Sledgehammer"
+--SWEP.Description = "A heavy, but powerful melee weapon. A target struck by the force of it will receive considerable knockback."
+SWEP.PrintName = ""..translate.Get("wep_sledge")
+SWEP.Description = ""..translate.Get("wep_d_sledge")
 
 if CLIENT then
 	SWEP.ViewModelFOV = 75
@@ -53,7 +55,7 @@ function SWEP:ApplyMeleeDamage(pl, trace, damage)
 	if SERVER and pl:IsPlayer() then
 		local cursed = pl:GetStatus("cursed")
 		if (cursed) then 
-			pl:AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 10)
+			pl:AddCursed(self:GetOwner(), cursed.DieTime - CurTime() + 50)
 		end
 		if (not cursed) then 
 			pl:AddCursed(pl:GetOwner(), 10)

@@ -1,9 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Tosser' SMG"
-SWEP.Description = "A relatively simple SMG with a decent fire rate and reload speed."
-
+--SWEP.PrintName = "'Tosser' SMG"
+--SWEP.Description = "A relatively simple SMG with a decent fire rate and reload speed."
+SWEP.PrintName = ""..translate.Get("wep_tosser")
+SWEP.Description = ""..translate.Get("wep_d_tosser")
 SWEP.Slot = 2
 SWEP.SlotPos = 0
 

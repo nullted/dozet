@@ -1,6 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Singularity hammer"
+--SWEP.PrintName = "Singularity hammer"
+SWEP.PrintName = ""..translate.Get("wep_shammer")
 
 if CLIENT then
 
@@ -29,5 +30,5 @@ SWEP.WorldModel = "models/weapons/w_hammer.mdl"
 
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.04)
+GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.01)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 3, 0.4)

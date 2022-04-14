@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Stubber' Rifle"
-SWEP.Description = "Your basic bolt action sniper rifle, capable of providing good damage on headshots."
+--SWEP.PrintName = "'Stubber' Rifle"
+--SWEP.Description = "Your basic bolt action sniper rifle, capable of providing good damage on headshots."
+SWEP.PrintName = ""..translate.Get("wep_stubber")
+SWEP.Description = ""..translate.Get("wep_d_stubber")
 
 SWEP.Slot = 3
 SWEP.SlotPos = 0

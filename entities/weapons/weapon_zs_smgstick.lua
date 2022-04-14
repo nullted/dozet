@@ -2,8 +2,10 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_base"
 
-SWEP.PrintName = " 'Infernu,' Infinity gun"
-SWEP.Description = "Stop what?."
+--SWEP.PrintName = " 'Infernu,' Infinity gun"
+--SWEP.Description = "Stop what?."
+SWEP.PrintName = ""..translate.Get("wep_smgstick")
+SWEP.Description = ""..translate.Get("wep_d_smgstick")
 
 if CLIENT then
 	SWEP.HUD3DBone = "ValveBiped.Gun"
@@ -40,16 +42,16 @@ SWEP.Tier = 3
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.FireAnimSpeed = 0.07
-SWEP.Knockback = 110
+SWEP.Knockback = 121
 
 
 
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.04)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Berjumo'", "Decreased damage but faster reload, more knockback and more move speed", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_smgstick_r1"), ""..translate.Get("wep_d_smgstick_r1"), function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 0.3
 	wept.ReloadSpeed = wept.ReloadSpeed * 2
 	wept.Primary.Delay = wept.Primary.Delay * 0.6
-	wept.Knockback = 120
+	wept.Knockback = 177
 	wept.WalkSpeed = SPEED_SLOW
 end)
 
