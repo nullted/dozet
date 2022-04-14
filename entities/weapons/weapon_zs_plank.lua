@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Plank"
-SWEP.Description = "Обычная доска..."
+SWEP.PrintName = ""..translate.Get("wep_plank")
+
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55

@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Electrohammer"
+SWEP.PrintName = ""..translate.Get("wep_ehammer")
 
 if CLIENT then
 

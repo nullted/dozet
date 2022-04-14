@@ -60,7 +60,7 @@ end
 function GM:AttachWeaponModifier(swep, modifier, amount, qualitystart)
 	if not swep.AltRemantleModifiers then swep.AltRemantleModifiers = {} end
 
-	local datatab = {Amount = amount, QualityStart = qualitystart or 2}
+	local datatab = {Amount = amount, QualityStart = qualitystart or 1}
 	swep.AltRemantleModifiers[modifier] = datatab
 end
 
@@ -148,7 +148,7 @@ function GM:CreateWeaponOfQuality(i, orig, quality, classname, branch)
 	wept.Branch = branch and branch.No
 
 	if wept.PrintName then
-		wept.PrintName = (branch and branch.NewNames and branch.NewNames[i] or branch and quality[5] or quality[1]).." "..(branch and branch.PrintName or wept.PrintName)
+		wept.PrintName = (branch and branch.NewNames and branch.NewNames[i] or branch and quality[6] or quality[1]).." "..(branch and branch.PrintName or wept.PrintName)
 	end
 
 	if wept.PrimaryRemantleModifier then

@@ -1,8 +1,8 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Adonis' Улучшенная версия"
-SWEP.Description = "Прошлая версия была пистолетом но ее чертежи затерялись."
+SWEP.PrintName = ""..translate.Get("wep_adonis")
+SWEP.Description = ""..translate.Get("wep_d_adonis")
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0
@@ -55,11 +55,11 @@ SWEP.FireAnimSpeed = 0.4
 SWEP.LegDamage = 50
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.014, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Servitor' Pulse Rifle", "Refreshes zapper cooldown on kill, more leg damage, reduced accuracy and reload speed", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_adonis_r1"), ""..translate.Get("wep_d_adonis_r1"), function(wept)
 	wept.ConeMin = 2.25
 	wept.ConeMax = 3.75
 	wept.ReloadSpeed = 0.2
-	wept.LegDamage = 39
+	wept.LegDamage = 99
 
 	wept.OnZombieKilled = function(self)
 		local killer = self:GetOwner()

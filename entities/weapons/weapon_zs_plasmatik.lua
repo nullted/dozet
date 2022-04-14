@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Plasmatik' Улучшенная версия"
-SWEP.Description = "Плазма пушка."
+--SWEP.PrintName = "'Plasmatik' Улучшенная версия"
+--SWEP.Description = "Плазма пушка."
+SWEP.PrintName = ""..translate.Get("wep_plasmatik")
+SWEP.Description = ""..translate.Get("wep_d_plasmatik")
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0
@@ -65,24 +67,7 @@ SWEP.FireAnimSpeed = 0.4
 SWEP.LegDamage = 5
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.014, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Server' Pulse Rifle", "Refreshes ressuply cooldown on kill, more leg damage, reduced accuracy and reload speed", function(wept)
-	wept.ConeMin = 2.25
-	wept.ConeMax = 3.75
-	wept.ReloadSpeed = 0.2
-	wept.LegDamage = 39
 
-	wept.OnZombieKilled = function(self)
-		local killer = self:GetOwner()
-
-		if killer:IsValid() then
-			for _,v in pairs(ents.FindByClass("prop_ressuplybox*")) do
-				if v:GetObjectOwner() == killer then
-					v:SetNextRessuply(0)
-				end
-			end
-		end
-	end
-end)
 
 function SWEP.BulletCallback(attacker, tr, dmginfo)
 	local ent = tr.Entity

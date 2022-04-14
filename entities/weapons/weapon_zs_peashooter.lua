@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Peashooter' Handgun"
-SWEP.Description = "У него меньше урон чем у обычного пистолета,но обладая свойством тратить половину патрон он покрывает свой недостаток."
+--SWEP.PrintName = "'Peashooter' Handgun"
+--SWEP.Description = "У него меньше урон чем у обычного пистолета,но обладая свойством тратить половину патрон он покрывает свой недостаток."
+SWEP.PrintName = ""..translate.Get("wep_pshooter")
+SWEP.Description = ""..translate.Get("wep_d_pshooter")
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0
@@ -39,7 +41,7 @@ SWEP.ConeMax = 4
 SWEP.ConeMin = 0.75
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Peashooter' Auto Handgun", "Fully automatic, increased clip size at the cost of accuracy", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_pshooter_r1"), ""..translate.Get("wep_d_pshooter_r1"), function(wept)
 	wept.Primary.Delay = 0.11
 	wept.Primary.Automatic = true
 	wept.Primary.ClipSize = math.floor(wept.Primary.ClipSize * 1.25)
