@@ -2,6 +2,8 @@ AddCSLuaFile()
 
 SWEP.PrintName = "'Nova Colt' Handcannon"
 SWEP.Description = "A heavy handgun which deals impressive burst damage but has a significant reload time."
+SWEP.PrintName = ""..translate.Get("wep_novacolt")
+SWEP.Description = ""..translate.Get("wep_d_novacolt")
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 

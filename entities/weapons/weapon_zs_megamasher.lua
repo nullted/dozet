@@ -1,6 +1,6 @@
 
-SWEP.PrintName = "Mega Masher"
-
+--SWEP.PrintName = "Mega Masher"
+SWEP.PrintName = ""..translate.Get("wep_megamasher")
 if CLIENT then
 	SWEP.ViewModelFOV = 75
 
@@ -73,7 +73,7 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	end
 end
 
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "MegaMesh", "Zombie is BOOMED than kill, faster but less damage and knockback", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_megamasher_r1"), ""..translate.Get("wep_d_megamasher_r1"), function(wept)
 	wept.Primary.Delay = wept.Primary.Delay * 0.2
 	wept.MeleeDamage = wept.MeleeDamage * 0.3
 	wept.MeleeKnockBack = 612

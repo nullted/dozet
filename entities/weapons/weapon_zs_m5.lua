@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Sacred' M5"
-SWEP.Description = "Secret sacred Weapon."
+--SWEP.PrintName = "'Sacred' M5"
+--SWEP.Description = "Secret sacred Weapon."
+SWEP.PrintName = ""..translate.Get("wep_m5")
+SWEP.Description = ""..translate.Get("wep_d_m5")
 SWEP.Slot = 2
 SWEP.SlotPos = 0
 

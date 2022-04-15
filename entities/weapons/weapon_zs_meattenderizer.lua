@@ -1,8 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Кулак мясного"
-SWEP.Description = "Мясной кулак!И МЯСНОЕ ОРУЖИЕ,очень много урона но очень долго!."
-
+--SWEP.PrintName = "Кулак мясного"
+--SWEP.Description = "Мясной кулак!И МЯСНОЕ ОРУЖИЕ,очень много урона но очень долго!."
+SWEP.PrintName = ""..translate.Get("wep_masnoy")
+SWEP.Description = ""..translate.Get("wep_d_masnoy")
 if CLIENT then
 	SWEP.ViewModelFOV = 70
 	SWEP.ShowViewModel = true

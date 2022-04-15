@@ -1,8 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Juggernaut' M249"
-SWEP.Description = "A light machine gun capable of immense firepower, firing additional red projectiles as it fires."
-
+--SWEP.PrintName = "'Juggernaut' M249"
+--SWEP.Description = "A light machine gun capable of immense firepower, firing additional red projectiles as it fires."
+SWEP.PrintName = ""..translate.Get("wep_jugger")
+SWEP.Description = ""..translate.Get("wep_d_jugger")
 SWEP.Slot = 3
 SWEP.SlotPos = 0
 

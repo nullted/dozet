@@ -1,6 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Ladle"
+--SWEP.PrintName = "Ladle"
+SWEP.PrintName = ""..translate.Get("wep_ladle")
 
 if CLIENT then
 	SWEP.ViewModelFlip = false

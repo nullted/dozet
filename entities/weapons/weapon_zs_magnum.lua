@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Ricochete' Magnum"
-SWEP.Description = "This gun's bullets will bounce off of walls which will then deal extra damage."
+--SWEP.PrintName = "'Ricochete' Magnum"
+--SWEP.Description = "This gun's bullets will bounce off of walls which will then deal extra damage."
+SWEP.PrintName = ""..translate.Get("wep_magnum")
+SWEP.Description = ""..translate.Get("wep_d_magnum")
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 
@@ -48,7 +50,7 @@ SWEP.IronSightsAng = Vector(0, 0, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.7, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.35, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.07, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Backlash' Magnum", "Gets more accurate for each direct hit, but less damage on non-bounced shots", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_magnum_r1"), ""..translate.Get("wep_d_magnum_r1"), function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 0.85
 	wept.BounceMulti = 1.764
 	wept.GetCone = function(self)

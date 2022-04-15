@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Harpoon MEGA"
-SWEP.Description = "MEGAAAA."
+--SWEP.PrintName = "Harpoon MEGA"
+--SWEP.Description = "MEGAAAA."
+SWEP.PrintName = ""..translate.Get("wep_harpoon_m")
+SWEP.Description = ""..translate.Get("wep_d_harpoon_m")
 
 if CLIENT then
 	SWEP.ViewModelFOV = 60

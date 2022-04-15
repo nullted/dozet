@@ -2,8 +2,10 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_basemelee"
 
-SWEP.PrintName = "Ice Shade Manipulator"
-SWEP.Description = "A high-tech device, useful for crowds of zombies, has endless ice blocks "
+---"Ice Shade Manipulator"
+--- "A high-tech device, useful for crowds of zombies, has endless ice blocks "
+SWEP.PrintName = ""..translate.Get("wep_shadeice")
+SWEP.Description = ""..translate.Get("wep_d_shadeice")
 
 SWEP.ViewModel = Model("models/weapons/v_crowbar.mdl")
 SWEP.WorldModel = Model("models/weapons/w_crowbar.mdl")

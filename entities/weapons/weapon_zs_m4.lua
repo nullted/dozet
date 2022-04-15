@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Stalker' M4"
-SWEP.Description = "Using this gun will severely reduce the distance in which zombies can see your aura."
+--SWEP.PrintName = "'Stalker' M4"
+--SWEP.Description = "Using this gun will severely reduce the distance in which zombies can see your aura."
+SWEP.PrintName = ""..translate.Get("wep_m4")
+SWEP.Description = ""..translate.Get("wep_d_m4")
 SWEP.Slot = 2
 SWEP.SlotPos = 0
 
@@ -48,12 +50,12 @@ SWEP.IronSightsPos = Vector(-3, 0, 2)
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.325)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.187)
-local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Aspirant' Burst M4", "Increased damage, shoots in a slower, more accurate 3 round burst", function(wept)
+local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_m4_r1"), ""..translate.Get("wep_d_m4_r1"), function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 1.1
 	wept.Primary.Delay = wept.Primary.Delay * 5.7
 	wept.Primary.BurstShots = 3
-	wept.ConeMin = wept.ConeMin * 0.6
-	wept.ConeMax = wept.ConeMax * 0.5
+	wept.ConeMin = wept.ConeMin * 1.2
+	wept.ConeMax = wept.ConeMax * 0.9
 
 	wept.PrimaryAttack = function(self)
 		if not self:CanPrimaryAttack() then return end

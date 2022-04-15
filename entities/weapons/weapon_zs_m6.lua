@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Amalgama' M6"
-SWEP.Description = "Very Strange weapon,have some souls,upgrade per kill(if you don't kill zombie every 120 sec upgrade has dismantled)..."
+--SWEP.PrintName = "'Amalgama' M6"
+--SWEP.Description = "Very Strange weapon,have some souls,upgrade per kill(if you don't kill zombie every 120 sec upgrade has dismantled)..."
+SWEP.PrintName = ""..translate.Get("wep_m6")
+SWEP.Description = ""..translate.Get("wep_d_m6")
 SWEP.Slot = 2
 SWEP.SlotPos = 0
 

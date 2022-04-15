@@ -537,7 +537,7 @@ GM:AddSkill(SKILL_HANDY4, "Handy IV", GOOD.."+11% repair rate",
 																-3,			1,					{SKILL_HANDY5}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_HANDY5, "Handy V", GOOD.."+13% repair rate",
 																-3,			3,					{SKILL_OVERHAND}, TREE_BUILDINGTREE)
-GM:AddSkill(SKILL_OVERHAND, "OverHandy", GOOD.."+100% repair rate\n"..BAD.."+50% swing delay",
+GM:AddSkill(SKILL_OVERHAND, "OverHandy", GOOD.."+25% repair rate\n"..BAD.."+15% swing delay",
 																-3,			4,					{SKILL_HANDY5}, TREE_BUILDINGTREE)
 GM:AddSkill(SKILL_HAMMERDISCIPLINE, "Hammer Discipline", GOOD.."-40% swing delay with the Carpenter Hammer",
 																0,			1,					{SKILL_BARRICADEEXPERT}, TREE_BUILDINGTREE)
@@ -825,8 +825,8 @@ GM:AddSkillModifier(SKILL_DEATH, SKILLMOD_MEDKIT_EFFECTIVENESS_MUL, 0.2)
 GM:AddSkill(SKILL_DEATH, "Morieris", GOOD.."Better medicine\n" ..BAD.."+20% Medkit Cooldown\n"..GOOD.."+20% Medkit effectiveness",
 										-3,			-8,					{SKILL_EX2}, TREE_ANCIENTTREE)
 										SKILL_ALLPOWER = 182
-GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.15)		
-GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Better cades\n" ..GOOD.."+15% Repair Mul",
+GM:AddSkillModifier(SKILL_ALLPOWER, SKILLMOD_REPAIRRATE_MUL, 0.10)		
+GM:AddSkill(SKILL_ALLPOWER, "Cunctipotens", GOOD.."Better cades\n" ..GOOD.."+10% Repair Mul",
 					-4,			-8,					{SKILL_DEATH}, TREE_ANCIENTTREE)
 SKILL_ANCIENT = 183
 GM:AddSkillModifier(SKILL_ANCIENT, SKILLMOD_MELEE_DAMAGE_TAKEN_MUL, 0.47)
@@ -924,28 +924,28 @@ GM:AddSkill(SKILL_HELPFORPROJECT, "Donate", GOOD.."Donate if you want to get new
 				                                                            	20,			20,					{}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_HELPFORPROJECT, SKILLMOD_BLOODARMOR, 1)
 SKILL_DONATE3 = 206
-GM:AddSkill(SKILL_DONATE3, "Donate III", GOOD.."+25% For XP\n"..BAD.."Free skill",
+GM:AddSkill(SKILL_DONATE3, "Donate III", GOOD.."+50% For XP\n"..BAD.."THX Chayok",
 				                                                            	20,			22,					{SKILL_DONATE2}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE3, SKILLMOD_XP, 0.25)
+GM:AddSkillModifier(SKILL_DONATE3, SKILLMOD_XP, 0.50)
 SKILL_DONATE4 = 207
-GM:AddSkill(SKILL_DONATE4, "Donate IV", GOOD.."+6% Reload Speed\n"..BAD.."THX cheetus",
+GM:AddSkill(SKILL_DONATE4, "Donate IV", GOOD.."+10% Reload Speed\n"..BAD.."THX cheetus and null",
 				                                                            	21,			23,					{SKILL_DONATE3}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE4, SKILLMOD_RELOADSPEED_MUL, 0.06)
+GM:AddSkillModifier(SKILL_DONATE4, SKILLMOD_RELOADSPEED_MUL, 0.10)
 SKILL_DONATE5 = 208
 GM:AddSkill(SKILL_DONATE5, "Donate V", GOOD.."Sale by 6%\n"..BAD.."Thx ivan36099",
 				                                                            	22,			23,					{SKILL_DONATE4}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE5, SKILLMOD_ARSENAL_DISCOUNT, -0.03)
 SKILL_DONATE6 = 209
-GM:AddSkill(SKILL_DONATE6, "Donate VI", GOOD.."+10% To blood armor convert\n"..BAD.."THX Null",
+GM:AddSkill(SKILL_DONATE6, "Donate VI", GOOD.."+15% To blood armor convert\n"..BAD.."THX Null",
 				                                                            	22,			24,					{SKILL_DONATE5}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE6, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.10)
+GM:AddSkillModifier(SKILL_DONATE6, SKILLMOD_MELEE_DAMAGE_TO_BLOODARMOR_MUL, 0.15)
 SKILL_DONATE7 = 211
-GM:AddSkill(SKILL_DONATE7, "Donate VII", GOOD.."+% Hammer repair mul\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	21,			24,					{SKILL_DONATE8}, TREE_DONATETREE)
-GM:AddSkillModifier(SKILL_DONATE7, SKILLMOD_REPAIRRATE_MUL, 0.10)
+GM:AddSkill(SKILL_DONATE7, "Donate VII", GOOD.."+20% Hammer repair mul\n"..BAD.."THX chayok01 and null",
+				                                                            	21,			24,					{SKILL_DONATE6}, TREE_DONATETREE)
+GM:AddSkillModifier(SKILL_DONATE7, SKILLMOD_REPAIRRATE_MUL, 0.20)
 SKILL_DONATE8 = 212
 GM:AddSkill(SKILL_DONATE8, "Donate VIII", GOOD.."+% Reload speed\n"..BAD.."Donate if you want to unlock this skill",
-				                                                            	21,			25,					{SKILL_DONATE7}, TREE_DONATETREE)
+				                                                            	21,			25,					{SKILL_DONATE9}, TREE_DONATETREE)
 GM:AddSkillModifier(SKILL_DONATE8, SKILLMOD_RELOADSPEED_MUL, 0.10)
 SKILL_DONATE9 = 213
 GM:AddSkill(SKILL_DONATE9, "Donate IX", GOOD.."+ Health\n"..BAD.."Donate if you want to unlock this skill",
@@ -1385,8 +1385,8 @@ GM:AddSkillModifier(SKILL_HANDY3, SKILLMOD_REPAIRRATE_MUL, 0.08)
 GM:AddSkillModifier(SKILL_HANDY4, SKILLMOD_REPAIRRATE_MUL, 0.11)
 GM:AddSkillModifier(SKILL_HANDY5, SKILLMOD_REPAIRRATE_MUL, 0.13)
 
-GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_REPAIRRATE_MUL, 1)
-GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.50)
+GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_REPAIRRATE_MUL, 0.25)
+GM:AddSkillModifier(SKILL_OVERHAND, SKILLMOD_HAMMER_SWING_DELAY_MUL, 0.10)
 
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_WORTH, 30)
 GM:AddSkillModifier(SKILL_D_SLOW, SKILLMOD_ENDWAVE_POINTS, 20)

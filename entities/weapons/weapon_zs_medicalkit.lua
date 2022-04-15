@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Medical Kit"
-SWEP.Description = "An advanced kit of medicine, bandages, and morphine.\nVery useful for keeping a group of survivors healthy.\nUse PRIMARY FIRE to heal other players.\nUse SECONDARY FIRE to heal yourself.\nHealing other players is not only faster but you get a nice point bonus!"
+SWEP.PrintName = ""..translate.Get("wep_medkit")
+SWEP.Description = ""..translate.Get("wep_d_medkit")
 SWEP.Slot = 4
 SWEP.SlotPos = 0
 
@@ -45,9 +45,9 @@ SWEP.HoldType = "slam"
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_HEALCOOLDOWN, -0.8)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_HEALRANGE, 4, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_HEALING, 1.5)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Restoration Kit", "Always uses the same amount of ammo, increased cooldown", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_medkit_r1"), ""..translate.Get("wep_d_medkit_r1"), function(wept)
 	wept.FixUsage = true
-	wept.Primary.Delay = wept.Primary.Delay * 1.3
+	wept.Primary.Delay = wept.Primary.Delay * 1.5
 end)
 
 function SWEP:Initialize()

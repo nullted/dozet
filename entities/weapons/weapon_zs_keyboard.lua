@@ -1,8 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Keyboard"
-SWEP.Description = "You overfilled by fury and shields!."
-
+--SWEP.PrintName = "Keyboard"
+--SWEP.Description = "You overfilled by fury and shields!."
+SWEP.PrintName = ""..translate.Get("wep_keyboard")
+SWEP.Description = ""..translate.Get("wep_d_keyboard")
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55

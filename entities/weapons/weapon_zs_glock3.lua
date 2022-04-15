@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Goset' Glock 3"
-SWEP.Description = "Fires 2 shots at once. Not very accurate, but very damaging up close."
+--SWEP.PrintName = "'Goset' Glock 3"
+--SWEP.Description = "Fires 2 shots at once. Not very accurate, but very damaging up close."
+SWEP.PrintName = ""..translate.Get("wep_glock")
+SWEP.Description = ""..translate.Get("wep_d_glock")
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0
@@ -59,7 +61,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 4 less but m
 		end
 	end
 end)
-local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shredder' SOCOM Mark 23", "Fires 1 shot, hides your aura, deals HIGHER total damage but is more accurate", function(wept)
+local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shredder' SOCOM Mark 23", "Fires 1 shot, hides your aura, deals HIGHER total damage, more accurate", function(wept)
 	wept.Primary.NumShots = 1
 	wept.Primary.Damage = wept.Primary.Damage * 3
 	wept.Primary.Delay = 1.6
@@ -93,6 +95,6 @@ local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shredder' SOCOM Mark 23"
 		return 512
 	end
 end)
-branch.Colors = {Color(170, 170, 170), Color(120, 120, 120), Color(70, 70, 70)}
-branch.NewNames = {"Cloaked", "Covert", "Silent", "Darkness"}
+branch.Colors = {Color(170, 170, 170), Color(120, 120, 120), Color(70, 70, 70), Color(250, 250, 250)}
+branch.NewNames = {"Cloaked", "Covert", "Silent", "Darkness", "Void"}
 branch.Killicon = "weapon_zs_shroud"

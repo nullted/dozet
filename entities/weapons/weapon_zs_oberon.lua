@@ -1,7 +1,10 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Oberon' Pulse Shotgun"
-SWEP.Description = "Fires a spread of pulse shots that slow targets."
+--SWEP.PrintName = "'Oberon' Pulse Shotgun"
+--SWEP.Description = "Fires a spread of pulse shots that slow targets."
+
+SWEP.PrintName = ""..translate.Get("wep_oberon")
+SWEP.Description = ""..translate.Get("wep_d_oberon")
 
 if CLIENT then
 	SWEP.Slot = 3
