@@ -281,7 +281,7 @@ GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.09)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.10)
 trinketwep.PermitDismantle = true
 
-trinket = GM:AddTrinket(""..translate.Get("t_momentsup"), "momentumsupsysiii", false, mveles, mweles, 3, ""..translate.Get("t_momentsupi"))
+trinket = GM:AddTrinket(""..translate.Get("t_momentsupi"), "momentumsupsysiii", false, mveles, mweles, 3, ""..translate.Get("t_d_momentsupi"))
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_SWING_DELAY_MUL, -0.13)
 GM:AddSkillModifier(trinket, SKILLMOD_MELEE_KNOCKBACK_MUL, 0.12)
 
