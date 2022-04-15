@@ -2,8 +2,10 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_baseshotgun"
 
-SWEP.PrintName = "DoomStick"
-SWEP.Description = "Ancient weapon,heaven for boomstickers,can burn zombie but less damage."
+--SWEP.PrintName = "DoomStick"
+--SWEP.Description = "Ancient weapon,heaven for boomstickers,can burn zombie but less damage."
+SWEP.PrintName = ""..translate.Get("wep_doomstick")
+SWEP.Description = ""..translate.Get("wep_d_doomstick")
 
 if CLIENT then
 	SWEP.VElements = {
@@ -57,7 +59,7 @@ SWEP.ReloadSound = Sound("Weapon_Shotgun.Reload")
 
 GAMEMODE:SetPrimaryWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.07)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Gloom Stick", "Better damage,1 numshots, faster reload, more knockback and more move speed", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_doomstick_r1"), ""..translate.Get("wep_d_doomstick_r1"), function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 40
 	wept.ReloadSpeed = wept.ReloadSpeed * 1.3
 	wept.Primary.Delay = wept.Primary.Delay * 0.9
@@ -69,7 +71,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "Gloom Stick", "Better damage,1 numshots,
 	wept.Primary.ClipSize = 1
 end)
 
-branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Bloomstick' Classic boomstick", "Classic boomstick", function(wept)
+branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, ""..translate.Get("wep_doomstick_f1"), ""..translate.Get("wep_d_doomstick_f1"), function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 2
 	wept.Primary.NumShots = 6
 	wept.Primary.Delay = 0.29

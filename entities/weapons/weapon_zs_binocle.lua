@@ -1,9 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Binocle' Hand AWP"
-SWEP.Description = "How."
-
+--SWEP.PrintName = "'Binocle' Hand AWP"
+--SWEP.Description = "How."
+SWEP.PrintName = ""..translate.Get("wep_binocle")
+SWEP.Description = ""..translate.Get("wep_d_binocle")
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 

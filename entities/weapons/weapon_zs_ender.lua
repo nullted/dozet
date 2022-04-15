@@ -1,8 +1,9 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Ender' Automatic Shotgun"
-SWEP.Description = "Relatively accurate, clip loaded, automatic shotgun."
-
+--SWEP.PrintName = "'Ender' Automatic Shotgun"
+--SWEP.Description = "Relatively accurate, clip loaded, automatic shotgun."
+SWEP.PrintName = ""..translate.Get("wep_ender")
+SWEP.Description = ""..translate.Get("wep_d_ender")
 SWEP.Slot = 3
 SWEP.SlotPos = 0
 
@@ -42,12 +43,7 @@ SWEP.Tier = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.603, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.51, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Ender' Automatic Slug Rifle", "Single accurate slug round, less total damage", function(wept)
-	wept.Primary.Damage = wept.Primary.Damage * 5.5
-	wept.Primary.NumShots = 1
-	wept.ConeMin = wept.ConeMin * 0.15
-	wept.ConeMax = wept.ConeMax * 0.3
-end)
+
 
 function SWEP:SecondaryAttack()
 end

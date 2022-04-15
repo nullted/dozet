@@ -3,8 +3,10 @@ AddCSLuaFile()
 SWEP.Base = "weapon_zs_baseshotgun"
 DEFINE_BASECLASS("weapon_zs_baseshotgun")
 
-SWEP.PrintName = "'Fracture' Shotgun"
-SWEP.Description = "A pump shotgun that shoots in a line spread."
+--SWEP.PrintName = "'Fracture' Shotgun"
+--SWEP.Description = "A pump shotgun that shoots in a line spread."
+SWEP.PrintName = ""..translate.Get("wep_fracture")
+SWEP.Description = ""..translate.Get("wep_d_fracture")
 
 if CLIENT then
 	SWEP.ViewModelFlip = false

@@ -69,7 +69,7 @@ end
 SWEP.IronSightsPos = Vector(-3, 0, 2)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.625)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.187)
-local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Jualon' Burst M6", "Increased damage, shoots is a slower, more accurate 3 round burst", function(wept)
+local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 1, ""..translate.Get("wep_m6_r1"), ""..translate.Get("wep_d_m6_r1"), function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 1.2
 	wept.Primary.Delay = wept.Primary.Delay * 2.3
 	wept.Primary.BurstShots = 3

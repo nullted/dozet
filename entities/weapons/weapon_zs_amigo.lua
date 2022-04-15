@@ -1,8 +1,10 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Amigo' Assault Rifle"
-SWEP.Description = "The Amigo gets extra headshot damage, but has a slow fire rate for an assault rifle."
+--SWEP.PrintName = "'Amigo' Assault Rifle"
+--SWEP.Description = "The Amigo gets extra headshot damage, but has a slow fire rate for an assault rifle."
+SWEP.PrintName = ""..translate.Get("wep_amigo")
+SWEP.Description = ""..translate.Get("wep_d_amigo")
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0

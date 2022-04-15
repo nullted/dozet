@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Baxe"
-SWEP.Description = "Balance."
+--SWEP.PrintName = "Axe"
+SWEP.PrintName = ""..translate.Get("wep_axe")
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55
